@@ -1,0 +1,67 @@
+.Post {
+    // max-width: 655px;
+    // margin: 0 auto;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    pre {
+        max-width: 655px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        font-weight: 700;
+        line-height: 115%;
+    }
+
+
+    p {
+        font-size: 1.3em;
+        font-family: 'Charter';
+        line-height: 158%;
+
+        .gatsby-resp-image-wrapper {
+            margin-left: -2em !important;
+            margin-right: -2em !important;
+        }
+
+        a {
+            background: linear-gradient(to right, rgba(0, 0, 0, .84) 100%, rgba(0, 0, 0, 0) 0);
+            background-size: 1px 1px;
+            background-repeat: repeat-x;
+            background-position: 0px 18px;
+            text-decoration: none;
+        }
+
+        a,
+        a:visited,
+        a:hover {
+            color: currentColor;
+        }
+    }
+
+    li {
+        font-size: 1.3em;
+        font-family: 'Charter';
+        line-height: 158%;
+        margin-bottom: 0.75em;
+    }
+
+    pre {
+        background: rgba(0, 0, 0, .05);
+        padding: 20px;
+        white-space: pre-wrap;
+    }
+
+    &__hero {
+        margin-top: 5em;
+        margin-bottom: 5em;
+    }
+}
