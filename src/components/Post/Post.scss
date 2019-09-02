@@ -1,3 +1,5 @@
+@import "../../styles/colors.scss";
+
 $post-max-width: 655px;
 
 .Post {
@@ -23,7 +25,11 @@ $post-max-width: 655px;
     }
 
     h2 {
-        margin-top: 2.75em;
+        margin-top: 4em;
+
+        @media(max-width: 600px) {
+            margin-top: 2em;
+        }
     }
 
     p {
@@ -52,15 +58,32 @@ $post-max-width: 655px;
         background: rgba(0, 0, 0, .05);
         padding: 20px;
         white-space: pre-wrap;
+
+        code {
+            background: none;
+        }
+    }
+
+    code {
+        background: rgba(0, 0, 0, .05);
     }
 
     &--style-ital {
         font-style: italic;
     }
 
+    &__metas {
+        max-width: $post-max-width;
+        margin-left: auto;
+        margin-right: auto;
+        display: flex;
+        justify-content: space-between;
+        opacity: 0.35;
+    }
+
     &__clump {
         margin-top: 3em;
-        margin-bottom: 4em;
+        margin-bottom: 4.25em;
 
         @media(max-width: 600px) {
             margin-top: 2em;
@@ -69,6 +92,8 @@ $post-max-width: 655px;
     }
 
     &__image {
+        box-shadow: 0 5px 55px rgba(#000000, 0.1);
+
         &--size {
             &-s {
                 max-width: 500;
@@ -83,6 +108,52 @@ $post-max-width: 655px;
             &-l {
                 max-width: 800px;
                 margin: 0 auto;
+            }
+        }
+    }
+
+    &__note {
+        border-top: 4px solid rgba(salmon, 0.5);
+        background: rgba(salmon, 0.1);
+        padding: 1em 1.5em;
+        margin-top: 2em;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        code {
+            background: rgba(salmon, 0.45);
+        }
+    }
+
+    &__pullquote {
+        background: $blue-100;
+        max-width: $post-max-width;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 1em 1.5em;
+        margin-top: 2em;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+
+        code {
+            background: rgba($blue-300, 0.5);
+        }
+
+        p {
+            font-style: italic;
+        }
+
+        &__link {
+            color: $blue-600;
+            background: none;
+            text-align: right;
+            display: block;
+            font-weight: 600;
+
+            &:visited,
+            &:hover {
+                color: $blue-600;
             }
         }
     }
