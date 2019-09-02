@@ -102,7 +102,7 @@ const Header = () => (
                 <Logo/>
             </HeaderLogo>
             <HeaderLinks>
-                <Link to="/">
+                <Link to="/work">
                     Work
                 </Link>
                 <Link

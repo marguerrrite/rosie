@@ -4,7 +4,6 @@ import classNames from 'classnames';
 import { StaticQuery, graphql } from "gatsby";
 import Header from "components/Header/Header";
 import 'styles/globals.scss';
-import 'styles/fonts.scss';
 
 const Layout = ({ className, children }) => (
     <StaticQuery

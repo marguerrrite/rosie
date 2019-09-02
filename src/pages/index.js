@@ -1,11 +1,10 @@
 import React from "react";
+import Intro from "components/Intro/Intro";
 import Layout from "components/Layout/Layout";
 
 const RenderBody = () => (
     <>
-        <h1>
-            Hello world.
-        </h1>
+        <Intro/>
     </>
 );
 
