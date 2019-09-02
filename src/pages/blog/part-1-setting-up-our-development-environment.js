@@ -3,6 +3,8 @@ import { graphql } from 'gatsby';
 import Img from "gatsby-image";
 import Link from "components/_ui/Link/Link";
 import Post from "components/Post/Post";
+import { TwitterShareButton, TwitterIcon } from "react-share";
+import simonBoggs from "images/2019-0918-part-1/simon-boggs.gif";
 import "./part-1-setting-up-our-development-environment.scss";
 
 const PostPartOne = ({ data }) => {
@@ -16,7 +18,16 @@ const PostPartOne = ({ data }) => {
                     September 10, 2019
                 </div>
                 <div className="Post__social">
-                    Tweet me!
+
+                    <TwitterShareButton
+                        url={"https://marguerite.io"}
+                        title={"Part 1: Setting up our dev environment and running a site"}
+                        className="Post__social__share-button">
+                        <span>Tweet this!</span>
+                        <TwitterIcon
+                            size={32}
+                            round />
+                    </TwitterShareButton>
                 </div>
             </div>
             <div className="Post__clump">
@@ -201,9 +212,18 @@ const PostPartOne = ({ data }) => {
                 </pre>
             </div>
             <div className="Post__clump">
-                <p className="Post__note">
-                    If you are seeing permission errors, you might need to add <code>sudo</code> to the beginning of this command to give admin access. For newcomers, sudo gives you super user permission to modify your computer. This is common for those using macOS.
-                </p>
+                <div className="Post__note">
+                    <p>
+                        If you are seeing permission errors, you might need to add <code>sudo</code> to the beginning of this command to give admin access. For newcomers, <code>sudo</code> gives you super user permission to modify your computer. This is common for those using macOS.
+                    </p>
+                    <Link
+                        className="Post__note__link"
+                        to="https://superuser.com/questions/185441/what-does-the-sudo-command-do"
+                        doOpenInNewTab
+                    >
+                        More about <i>sudo</i>
+                    </Link>
+                </div>
                 <pre>
                     <code>
                         sudo npm install -g live-server
@@ -486,6 +506,9 @@ const PostPartOne = ({ data }) => {
                 </p>
             </div>
             <div className="Post__clump">
+                <p>
+                    <img src={simonBoggs} alt="Sega karate chop gif from She's All That" />
+                </p>
                 <p>
                     Pretty cool, right?
                 </p>

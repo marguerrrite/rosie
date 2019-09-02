@@ -22,6 +22,11 @@ $post-max-width: 655px;
 
     h1 {
         text-align: center;
+        margin-bottom: 0.7em;
+
+        @media(max-width: 600px) {
+            font-size: 1.9em;
+        }
     }
 
     h2 {
@@ -29,6 +34,13 @@ $post-max-width: 655px;
 
         @media(max-width: 600px) {
             margin-top: 2em;
+            font-size: 1.6em;
+        }
+    }
+
+    h3 {
+        @media(max-width: 600px) {
+            font-size: 1.4em;
         }
     }
 
@@ -58,6 +70,8 @@ $post-max-width: 655px;
         background: rgba(0, 0, 0, .05);
         padding: 20px;
         white-space: pre-wrap;
+        overflow-x: auto;
+        word-wrap: break-word;
 
         code {
             background: none;
@@ -78,7 +92,29 @@ $post-max-width: 655px;
         margin-right: auto;
         display: flex;
         justify-content: space-between;
-        opacity: 0.35;
+        align-items: center;
+        opacity: 1;
+        font-weight: 400;
+    }
+
+    &__date {
+        color: $blue-500;
+    }
+
+    &__social {
+        &__share-button {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            span {
+                margin-right: 0.5em;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 
     &__clump {
@@ -114,14 +150,33 @@ $post-max-width: 655px;
 
     &__note {
         border-top: 4px solid rgba(salmon, 0.5);
+        max-width: $post-max-width;
+        margin-left: auto;
+        margin-right: auto;
         background: rgba(salmon, 0.1);
         padding: 1em 1.5em;
         margin-top: 2em;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
 
         code {
-            background: rgba(salmon, 0.45);
+            background: rgba(salmon, 0.25);
+        }
+
+        &__link {
+            color: salmon;
+            text-align: right;
+            display: block;
+            font-weight: 600;
+
+            &:after {
+                background: none;
+            }
+
+            &:visited,
+            &:hover {
+                color: darken(salmon, 5%);
+            }
         }
     }
 
@@ -133,8 +188,7 @@ $post-max-width: 655px;
         margin-right: auto;
         padding: 1em 1.5em;
         margin-top: 2em;
-        border-bottom-left-radius: 10px;
-        border-bottom-right-radius: 10px;
+        border-radius: 8px;
 
         code {
             background: rgba($blue-300, 0.5);
@@ -146,10 +200,13 @@ $post-max-width: 655px;
 
         &__link {
             color: $blue-600;
-            background: none;
             text-align: right;
             display: block;
             font-weight: 600;
+
+            &:after {
+                background: none;
+            }
 
             &:visited,
             &:hover {
