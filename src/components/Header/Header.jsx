@@ -39,7 +39,7 @@ const HeaderLogo = styled(Link)`
 
 const HeaderLinks = styled("div")`
     display: grid;
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, auto);
     grid-gap: 7em;
     grid-gap: 4em;
     justify-content: flex-end;
@@ -112,10 +112,10 @@ const Header = () => (
                 </Link>
                 {/* <Link to="/">
                     About me
-                </Link>
+                </Link> */}
                 <Link to="/">
                     Contact
-                </Link> */}
+                </Link>
             </HeaderLinks>
         </HeaderContent>
     </HeaderContainer>
