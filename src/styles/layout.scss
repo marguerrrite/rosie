@@ -1,0 +1,37 @@
+//theme colors and tints (dark900 to normal500 to light100)
+
+$border-radius--200: 2px;
+$border-radius--300: 3px;
+$border-radius--400: 4px;
+$border-radius--500: 5px;
+$border-radius--600: 8px;
+$border-radius--700: 12px;
+$border-radius--800: 20px;
+$border-radius--900: 30px;
+
+$padding-horizontal: 60px;
+$padding-horizontal--mobile: 16px;
+
+$navigation-height: 78px;
+$navigation-height--mobile: 56px;
+
+$max-width__content: 1500px;
+$max-width__content--l: 1500px;
+$max-width__footer: 1180px; //max-width content minus both content's padding
+$max-width__navigation: 910px;
+$max-width__navigation: $max-width__content;
+$max-width__navigation--l: $max-width__content--l;
+
+
+// Media query widths
+$media-mobile: 520px;
+$media-tablet: 767px;
+$media-desktop: 1100px;
+$media-tablet--include: 768px;
+
+
+//BookRows: Seen in in Bookshelf.scss and BookRow.scss
+$BookRow__grid: 1fr 170px 44px;
+$BookRow__grid--tablet: 1fr 120px 44px;
+$BookRow__grid--mobile: 1fr 120px;
+$BookRow__grid-gap: 15px;

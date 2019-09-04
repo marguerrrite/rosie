@@ -91,8 +91,6 @@ const PostPartOne = ({ data }) => {
                 <p>
                     We will be tackling a pure HTML, CSS, and JavaScript project - not incorporating any frontend frameworks like <Link to="https://reactjs.org/" doOpenInNewTab>React</Link>, <Link to="https://vuejs.org/" doOpenInNewTab>Vue</Link>Vue, or <Link to="https://angular.io/" doOpenInNewTab>Angular</Link>. We'll save those for a rainy day.
                 </p>
-            </div>
-            <div className="Post__clump">
                 <p className="Post--style-ital">
                     This tutorial shows a macOS environment, but you can apply the methods to other operating systems.
                 </p>
