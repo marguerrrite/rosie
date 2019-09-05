@@ -123,19 +123,6 @@ button {
     }
 }
 
-.Layout {
-    max-width: 1400px;
-    margin: 0 auto;
-    width: 100%;
-    padding-left: 4em;
-    padding-right: 4em;
-
-    @media(max-width: 600px) {
-        padding-left: 1.25em;
-        padding-right: 1.25em;
-    }
-}
-
 /*
 An workaround for forcing accessibility wrappers
 to have a 100% height.
