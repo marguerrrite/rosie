@@ -1,63 +1,91 @@
-import React from "react";
-import { Link } from "gatsby";
-import styled from "@emotion/styled";
-import colors from "styles/colors";
-import Logo from "components/_ui/Logo/Logo";
-import spooch from "images/oscar-icon.png"
+import React, { Component } from 'react';
+import ReactGA from 'react-ga';
+import Button from "components/_ui/Button/Button";
+import Label from "components/_ui/Label/Label";
+import SpinningPets from "components/SpinningPets/SpinningPets";
+import './Footer.scss';
 
-const FooterContainer = styled("div")`
-    padding-top: 3.75em;
-    padding-bottom: 3em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+class Footer extends Component {
 
-    svg {
-        max-width: 50px;
-    }
-`
-
-const FooterAuthor = styled("a")`
-    font-size: 0.75em;
-    color: ${colors.grey700};
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    margin-top: 1.5em;
-
-     &:hover {
-         color: ${colors.blue900};
-
-        .FooterSpooch {
-            animation-name: rotate;
-            animation-duration: 1.5s;
-            animation-iteration-count: infinite;
-            animation-timing-function: linear;
-        }
+    trackEvent = (action) => {
+        ReactGA.event({
+            category: 'User',
+            action: action
+        });
     }
 
-    @keyframes rotate {
-        from {transform: rotate(0deg);}
-        to {transform: rotate(360deg);}
+    render() {
+
+        return (
+            <div className="Footer__container">
+                <div className="Footer">
+                    <div className="Footer__section Footer__section__links">
+                        <Label className="Footer__label">
+                            <a className="Footer__link"
+                                onClick={() => this.trackEvent('Footer | clicked Github')}
+                                href="http://www.github.com/margueriteroth"
+                                rel="noopener noreferrer" target="_blank">
+                                Github
+                            </a>
+                        </Label>
+                        <Label className="Footer__label">
+                            <a className="Footer__link"
+                                onClick={() => this.trackEvent('Footer | clicked Dribbble')}
+                                href="http://www.dribbble.com/marrrguerite"
+                                rel="noopener noreferrer" target="_blank">
+                                Dribbble
+                            </a>
+                        </Label>
+                        <Label className="Footer__label">
+                            <a className="Footer__link"
+                                onClick={() => this.trackEvent('Footer | clicked Giphy')}
+                                href="https://giphy.com/channel/marrrguerite"
+                                rel="noopener noreferrer" target="_blank">
+                                Giphy
+                            </a>
+                        </Label>
+                        <Label className="Footer__label">
+                            <a className="Footer__link"
+                                onClick={() => this.trackEvent('Footer | clicked Codepen')}
+                                href="http://codepen.io/marguerite"
+                                rel="noopener noreferrer" target="_blank">
+                                Codepen
+                            </a>
+                        </Label>
+                        <Label className="Footer__label">
+                            <a className="Footer__link"
+                                onClick={() => this.trackEvent('Footer | clicked Instagram')}
+                                href="https://www.instagram.com/marguer.ite"
+                                rel="noopener noreferrer" target="_blank">
+                                Instagram
+                            </a>
+                        </Label>
+                    </div>
+                    <div className="Footer__section Footer__section__contact">
+                        <a href="mailto:hello@marguerite.io"
+                           onClick={() => this.trackEvent('Footer | clicked Contact')}
+                           rel="noopener noreferrer" target="_blank">
+                            <Button category="secondary--white">
+                                Contact
+                            </Button>
+                        </a>
+                    </div>
+                </div>
+                <div className="Footer__pets">
+                    <SpinningPets />
+                </div>
+                <div className="Footer__copyright__container">
+                    <span className="Footer__copyright">
+                        &copy; 2019 — </span>
+                    <a className="Footer__copyright__link" href="https://github.com/margueriteroth/flagg"
+                       onClick={() => this.trackEvent('Footer | clicked Copyright Github link')}
+                       rel="noopener noreferrer" target="_blank">
+                        Designed and developed by Marguerite Roth
+                    </a>
+                </div>
+            </div>
+        );
     }
-`
-
-const FooterSpooch = styled("img")`
-    max-width: 33px;
-    margin-top: 0.25em;
-`
-
-const Footer = () => (
-    <FooterContainer>
-        <Link to="/">
-            <Logo />
-        </Link>
-        <FooterAuthor href="https://marguerite.io">
-            © 2019 — Designed & developed by Marguerite Roth
-            <FooterSpooch className="FooterSpooch" src={spooch} />
-        </FooterAuthor>
-    </FooterContainer>
-)
+}
 
 export default Footer;

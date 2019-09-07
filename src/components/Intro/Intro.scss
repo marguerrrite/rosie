@@ -1,9 +1,9 @@
 @import "../../styles/lib.scss";
 
 .Intro {
-    padding-bottom: 8em;
+    padding-bottom: 0em;
     padding-bottom: 5vh;
-    min-height: calc(#{100vh} - 160px);
+    min-height: calc(#{100vh} - 200px);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;

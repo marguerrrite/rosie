@@ -1,0 +1,124 @@
+@import "../../styles/lib.scss";
+
+.Footer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: $max-width__footer;
+    margin: 0 auto;
+    height: $navigation-height;
+    border-bottom: 1px solid rgba($white, 0.15);
+
+    @media(min-width: 1700px) {
+        max-width: $max-width__content--l;
+    }
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        padding-left: $padding-horizontal;
+        padding-right: $padding-horizontal;
+        padding-top: 1em;
+        padding-bottom: 2em;
+        margin-top: 4em;
+        transition: all 150ms linear;
+        background: $blue-500;
+        color: $white;
+        transition: all 150ms linear;
+    }
+
+    &__section {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &__links {
+            width: 100%;
+            max-width: 600px;
+
+            @media(max-width: $media-tablet) {
+                max-width: 100%;
+            }
+        }
+
+        &__contact {
+            flex: 1 0 25%;
+            justify-content: flex-end;
+        }
+    }
+
+    &__label {
+        @media(max-width: $media-tablet) {
+            margin-bottom: 2em;
+        }
+    }
+
+    &__link {
+        color: $white;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 10px 10px;
+
+        &:visited {
+            color: $white;
+        }
+
+        &:hover {
+            border-radius: 20px;
+            background: #0000000f;
+        }
+    }
+
+    &__copyright {
+        opacity: 0.6;
+
+        &__container {
+            max-width: $max-width__content;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 3em;
+        }
+
+        &__link {
+            color: $white;
+            text-decoration: none;
+            font-weight: 400;
+            opacity: 0.6;
+
+            &:visited {
+                color: $white;
+            }
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+
+        @media(min-width: 1700px) {
+            max-width: $max-width__content--l;
+        }
+    }
+
+    @media(max-width: 700px) {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+
+        &__container {
+            padding-top: 2em;
+        }
+
+        &__section {
+            flex-wrap: wrap;
+
+            &__contact {
+                flex-direction: column;
+                margin-top: 2em;
+                margin-bottom: 2em;
+            }
+        }
+    }
+}

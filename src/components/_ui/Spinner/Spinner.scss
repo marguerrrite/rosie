@@ -1,0 +1,25 @@
+@import "../../../styles/lib.scss";
+
+.Spinner__container {
+    .Spinner {
+        width: 32px;
+    }
+
+    &--size {
+        &-xl {
+            .Spinner {
+                width: 100px;
+            }
+        }
+    }
+
+    &--spin {
+        .Spinner {
+            animation: spin 50s linear infinite;
+        }
+    }
+}
+
+@keyframes spin {
+    to { transform: rotate(6080deg); }
+}

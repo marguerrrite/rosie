@@ -1,0 +1,39 @@
+@import "../../styles/lib.scss";
+
+.SpinningPets {
+    display: flex;
+    justify-content: center;
+
+    &__container {
+        margin-top: 10em;
+
+        @media(max-width: 500px) {
+            margin-top: 5em;
+        }
+    }
+
+    &__pet {
+        margin-left: 1em;
+        margin-right: 1em;
+        transition: 150ms ease-out all;
+
+        &:hover {
+            transform: translateY(-8px) scale(2);
+            transition: 150ms ease-out all;
+            z-index: 1;
+        }
+    }
+
+    &__message {
+        width: 160px;
+        margin: 0 auto;
+        text-align: left;
+        margin-top: 1em;
+        color: rgba($white, 0.75);
+        transform: translateX(17px);
+    }
+
+    &__name {
+        color: rgba($white, 0.9);
+    }
+}
