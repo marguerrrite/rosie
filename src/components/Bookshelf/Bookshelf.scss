@@ -1,0 +1,105 @@
+@import "../../styles/lib.scss";
+
+.Bookshelf {
+    margin: 0 auto;
+
+    @media(max-width: 700px) {
+        padding-left: 0;
+        padding-right: 0;
+        padding-top: 1em;
+    }
+
+    &__header {
+        display: flex;
+        align-items: center;
+
+        &__emoji {
+            margin-right: 5px;
+        }
+    }
+
+    &__label {
+        margin-bottom: 1em;
+    }
+
+    &__action {
+        &__container {
+            padding: 1.25em;
+            text-align: center;
+            margin-top: 2em;
+
+            @media(max-width: 700px) {
+                padding: 0.25em;
+                margin-top: 1.75em;
+            }
+        }
+
+        &__message {
+            margin: 0;
+            margin-top: 10px;
+            margin-bottom: 2em;
+        }
+    }
+
+    .BookRowLabel {
+        //border: 1px solid red;
+
+        &--author {
+            padding-left: 16px;
+        }
+
+        &--genre {
+            padding-left: 6px;
+
+            @media(max-width: 700px) {
+                opacity: 0;
+            }
+        }
+
+        &--status {
+            @media(max-width: $media-mobile) {
+                grid-column: 3;
+            }
+        }
+
+        &s {
+            display: grid;
+            grid-template-columns: $BookRow__grid;
+            align-items: baseline;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+            margin-bottom: 10px;
+            grid-gap: $BookRow__grid-gap;
+
+            @media(max-width: $media-desktop) {
+                grid-template-columns: $BookRow__grid--tablet;
+            }
+
+            @media(max-width: $media-mobile) {
+                grid-template-columns: $BookRow__grid--mobile;
+            }
+        }
+
+
+
+    }
+
+    &__books {
+        &__title {
+            margin-bottom: 1em;
+        }
+
+        &__container {
+            //box-shadow: $box-shadow;
+            background: white;
+            //border-radius: $border-radius;
+            padding-top: 0.5em;
+        }
+    }
+
+    &__genres__container {
+        @media(max-width: 500px) {
+            display: none;
+        }
+    }
+}

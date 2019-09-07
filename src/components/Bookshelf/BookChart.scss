@@ -1,0 +1,40 @@
+@import "../../styles/lib.scss";
+
+.BookChart {
+    width: 100%;
+//    border: 1px solid red;
+    margin-left: -5px;
+    overflow: visible;
+
+    text {
+        font-size: 0.8em;
+    }
+
+    .Tooltip {
+        width: 100px;
+        height: 24px;
+        padding: 5px 12px 4px;
+        border: 1px solid white;
+        transform: translateX(-50%);
+        background: white;
+        border: 1px solid $grey-100;
+        box-shadow: $box-shadow;
+        border-radius: 3px;
+        text-align: center;
+        text-transform: capitalize;
+        display: flex;
+
+        span {
+            width: 7px;
+            height: 7px;
+            border-radius: 5px;
+            background: red;
+            position: absolute;
+        }
+
+        p {
+            margin: 0;
+            display: inline-block;
+        }
+    }
+}

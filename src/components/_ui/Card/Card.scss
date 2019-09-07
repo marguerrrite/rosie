@@ -1,0 +1,11 @@
+@import "../../../styles/lib.scss";
+
+.Card {
+    border-radius: $border-radius--700;
+    box-shadow: $box-shadow;
+    background: white;
+
+    &--padding {
+        padding: 2em 1em;
+    }
+}

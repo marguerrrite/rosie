@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "components/Layout/Layout";
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
+import BookshelfContainer from "components/Bookshelf/BookshelfContainer";
 
 const Work = () => (
     <Layout>
@@ -8,9 +9,7 @@ const Work = () => (
             <h1>
                 Work
             </h1>
-            <p>
-                Hello world!
-            </p>
+            <BookshelfContainer/>
         </MaxWidth>
     </Layout>
 )

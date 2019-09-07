@@ -1,0 +1,21 @@
+@keyframes icon--spin {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0.5; }
+  50% {
+    opacity: 1; }
+  100% {
+    transform: rotate(360deg);
+    opacity: 0.5; } }
+
+@keyframes fade--up {
+  0% {
+    opacity: 0;
+    transform: translateY(3px); }
+  80% {
+    opacity: 1; }
+  100% {
+    transform: translateY(0);
+    opacity: 1; } }
+
+/* Applied colors */

@@ -1,0 +1,28 @@
+@import "../../../styles/lib.scss";
+
+.Label {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.8em;
+
+    &--primary {
+        color: $grey-900;
+        font-weight: 700;
+    }
+
+    &--secondary {
+        color: $grey-400;
+    }
+
+    &--heading {
+        border-bottom: 1px solid $grey-200;
+        padding-bottom: 10px;
+    }
+
+    &--table {
+        font-size: 0.7em;
+        color: $grey-400;
+        font-weight: 600;
+    }
+}

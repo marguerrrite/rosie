@@ -1,0 +1,280 @@
+@import "../../styles/lib.scss";
+
+$row-transition: 100ms ease-in-out all;
+
+.BookRow {
+    display: grid;
+    grid-template-columns: $BookRow__grid;
+    align-items: baseline;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    align-content: center;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    grid-gap: $BookRow__grid-gap;
+    transition: $row-transition;
+
+    @media(max-width: $media-desktop) {
+        grid-template-columns: $BookRow__grid--tablet;
+    }
+
+    @media(max-width: 700px) {
+        grid-template-rows: 24px 1fr;
+        grid-row-gap: 1px;
+        padding-left: 1.2em;
+        padding-right: 1.2em;
+    }
+
+    @media(max-width: $media-mobile) {
+        grid-template-columns: $BookRow__grid--mobile;
+    }
+
+    &:hover {
+        background: #e6efff;
+        cursor: pointer;
+        transition: $row-transition;
+    }
+
+    &__container {
+        transition: $row-transition;
+        margin-bottom: 8px;
+
+        @media(max-width: 700px) {
+            margin-bottom: 0;
+            box-shadow: inset 0 1px 0 0 $grey-100;
+        }
+
+        &--expanded {
+            border-top-color: $blue-500;
+            transition: $row-transition;
+
+            .BookRow {
+                background: $blue-500;
+                transition: $row-transition;
+            }
+
+            .BookRow__title {
+                white-space: normal;
+                overflow: visible;
+                text-overflow: unset;
+                //transition: $row-transition;
+                color: white;
+            }
+
+            .BookRow__author {
+                color: white;
+                transition: $row-transition;
+            }
+
+            .BookRow__icon {
+                color: white;
+                transition: $row-transition;
+
+                &--progress {
+                    animation: icon--spin 2s infinite linear;
+                }
+            }
+        }
+    }
+
+    &Label {
+        &--fiction,
+        &--statue {
+            text-align: center;
+        }
+    }
+
+    &__image {
+        width: 0px;
+        opacity: 0;
+        transition: $row-transition;
+
+        &__container {
+
+        }
+    }
+
+    &__metas {
+        @media(max-width: 700px) {
+            grid-row: 2 / span 1;
+            grid-column: 1 / span 2;
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        margin-right: 3px;
+        line-height: 1.2;
+        font-size: 1em;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        //transition: $row-transition;
+
+        &__span {
+            margin-right: 1em;
+            transition: $row-transition;
+
+            @media(max-width: 700px) {
+                margin-right: 0.5em;
+            }
+        }
+
+        &__icon {
+            opacity: 0.75;
+        }
+    }
+
+    &__author {
+        white-space: nowrap;
+        font-size: 0.9em;
+        color: $grey-800;
+        transition: $row-transition;
+
+        @media(max-width: 700px) {
+            font-size: 0.85em;
+        }
+    }
+
+    &GenreTags__container {
+        display: flex;
+        align-items: center;
+    }
+
+    &__status {
+        text-align: center;
+
+        .BookRow__icon {
+            vertical-align: text-top;
+        }
+
+        @media(max-width: 700px) {
+            grid-row: 2 / span 1;
+            grid-column: 3 / span 1;
+
+            .BookRow__icon {
+                vertical-align: baseline;
+            }
+        }
+    }
+
+    &__fiction {
+        text-align: center;
+    }
+
+    &__icon {
+        font-size: 0.85em;
+        color: $grey-700;
+
+        &s {
+            margin-left: auto;
+            display: flex;
+        }
+
+        &__container {
+            width: 20px;
+            text-align: right;
+            margin-left: auto;
+        }
+
+        &--progress {
+            color: $blue-400;
+            animation: icon--spin 2s infinite linear;
+        }
+
+        &--check {
+            color: $blue-500;
+        }
+
+        &--fiction {
+            color: $green;
+
+            &--true {
+                font-size: 1em;
+            }
+
+            &--false {
+                color: $grey-300;
+            }
+        }
+
+        &--book {
+            color: $grey-300;
+            margin-right: 0.5em;
+            font-size: 1.25em;
+            margin-bottom: -1px;
+        }
+    }
+
+    &__summary {
+        font-size: 0.95em;
+        line-height: 1.5;
+        margin-top: 1em;
+
+        &__container {
+            margin-top: 2em;
+            margin-bottom: 1.25em;
+            margin-right: 9em;
+        }
+    }
+
+    &Summary {
+        display: flex;
+        align-content: center;
+        opacity: 0;
+
+        @media(max-width: 700px) {
+            display: inline;
+        }
+
+        &__container {
+            max-height: 0;
+            overflow: hidden;
+            transition: 80ms ease-in-out all;
+            padding-left: 1.5em;
+            padding-right: 1.5em;
+
+            &--expanded {
+                max-height: 100%;
+                transition: 80ms ease-in-out all;
+                padding-top: 1.25em;
+                background: $grey-50;
+                padding-bottom: 4em;
+
+                @media(max-width: 700px) {
+                    padding-left: 1.2em;
+                    padding-right: 1.2em;
+                }
+
+                .BookRowSummary {
+                    opacity: 1;
+                    transition: all 500ms ease-in-out;
+                }
+            }
+        }
+
+        &__image {
+            height: 200px;
+            border: 8px solid white;
+            box-shadow: $box-shadow;
+            margin-right: 1.75em;
+            border-radius: $border-radius--300;
+            grid-column: 2 / span 1;
+
+            @media(max-width: 700px) {
+                margin-right: 0;
+                float: right;
+                height: 160px;
+                border-width: 6px;
+                margin-left: 1em;
+                margin-bottom: 1em;
+            }
+        }
+
+        &__summary {
+            margin-top: 0;
+            font-size: 0.9em;
+            line-height: 1.55;
+            max-width: 480px;
+        }
+    }
+}

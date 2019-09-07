@@ -1,0 +1,36 @@
+@import "../../styles/lib.scss";
+
+.BookGenreCharts {
+    &__title {
+        margin-bottom: 1em;
+    }
+
+    &__legend {
+        display: flex;
+        margin-right: 2em;
+        align-items: center;
+        margin-bottom: 4px;
+
+        &__container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &__key {
+            background: $blue-500;
+            width: 7px;
+            height: 7px;
+            border-radius: 7px;
+            margin-right: 4px;
+        }
+
+        &__label {
+
+        }
+    }
+
+    &__charts {
+        //top: 38px;
+    }
+}
+

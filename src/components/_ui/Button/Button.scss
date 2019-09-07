@@ -1,0 +1,91 @@
+@import "../../../styles/lib.scss";
+
+.Button {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border: 1px solid transparent;
+    transition: all 150ms ease-out;
+
+    &--shape {
+        &-round {
+            border-radius: 20px;
+        }
+
+        &-square {
+            border-radius: 4px;
+        }
+    }
+
+    &--size {
+        &-large {
+            font-size: 0.8em;
+            padding: 12px 20px 12px 20px;
+
+            &:hover {
+                transform: translateY(-2px);
+            }
+        }
+
+        &-small {
+            font-size: 0.8em;
+            padding: 5px 12px 5px 12px;
+        }
+    }
+
+    &--primary {
+        color: $white;
+        background: $blue-500;
+        border-color: $blue;
+
+        &:hover {
+            background: desaturate(darken($blue-500, 8%), 20%);
+            border-color: desaturate(darken($blue, 8%), 20%);
+            cursor: pointer;
+        }
+
+        &.Button--size-large {
+            &:hover {
+                background: $blue-500;
+                border-color: $blue-500;
+                box-shadow: $box-shadow__button--blue;
+            }
+        }
+    }
+
+    &--secondary {
+        color: $blue-500;
+        background: transparent;
+        background: $white;
+        border-color: $blue-500;
+
+        &:hover {
+            box-shadow: $box-shadow__button--grey;
+            cursor: pointer;
+        }
+
+        &.Button--size-large {
+            background: $blue-100;
+
+            &:hover {
+                box-shadow: $box-shadow__button--blue;
+            }
+        }
+    }
+
+    &--secondary--white {
+        color: $white;
+        background: transparent;;
+        border-color: $white;
+
+        &:hover {
+            background: rgba($white, 0.075);
+            transition: all 150ms ease-out;
+            cursor: pointer;
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
