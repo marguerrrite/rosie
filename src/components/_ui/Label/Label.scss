@@ -7,22 +7,22 @@
     font-size: 0.8em;
 
     &--primary {
-        color: $grey-900;
+        color: $grey-100;
         font-weight: 700;
     }
 
     &--secondary {
-        color: $grey-400;
+        color: $grey-600;
     }
 
     &--heading {
-        border-bottom: 1px solid $grey-200;
+        border-bottom: 1px solid $grey-800;
         padding-bottom: 10px;
     }
 
     &--table {
         font-size: 0.7em;
-        color: $grey-400;
+        color: $grey-600;
         font-weight: 600;
     }
 }
