@@ -1,11 +1,10 @@
 @import "../../../styles/lib.scss";
 
 .Button {
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
+    font-weight: 600;
     border: 1px solid transparent;
     transition: all 150ms ease-out;
+    font-family: "Circular", sans-serif;
 
     &--shape {
         &-round {
@@ -19,8 +18,8 @@
 
     &--size {
         &-large {
-            font-size: 0.8em;
-            padding: 12px 20px 12px 20px;
+            font-size: 1em;
+            padding: 0.65em 1.5em 0.65em;
 
             &:hover {
                 transform: translateY(-2px);
@@ -28,8 +27,8 @@
         }
 
         &-small {
-            font-size: 0.8em;
-            padding: 5px 12px 5px 12px;
+            font-size: 0.95em;
+            padding: 0.45em 1.25em 0.5em;
         }
     }
 

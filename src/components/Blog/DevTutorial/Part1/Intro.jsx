@@ -1,8 +1,5 @@
 import React from "react";
 import { graphql, StaticQuery } from 'gatsby';
-import Img from "gatsby-image";
-import { TwitterShareButton, TwitterIcon } from "react-share";
-
 
 const Intro = ({ data }) => {
     return (
@@ -10,39 +7,10 @@ const Intro = ({ data }) => {
             query={DEV_TUT_PART_1_INTRO}
             render={data => (
                 <div>
-                    <h1>
-                        Part 1: Setting up our dev environment and running a site
-                    </h1>
-                    <div className="Post__metas">
-                        <div className="Post__date">
-                            September 10, 2019
-                        </div>
-                        <div className="Post__social">
-
-                            <TwitterShareButton
-                                url={"https://marguerite.io"}
-                                title={"Part 1: Setting up our dev environment and running a site"}
-                                className="Post__social__share-button">
-                                <span>Tweet this!</span>
-                                <TwitterIcon
-                                    size={32}
-                                    round />
-                            </TwitterShareButton>
-                        </div>
-                    </div>
                     <div className="Post__clump">
                         <p>
                             Setting up a local web development environment allows you to play with new tools, languages, and any kind of project you're working on without having to deploy publicly.
                         </p>
-                    </div>
-                    <div className="Post__clump">
-                        <Img
-                            className="Post__image Post__image--size-xl"
-                            fluid={data.hero.childImageSharp.fluid}
-                            objectFit="cover"
-                            objectPosition="50% 50%"
-                            alt="Desktop shoping terminal, text editor, and demo project website."
-                        />
                     </div>
                     <div className="Post__clump">
                         <p>

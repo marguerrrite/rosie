@@ -3,7 +3,7 @@
 import React, { useMemo } from "react";
 import classNames from 'classnames';
 import PropTypes from "prop-types";
-import { Button } from "components/_ui/Button/Button";
+import Button from "components/_ui/Button/Button";
 import { Link as GatsbyLink } from "gatsby";
 import { OutboundLink } from 'gatsby-plugin-google-analytics';
 import "./Link.scss";

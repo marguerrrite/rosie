@@ -3,6 +3,7 @@
     color: currentColor;
     text-decoration: none;
     position: relative;
+    display: inline-block;
 
     &:after {
         position: absolute;
@@ -17,5 +18,11 @@
     &:visited,
     &:hover {
         color: currentColor;
+    }
+
+    &--is-button {
+        &:after {
+            background: none;
+        }
     }
 }
