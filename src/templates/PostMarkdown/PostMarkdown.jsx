@@ -2,28 +2,28 @@ import React from "react";
 import { graphql } from 'gatsby';
 import Img from "gatsby-image";
 import Layout from "components/Layout/Layout";
-import './Post.scss';
+import './PostMarkdown.scss';
 
 export default ({ data }) => {
-    let post = data.markdownRemark
-    let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+    let PostMarkdown = data.markdownRemark
+    let featuredImgFluid = PostMarkdown.frontmatter.featuredImage.childImageSharp.fluid
     return (
-        <Layout className="Post">
+        <Layout className="PostMarkdown">
             <div>
                 <h1>
-                    {post.frontmatter.title}
+                    {PostMarkdown.frontmatter.title}
                 </h1>
                 <h5>
                     Tweet this
                 </h5>
                 <p>
-                    {post.frontmatter.intro}
+                    {PostMarkdown.frontmatter.intro}
                 </p>
                 <Img
-                    className="Post__hero"
+                    className="PostMarkdown__hero"
                     fluid={featuredImgFluid}
                 />
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <div dangerouslySetInnerHTML={{ __html: PostMarkdown.html }} />
             </div>
         </Layout>
     )

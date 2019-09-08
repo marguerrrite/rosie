@@ -8,16 +8,6 @@ const Intro = ({ data }) => {
             render={data => (
                 <div>
                     <div className="Post__clump">
-                        <p>
-                            Setting up a local web development environment allows you to play with new tools, languages, and any kind of project you're working on without having to deploy publicly.
-                        </p>
-                    </div>
-                    <div className="Post__clump">
-                        <p>
-                            In <strong>Part 1</strong> of this tutorial, we will collect the tools needed to spin up and edit a website. By the end, you will have a local environment set up and the space needed to start working on a project. 👏
-                        </p>
-                    </div>
-                    <div className="Post__clump">
                         <h2>
                             Who this is for
                         </h2>

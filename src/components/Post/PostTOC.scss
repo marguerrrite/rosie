@@ -1,0 +1,24 @@
+@import "../../styles/colors.scss";
+
+$post-max-width: 655px;
+
+.PostTOC {
+    position: sticky;
+    max-width: 11em;
+    height: 10em;
+    top: 3em;
+    margin-top: 3em;
+    justify-self: end;
+
+    &__item {
+        margin-bottom: 2em;
+        font-family: "Circular", sans-serif;
+        letter-spacing: -0.005em;
+        color: $grey-600;
+        font-weight: 500;
+
+        &:first-of-type {
+            color: $grey-900;
+        }
+    }
+}

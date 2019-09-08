@@ -6,16 +6,17 @@ import { TwitterShareButton, TwitterIcon } from "react-share";
 import Button from "components/_ui/Button/Button";
 import Link from "components/_ui/Link/Link";
 import Layout from "components/Layout/Layout";
+import PostGoals from "components/Post/PostGoals";
 import PostTOC from "components/Post/PostTOC";
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
 import './Post.scss';
 
-const Post = ({ children, className, heroImg, path }) => {
+const Post = ({ children, className, heroImg, path, goals, title, demo, repo }) => {
     return (
         <Layout className={classNames(className, "Post")}>
             <div className="Post__clump">
                 <h1>
-                    Part 1: Setting up our dev environment and running a site
+                    {title}
                 </h1>
                 <div className="Post__metas">
                     <div className="Post__date">
@@ -24,7 +25,7 @@ const Post = ({ children, className, heroImg, path }) => {
                     <div className="Post__social">
                         <TwitterShareButton
                             url={`https://marguerite.io${path}`}
-                            title={"Part 1: Setting up our dev environment and running a site"}
+                            title={title}
                             className="Post__social__share-button">
                             <span>Tweet this!</span>
                             <TwitterIcon
@@ -39,22 +40,31 @@ const Post = ({ children, className, heroImg, path }) => {
 
             <MaxWidth className="Post__content">
                 <div className="Post__links">
-                    <Link
-                        className="Post__link Post__link__button"
-                        doOpenInNewTab
-                        isButton
-                        to="https://sample.marguerite.io">
-                        Demo site
-                    </Link>
-                    <Link
-                        className="Post__link"
-                        doOpenInNewTab
-                        to="https://github.com/margueriteroth/our-new-project">
-                        Github repo
-                    </Link>
+                    {demo && (
+                        <Link
+                            className="Post__link Post__link__button"
+                            doOpenInNewTab
+                            isButton
+                            to={demo}>
+                            Demo site
+                        </Link>
+                    )}
+                    {repo && (
+                        <Link
+                            className="Post__link"
+                            doOpenInNewTab
+                            to={repo}>
+                            Github repo
+                        </Link>
+                    )}
                 </div>
 
-                {children}
+                <div>
+                    <PostGoals
+                        title="Part 1: Goals"
+                        goals={goals}/>
+                    {children}
+                </div>
 
                 <PostTOC>
                     <div className="PostTOC__item">

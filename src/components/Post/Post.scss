@@ -8,6 +8,11 @@ $post-max-width: 655px;
         position: relative;
         display: grid;
         grid-template-columns: 1fr 800px 1fr;
+
+        @media(max-width: 1150px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__link {
@@ -15,6 +20,10 @@ $post-max-width: 655px;
 
         &__button {
             font-size: 1rem;
+
+            @media(max-width: 1150px) {
+                margin-right: 2em;
+            }
         }
 
         &s {
@@ -26,6 +35,18 @@ $post-max-width: 655px;
             flex-direction: column;
             align-items: flex-start;
             font-size: 0.85em;
+
+            @media(max-width: 1150px) {
+                max-width: 655px;
+                width: 100%;
+                margin: 0 auto;
+                height: auto;
+                position: relative;
+                top: 0;
+                flex-direction: row;
+                align-items: center;
+                font-size: 0.9em;
+            }
         }
     }
 

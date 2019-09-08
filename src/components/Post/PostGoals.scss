@@ -1,0 +1,14 @@
+@import "../../styles/colors.scss";
+
+$post-max-width: 655px;
+
+.PostGoals {
+    margin-top: 3em;
+    margin-bottom: 0em;
+    background: $grey-200;
+    padding-top: 0.1em;
+    padding-bottom: 0.1em;
+    border-radius: 10px;
+    padding-left: 2em;
+    padding-right: 2em;
+}
