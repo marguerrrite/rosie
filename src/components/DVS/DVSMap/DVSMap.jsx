@@ -87,11 +87,6 @@ class DVSMap extends Component {
         // const xAccessor = d => d.longitude;
         // const yAccessor = d => d.latitude;
         const tooltip = d3.select("#tooltip");
-
-        tooltip.select("#location")
-            .text("bees")
-
-        console.log(member);
     }
 
     onMouseLeave(datum, index) {
@@ -102,9 +97,6 @@ class DVSMap extends Component {
         const { containerWidth, showMap, showData, showViz, showSociety, isLoaded } = this.props;
         return (
             <div className="DVSMap">
-                <div id="tooltip" className="tooltip">
-                    Location: <span id="location"></span>
-                </div>
                 <React.Fragment>
                     {/* <svg width="1050" height="600" viewBox="0 0 900 400"> */}
                     <svg width={containerWidth} viewBox="0 0 900 400">

@@ -1,6 +1,10 @@
 @import "../../styles/lib.scss";
 
 .DVS {
+    &__layout {
+        padding: 1.25em;
+    }
+
     &Page {
         height: 100%;
         background:
@@ -28,6 +32,7 @@
         h1 {
             line-height: 1.1;
             margin-top: 0.3em;
+            margin-bottom: 0;
 
             @media(max-width: 1200px) {
                 font-size: 2.5em;
@@ -43,7 +48,7 @@
     }
 
     &__InfoKey {
-        margin-top: 2em;
+        margin-top: 0em;
         font-size: 0.85em;
 
         p {
