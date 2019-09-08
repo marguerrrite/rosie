@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
+import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
 import Button from "components/_ui/Button/Button";
 import Label from "components/_ui/Label/Label";
 import SpinningPets from "components/SpinningPets/SpinningPets";
 import './Footer.scss';
-
 class Footer extends Component {
-
     trackEvent = (action) => {
         ReactGA.event({
             category: 'User',
@@ -15,10 +14,9 @@ class Footer extends Component {
     }
 
     render() {
-
         return (
-            <div className="Footer__container">
-                <div className="Footer">
+            <MaxWidth size="l" className="Footer__container">
+                <MaxWidth size="m" className="Footer">
                     <div className="Footer__section Footer__section__links">
                         <Label className="Footer__label">
                             <a className="Footer__link"
@@ -70,7 +68,7 @@ class Footer extends Component {
                             </Button>
                         </a>
                     </div>
-                </div>
+                </MaxWidth>
                 <div className="Footer__pets">
                     <SpinningPets />
                 </div>
@@ -83,7 +81,7 @@ class Footer extends Component {
                         Designed and developed by Marguerite Roth
                     </a>
                 </div>
-            </div>
+            </MaxWidth>
         );
     }
 }

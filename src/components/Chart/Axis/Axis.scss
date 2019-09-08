@@ -1,0 +1,17 @@
+.Axis path,
+.Axis line {
+    stroke: #E0E0E0;
+}
+
+.Axis text {
+    font-size: 11px;
+    fill: black;
+}
+
+.Axis-Bottom text {
+    opacity: 0.35;
+    text-anchor: center;
+    text-transform: uppercase;
+    font-size: 9px;
+    letter-spacing: 0.055em;
+}

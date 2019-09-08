@@ -3,16 +3,16 @@ import Layout from "components/Layout/Layout";
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
 import BookshelfContainer from "components/Bookshelf/BookshelfContainer";
 import Project from "components/Project/Project";
+import ProjectCrochet from "components/Project/ProjectCrochet";
 import projects from "components/Project/projects.js";
-
-const bees = ["bee", "bee"];
 
 const Work = () => (
     <Layout>
         <MaxWidth>
-            <h1>
+            {/* <h1>
                 Work
-            </h1>
+            </h1> */}
+            <ProjectCrochet />
             {Object.keys(projects).map((key) =>
                 <Project
                     demo={projects[key].demo}

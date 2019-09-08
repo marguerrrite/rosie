@@ -14,12 +14,12 @@ const Header = () => (
                 <Link
                     activeClassName="Link--is-active"
                     to="/work">
-                    Work
+                    Projects
                 </Link>
                 <Link
                     activeClassName="Link--is-active"
                     to="/blog">
-                    Blog
+                    Writing
                 </Link>
                 {/* <Link to="/">
                     About me

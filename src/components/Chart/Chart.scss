@@ -1,0 +1,17 @@
+@import "../../styles/lib.scss";
+
+.Chart {
+    overflow: visible;
+
+    &__container {
+        position: relative;
+    }
+
+    circle {
+        opacity: 0.75;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

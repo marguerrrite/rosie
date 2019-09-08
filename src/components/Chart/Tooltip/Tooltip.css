@@ -1,0 +1,11 @@
+.Tooltip {
+  border: 1px solid #757575;
+  box-shadow: none;
+  display: table;
+  position: absolute;
+  padding: 8px;
+  text-align: left;
+  font-size: 12px;
+  background: #f5f5f5;
+  pointer-events: none;
+  white-space: nowrap; }
