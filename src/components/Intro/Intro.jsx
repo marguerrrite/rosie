@@ -10,7 +10,7 @@ const Intro = () => {
                 in product design and user experience.
                 </h1>
             <h2 className="Intro__subheader">
-                I also enjoy messing around with data visualizations. 😊
+                I also enjoy messing around with data visualizations. 😊 [wip!]
             </h2>
         </MaxWidth>
     );

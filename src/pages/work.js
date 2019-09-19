@@ -7,7 +7,7 @@ import ProjectCrochet from "components/Project/ProjectCrochet";
 import projects from "components/Project/projects.js";
 
 const Work = () => (
-    <Layout>
+    <Layout className="Layout--work">
         <MaxWidth>
             {/* <h1>
                 Work

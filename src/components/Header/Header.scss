@@ -14,24 +14,6 @@
 
     &__logo {
         text-decoration: none;
-
-        .Logo {
-            transition: background 100ms ease-in-out;
-
-            .LogoType {
-                transition: transform 100ms ease-in-out;
-            }
-
-            &:hover {
-                background: $blue-600;
-                transition: background 250ms ease-in-out;
-
-                .LogoType {
-                    transform: translateY(-4px);
-                    transition: transform 250ms ease-in-out;
-                }
-            }
-        }
     }
 
     &__links {

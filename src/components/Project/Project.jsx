@@ -58,7 +58,7 @@ class Project extends Component {
                                 <a href={demo}
                                     rel="noopener noreferrer" target="_blank"
                                     onClick={() => this.trackEvent(`Project | clicked demo button: ${title}`)}>
-                                    <Button category="secondary" target="_blank">
+                                    <Button category="primary" target="_blank">
                                         Demo
                                     </Button>
                                 </a>
