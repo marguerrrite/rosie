@@ -4,11 +4,11 @@ import Layout from "components/Layout/Layout";
 import Link from "components/_ui/Link/Link";
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
 
-const Blog = () => (
+const Writing = () => (
     <Layout>
         <MaxWidth>
             <h1>
-                Blog
+                Writing
             </h1>
             <p>
                 Hello world!
@@ -20,4 +20,4 @@ const Blog = () => (
     </Layout>
 )
 
-export default Blog;
+export default Writing;

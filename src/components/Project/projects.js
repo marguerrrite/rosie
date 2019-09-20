@@ -1,29 +1,6 @@
 import React from "react";
 
 const projects = {
-    dvs: {
-        title: "Data Visualization Society Member Map",
-        projectType: "web",
-        description: <div>
-            The <a href="https://www.datavisualizationsociety.com/" rel="noopener noreferrer" target="_blank">Data Visualization Society</a> asked
-            members to rank their skills in the following categories: data, visualization, and society.
-            <br />
-            <br />
-            I mapped the location of each
-            member with the ability to filter by their highest ranked skill
-            to show the distribution of each around the world.
-        </div>,
-        demo: "https://marguerite.io/dvs",
-        github: "https://github.com/margueriteroth/flagg/tree/master/src/components/Map",
-        "tech": [
-            "react",
-            "d3",
-            "data",
-        ],
-        "img_src": [
-            "project-dvs-01"
-        ],
-    },
     prist: {
         title: "Prist | A Gatsby & Prismic Starter",
         projectType: "web",
@@ -46,6 +23,29 @@ const projects = {
         hasImageBorder: true,
         "img_src": [
             "project-prist-01"
+        ],
+    },
+    dvs: {
+        title: "Data Visualization Society Member Map",
+        projectType: "web",
+        description: <div>
+            The <a href="https://www.datavisualizationsociety.com/" rel="noopener noreferrer" target="_blank">Data Visualization Society</a> asked
+            members to rank their skills in the following categories: data, visualization, and society.
+            <br />
+            <br />
+            I mapped the location of each
+            member with the ability to filter by their highest ranked skill
+            to show the distribution of each around the world.
+        </div>,
+        demo: "https://marguerite.io/dvs",
+        github: "https://github.com/margueriteroth/flagg/tree/master/src/components/Map",
+        "tech": [
+            "react",
+            "d3",
+            "data",
+        ],
+        "img_src": [
+            "project-dvs-01"
         ],
     },
     albondiga: {

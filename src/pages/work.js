@@ -12,7 +12,6 @@ const Work = () => (
             {/* <h1>
                 Work
             </h1> */}
-            <ProjectCrochet />
             {Object.keys(projects).map((key) =>
                 <Project
                     demo={projects[key].demo}
@@ -27,6 +26,7 @@ const Work = () => (
                     key={key}
                 />
             )}
+            <ProjectCrochet />
             <BookshelfContainer />
         </MaxWidth>
     </Layout>

@@ -9,7 +9,7 @@
     flex-direction: column;
     justify-content: flex-end;
     padding: 9px 12px;
-    transition: background 100ms ease-in-out;
+    transition: background 300ms ease-in;
     position: relative;
     overflow: hidden;
 
@@ -35,6 +35,7 @@
         margin-top: -20px;
 
 
+
         &--yellow {
             background: #87FFE9;
             z-index: 8;
@@ -50,6 +51,8 @@
 
     &:hover {
         background: #020F1B;
+        transition: background 300ms ease-in;
+        transition-delay: 300ms;
 
         .Logo__type {
             transform: translate(4px, -1px);
