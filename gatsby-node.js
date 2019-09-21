@@ -9,8 +9,8 @@ const BLOG_POST_FILENAME_REGEX = /([0-9]+)\-([0-9]+)\-([0-9]+)\-(.+)$/;
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions;
 
-    if (node.internal.type === `MarkdownRemark`) {
-        if (node.internal.type === `MarkdownRemark`) {
+    if (node.internal.type === `Mdx`) {
+        if (node.internal.type === `Mdx`) {
             const slug = createFilePath({ node, getNode })
 
             //isolate date and post title from folder name
@@ -51,7 +51,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const result = await graphql(`
     query {
-        allMarkdownRemark(
+        allMdx(
                 sort: { fields: [frontmatter___date], order: DESC }
                     limit: 1000
                 ){
@@ -71,7 +71,7 @@ exports.createPages = async ({ graphql, actions }) => {
     }
 
     // Create blog posts pages.
-    const posts = result.data.allMarkdownRemark.edges
+    const posts = result.data.allMdx.edges
 
     posts.forEach((post, index) => {
         const previous = index === posts.length - 1 ? null : posts[index + 1].node
