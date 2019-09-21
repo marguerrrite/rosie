@@ -2,9 +2,7 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-
 import emojiMap from './emojiMap.jsx';
-
 import './Emoji.scss';
 
 const Emoji = ({ name, className, ...props }) => {
