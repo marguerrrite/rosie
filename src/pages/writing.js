@@ -13,7 +13,7 @@ const Writing = () => (
             <p>
                 Hello world!
             </p>
-            <Link to="/blog//part-1-setting-up-our-development-environment">
+            <Link to="/writing/part-1-setting-up-our-development-environment">
                 Part 1: Setting up our environment! <Emoji name="party popper" />
             </Link>
         </MaxWidth>

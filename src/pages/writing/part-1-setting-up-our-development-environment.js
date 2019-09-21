@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from 'gatsby';
 import Intro from "components/Blog/DevTutorial/Part1/Intro";
+import Tools from "components/Blog/DevTutorial/Part1/Tools";
 import Post from "components/Post/Post";
 
 const PostPartOne = ({ data, path }) => {
@@ -14,6 +15,7 @@ const PostPartOne = ({ data, path }) => {
             repo="https://github.com/margueriteroth/our-new-project"
         >
             <Intro />
+            <Tools />
         </Post>
     )
 }

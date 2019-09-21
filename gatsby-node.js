@@ -26,7 +26,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
                 createNodeField({
                     name: `slug`,
                     node,
-                    value: `/blog/${filename}`,
+                    value: `/writing/${filename}`,
                 })
 
                 createNodeField({
@@ -88,7 +88,6 @@ exports.createPages = async ({ graphql, actions }) => {
         })
     })
 }
-
 
 exports.onCreateWebpackConfig = ({
     stage,
