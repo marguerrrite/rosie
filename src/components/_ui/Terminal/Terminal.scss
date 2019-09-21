@@ -1,0 +1,36 @@
+@import "./../../../styles/lib";
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:400,500&display=swap');
+
+.Terminal {
+    font-family: 'Source Code Pro', monospace;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 24px 18px rgba(0, 0, 0, 0.1);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    border-radius: 8px;
+    position: relative;
+    padding-left: 3em;
+    padding-right: 3em;
+    height: 10em;
+    position: sticky;
+    top: calc(100vh - 10em);
+    z-index: 199;
+
+    &:after {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 1.25em;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+        background: $grey-200;
+        top: 0;
+        left: 0;
+        z-index: 10;
+    }
+
+    &__root {
+        color: $grey-700;
+    }
+}
