@@ -6,16 +6,16 @@ import './PostGoals.scss';
 
 const PostGoals = ({ children, className, goals, title }) => {
     return (
-        <MaxWidth size="s" className={classNames(className, "PostGoals")}>
-            <h3>
+        <div className={classNames(className, "PostGoals")}>
+            <h3 className="PostGoal__title">
                 {title}
             </h3>
             {goals.map((goal, i) =>
-                <p key={i}>
+                <div className="PostGoal" key={i}>
                     {goal}
-                </p>
+                </div>
             )}
-        </MaxWidth>
+        </div>
     );
 };
 

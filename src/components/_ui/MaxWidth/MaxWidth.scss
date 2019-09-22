@@ -1,9 +1,10 @@
-.MaxWidth {
+@import "./../../../styles/lib";
 
+.MaxWidth {
     &--size {
-        //MaxWidth 655px
+        //MaxWidth 740px
         &-s {
-            max-width: 655px;
+            max-width: $post-max-width;
             margin: 0 auto;
             width: 100%;
             padding-left: 4em;

@@ -24,62 +24,6 @@ module.exports = {
                         sizeByPixelDensity: true,
                     },
                 },
-            ],
-        },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/blog`,
-        name: `blog`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/assets`,
-        name: `assets`,
-      },
-    },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    {
-        resolve: `gatsby-plugin-manifest`,
-        options: {
-            name: `rose madder`,
-            short_name: `rose`,
-            start_url: `/`,
-            background_color: `#663399`,
-            theme_color: `#663399`,
-            display: `minimal-ui`,
-            icon: `src/images/oscar-icon.png`, // This path is relative to the root of the site.
-        },
-    },
-    {
-        resolve: `gatsby-plugin-google-analytics`,
-        options: {
-            trackingId: "130275221-1",
-            head: true,
-        },
-    },
-    {
-        resolve: `gatsby-transformer-remark`,
-        options: {
-            // In your gatsby-transformer-remark plugin array
-            plugins: [
-                {
-                    resolve: `gatsby-remark-images`,
-                    options: {
-                        maxWidth: 1080,
-                    },
-                },
                 {
                     resolve: `gatsby-remark-prismjs`,
                     options: {
@@ -141,6 +85,62 @@ module.exports = {
                         },
                     }
                 }
+            ],
+        },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/blog`,
+        name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/assets`,
+        name: `assets`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
+    {
+        resolve: `gatsby-plugin-manifest`,
+        options: {
+            name: `rose madder`,
+            short_name: `rose`,
+            start_url: `/`,
+            background_color: `#663399`,
+            theme_color: `#663399`,
+            display: `minimal-ui`,
+            icon: `src/images/oscar-icon.png`, // This path is relative to the root of the site.
+        },
+    },
+    {
+        resolve: `gatsby-plugin-google-analytics`,
+        options: {
+            trackingId: "130275221-1",
+            head: true,
+        },
+    },
+    {
+        resolve: `gatsby-transformer-remark`,
+        options: {
+            // In your gatsby-transformer-remark plugin array
+            plugins: [
+                {
+                    resolve: `gatsby-remark-images`,
+                    options: {
+                        maxWidth: 1080,
+                    },
+                },
             ],
         },
     },

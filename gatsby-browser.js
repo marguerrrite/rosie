@@ -4,7 +4,6 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
-// const { registerLinkResolver } = require('gatsby-source-prismic-graphql');
-// const { linkResolver } = require('./src/utils/prismic-configuration');
-
-// registerLinkResolver(linkResolver);
+// gatsby-browser.js
+require("prismjs/themes/prism-tomorrow.css")
+require("prismjs/plugins/line-numbers/prism-line-numbers.css")

@@ -1,14 +1,23 @@
-@import "../../styles/colors.scss";
+@import "../../styles/lib.scss";
 
-$post-max-width: 655px;
+.PostGoal {
+    &s {
+        margin-top: 3em;
+        margin-bottom: 0em;
+        background: $grey-200;
+        padding-top: 1em;
+        padding-bottom: 1.25em;
+        border-radius: 10px;
+        padding-left: 2em;
+        padding-right: 2em;
+    }
 
-.PostGoals {
-    margin-top: 3em;
-    margin-bottom: 0em;
-    background: $grey-200;
-    padding-top: 0.1em;
-    padding-bottom: 0.1em;
-    border-radius: 10px;
-    padding-left: 2em;
-    padding-right: 2em;
+    margin-bottom: 1em;
+    max-width: 740px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &__title {
+        margin-bottom: 1em !important;
+    }
 }

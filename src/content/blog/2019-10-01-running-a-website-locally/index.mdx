@@ -10,7 +10,15 @@ goals:
   - "Gain familiarity with the Terminal, Node, and Visual Studio Code"
 ---
 
-MDX BABY
+import PostGoals from 'components/Post/PostGoals'
+
+<PostGoals
+    title="Goals"
+    goals={[
+        "⚒ Get to know the terminal, npm, a server, and our text editor",
+        "🙏 Run the local server with our HTML/CSS/JS project"
+    ]}
+/>
 
 In Part 1 of this tutorial, we will collect the tools needed to spin up and edit a website. By the end, you will have a local environment set up and the space needed to start working on a project. 👏
 
@@ -25,22 +33,21 @@ You might be a:
 
 <br/>
 
-This tutorial is broken down into three parts:
+<!-- This tutorial is broken down into three parts:
 - **Part 1**: Setting up our environment and running a project locally in our browser (You are here! 🏁)
 - **Part 2**: Committing our work to Github
-- **Part 3**: Deploying to a public url with Netlify
+- **Part 3**: Deploying to a public url with Netlify -->
 
-<br/>
 
-We will be tackling a pure HTML, CSS, and JavaScript project - not any frontend frameworks like [React](https://reactjs.org/), [Vue](https://vuejs.org/), or [Angular](https://angular.io/). We'll save those for a rainy day.
+We will be tackling a pure HTML, CSS, and vanilla JavaScript project - not any frontend frameworks like [React](https://reactjs.org/), [Vue](https://vuejs.org/), or [Angular](https://angular.io/). We'll save those for a rainy day.
 
 Let's go! 🚀
 
 <br/>
 <br/>
 
-## Tools and files
-### What we will be installing and setting up:
+### Tools and files
+
 - Terminal: iTerm2 (optional)
 - Node and npm
 - Server: Live server
@@ -79,5 +86,21 @@ cd ..
     console.log("bees");
 
 ```js
-const some = {}
+class Chart extends Component {
+  componentDidMount() {
+    // when Chart mounts, do this
+  }
+  componentDidUpdate(prevProps) {
+    if (prevProps.data == props.data) return
+    // when data updates, do this
+  }
+  componentWillUnmount() {
+    // before Chart unmounts, do this
+  }
+  render() {
+    return (
+      <svg className="Chart" />
+    )
+  }
+}
 ```
