@@ -1,11 +1,13 @@
 import React from "react";
 import { graphql } from 'gatsby';
 import { MDXRenderer } from 'gatsby-plugin-mdx';
+import { TwitterShareButton, TwitterIcon } from "react-share";
+import Emoji from "components/_ui/Emoji/Emoji";
 import Img from "gatsby-image";
 import Layout from "components/Layout/Layout";
 import './PostMarkdown.scss';
 
-export default ({ data }) => {
+export default ({ data, path }) => {
     let PostMarkdown = data.mdx
     let featuredImgFluid = PostMarkdown.frontmatter.featuredImage.childImageSharp.fluid
     return (
@@ -14,12 +16,28 @@ export default ({ data }) => {
                 <h1>
                     {PostMarkdown.frontmatter.title}
                 </h1>
-                <h5>
-                    Tweet this
-                </h5>
-                <p>
+                <div className="PostMarkdown__metas">
+                    <div className="Post__date">
+                        {PostMarkdown.frontmatter.date}
+                    </div>
+                    <div className="PostMarkdown__social">
+                        <TwitterShareButton
+                            url={`https://marguerite.io${path}`}
+                            title={PostMarkdown.frontmatter.title}
+                            className="PostMarkdown__social__share-button">
+                            <span>
+                                Tweet me!
+                            </span>
+                            <TwitterIcon
+                                className="PostMarkdown__social__icon"
+                                size={32}
+                                round />
+                        </TwitterShareButton>
+                    </div>
+                </div>
+                <div className="PostMarkdown__intro">
                     {PostMarkdown.frontmatter.intro}
-                </p>
+                </div>
                 <Img
                     className="PostMarkdown__hero"
                     fluid={featuredImgFluid}
@@ -37,7 +55,7 @@ export const query = graphql`
       frontmatter {
         title
         intro
-        date
+        date(formatString: "MMMM D, YYYY")
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 2500) {

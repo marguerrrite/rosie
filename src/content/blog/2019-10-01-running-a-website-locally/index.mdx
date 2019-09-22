@@ -1,7 +1,7 @@
 ---
 slug: running-a-website-locally
 title: "Setting up a local dev environment and running a site"
-date: 2019-10-01T19:22:35.046Z
+date: 2019-10-01
 section: "tutorial"
 intro: "Setting up a local web development environment allows you to play with new tools, languages, and any kind of project you're working on without having to deploy publicly."
 featuredImage: ./part1-hero.png
@@ -11,6 +11,7 @@ goals:
 ---
 
 import PostGoals from 'components/Post/PostGoals'
+import Emoji from 'components/_ui/Emoji/Emoji'
 
 <PostGoals
     title="Goals"
@@ -86,21 +87,44 @@ cd ..
     console.log("bees");
 
 ```js
-class Chart extends Component {
-  componentDidMount() {
-    // when Chart mounts, do this
-  }
-  componentDidUpdate(prevProps) {
-    if (prevProps.data == props.data) return
-    // when data updates, do this
-  }
-  componentWillUnmount() {
-    // before Chart unmounts, do this
-  }
-  render() {
+export default ({ data, path }) => {
+    let PostMarkdown = data.mdx
+    let featuredImgFluid = PostMarkdown.frontmatter.featuredImage.childImageSharp.fluid
     return (
-      <svg className="Chart" />
+        <Layout className="PostMarkdown">
+            <div>
+                <h1>
+                    {PostMarkdown.frontmatter.title}
+                </h1>
+                <div className="PostMarkdown__metas">
+                    <div className="Post__date">
+                        {PostMarkdown.frontmatter.date}
+                    </div>
+                    <div className="PostMarkdown__social">
+                        <TwitterShareButton
+                            url={`https://marguerite.io${path}`}
+                            title={PostMarkdown.frontmatter.title}
+                            className="PostMarkdown__social__share-button">
+                            <span>
+                                Tweet me!
+                            </span>
+                            <TwitterIcon
+                                className="PostMarkdown__social__icon"
+                                size={32}
+                                round />
+                        </TwitterShareButton>
+                    </div>
+                </div>
+                <div className="PostMarkdown__intro">
+                    {PostMarkdown.frontmatter.intro}
+                </div>
+                <Img
+                    className="PostMarkdown__hero"
+                    fluid={featuredImgFluid}
+                />
+                <MDXRenderer>{PostMarkdown.body}</MDXRenderer>
+            </div>
+        </Layout>
     )
-  }
 }
 ```

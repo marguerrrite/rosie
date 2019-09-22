@@ -5,5 +5,5 @@
  */
 
 // gatsby-browser.js
-require("prismjs/themes/prism-tomorrow.css")
-require("prismjs/plugins/line-numbers/prism-line-numbers.css")
+// require("prismjs/themes/prism-tomorrow.css")
+// require("../src/styles/prism-base16-ateliersulphurpool.light.css")
