@@ -10,8 +10,8 @@ Original Base16 color scheme by Chris Kempson (https://github.com/chriskempson/b
 code[class*="language-"],
 pre[class*="language-"] {
   font-family: Consolas, Menlo, Monaco, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
-  font-size: 13px;
-  line-height: 1.4;
+  font-size: 16px;
+  line-height: 1.5;
   direction: ltr;
   text-align: left;
   white-space: pre;
@@ -28,6 +28,7 @@ pre[class*="language-"] {
   color: #5e6687;
   color: #3b3f51;
 }
+
 
 pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
 code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
@@ -50,8 +51,8 @@ pre[class*="language-"] {
 
 /* Inline code */
 :not(pre) > code[class*="language-"] {
-  padding: .1em;
-  border-radius: .3em;
+  padding: 0 .1em;
+  //border-radius: .3em;
 }
 
 .token.comment,
@@ -150,6 +151,8 @@ pre[class*="language-"] {
 pre > code.highlight {
   outline: 0.4em solid #c94922;
   outline-offset: .4em;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 /* overrides color-values for the Line Numbers plugin
