@@ -11,9 +11,40 @@ goals:
 ---
 
 import PostGoals from 'components/Post/PostGoals'
+import PostLinks from 'components/Post/PostLinks'
 import PostNote from 'components/Post/PostNote'
+import PostTOC from 'components/Post/PostTOC'
 import Emoji from 'components/_ui/Emoji/Emoji'
 import Link from 'components/_ui/Link/Link'
+
+<PostTOC>
+    <div className="PostTOC__item">
+        Goals
+    </div>
+    <div className="PostTOC__item">
+        Who this is for
+    </div>
+    <div className="PostTOC__item">
+        Setting up tools and files
+    </div>
+    <div className="PostTOC__item">
+        Walking through HTML, CSS, and JS files
+    </div>
+    <div className="PostTOC__item">
+        Running our local environment
+    </div>
+    <div className="PostTOC__item">
+        Editing the files
+    </div>
+    <div className="PostTOC__item">
+        Now what?
+    </div>
+</PostTOC>
+
+<PostLinks
+    demo="https://sample.marguerite.io/"
+    repo="https://github.com/margueriteroth/our-new-project"
+/>
 
 <PostGoals
     title="Goals"
@@ -362,4 +393,17 @@ In `index.html` we have a basic html structure with our content inside of the `<
 
 ## Now what?
 
-The world is our oyster. Continue editing the index.html and styles.css files to adjust and style the content, or jump into scripts.js to start writing some JavaScript.
+The world is our oyster. Continue editing the project files!
+
+Next steps / Resources
+
+- Style the site
+  - Utilize css [link to css tricks]
+  - Add a css framework if you want an out-of-the-box solution [Bootstrap]
+
+
+
+- Create a digital visualization
+  - Add d3 to our site [link to starter with d3 chart]
+  - D3 fundamentals [wattenberger]
+

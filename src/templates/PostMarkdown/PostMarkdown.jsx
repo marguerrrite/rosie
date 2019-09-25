@@ -42,7 +42,11 @@ export default ({ data, path }) => {
                     className="PostMarkdown__hero"
                     fluid={featuredImgFluid}
                 />
-                <MDXRenderer>{PostMarkdown.body}</MDXRenderer>
+                <div className="PostMarkdown__content">
+                    <MDXRenderer>
+                        {PostMarkdown.body}
+                    </MDXRenderer>
+                </div>
             </div>
         </Layout>
     )

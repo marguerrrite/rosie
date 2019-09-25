@@ -5,8 +5,10 @@ import './PostTOC.scss';
 
 const PostTOC = ({ children, className }) => {
     return (
-        <div className={classNames(className, "PostTOC")}>
-            {children}
+        <div className={classNames(className, "PostTOC__container")}>
+            <div className="PostTOC">
+                {children}
+            </div>
         </div>
     );
 };
