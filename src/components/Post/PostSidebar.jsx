@@ -1,23 +1,16 @@
-import React, { useState, useEffect } from "react"
+import React from 'react';
 import classNames from 'classnames';
-import { useIsInView } from "hooks";
 import Link from "components/_ui/Link/Link";
 import PropTypes from 'prop-types';
-import './PostLinks.scss';
+import './PostSidebar.scss';
 
-const PostLinks = ({ demo, repo, children, className }) => {
-
-    const [ref, isInView] = useIsInView()
-
+const PostSidebar = ({ demo, repo, children, className }) => {
     return (
-        <div ref={ref}
-            className={classNames(className, "PostLinks__container", {
-                "PostLinks__container--isInView": isInView
-            })}>
-            <div className="PostLinks">
+        <div className={classNames(className, "PostSidebar__container")}>
+            <div className="PostSidebar">
                 {demo && (
                     <Link
-                        className="PostLinks__link PostLinks__link__button"
+                        className="PostSidebar__link PostSidebar__link__button"
                         doOpenInNewTab
                         isButton
                         to={demo}>
@@ -26,7 +19,7 @@ const PostLinks = ({ demo, repo, children, className }) => {
                 )}
                 {repo && (
                     <Link
-                        className="PostLinks__link"
+                        className="PostSidebar__link"
                         doOpenInNewTab
                         to={repo}>
                         Github repo
@@ -37,8 +30,8 @@ const PostLinks = ({ demo, repo, children, className }) => {
     );
 };
 
-PostLinks.propTypes = {
+PostSidebar.propTypes = {
 
 };
 
-export default PostLinks;
+export default PostSidebar;

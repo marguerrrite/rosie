@@ -13,6 +13,7 @@ module.exports = {
     `gatsby-plugin-resolve-src`,
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-emotion`,
+    `gatsby-remark-autolink-headers`,
     {
         resolve: `gatsby-plugin-mdx`,
         options: {
@@ -136,6 +137,7 @@ module.exports = {
             ],
         },
     },
+    `gatsby-plugin-lodash`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
