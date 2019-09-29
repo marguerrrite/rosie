@@ -7,9 +7,9 @@ import './PostGoals.scss';
 const PostGoals = ({ children, className, goals, title }) => {
     return (
         <div className={classNames(className, "PostGoals")}>
-            <h3 className="PostGoal__title">
+            <h2 className="PostGoal__title">
                 {title}
-            </h3>
+            </h2>
             {goals.map((goal, i) =>
                 <div className="PostGoal" key={i}>
                     {goal}

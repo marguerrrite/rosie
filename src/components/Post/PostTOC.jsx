@@ -5,6 +5,9 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import './PostTOC.scss';
 
+
+// Adaped from https://github.com/janosh/janosh.io/tree/master/src/components/Toc
+
 const accumulateOffsetTop = (el, totalOffset = 0) => {
     while (el) {
         totalOffset += el.offsetTop - el.scrollTop + el.clientTop
@@ -14,7 +17,7 @@ const accumulateOffsetTop = (el, totalOffset = 0) => {
 }
 
 const PostTOC = ({ headingSelector, getTitle, getDepth, ...rest }) => {
-    const { throttleTime = 200, tocTitle = `Contents` } = rest
+    const { throttleTime = 200 } = rest
     const [headings, setHeadings] = useState({
         titles: [],
         nodes: [],
@@ -33,64 +36,66 @@ const PostTOC = ({ headingSelector, getTitle, getDepth, ...rest }) => {
         // setHeadings which triggers a rerender, it would cause an infinite loop.
 
         const selector =
-            headingSelector || Array.from({ length: 6 }, (_, i) => `main h` + (i + 1))
+            headingSelector || Array.from({ length: 5 }, (_, i) => `main h` + (i + 1))
         const nodes = Array.from(document.querySelectorAll(selector))
         const titles = nodes.map(node => ({
             title: getTitle ? getTitle(node) : node.innerText,
             depth: getDepth ? getDepth(node) : Number(node.nodeName[1]),
         }))
+
         const minDepth = Math.min(...titles.map(h => h.depth))
         setHeadings({ titles, nodes, minDepth })
     }, [headingSelector, getTitle, getDepth])
+
 
     const scrollHandler = throttle(() => {
         const { titles, nodes } = headings
         // Offsets need to be recomputed because lazily-loaded
         // content increases offsets as user scrolls down.
-        const offsets = nodes.map(el => accumulateOffsetTop(el))
+        const offsets = nodes.map(el => (
+            accumulateOffsetTop(el)
+        ))
         const activeIndex = offsets.findIndex(
-            offset => offset > window.scrollY + 0.8 * window.innerHeight
+            offset => offset > window.scrollY + 90
         )
+
         setActive(activeIndex === -1 ? titles.length - 1 : activeIndex - 1)
     }, throttleTime)
     useEventListener(`scroll`, scrollHandler)
 
-    console.log("active: " + active, headings);
     return (
-        <>
+        <div className="PostTOC__container">
             {/* <div className="PostTOC__toggle" opener open={open} onClick={() => setOpen(true)} size="1.6em"></div> */}
-            <div className="PostTOC__toc" ref={ref} open={open}>
-                <div className="PostTOC__title">
-                    <div className="PostTOC__icon"/>
-                    {tocTitle}
-                    {/* <div className="PostTOC__toggle" closer onClick={() => setOpen(false)} /> */}
-                </div>
+            <div className="PostTOC" ref={ref} open={open}>
+                {/* <div className="PostTOC__title">
+                    <div className="PostTOC__toggle" closer onClick={() => setOpen(false)} />
+                </div> */}
                 <nav>
                     {headings.titles.map(({ title, depth }, index) => (
-                        <div className={classNames("PostTOC__link",
-                                (active === index) ? "PostTOC__link--active" : undefined)
-                            }
+                        <div className={classNames(
+                                "PostTOC__link",
+                                `PostTOC__link--h${depth}`,
+                                (active === index) ? "PostTOC__link--active" : undefined,
+                            )}
                             key={title}
-                            active={active === index}
-                            depth={depth - headings.minDepth}
                             onClick={event => {
                                 event.preventDefault()
                                 setOpen(false)
                                 headings.nodes[index].scrollIntoView({
                                     behavior: `smooth`,
-                                    block: `center`,
+                                    block: `start`,
                                 })
                             }}
                         >
                             <div>
-                                {index}
+                                {/* {index} */}
                                 {title}
                             </div>
                         </div>
                     ))}
                 </nav>
             </div>
-        </>
+        </div>
     )
 };
 

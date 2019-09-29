@@ -3,18 +3,35 @@
 
 
 .PostTOC {
+    position: absolute;
+    right: 0;
+    transform: translateX(140%);
+    max-width: 11em;
+    justify-self: end;
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 20px;
+        max-width: $post-max-width;
+        height: 0;
+        position: sticky;
+        top: 2em;
+        background: white;
+    }
+
     &__toggle {
 
     }
 
-    &__toc {
-        height: 60em;
+    // &__toc {
+    //     height: 60em;
 
-        max-height: 80vh;
-        overflow-y: scroll;
-        z-index: 1;
-        line-height: 2.2em;
-    }
+    //     max-height: 80vh;
+    //     overflow-y: scroll;
+    //     z-index: 1;
+    //     line-height: 2.2em;
+    // }
 
     &__title {
         margin: 0;
@@ -31,8 +48,39 @@
     }
 
     &__link {
-        color: $grey-900;
         display: block;
+        font-family: "Circular", sans-serif;
+        letter-spacing: -0.005em;
+        color: $grey-700;
+        font-weight: 500;
+        line-height: 1.45;
+
+        &--active {
+            color: $grey-900;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        margin-bottom: 0.75em;
+        margin-left: 1em;
+
+        &--h {
+            &2 {
+                margin-top: 1.25em;
+                margin-left: 0;
+            }
+        }
+
+        &:first-of-type {
+            display: none;
+        }
+
+
+        // &:first-of-type {
+        //     color: $grey-900;
+        // }
     }
 }
 
