@@ -53,14 +53,17 @@
         letter-spacing: -0.005em;
         color: $grey-700;
         font-weight: 500;
-        line-height: 1.45;
+        line-height: 1.3;
 
         &--active {
             color: $grey-900;
+            //font-weight: 600;
         }
 
         &:hover {
             cursor: pointer;
+            color: $grey-900;
+            //font-weight: 600;
         }
 
         margin-bottom: 0.75em;
