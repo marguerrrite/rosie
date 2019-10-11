@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-        title: `Site & writing for Marguerite Roth`,
-        description: `Marguerite Roth's personal site and blog.`,
+        title: `Marguerite Roth | Designer & Developer`,
+        description: `Personal site for Marguerite Roth`,
         author: `Marguerite Roth | marguerite.io | @marrrguerite`,
   },
   plugins: [
@@ -95,13 +95,13 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/src/content/blog`,
-        name: `blog`,
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     path: `${__dirname}/src/content/blog`,
+    //     name: `blog`,
+    //   },
+    // },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

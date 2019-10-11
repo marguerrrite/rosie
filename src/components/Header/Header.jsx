@@ -16,11 +16,6 @@ const Header = () => (
                     to="/work">
                     Projects
                 </Link>
-                <Link
-                    activeClassName="Link--is-active"
-                    to="/writing">
-                    Writing
-                </Link>
                 {/* <Link to="/">
                     About me
                 </Link> */}
