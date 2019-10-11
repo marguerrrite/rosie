@@ -1,6 +1,6 @@
 import React from "react";
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
-import { Link } from "gatsby";
+import Link from "components/_ui/Link/Link";
 import Logo from "components/_ui/Logo/Logo";
 import "./Header.scss";
 
@@ -12,15 +12,17 @@ const Header = () => (
             </Link>
             <div className="Header__links">
                 <Link
-                    activeClassName="Link--is-active"
+                    className="Header__link"
+                    activeClassName="Header__link--is-active"
                     to="/work">
                     Projects
                 </Link>
-                {/* <Link to="/">
-                    About me
-                </Link> */}
-                <Link to="/">
-                    Contact
+                <Link
+                    className="Header__link Header__link--email"
+                    to="mailto:hello@marguerite.io"
+                    doOpenInNewTab>
+                    Email
+                    <span>&#8594;</span>
                 </Link>
             </div>
         </div>

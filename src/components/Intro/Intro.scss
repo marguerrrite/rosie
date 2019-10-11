@@ -2,14 +2,19 @@
 
 .Intro {
     padding-bottom: 0em;
-    padding-bottom: 5vh;
+    padding-bottom: 6vh;
     min-height: calc(#{100vh} - 170px);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
 
     @media(max-width: 768px) {
-        //text-align: center;
+        min-height: calc(#{100vh} - 170px);
+    }
+
+    @media(max-width: 500px) {
+        min-height: 27em;
+        padding-bottom: 2em;
     }
 
     &__contact {
@@ -40,11 +45,13 @@
 
         @media(max-width: 768px) {
             font-size: 3em;
+            line-height: 1.2;
             transition: font-size 100ms ease-out;
         }
 
         @media(max-width: 500px) {
-            font-size: 2.7em;
+            font-size: 2em;
+            line-height: 1.2;
             transition: font-size 100ms ease-out;
         }
     }
@@ -52,10 +59,13 @@
     &__subheader {
         font-weight: 700;
         color: $grey-600;
-        margin-top: 0em;
-        margin-bottom: 1em;
+        margin: 0;
         animation: fade--up 1s ease-out;
-        //max-width: 900px;
+
+        &::selection {
+            background: $salmon;
+            color: rgba($grey-900, 0.75);
+        }
     }
 
     &__button {

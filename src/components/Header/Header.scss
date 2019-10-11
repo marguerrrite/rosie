@@ -14,54 +14,86 @@
 
     &__logo {
         text-decoration: none;
+
+        &::after {
+            content: none;
+        }
     }
 
-    &__links {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-gap: 7em;
-        grid-gap: 4em;
-        justify-content: flex-end;
-        width: 100%;
+    &__link {
+        &s {
+            display: grid;
+            grid-template-columns: repeat(2, auto);
+            grid-gap: 7em;
+            grid-gap: 4em;
+            justify-content: flex-end;
+            width: 100%;
+        }
 
-        a {
-            color: currentColor;
-            text-decoration: none;
-            border-bottom: 3px solid transparent;
-            font-weight: 600;
-            font-size: 0.95em;
-            height: 100%;
-            padding-bottom: 1.25em;
-            padding-top: 0.25em;
-            display: block;
-            position: relative;
+        color: currentColor;
+        text-decoration: none;
+        border-bottom: 3px solid transparent;
+        font-weight: 600;
+        font-size: 0.95em;
+        height: 100%;
+        padding-bottom: 1.25em;
+        padding-top: 0.25em;
+        display: block;
+        position: relative;
 
+        &:after {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            width: 18px;
+            height: 3px;
+            background: transparent;
+            bottom: -3px;
+            right: 50%;
+            margin-right: -9px;
+            transition: 100ms ease-in-out background;
+        }
+
+        &:hover {
+            color: $grey-700;
+            // &:after {
+            //     background: $grey-400;
+            //     transition: 100ms ease-in-out background;
+            // }
+        }
+
+        &--is-active {
             &:after {
-                position: absolute;
-                content: "";
-                bottom: 0;
-                width: 18px;
-                height: 3px;
-                background: transparent;
-                bottom: -3px;
-                right: 50%;
-                margin-right: -9px;
+                background: $blue-500;
                 transition: 100ms ease-in-out background;
             }
 
             &:hover {
-                &:after {
-                    background: $blue-500;
-                    transition: 100ms ease-in-out background;
-                }
+                color: currentColor;
+            }
+        }
+
+        &--email {
+            span {
+                display: inline-block;
+                transition: transform 300ms ease-in-out;
+                opacity: 0;
             }
 
-            &.Link--is-active {
-                &:after {
-                    background: $blue-500;
-                    transition: 100ms ease-in-out background;
+            &:hover {
+                color: $blue-600;
+
+                span {
+                    opacity: 1;
+                    transform: translateX(6px);
+                    transition: all 400ms ease-in-out;
                 }
             }
         }
+
+        @media(max-width: 767px) {
+            padding-bottom: 0.25em;
+        }
+
     }
 }

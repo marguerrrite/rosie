@@ -1,4 +1,4 @@
-// Emoji component by Amelia Wattenberger | github.com/wattenberger | @wattenberger
+// Link component by Amelia Wattenberger | github.com/wattenberger | @wattenberger
 
 import React, { useMemo } from "react";
 import classNames from 'classnames';

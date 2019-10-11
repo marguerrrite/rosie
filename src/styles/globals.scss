@@ -23,6 +23,10 @@ body {
 
     * {
         box-sizing: border-box;
+
+        &::selection {
+            background: $salmon;
+        }
     }
 }
 
