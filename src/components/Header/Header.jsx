@@ -18,9 +18,10 @@ const Header = () => (
                     Projects
                 </Link>
                 <Link
+                    doOpenInNewTab
                     className="Header__link Header__link--email"
                     to="mailto:hello@marguerite.io"
-                    doOpenInNewTab>
+                    >
                     Email
                     <span>&#8594;</span>
                 </Link>

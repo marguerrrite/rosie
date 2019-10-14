@@ -14,6 +14,12 @@ module.exports = {
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-emotion`,
     `gatsby-remark-autolink-headers`,
+    // {
+    //     resolve: `gatsby-plugin-layout`,
+    //     options: {
+    //         component: require.resolve(`./src/components/Layout/Layout.jsx`),
+    //     },
+    // },
     {
         resolve: `gatsby-plugin-mdx`,
         options: {
