@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
-//import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import Button from "components/_ui/Button/Button";
 import Label from "components/_ui/Label/Label";
 import classNames from 'classnames';
@@ -40,7 +41,7 @@ class Project extends Component {
                     <div className="Project__about">
                         {inspiration && (
                             <div className="Project__inspiration">
-                                <h4 className="Project__inspiration__title">
+                                <h4 clas3sName="Project__inspiration__title">
                                     Inspired by:
                                 </h4>
                                 <a className="Project__inspiration__link"
@@ -70,7 +71,7 @@ class Project extends Component {
 
                         {github && (
                             <p>
-                                <i className="Project__link__icon fab fa-github"></i>
+                                <FontAwesomeIcon className="Project__link__icon" icon={faGithub} />
                                 <a className="Project__inspiration__link"
                                     onClick={() => this.trackEvent(`Project | clicked Github: ${title}`)}
                                     href={github}

@@ -97,7 +97,7 @@
 
     &__link {
         &__icon {
-            margin-right: 4px;
+            margin-right: 0.4em;
         }
     }
 
@@ -112,6 +112,9 @@
 
         &__link {
             display: inline-block;
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 1em;
         }
     }
 

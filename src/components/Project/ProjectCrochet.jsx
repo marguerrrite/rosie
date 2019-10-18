@@ -85,15 +85,6 @@ class ProjectCrochet extends Component {
                         <p>
                             Insight: crocheting a blanket takes a lot of time.
                         </p>
-                        <p>
-                            <i className="Project__link__icon fab fa-github"></i>
-                            <a className="Project__inspiration__link"
-                                onClick={() => this.trackEvent('Project | clicked Github: Crochet')}
-                                href="https://github.com/margueriteroth/flagg/blob/master/src/components/Chart/Chart.js"
-                                rel="noopener noreferrer" target="_blank" >
-                                Github
-                            </a>
-                        </p>
                     </div>
                     <div className="Project__tech__section">
                         <Label className="Project__tech__title" category="primary">

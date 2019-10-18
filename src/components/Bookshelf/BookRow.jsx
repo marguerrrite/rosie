@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import ReactGA from 'react-ga';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSpinner, faClipboardCheck } from '@fortawesome/free-solid-svg-icons'
 import classNames from 'classnames';
 import BookGenreTag from "./BookGenreTag";
 import './BookRow.scss';
@@ -54,9 +56,9 @@ class BookRow extends Component {
                     </div>
                     <div className="BookRow__status">
                         {inProgress ? (
-                            <i className="BookRow__icon BookRow__icon--progress fas fa-spinner"></i>
+                            <FontAwesomeIcon className="BookRow__icon BookRow__icon--progress" icon={faSpinner} />
                         ) : (
-                            <i className="BookRow__icon BookRow__icon--check fas fa-clipboard-check"></i>
+                                <FontAwesomeIcon className="BookRow__icon BookRow__icon--check" icon={faClipboardCheck} />
                         )}
                     </div>
                 </div>

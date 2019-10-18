@@ -35,10 +35,32 @@ const books = [
     //     </div>
     // },
     {
-        title: "1984",
-        author: "George Orwell",
+        title: "In Cold Blood",
+        author: "Truman Capote",
         finished: false,
         inProgress: true,
+        "tags": [
+            "fiction",
+            "true crime",
+        ],
+        isFiction: false,
+        genre: "true crime",
+        goodreadsUrl: "https://www.goodreads.com/book/show/168642.In_Cold_Blood",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1424931136l/168642.jpg",
+        summary: <div>
+            <p>
+                On November 15, 1959, in the small town of Holcomb, Kansas, four members of the Clutter family were savagely murdered by blasts from a shotgun held a few inches from their faces. There was no apparent motive for the crime, and there were almost no clues.
+            </p>
+            <p>
+                As Truman Capote reconstructs the murder and the investigation that led to the capture, trial, and execution of the killers, he generates both mesmerizing suspense and astonishing empathy. At the center of his study are the amoral young killers Perry Smith and Dick Hickcock, who, vividly drawn by Capote, are shown to be reprehensible yet entirely and frighteningly human. <i>In Cold Blood</i> is a seminal work of modern prose, a remarkable synthesis of journalistic skill and powerfully evocative narrative.
+            </p>
+        </div>
+    },
+    {
+        title: "1984",
+        author: "George Orwell",
+        finished: true,
+        inProgress: false,
         "tags": [
             "non-fiction",
             "sci-fi",
@@ -95,40 +117,40 @@ const books = [
             </p>
         </div>
     },
-    {
-        title: "Under the Dome",
-        author: "Stephen King",
-        finished: false,
-        inProgress: true,
-        "tags": [
-            "non-fiction",
-            "horror",
-        ],
-        isFiction: true,
-        genre: "horror",
-        goodreadsUrl: "https://www.goodreads.com/book/show/6320534-under-the-dome",
-        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511289992l/6320534._SY475_.jpg",
-        summary: <div>
-            <p>
-                On an entirely normal, beautiful fall day in Chester’s Mill, Maine, the
-                town is inexplicably and suddenly sealed off from the rest of the world
-                by an invisible force field. Planes crash into it and fall from the sky
-                in flaming wreckage, a gardener’s hand is severed as “the dome” comes
-                down on it, people running errands in the neighboring town are divided
-                from their families, and cars explode on impact. No one can fathom what
-                this barrier is, where it came from, and when—or if—it will go away.
-            </p>
-            <p>
-                Dale Barbara, Iraq vet and now a short-order cook, finds himself teamed
-                with a few intrepid citizens—town newspaper owner Julia Shumway, a
-                physician’s assistant at the hospital, a selectwoman, and three brave
-                kids. Against them stands Big Jim Rennie, a politician who will stop
-                at nothing—even murder—to hold the reins of power, and his son, who
-                is keeping a horrible secret in a dark pantry. But their main adversary
-                is the Dome itself. Because time isn’t just short. It’s running out. Source: stephenking.com
-            </p>
-        </div>
-    },
+    // {
+    //     title: "Under the Dome",
+    //     author: "Stephen King",
+    //     finished: false,
+    //     inProgress: true,
+    //     "tags": [
+    //         "non-fiction",
+    //         "horror",
+    //     ],
+    //     isFiction: true,
+    //     genre: "horror",
+    //     goodreadsUrl: "https://www.goodreads.com/book/show/6320534-under-the-dome",
+    //     coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1511289992l/6320534._SY475_.jpg",
+    //     summary: <div>
+    //         <p>
+    //             On an entirely normal, beautiful fall day in Chester’s Mill, Maine, the
+    //             town is inexplicably and suddenly sealed off from the rest of the world
+    //             by an invisible force field. Planes crash into it and fall from the sky
+    //             in flaming wreckage, a gardener’s hand is severed as “the dome” comes
+    //             down on it, people running errands in the neighboring town are divided
+    //             from their families, and cars explode on impact. No one can fathom what
+    //             this barrier is, where it came from, and when—or if—it will go away.
+    //         </p>
+    //         <p>
+    //             Dale Barbara, Iraq vet and now a short-order cook, finds himself teamed
+    //             with a few intrepid citizens—town newspaper owner Julia Shumway, a
+    //             physician’s assistant at the hospital, a selectwoman, and three brave
+    //             kids. Against them stands Big Jim Rennie, a politician who will stop
+    //             at nothing—even murder—to hold the reins of power, and his son, who
+    //             is keeping a horrible secret in a dark pantry. But their main adversary
+    //             is the Dome itself. Because time isn’t just short. It’s running out. Source: stephenking.com
+    //         </p>
+    //     </div>
+    // },
     {
         title: "The Apology",
         author: "Eve Ensler",
