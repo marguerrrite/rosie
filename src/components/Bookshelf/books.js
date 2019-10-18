@@ -348,7 +348,7 @@ const books = [
         title: "Info We Trust: How to Inspire the World with Data",
         author: "RJ Andrews",
         finished: "",
-        inProgress: true,
+        inProgress: false,
         "tags": [
             "non-fiction",
             "design",

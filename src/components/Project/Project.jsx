@@ -97,7 +97,7 @@ class Project extends Component {
                 <div className={classNames("Project__image__container", {
                     'Project__image__container--has-link': demo
                 })}>
-                    {Object.keys(images).map((key, bees) =>
+                    {Object.keys(images).map((key, i) =>
                         <a className="Project__image__link"
                             onClick={() => this.trackEvent(`Project | clicked demo Image: ${title}`)}
                             href={demo} rel="noopener noreferrer" target="_blank" key={key}>
@@ -116,7 +116,6 @@ class Project extends Component {
                                 </div>
                             )}
                         </a>
-
                     )}
                 </div>
             </div>
