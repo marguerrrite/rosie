@@ -1,19 +1,20 @@
 .Link {
     cursor: pointer;
     color: currentColor;
-    text-decoration: none;
+    //text-decoration: none;
     position: relative;
     display: inline-block;
+    text-decoration: underline;
 
-    &:after {
-        position: absolute;
-        content: "";
-        height: 1px;
-        width: 100%;
-        background: currentColor;
-        left: 0;
-        bottom: 0;
-    }
+    // &:after {
+    //     position: absolute;
+    //     content: "";
+    //     height: 1px;
+    //     width: 100%;
+    //     background: currentColor;
+    //     left: 0;
+    //     bottom: 0;
+    // }
 
     &:visited,
     &:hover {

@@ -3,6 +3,9 @@ module.exports = {
         title: `Marguerite Roth | Designer & Developer`,
         description: `Personal site for Marguerite Roth`,
         author: `Marguerite Roth | marguerite.io | @marrrguerite`,
+        siteUrl: "https://www.marguerite.io",
+        image: `https://www.marguerite.io/og-image.png`,
+        twitterImage: `https://www.marguerite.io/twitter-image.png`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -125,7 +128,7 @@ module.exports = {
     {
         resolve: `gatsby-plugin-google-analytics`,
         options: {
-            trackingId: "",
+            trackingId: "UA-130275221-1",
             head: true,
         },
     },

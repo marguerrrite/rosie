@@ -37,7 +37,7 @@ const projects = {
             member with the ability to filter by their highest ranked skill
             to show the distribution of each around the world.
         </div>,
-        demo: "https://marguerite.io/dvs",
+        demo: "/dvs",
         github: "https://github.com/margueriteroth/flagg/tree/master/src/components/Map",
         "tech": [
             "react",

@@ -5,9 +5,11 @@ import BookshelfContainer from "components/Bookshelf/BookshelfContainer";
 import Project from "components/Project/Project";
 import ProjectCrochet from "components/Project/ProjectCrochet";
 import projects from "components/Project/projects.js";
+import SEO from "components/SEO/SEO";
 
 const Work = () => (
     <Layout className="Layout--work">
+        <SEO title="Projects"/>
         <MaxWidth>
             {/* <h1>
                 Work

@@ -139,6 +139,7 @@
         transition: all 100ms ease-out;
         border-radius: $border-radius--700;
         display: block;
+        margin-bottom: 0;
 
         &--hasBorder {
             border: 16px solid $white;
@@ -147,6 +148,7 @@
         &__container {
             position: relative;
             top: 0;
+            margin-bottom: 2em;
 
             &--has-link {
                 .Project__image {

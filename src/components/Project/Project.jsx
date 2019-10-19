@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import ReactGA from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
-import Button from "components/_ui/Button/Button";
+import Link from "components/_ui/Link/Link";
 import Label from "components/_ui/Label/Label";
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
@@ -23,12 +22,6 @@ class Project extends Component {
         title: PropTypes.string,
     };
 
-    trackEvent = (action) => {
-        ReactGA.event({
-            category: 'User',
-            action: action
-        });
-    }
 
     render() {
         const { demo, description, github, hasImageBorder, images, inspiration, tech, title } = this.props;
@@ -43,7 +36,7 @@ class Project extends Component {
                             <div className="Project__inspiration">
                                 <h4 clas3sName="Project__inspiration__title">
                                     Inspired by:
-                                </h4>
+                            </h4>
                                 <a className="Project__inspiration__link"
                                     href={inspiration.link_src}
                                     rel="noopener noreferrer" target="_blank">
@@ -56,13 +49,12 @@ class Project extends Component {
                         </span>
                         {demo && (
                             <p>
-                                <a href={demo}
-                                    rel="noopener noreferrer" target="_blank"
-                                    onClick={() => this.trackEvent(`Project | clicked demo button: ${title}`)}>
-                                    <Button category="primary" target="_blank">
-                                        Demo
-                                    </Button>
-                                </a>
+                                <Link
+                                    to={demo}
+                                    isButton
+                                >
+                                    Demo
+                                </Link>
                             </p>
                         )}
                         <div>
@@ -72,12 +64,9 @@ class Project extends Component {
                         {github && (
                             <p>
                                 <FontAwesomeIcon className="Project__link__icon" icon={faGithub} />
-                                <a className="Project__inspiration__link"
-                                    onClick={() => this.trackEvent(`Project | clicked Github: ${title}`)}
-                                    href={github}
-                                    rel="noopener noreferrer" target="_blank" >
+                                <Link to={github} className="Project__inspiration__link">
                                     Github
-                                </a>
+                                 </Link>
                             </p>
                         )}
                     </div>
@@ -97,26 +86,33 @@ class Project extends Component {
                 <div className={classNames("Project__image__container", {
                     'Project__image__container--has-link': demo
                 })}>
-                    {Object.keys(images).map((key, i) =>
-                        <a className="Project__image__link"
-                            onClick={() => this.trackEvent(`Project | clicked demo Image: ${title}`)}
-                            href={demo} rel="noopener noreferrer" target="_blank" key={key}>
+
+                    {images.map((image, i) => (
+                        <Link
+                            key={i}
+                            className="Project__image__link"
+                            to={demo}
+                        >
                             <img className={classNames("Project__image", {
-                                "Project__image--hasBorder" : hasImageBorder
+                                "Project__image--hasBorder": hasImageBorder
                             })}
-                                src={require(`./images/${images[key]}.png`)}
+                                src={require(`./images/${image}.png`)}
                                 alt="Project"
                             />
                             {demo && (
                                 <div className="Project__image__action">
-                                    <Button shape="square" size="large" className="Project__image__button"
-                                            category="secondary" target="_blank">
+                                    <Link
+                                        className="Project__image__button"
+                                        to={demo}
+                                        isButton
+                                        buttonProps={{ category: "secondary" }}
+                                    >
                                         Go to demo
-                                    </Button>
+                                    </Link>
                                 </div>
                             )}
-                        </a>
-                    )}
+                        </Link>
+                    ))}
                 </div>
             </div>
         );
