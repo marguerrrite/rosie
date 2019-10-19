@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
+import Button from "components/_ui/Button/Button";
 import Link from "components/_ui/Link/Link";
 import Label from "components/_ui/Label/Label";
 import classNames from 'classnames';
@@ -101,14 +102,12 @@ class Project extends Component {
                             />
                             {demo && (
                                 <div className="Project__image__action">
-                                    <Link
+                                    <Button
                                         className="Project__image__button"
-                                        to={demo}
-                                        isButton
-                                        buttonProps={{ category: "secondary" }}
-                                    >
-                                        Go to demo
-                                    </Link>
+                                        category="secondary"
+                                >
+                                    Go to demo
+                                    </Button>
                                 </div>
                             )}
                         </Link>

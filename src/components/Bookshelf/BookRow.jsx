@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactGA from 'react-ga';
+import Link from "components/_ui/Link/Link";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner, faClipboardCheck } from '@fortawesome/free-solid-svg-icons'
 import classNames from 'classnames';
@@ -13,19 +13,11 @@ class BookRow extends Component {
     }
 
     openBook = () => {
-        this.trackEvent('Book Toggle | clicked "' + this.props.title + '"');
         this.setState(prevState => ({
             bookIsClicked: !prevState.bookIsClicked
         }));
-
     }
 
-    trackEvent = (action) => {
-        ReactGA.event({
-            category: 'User',
-            action: action
-        });
-    }
 
     render() {
         const { audiobook, author, categories, coverImg, genresList, goodreadsUrl, genre, inProgress, summary, title } = this.props;
@@ -58,7 +50,7 @@ class BookRow extends Component {
                         {inProgress ? (
                             <FontAwesomeIcon className="BookRow__icon BookRow__icon--progress" icon={faSpinner} />
                         ) : (
-                                <FontAwesomeIcon className="BookRow__icon BookRow__icon--check" icon={faClipboardCheck} />
+                            <FontAwesomeIcon className="BookRow__icon BookRow__icon--check" icon={faClipboardCheck} />
                         )}
                     </div>
                 </div>
@@ -70,12 +62,12 @@ class BookRow extends Component {
                             <div>
                                 {summary}
                             </div>
-                            <a className="BookRowSummary__link"
-                                onClick={() => this.trackEvent(`Book | clicked on Goodreads url: ${title}`)}
-                                href={goodreadsUrl}
-                                rel="noopener noreferrer" target="_blank" >
+                            <Link
+                                className="BookRowSummary__link"
+                                to={goodreadsUrl}
+                            >
                                 Summary and image: Goodreads.com
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
