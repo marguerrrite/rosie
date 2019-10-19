@@ -21,7 +21,7 @@ function SEO({ description, lang, meta, title, image, twitterImage }) {
         `
     )
 
-    //const metaTitle = title || site.siteMetadata.title;
+    const metaTitle = title || site.siteMetadata.title;
     const metaDescription = description || site.siteMetadata.description;
     const metaImage = image || site.siteMetadata.image;
     const metaTwitterImage = twitterImage || site.siteMetadata.twitterImage;
@@ -31,8 +31,8 @@ function SEO({ description, lang, meta, title, image, twitterImage }) {
             htmlAttributes={{
                 lang,
             }}
-            title={title}
-            titleTemplate={`%s | ${site.siteMetadata.title}`}
+            title={metaTitle}
+            titleTemplate={title ? `%s | ${site.siteMetadata.title}`: null}
             meta={[
                 {
                     property: `og:url`,
@@ -110,7 +110,7 @@ SEO.propTypes = {
     description: PropTypes.string,
     lang: PropTypes.string,
     meta: PropTypes.arrayOf(PropTypes.object),
-    title: PropTypes.string.isRequired,
+    title: PropTypes.string,
     image: PropTypes.string,
 }
 
