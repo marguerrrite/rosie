@@ -1,0 +1,15 @@
+.NotFound {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+    @media(min-width: 600px) {
+        min-height: 22em;
+    }
+
+    &__header {
+        margin-bottom: 0.5em;
+        margin-top: 0.5em;
+    }
+}
