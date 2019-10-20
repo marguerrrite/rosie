@@ -9,7 +9,7 @@ import 'styles/globals.scss';
 const Layout = ({ className, children, showNavigation, showFooter }) => (
     <StaticQuery
         query={graphql`
-            query SiteTitleQuery {
+            query SITE_TITLE_QUERY {
                 site {
                     siteMetadata {
                         title

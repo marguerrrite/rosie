@@ -1,89 +1,89 @@
-import React, { Component } from 'react';
-import ReactGA from 'react-ga';
+import React from 'react';
+import PropTypes from 'prop-types';
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
-import Button from "components/_ui/Button/Button";
+import Link from "components/_ui/Link/Link";
 import Label from "components/_ui/Label/Label";
 import SpinningPets from "components/SpinningPets/SpinningPets";
 import './Footer.scss';
-class Footer extends Component {
-    trackEvent = (action) => {
-        ReactGA.event({
-            category: 'User',
-            action: action
-        });
-    }
 
-    render() {
-        return (
-            <MaxWidth size="l" className="Footer__container">
-                <MaxWidth size="m" className="Footer">
-                    <div className="Footer__section Footer__section__links">
-                        <Label className="Footer__label">
-                            <a className="Footer__link"
-                                onClick={() => this.trackEvent('Footer | clicked Github')}
-                                href="http://www.github.com/margueriteroth"
-                                rel="noopener noreferrer" target="_blank">
-                                Github
-                            </a>
-                        </Label>
-                        <Label className="Footer__label">
-                            <a className="Footer__link"
-                                onClick={() => this.trackEvent('Footer | clicked Dribbble')}
-                                href="http://www.dribbble.com/marrrguerite"
-                                rel="noopener noreferrer" target="_blank">
-                                Dribbble
-                            </a>
-                        </Label>
-                        <Label className="Footer__label">
-                            <a className="Footer__link"
-                                onClick={() => this.trackEvent('Footer | clicked Giphy')}
-                                href="https://giphy.com/channel/marrrguerite"
-                                rel="noopener noreferrer" target="_blank">
-                                Giphy
-                            </a>
-                        </Label>
-                        <Label className="Footer__label">
-                            <a className="Footer__link"
-                                onClick={() => this.trackEvent('Footer | clicked Codepen')}
-                                href="http://codepen.io/marguerite"
-                                rel="noopener noreferrer" target="_blank">
-                                Codepen
-                            </a>
-                        </Label>
-                        <Label className="Footer__label">
-                            <a className="Footer__link"
-                                onClick={() => this.trackEvent('Footer | clicked Instagram')}
-                                href="https://www.instagram.com/marguer.ite"
-                                rel="noopener noreferrer" target="_blank">
-                                Instagram
-                            </a>
-                        </Label>
-                    </div>
-                    <div className="Footer__section Footer__section__contact">
-                        <a href="mailto:hello@marguerite.io"
-                           onClick={() => this.trackEvent('Footer | clicked Contact')}
-                           rel="noopener noreferrer" target="_blank">
-                            <Button category="secondary--white">
-                                Contact
-                            </Button>
-                        </a>
-                    </div>
-                </MaxWidth>
-                <div className="Footer__pets">
-                    <SpinningPets />
+
+const Footer = props => {
+    return (
+        <MaxWidth size="l" className="Footer__container">
+            <MaxWidth size="xl" className="Footer">
+                <div className="Footer__section Footer__section__links">
+                    <Label className="Footer__label">
+                        <Link className="Footer__link"
+                            doOpenInNewTab
+                            to="http://www.github.com/margueriteroth">
+                            Github
+                        </Link>
+                    </Label>
+                    <Label className="Footer__label">
+                        <Link className="Footer__link"
+                            doOpenInNewTab
+                            href="http://www.dribbble.com/marrrguerite">
+                            Dribbble
+                        </Link>
+                    </Label>
+                    <Label className="Footer__label">
+                        <Link className="Footer__link"
+                            doOpenInNewTab
+                            href="https://giphy.com/channel/marrrguerite">
+                            Giphy
+                        </Link>
+                    </Label>
+                    <Label className="Footer__label">
+                        <Link className="Footer__link"
+                            doOpenInNewTab
+                            href="http://codepen.io/marguerite">
+                            Codepen
+                        </Link>
+                    </Label>
+                    <Label className="Footer__label">
+                        <Link className="Footer__link"
+                            doOpenInNewTab
+                            href="https://www.instagram.com/marguer.ite">
+                            Instagram
+                        </Link>
+                    </Label>
+                    <Label className="Footer__label">
+                        <Link className="Footer__link"
+                            doOpenInNewTab
+                            href="https://www.twitter.com/marrrguerite">
+                            Twitter
+                        </Link>
+                    </Label>
                 </div>
-                <div className="Footer__copyright__container">
-                    <span className="Footer__copyright">
-                        &copy; 2019 — </span>
-                    <a className="Footer__copyright__link" href="https://github.com/margueriteroth/flagg"
-                       onClick={() => this.trackEvent('Footer | clicked Copyright Github link')}
-                       rel="noopener noreferrer" target="_blank">
-                        Designed and developed by Marguerite Roth
-                    </a>
+                <div className="Footer__section Footer__section__contact">
+                    <Link
+                        href="mailto:hello@marguerite.io"
+                        isButton
+                        buttonProps={{ category: "secondary--white" }}
+                    >
+                        Contact
+                    </Link>
                 </div>
             </MaxWidth>
-        );
-    }
-}
+            <div className="Footer__pets">
+                <SpinningPets />
+            </div>
+            <div className="Footer__copyright__container">
+                <span className="Footer__copyright">
+                    &copy; 2019 — </span>
+                <Link
+                    className="Footer__copyright__link"
+                    href="https://github.com/margueriteroth"
+                >
+                    Designed and developed by Marguerite Roth
+                </Link>
+            </div>
+        </MaxWidth>
+    );
+};
+
+Footer.propTypes = {
+
+};
 
 export default Footer;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Link from "components/_ui/Link/Link";
+import ReactGA from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSpinner, faClipboardCheck } from '@fortawesome/free-solid-svg-icons'
 import classNames from 'classnames';
@@ -13,11 +14,18 @@ class BookRow extends Component {
     }
 
     openBook = () => {
+        this.trackEvent('Book Toggle | clicked "' + this.props.title + '"');
         this.setState(prevState => ({
             bookIsClicked: !prevState.bookIsClicked
         }));
     }
 
+    trackEvent = (action) => {
+        ReactGA.event({
+            category: 'User',
+            action: action
+        });
+    }
 
     render() {
         const { audiobook, author, categories, coverImg, genresList, goodreadsUrl, genre, inProgress, summary, title } = this.props;
