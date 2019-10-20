@@ -44,7 +44,7 @@ function SEO({ description, lang, meta, title, image, twitterImage }) {
                 },
                 {
                     property: `og:title`,
-                    content: title,
+                    content: metaTitle,
                 },
                 {
                     name: `description`,
@@ -88,7 +88,7 @@ function SEO({ description, lang, meta, title, image, twitterImage }) {
                 },
                 {
                     name: `twitter:title`,
-                    content: title,
+                    content: metaTitle,
                 },
                 {
                     name: `twitter:description`,
