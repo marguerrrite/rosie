@@ -1,11 +1,16 @@
-import React from 'react';
+import React from "react"
+import classNames from 'classnames';
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
+
 import "./Intro.scss";
 
 const Intro = () => {
     return (
-        <MaxWidth size="s" className="Intro">
-            <h2>
+        <MaxWidth
+            size="s"
+            className="Intro"
+        >
+            <h2 className="Intro__greeting">
                 Hello! 🌭
             </h2>
             <h1 className="Intro__header">
