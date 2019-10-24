@@ -1,5 +1,6 @@
 import React from "react"
 import classNames from 'classnames';
+import Link from "components/_ui/Link/Link";
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
 
 import "./Intro.scss";
@@ -20,10 +21,19 @@ const Intro = () => {
             </h1>
             <h3 className="Intro__subheader">
                 I'm a frontend designer and developer
-                specializing in building exceptional,
-                high-quality analytics products. I also
-                mess around with data visualizations :)
+                specializing in building
+                high-quality analytics products. I also enjoy
+                messing around with data visualizations. 😊
             </h3>
+            <Link
+                doOpenInNewTab
+                isButton
+                className="Intro__button"
+                buttonProps={{size: "xl", color: "white-blue-stroke"}}
+                to="mailto:hello@marguerite.io"
+            >
+                Get in touch
+            </Link>
         </MaxWidth>
     );
 };

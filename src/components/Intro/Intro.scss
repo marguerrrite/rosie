@@ -4,9 +4,6 @@
     margin-top: 16vh;
     padding-bottom: 0em;
     padding-bottom: 6vh;
-    //min-height: calc(#{100vh} - 170px);
-    display: flex;
-    flex-direction: column;
     color: $blue-900;
 
     @media(max-width: 768px) {
@@ -20,7 +17,7 @@
 
     &__greeting {
         opacity: 0;
-        animation: fadeUpMedium 800ms ease-in-out;
+        animation: fadeUpMedium 1000ms ease-in-out;
         animation-fill-mode: forwards;
     }
 
@@ -59,6 +56,7 @@
         font-weight: 400;
         font-family: "Inter", sans-serif;
         margin: 0;
+        margin-bottom: 2em;
         animation: fade--up 1s ease-out;
         max-width: 810px;
         line-height: 1.8;
@@ -68,30 +66,20 @@
         animation-delay: 250ms;
     }
 
-    &__contact {
-        display: flex;
-        width: 100%;
-        margin-top: 2em;
-
-        .Button {
-            margin-right: 1em;
-        }
-
-        @media(max-width: 768px) {
-            justify-content: center;
-        }
-    }
-
     &__button {
-        animation: fade--up 1s ease-out;
-    }
+        opacity: 0;
+        animation: fadeUpSmall 1000ms ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 400ms;
+        display: inline-block;
+        position: relative;
 
-    &--animate {
-        .Intro {
-            &__avatar {
-                animation: avatar--fade--shrink;
-                opacity: 0;
-            }
+        &__arrow {
+            position: absolute;
+        }
+
+        &:hover {
+            transform: translateY(10px);
         }
     }
 }

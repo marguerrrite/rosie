@@ -18,14 +18,14 @@ const Header = () => (
                         activeClassName="Header__link--is-active"
                         to="/work">
                         Projects
-                </Link>
+                    </Link>
                     <Link
                         doOpenInNewTab
                         className="Header__link Header__link--email"
                         to="mailto:hello@marguerite.io"
                     >
                         Email
-                    <span>&#8594;</span>
+                        <span>&#8594;</span>
                     </Link>
                 </div>
             </div>
