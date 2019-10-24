@@ -3,10 +3,11 @@ import PropTypes from "prop-types";
 import classNames from 'classnames';
 import { StaticQuery, graphql } from "gatsby";
 import Footer from "components/Footer/Footer";
+import SocialCol from "components/SocialCol/SocialCol";
 import Header from "components/Header/Header";
 import 'styles/globals.scss';
 
-const Layout = ({ className, children, showNavigation, showFooter }) => (
+const Layout = ({ className, children, showNavigation, showSocialCol, showFooter }) => (
     <StaticQuery
         query={graphql`
             query SITE_TITLE_QUERY {
@@ -22,6 +23,9 @@ const Layout = ({ className, children, showNavigation, showFooter }) => (
                 <div className="Layout">
                     {showNavigation && (
                         <Header />
+                    )}
+                    {showSocialCol && (
+                        <SocialCol />
                     )}
                     <main className={classNames("Layout__content", className)}>
                         {children}
@@ -39,11 +43,13 @@ Layout.propTypes = {
     children: PropTypes.node.isRequired,
     showNavigation: PropTypes.bool,
     showFooter: PropTypes.bool,
+    showSocialCol: PropTypes.bool,
 }
 
 Layout.defaultProps = {
     showNavigation: true,
     showFooter: true,
+    showSocialCol: true,
 }
 
 export default Layout;
