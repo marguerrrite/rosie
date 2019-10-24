@@ -3,6 +3,8 @@
 .Header {
     //Shrink height for react-headroom scrub peep
     &__headroom {
+        z-index: 300;
+
         .headroom--scrolled {
             background: white;
             box-shadow: 0 4px 20px 0 rgba(#000000, 0.1);
