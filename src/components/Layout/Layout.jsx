@@ -26,9 +26,9 @@ const Layout = ({ className, children, showNavigation, showFooter }) => (
                     <main className={classNames("Layout__content", className)}>
                         {children}
                     </main>
-                    {showFooter && (
+                    {/* {showFooter && (
                         <Footer />
-                    )}
+                    )} */}
                 </div>
             </div>
         )}
