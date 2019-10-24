@@ -6,7 +6,7 @@ import "./Terminal.scss";
 
 const Terminal = ({children, className, size}) => {
     return (
-        <MaxWidth size="s" className={classNames(className, "Terminal")}>
+        <MaxWidth size="xs" className={classNames(className, "Terminal")}>
             <span className="Terminal__root">
                 marguerites-mbp:~ marge$
             </span>

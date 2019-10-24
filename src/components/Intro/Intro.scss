@@ -1,12 +1,13 @@
 @import "../../styles/lib.scss";
 
 .Intro {
+    margin-top: 16vh;
     padding-bottom: 0em;
     padding-bottom: 6vh;
-    min-height: calc(#{100vh} - 170px);
+    //min-height: calc(#{100vh} - 170px);
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    color: $blue-900;
 
     @media(max-width: 768px) {
         min-height: calc(#{100vh} - 170px);
@@ -32,11 +33,13 @@
     }
 
     &__header {
-        font-size: 4.5em;
-        font-weight: 800;
+        font-size: 4.7em;
+        font-weight: 900;
         line-height: 1.1;
         max-width: 100%;
         transition: font-size 100ms ease-out;
+        margin-top: 1rem;
+        margin-bottom: 2.75rem;
 
         @media(max-width: 960px) {
             font-size: 3.75em;
@@ -57,10 +60,12 @@
     }
 
     &__subheader {
-        font-weight: 700;
-        color: $grey-600;
+        font-weight: 400;
+        font-family: "Inter", sans-serif;
         margin: 0;
         animation: fade--up 1s ease-out;
+        max-width: 810px;
+        line-height: 1.8;
 
         &::selection {
             background: $salmon;
