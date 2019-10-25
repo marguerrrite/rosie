@@ -12,7 +12,7 @@ const Home = () => (
     <Layout>
         <SEO />
         <Intro />
-        <MaxWidth className="Home__projects">
+        <MaxWidth id="work" className="Home__projects">
             <h1>
                 Work
             </h1>

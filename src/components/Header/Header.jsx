@@ -24,7 +24,7 @@ const Header = () => (
                         className="Header__link Header__link--email"
                         to="mailto:hello@marguerite.io"
                     >
-                        Email
+                        Contact
                         <span>&#8594;</span>
                     </Link>
                 </div>
