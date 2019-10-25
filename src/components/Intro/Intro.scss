@@ -1,10 +1,11 @@
 @import "../../styles/lib.scss";
 
 .Intro {
-    margin-top: 16vh;
-    padding-bottom: 0em;
-    padding-bottom: 6vh;
+    height: calc(#{100vh} - 200px);
     color: $blue-900;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @media(min-width: 601px) {
         padding-left: 9em;
@@ -30,9 +31,6 @@
     }
 
     &__header {
-        font-size: 4.7em;
-        font-weight: 900;
-        line-height: 1.1;
         max-width: 100%;
         transition: font-size 100ms ease-out;
         margin-top: 1rem;
@@ -41,23 +39,6 @@
         animation: fadeUpSmall 800ms ease-in-out;
         animation-fill-mode: forwards;
         animation-delay: 100ms;
-
-        @media(max-width: 960px) {
-            font-size: 3.75em;
-            transition: font-size 100ms ease-out;
-        }
-
-        @media(max-width: 768px) {
-            font-size: 3em;
-            line-height: 1.2;
-            transition: font-size 100ms ease-out;
-        }
-
-        @media(max-width: 500px) {
-            font-size: 2em;
-            line-height: 1.2;
-            transition: font-size 200ms ease-out;
-        }
     }
 
     &__subheader {
