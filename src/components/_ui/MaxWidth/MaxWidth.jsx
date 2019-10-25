@@ -3,9 +3,11 @@ import classNames from 'classnames';
 import PropTypes from 'prop-types';
 import "./MaxWidth.scss";
 
-const MaxWidth = ({children, className, size}) => {
+const MaxWidth = ({children, id, className, size}) => {
     return (
-        <div className={classNames(className, `MaxWidth MaxWidth--size-${size}`)}>
+        <div
+            id={id}
+            className={classNames(className, `MaxWidth MaxWidth--size-${size}`)}>
             {children}
         </div>
     );

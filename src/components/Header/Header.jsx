@@ -2,6 +2,7 @@ import React from "react";
 import Headroom from "react-headroom";
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
 import Link from "components/_ui/Link/Link";
+
 import Logo from "components/_ui/Logo/Logo";
 import "./Header.scss";
 
@@ -13,12 +14,12 @@ const Header = () => (
                     <Logo />
                 </Link>
                 <div className="Header__links">
-                    {/* <Link
+                    <Link
                         className="Header__link"
-                        activeClassName="Header__link--is-active"
-                        to="/work">
-                        Projects
-                    </Link> */}
+                        to={'/#work'}
+                    >
+                    Work
+                    </Link>
                     <Link
                         doOpenInNewTab
                         className="Header__link Header__link--email"
