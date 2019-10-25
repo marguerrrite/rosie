@@ -1,17 +1,39 @@
-import React from 'react';
+import React from "react"
+import classNames from 'classnames';
+import Link from "components/_ui/Link/Link";
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
+
 import "./Intro.scss";
 
 const Intro = () => {
     return (
-        <MaxWidth className="Intro">
-            <h1 className="Intro__header">
-                Hello! I’m Marguerite, a designer and developer specializing
-                in product design and user experience.
-                </h1>
-            <h2 className="Intro__subheader">
-                I also enjoy messing around with data visualizations. [wip 😊]
+        <MaxWidth
+            size="s"
+            className="Intro"
+        >
+            <h2 className="Intro__greeting">
+                Hello! 🌭
             </h2>
+            <h1 className="Intro__header">
+                I’m Marguerite Roth.
+                <br/>
+                I create things for the web.
+            </h1>
+            <h3 className="Intro__subheader">
+                I'm a frontend designer and developer
+                specializing in building analytics products.
+                I also
+                mess around with data visualizations. 😊
+            </h3>
+            <Link
+                doOpenInNewTab
+                isButton
+                className="Intro__button"
+                buttonProps={{size: "xl", color: "white-blue-stroke"}}
+                to="mailto:hello@marguerite.io"
+            >
+                Get in touch
+            </Link>
         </MaxWidth>
     );
 };

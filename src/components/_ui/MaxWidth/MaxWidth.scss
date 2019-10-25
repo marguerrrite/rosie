@@ -3,7 +3,7 @@
 .MaxWidth {
     &--size {
         //MaxWidth 740px
-        &-s {
+        &-xs {
             max-width: $post-max-width;
             margin: 0 auto;
             width: 100%;
@@ -16,13 +16,35 @@
             }
         }
 
-        //MaxWidth 1400px
-        &-m {
-            max-width: 1400px;
+
+        &-s {
+            max-width: 1150px;
             margin: 0 auto;
             width: 100%;
             padding-left: 4em;
             padding-right: 4em;
+
+            @media(max-width: 600px) {
+                padding-left: 1.25em;
+                padding-right: 1.25em;
+            }
+        }
+
+        //MaxWidth 1340px
+        &-m {
+            max-width: 1300px;
+            margin: 0 auto;
+            width: 100%;
+            padding-left: 4em;
+            padding-right: 4em;
+
+            @media(max-width: 1400px) {
+                padding-left: 8em;
+            }
+
+            @media(max-width: 900px) {
+                padding-left: 9em;
+            }
 
             @media(max-width: 600px) {
                 padding-left: 1.25em;

@@ -1,0 +1,53 @@
+@import "../../styles/lib.scss";
+
+.SocialCol {
+    position: fixed;
+    bottom: 0;
+    left: $padding-horizontal;
+
+    @media(max-width: 600px) {
+        display: none;
+    }
+
+    &:before {
+        content: "";
+        height: 4em;
+        width: 3px;
+        background: $blue-500;
+        position: absolute;
+        bottom: 0;
+        transform: translateX(9px);
+    }
+
+    &__icon {
+        margin-bottom: 1.5em;
+        opacity: 0;
+        animation: fadeUpSmall 800ms ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 800ms;
+        transition: 100ms all ease-in-out;
+        padding: 0.25em;
+
+        svg {
+            transition: 200ms all ease-in-out;
+        }
+
+        &:hover {
+            color: $blue-500;
+            transition: 100ms all ease-in-out;
+
+            svg {
+                transform: translateY(-3px);
+                transition: 200ms all ease-in-out;
+            }
+        }
+
+        &s {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            margin-bottom: 4em;
+        }
+    }
+}

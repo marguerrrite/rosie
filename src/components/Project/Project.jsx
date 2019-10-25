@@ -32,7 +32,7 @@ const Project = ({ demo, description, github, hasImageBorder, images, inspiratio
                                 <div className="Project__inspiration">
                                     <h4 clas3sName="Project__inspiration__title">
                                         Inspired by:
-                            </h4>
+                                    </h4>
                                     <a className="Project__inspiration__link"
                                         href={inspiration.link_src}
                                         rel="noopener noreferrer" target="_blank">

@@ -1,15 +1,21 @@
 @import "../../styles/lib.scss";
 
 .Intro {
+    margin-top: 16vh;
     padding-bottom: 0em;
     padding-bottom: 6vh;
-    min-height: calc(#{100vh} - 170px);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+    color: $blue-900;
+
+    @media(min-width: 601px) {
+        padding-left: 9em;
+    }
 
     @media(max-width: 768px) {
         min-height: calc(#{100vh} - 170px);
+    }
+
+    @media(min-width: 769px) {
+        padding-left: 8em;
     }
 
     @media(max-width: 500px) {
@@ -17,26 +23,24 @@
         padding-bottom: 2em;
     }
 
-    &__contact {
-        display: flex;
-        width: 100%;
-        margin-top: 2em;
-
-        .Button {
-            margin-right: 1em;
-        }
-
-        @media(max-width: 768px) {
-            justify-content: center;
-        }
+    &__greeting {
+        opacity: 0;
+        animation: fadeUpMedium 1000ms ease-in-out;
+        animation-fill-mode: forwards;
     }
 
     &__header {
-        font-size: 4.5em;
-        font-weight: 800;
+        font-size: 4.7em;
+        font-weight: 900;
         line-height: 1.1;
         max-width: 100%;
         transition: font-size 100ms ease-out;
+        margin-top: 1rem;
+        margin-bottom: 2.75rem;
+        opacity: 0;
+        animation: fadeUpSmall 800ms ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 100ms;
 
         @media(max-width: 960px) {
             font-size: 3.75em;
@@ -52,32 +56,38 @@
         @media(max-width: 500px) {
             font-size: 2em;
             line-height: 1.2;
-            transition: font-size 100ms ease-out;
+            transition: font-size 200ms ease-out;
         }
     }
 
     &__subheader {
-        font-weight: 700;
-        color: $grey-600;
+        font-weight: 400;
+        font-family: "Inter", sans-serif;
         margin: 0;
+        margin-bottom: 2em;
         animation: fade--up 1s ease-out;
-
-        &::selection {
-            background: $salmon;
-            color: rgba($grey-900, 0.75);
-        }
+        max-width: 810px;
+        line-height: 1.8;
+        opacity: 0;
+        animation: fadeUpSmall 800ms ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 250ms;
     }
 
     &__button {
-        animation: fade--up 1s ease-out;
-    }
+        opacity: 0;
+        animation: fadeUpSmall 800ms ease-in-out;
+        animation-fill-mode: forwards;
+        animation-delay: 250ms;
+        display: inline-block;
+        position: relative;
 
-    &--animate {
-        .Intro {
-            &__avatar {
-                animation: avatar--fade--shrink;
-                opacity: 0;
-            }
+        &__arrow {
+            position: absolute;
+        }
+
+        &:hover {
+            transform: translateY(10px);
         }
     }
 }
