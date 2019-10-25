@@ -6,8 +6,16 @@
     padding-bottom: 6vh;
     color: $blue-900;
 
+    @media(min-width: 601px) {
+        padding-left: 9em;
+    }
+
     @media(max-width: 768px) {
         min-height: calc(#{100vh} - 170px);
+    }
+
+    @media(min-width: 769px) {
+        padding-left: 8em;
     }
 
     @media(max-width: 500px) {

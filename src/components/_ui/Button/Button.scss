@@ -8,6 +8,7 @@
 
     &:hover {
         cursor: pointer;
+        transition: all 150ms ease-out;
     }
 
 
@@ -37,6 +38,15 @@
     }
 
     &--color {
+        &-blue {
+            background: $blue-500;
+            color: white;
+
+            &:hover {
+                background: $blue-600;
+            }
+        }
+
         &-white-blue-stroke {
             color: $blue-500;
             background: white;
@@ -93,6 +103,7 @@
 
         &:hover {
             box-shadow: $box-shadow__button--grey;
+            background: $blue-100;
             cursor: pointer;
         }
 

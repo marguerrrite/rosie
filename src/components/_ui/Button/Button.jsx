@@ -14,6 +14,7 @@ class Button extends Component {
         category: 'primary',
         size: 's',
         shape: 'square',
+        color: 'blue',
     };
 
     getClassName() {

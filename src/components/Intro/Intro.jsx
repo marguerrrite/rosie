@@ -21,9 +21,9 @@ const Intro = () => {
             </h1>
             <h3 className="Intro__subheader">
                 I'm a frontend designer and developer
-                specializing in building
-                high-quality analytics products. I also enjoy
-                messing around with data visualizations. 😊
+                specializing in building analytics products.
+                I also
+                mess around with data visualizations. 😊
             </h3>
             <Link
                 doOpenInNewTab

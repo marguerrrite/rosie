@@ -18,7 +18,7 @@
 
 
         &-s {
-            max-width: 1115px;
+            max-width: 1150px;
             margin: 0 auto;
             width: 100%;
             padding-left: 4em;
@@ -30,13 +30,25 @@
             }
         }
 
-        //MaxWidth 1400px
+        //MaxWidth 1340px
         &-m {
-            max-width: 1400px;
+            max-width: 1300px;
             margin: 0 auto;
             width: 100%;
             padding-left: 4em;
             padding-right: 4em;
+
+            @media(max-width: 1340px) {
+                padding-left: 8em;
+            }
+
+            @media(max-width: 1100px) {
+                padding-left: 9em;
+            }
+
+            @media(max-width: 900px) {
+                padding-left: 9em;
+            }
 
             @media(max-width: 600px) {
                 padding-left: 1.25em;

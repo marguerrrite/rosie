@@ -17,14 +17,15 @@
     }
 
     &__container {
-        padding-top: 2em;
-        padding-bottom: 2em;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
         //margin-bottom: 10em;
     }
 
     &__content {
         display: flex;
         justify-content: space-between;
+        align-items: center;
     }
 
     &__logo {
@@ -38,7 +39,7 @@
     &__link {
         &s {
             display: grid;
-            grid-template-columns: repeat(2, auto);
+            grid-template-columns: repeat(1, auto);
             grid-gap: 7em;
             grid-gap: 4em;
             justify-content: flex-end;
@@ -50,9 +51,10 @@
         border-bottom: 3px solid transparent;
         font-weight: 600;
         font-size: 0.95em;
-        height: 100%;
-        padding-bottom: 1.25em;
+        //height: 100%;
+        //padding-bottom: 1.25em;
         padding-top: 0.25em;
+        padding-bottom: 0.25em;
         display: block;
         position: relative;
 

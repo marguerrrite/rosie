@@ -5,6 +5,10 @@
     bottom: 0;
     left: $padding-horizontal;
 
+    @media(max-width: 600px) {
+        display: none;
+    }
+
     &:before {
         content: "";
         height: 4em;
