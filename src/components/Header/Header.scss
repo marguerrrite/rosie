@@ -10,8 +10,16 @@
             box-shadow: 0 4px 20px 0 rgba(#000000, 0.1);
 
             .Header__container {
-                padding-top: 1em;
-                padding-bottom: 1em;
+                padding-top: 0.5em;
+                padding-bottom: 0.5em;
+            }
+
+            .Header__logo {
+                .Logo {
+                    width: 55px;
+                    height: 44px;
+                    transition: all 100ms ease-out;
+                }
             }
         }
     }

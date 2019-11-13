@@ -1,0 +1,104 @@
+---
+slug: "data-retention"
+title: "Data Retention Upsells"
+section: "work | parse.ly"
+date: "2019-11-11"
+details:
+  - tools: "Angular, Less, Figma"
+    role: "Designer, developer"
+    status: "V1 shipped"
+    waitingForUserData: "true"
+featuredImage: "./hero-retention-datepicker.png"
+goals:
+  - "Set up a local server and run an HTML/CSS/JS project"
+  - "Gain familiarity with the Terminal, Node, and Visual Studio Code"
+---
+
+import Emoji from 'components/_ui/Emoji/Emoji'
+import Link from 'components/_ui/Link/Link'
+
+
+
+
+
+
+## Overview
+
+This project was about surfacing user historical data retention information in the datepicker and prompt plan upgrades for the user. This also serves to provide more targeted apikey and user information for our Upsells team.
+
+
+## The problem
+
+Primary objectives:
+
+- communicate to users that upgradable data exists for relevant accounts
+- prevent account churn
+- Upgradable data: Historical data collected within a user's site start data but outside the dates of their current retention limit
+
+As of right now, there is no place within the general UI that shows a user what data they do and do not have access to, nor communicate that more historical data is available outside their plan's tier. Common data retention plans have retention trail of one or two years, but many customers have been with us for much longer. We have apikey historical data from the moment they successfully integrate with us, but depending on their plan, only permit access going back a certain amount of time.
+
+We needed to communicate that upgradable data exists, what historical range is included, how to upgrade, and make sure that both admins and non-admins have some plan of action.
+
+Additionally, additional event tracking is part of this release to better inform us of better historical date feature information.
+
+
+## Research
+
+I began this journey by researching various in-app/product upsell prompts. Thanks to a great article by Appcues, I broke down various product upsells by the following categories:
+
+- Moments of discovery
+- Triggered when a feature is needed
+- Free and premium features shown side-by-side
+- Combined upsell messages
+- Upsells added to regular workflows
+- Messaging tailored to Power Users
+- Prompts communicating a relative value metric
+- Account status pages
+
+Figma file showing examples of each.
+
+After collecting information and meeting with my Product Manager to discuss upsell flows and project scope, then hit the pen & paper & Figma step. I determined states and steps needed, sketched date picker elements, and worked through initial user flows.
+
+
+## Solutions
+
+- Update the current datepicker UI elements (calendar, inputs, presets)
+- Style dates and hover elements for outside ranges
+- If upgradable data exists, surface a friendly button in the open datepicker that prompts the user to Upgrade (this also communicates that we have more than one year of historical data, for example)
+- Open an Upgrade Modal* when the user clicks the button above. If they are an admin, allow them to send a message to our sales team or if they are not an admin, bring them to their setting screens that lists apikey admins.
+- Track** apikey, admin status, and user email address when the Upgrade button is clicked. This allows us to both begin upsell conversations and note the amount of users within an apikey are requesting more data (which becomes actionable data within upsell conversations)
+
+
+Total UI states needed for the datepicker:
+- Selected Dates
+    - Selected range start date
+    - Selected range end date
+    - Selected range span date (not start nor end)
+- Unselected Dates
+    - Day is a future date (no data exists because it is the future 🔮)
+    - Unselected within their data retention clump
+    - Unselected but upgradable (historical data exists, but you need to have an upgraded plan)
+    - Unselected but out of the range of their minimum start data (before they ever integrated the [Parse.ly](http://parse.ly) tracker)
+
+The historical datepicker component includes options for preset ranges:
+- This week
+- Last week
+- This month
+- Last month
+- Last 6 months
+
+I updated the button states of these presets to both be inline with other UI buttons and to free up color schemes for the calendar UI.
+
+
+## Scope punts
+
+*In a future iteration, we will allow the user to upgrade directly in this modal / flow as that reduced friction will make upgrading both easier and more enjoyable. Unfortunately, we determined that was out of the scope for this feature release as a primary objective was to communicate that data exists outside a user's tier and they can upgrade their plan to access it.
+
+**An additional solution was to send a custom event when a user scrolled back far enough in the datepicker that they land on a month where upgradable data exists (aka scrolls back far enough to show unselectable but upgradable dates). Since the datepicker component still utilizes JQueryUI, it would take some out of scope work surface custom components and fired trackers when such a month was visible (regardless of interactions). This will fall under a feature umbrella where we move away from JQuery UI and build our own datepicker.
+
+
+## Outcomes
+
+This project successfully communicates Data Retention. We are still waiting to see how this works with the Upsell Sales Team outreach.
+
+In the past we have erred on the side of
