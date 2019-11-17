@@ -117,6 +117,17 @@ I struggled a bit with making both upgradable dates and dates outside the histor
 ###### Non-admin users
 ![Modal notifying that only admins can upgrade.](./modal-non-admin.png)
 
+## Development overview
+
+* Update current datepicker UI elements with mockup designs
+* Capture User Info retention information from Django
+* Calculate retention start dates for all limit options (90 days, 180 days, 1 year, 2 years, 3 years, unlimited days)
+* Display hover prompt on upgradable dates within the calendar UI
+* Display the Upgrade button prompt for accounts that have an earlier first-tracked-date than retention date
+* Track account, user, retention limit, and button location data
+* Create modal message flows for admin and non-administrators
+* Send information and optional comments to internal teams if the Upgrade prompt is submitted
+
 
 ## Out-of-scope ideas to explore
 - Create an in-app Upgrade flow for features and plans (completely self serve)
