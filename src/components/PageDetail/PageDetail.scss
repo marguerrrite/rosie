@@ -56,5 +56,20 @@
             margin-top: 1em;
             margin-bottom: 2em;
         }
+
+        &__team {
+            &__title {
+                font-weight: 500;
+                color: #4656e8;
+            }
+
+            &__role {
+                font-size: 0.85em;
+                //font-weight: 500;
+                //color: $grey-700;
+                line-height: 1.4;
+                margin-top: 0.5em;
+            }
+        }
     }
 }

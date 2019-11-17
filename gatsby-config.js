@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-        title: `Marguerite Roth | Designer & Developer`,
+        title: `Marguerite Roth | Product Designer & Developer`,
         description: `Personal site for Marguerite Roth`,
         author: `Marguerite Roth | marguerite.io | @marrrguerite`,
         siteUrl: "https://www.marguerite.io",
