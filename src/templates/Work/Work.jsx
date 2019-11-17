@@ -2,26 +2,25 @@ import React from "react"
 import { graphql } from 'gatsby'
 import classNames from 'classnames'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-import { TwitterShareButton, TwitterIcon } from "react-share"
-import Emoji from "components/_ui/Emoji/Emoji"
 import Img from "gatsby-image"
 import Label from "components/_ui/Label/Label"
 import Layout from "components/Layout/Layout"
+import Link from "components/_ui/Link/Link"
 import PageDetail from 'components/PageDetail/PageDetail'
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth"
+import Objectives from 'components/Objectives/Objectives'
 import TOC from 'components/TOC/TOC'
 import './Work.scss'
 
 export default ({ data, path }) => {
     let Work = data.mdx
     let featuredImgFluid = Work.frontmatter.featuredImage.childImageSharp.fluid
-
-    console.log(data)
+    let objectives = Work.frontmatter.objectives.childMdx
     return (
         <Layout showSocialCol={false} className={classNames("Work", `Work--${Work.frontmatter.slug}`)}>
             <div>
                 <Label className="Work__hero__label" category="primary">
-                    {Work.frontmatter.section}
+                    <Link className="Work__hero__label__link" to={'/#work'}>Work</Link> | {Work.frontmatter.section}
                 </Label>
                 <h1 className="Work__hero__title">
                     {Work.frontmatter.title}
@@ -66,6 +65,7 @@ export default ({ data, path }) => {
                             className="Work__content__detail"
                             details={Work.frontmatter.details[0]} />
                         <div className="Word__content__body">
+                            <Objectives objectives={objectives.body}/>
                             <MDXRenderer>
                                 {Work.body}
                             </MDXRenderer>
@@ -94,13 +94,17 @@ export const query = graphql`
             tools
             waitingForUserData
         }
-        goals
         date(formatString: "MMMM D, YYYY")
         featuredImage {
           childImageSharp {
             fluid(maxWidth: 2500) {
               ...GatsbyImageSharpFluid
             }
+          }
+        }
+        objectives {
+          childMdx {
+            body
           }
         }
       }

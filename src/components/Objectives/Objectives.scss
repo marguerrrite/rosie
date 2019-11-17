@@ -1,0 +1,33 @@
+@import "./../../styles/lib";
+
+.Objectives {
+    background: $grey-200;
+    max-width: $post-max-width;
+    margin: 0 auto;
+    padding: 1.5em 1em 1em;
+    border-radius: 6px;
+    margin-top: 5rem;
+
+    h2 {
+        padding-top: 0.5rem !important;
+        //font-size: 1.625em !important;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        padding-left: 20px;
+        margin: 0;
+
+        li {
+            padding-left: 7px;
+            text-indent: -1.7rem;
+            line-height: 155%;
+            margin-bottom: 0.9em;
+        }
+
+        li::before {
+            content: "⭐ ";
+        }
+    }
+}

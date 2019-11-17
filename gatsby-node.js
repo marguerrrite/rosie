@@ -49,6 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const result = await graphql(`
         query {
             allMdx(
+                filter: {frontmatter: {type: {ne: "internal"}}}
                 sort: { fields: [frontmatter___date], order: DESC }
                     limit: 1000
                 ){

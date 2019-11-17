@@ -1,50 +1,39 @@
 ---
 slug: "data-retention"
-title: "Data Retention Upsells"
-section: "work | parse.ly"
+title: "Data Retention Upgrades"
+section: "Parse.ly Analytics"
 date: "2019-11-11"
+objectives: "./objectives.mdx"
 details:
   - tools: "Angular, Less, Figma"
     role: "Designer, developer"
     status: "V1 shipped"
     waitingForUserData: "true"
 featuredImage: "./hero-retention-datepicker.png"
-goals:
-  - "Set up a local server and run an HTML/CSS/JS project"
-  - "Gain familiarity with the Terminal, Node, and Visual Studio Code"
 ---
 
 import Emoji from 'components/_ui/Emoji/Emoji'
 import Link from 'components/_ui/Link/Link'
 
 
-
-
-
-
-## Overview
-
-This project was about surfacing user historical data retention information in the datepicker and prompt plan upgrades for the user. This also serves to provide more targeted apikey and user information for our Upsells team.
-
-
 ## The problem
 
-Primary objectives:
+In our Content Analytics platform currently, there is no concrete place that shows a user what data they do and do not have access to, nor communicates to them that more historical data is available outside their plan's tier.
 
-- communicate to users that upgradable data exists for relevant accounts
-- prevent account churn
-- Upgradable data: Historical data collected within a user's site start data but outside the dates of their current retention limit
+Common data retention plans have retention trail of one or two years, but many customers have been with us for much longer. We collect data the moment a customer account successfully integrates Parse.ly's tracker, but depending on their plan, account's are only permitted access to a trailing amount of days.
 
-As of right now, there is no place within the general UI that shows a user what data they do and do not have access to, nor communicate that more historical data is available outside their plan's tier. Common data retention plans have retention trail of one or two years, but many customers have been with us for much longer. We have apikey historical data from the moment they successfully integrate with us, but depending on their plan, only permit access going back a certain amount of time.
+###### Original datepicker
+![Original datepicker showing two calendars and date range presets.](./datepicker-before.png)
 
-We needed to communicate that upgradable data exists, what historical range is included, how to upgrade, and make sure that both admins and non-admins have some plan of action.
+In the datepicker, we need to communicate if upgradable data exists, what historical range is included, and how to upgrade. Additionally, there needs to be UX flows for both admins and non-admins.
 
-Additionally, additional event tracking is part of this release to better inform us of better historical date feature information.
+<!--
+Additionally, additional event tracking is part of this release to better inform us of better historical date feature information. -->
 
 
 ## Research
 
-I began this journey by researching various in-app/product upsell prompts. Thanks to a great article by Appcues, I broke down various product upsells by the following categories:
+To kick things off, I began by researching various in-app upsell prompts. Thanks to a [great article by Appcues](https://www.appcues.com/blog/upselling-prompts-saas), I used and modified their upsell categories and broke down various product examples:
 
 - Moments of discovery
 - Triggered when a feature is needed
@@ -55,50 +44,97 @@ I began this journey by researching various in-app/product upsell prompts. Thank
 - Prompts communicating a relative value metric
 - Account status pages
 
-Figma file showing examples of each.
+##### Based on [_The 9 best upselling prompts for B2B SaaS companies_](https://www.appcues.com/blog/upselling-prompts-saas) by Katryana Balboni
 
-After collecting information and meeting with my Product Manager to discuss upsell flows and project scope, then hit the pen & paper & Figma step. I determined states and steps needed, sketched date picker elements, and worked through initial user flows.
+<br/>
+<br/>
+
+###### Figma file with product examples
+![Figma file showing an artboard for each upsell type.](./research-figma.png)
+
+###### Examples: Mixpanel (Free and premium side-by-side), Mailchimp (Combined upsell messages)
+![Examples of Mixpanel's and Mailchimp's dashboard.](./research-mixpanel-mailchimp.png)
 
 
-## Solutions
+## Sketching and decision making
 
-- Update the current datepicker UI elements (calendar, inputs, presets)
-- Style dates and hover elements for outside ranges
+After collecting information, I started working through issues and potential solutions via pen and paper.
+
+![UI sketch on paper and clipboard.](./mockups-sketch.jpg)
+
+Starting with the original datepicker, I determined I need to:
+
+- Update the current datepicker UI elements (calendar, inputs, presets) to allow for extra styles needed for various unselected and selected date states
+    - Unselected date states:
+        - Day outside the range of their minimum start date (before they  integrated the [Parse.ly](http://parse.ly) tracker)
+        - Day is upgradable (historical data exists, but an upgraded plan is required)
+        - Day is within their data retention range
+        - Day is a future date (no data exists because it is the future 🔮)
+    - Selected date states:
+        - Day is the start-date of the selected range
+        - Day is the end-date of the selected range
+        - Day falls between the start and end date (aka a span-date)
 - If upgradable data exists, surface a friendly button in the open datepicker that prompts the user to Upgrade (this also communicates that we have more than one year of historical data, for example)
-- Open an Upgrade Modal* when the user clicks the button above. If they are an admin, allow them to send a message to our sales team or if they are not an admin, bring them to their setting screens that lists apikey admins.
-- Track** apikey, admin status, and user email address when the Upgrade button is clicked. This allows us to both begin upsell conversations and note the amount of users within an apikey are requesting more data (which becomes actionable data within upsell conversations)
+    - Open an Upgrade Modal* when the user clicks the button above. If they are an admin, allow them to send a message to our sales team or if they are not an admin, bring them to their setting screens that lists apikey admins
+- Track events around acount, user admin status, and user email address when the Upgrade button is clicked. This allows us to both begin upsell conversations and note the amount of users within an account who request access to deeper historical data (which becomes actionable data within upsell conversations)
+
+<br/>
+
+##### * Because there is no self-serve account upgrade flow within the application, I opted to use a modal->message flow for the time being. Immediately upgrading within the app is preferred, but building out that functionality was out of the scope of this feature. It would also introduce additional complexities around user admin statuses—we want everyone to know if upgradable data exits, regardless of them being the account decision makers.
+
+## Mockups and prototypes
+
+#### Datepicker cleanup:
+
+###### Original datepicker
+![Original datepicker showing two calendars and date range presets.](./datepicker-before.png)
+
+###### Proposed datepicker cleanup
+![Updated datepicker.](./datepicker-after.png)
+
+This cleanup addresses:
+- Updating UI for both calendars, days, and presets
+- Adds Upgrade button
+
+#### Upgradable date ranges:
+
+###### Option 1
+![Upgradable option with strikethru days.](./datepicker-upgradable-01.png)
+
+###### Option 2
+![Upgradable option with green days.](./datepicker-upgradable-02.png)
+
+###### Option 3
+![Upgradable option with grey background days.](./datepicker-upgradable-03.png)
+
+I struggled a bit with making both upgradable dates and dates outside the historical limit look friendly and enabled. I eventually settled on a version of **Option 3**, highlighting the dates in grey and leaving dates outside the historical start-date grey and unhighlighted.
+
+#### Modal flows:
+
+![Diagram showing upgrade flows for admin and non-admin users. Steps include tracker, event, option, and data collection information.](./modal-flow.png)
+
+###### Admin users
+![Modal showing text input and submit buttons](./modal-admin.png)
+
+###### Non-admin users
+![Modal notifying that only admins can upgrade.](./modal-non-admin.png)
+
+## Out-of-scope ideas to explore
+- In-app self-serve Upgrades
+- Create a screen in User Settings that displays all feature limits
+- Rebuild calendar and datepicker components to allow for more flexible interactions and tracking
+- Update modal components to allow for more flexible properties (functions, button text, inputs, placeholders)
 
 
-Total UI states needed for the datepicker:
-- Selected Dates
-    - Selected range start date
-    - Selected range end date
-    - Selected range span date (not start nor end)
-- Unselected Dates
-    - Day is a future date (no data exists because it is the future 🔮)
-    - Unselected within their data retention clump
-    - Unselected but upgradable (historical data exists, but you need to have an upgraded plan)
-    - Unselected but out of the range of their minimum start data (before they ever integrated the [Parse.ly](http://parse.ly) tracker)
+## Determining success
 
-The historical datepicker component includes options for preset ranges:
-- This week
-- Last week
-- This month
-- Last month
-- Last 6 months
+This product update is still in its infancy, but let's review the original objectives:
 
-I updated the button states of these presets to both be inline with other UI buttons and to free up color schemes for the calendar UI.
-
-
-## Scope punts
-
-*In a future iteration, we will allow the user to upgrade directly in this modal / flow as that reduced friction will make upgrading both easier and more enjoyable. Unfortunately, we determined that was out of the scope for this feature release as a primary objective was to communicate that data exists outside a user's tier and they can upgrade their plan to access it.
-
-**An additional solution was to send a custom event when a user scrolled back far enough in the datepicker that they land on a month where upgradable data exists (aka scrolls back far enough to show unselectable but upgradable dates). Since the datepicker component still utilizes JQueryUI, it would take some out of scope work surface custom components and fired trackers when such a month was visible (regardless of interactions). This will fall under a feature umbrella where we move away from JQuery UI and build our own datepicker.
-
-
-## Outcomes
-
-This project successfully communicates Data Retention. We are still waiting to see how this works with the Upsell Sales Team outreach.
-
-In the past we have erred on the side of
+- **Communicate to users if historical data exists outside their plan's retention limits**
+    - ✅Yes, now there is a prominent spot in the interface that informs about available historical data
+- **Allow users to upgrade their plans and data retention limits**
+    - ✅Yes, now there is a prominent spot in the interface that informs
+    about available historical data
+    - ⏲️After some time, we will be able to see how these tracked data requests effect account upgrades
+- **Prevent account churn**
+    - ⏲️Check back later!
