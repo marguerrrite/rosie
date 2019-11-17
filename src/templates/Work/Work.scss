@@ -5,6 +5,10 @@
     // margin: 0 auto;
     margin-bottom: 2em;
 
+    @media(max-width: 600px) {
+        padding-top: 1em;
+    }
+
     h2,
     h3,
     h5,
@@ -38,11 +42,19 @@
         margin-right: auto;
         padding-left: 20px;
         padding-right: 20px;
+
+        @media(max-width: 600px) {
+            padding-left: 0;
+            padding-right: 0;
+        }
     }
 
     ul {
-        padding-left: 40px;
-        //margin-top: -20px;
+        padding-left: 20px;
+
+        @media(min-width: 601px) {
+            padding-left: 40px;
+        }
     }
 
     .PostGoals {
@@ -64,12 +76,15 @@
 
             margin-left: -2em !important;
             margin-right: -2em !important;
+
+            @media(max-width: 600px) {
+                margin-left: 0em !important;
+                margin-right: 0em !important;
+            }
         }
 
         margin: 0 auto 2em;
         max-width: $post-max-width;
-        padding-left: 20px;
-        padding-right: 20px;
         font-size: 1em;
         line-height: 1.9em;
         font: normal 16px/1.9em "Inter", Arial, sans-serif;
@@ -208,8 +223,20 @@
             padding-right: 3em;
         }
 
+        @media(max-width: 1350px) {
+            grid-gap: 2em;
+        }
+
+        @media(max-width: 1000px) {
+             grid-template-columns: 1fr;
+        }
+
         &__container {
             position: relative;
+        }
+
+        @media(max-width: 600px) {
+            grid-gap: 2em;
         }
 
         @media(min-width: 601px) {

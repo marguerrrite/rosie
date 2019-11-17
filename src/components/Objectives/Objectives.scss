@@ -20,14 +20,28 @@
         margin: 0;
 
         li {
-            padding-left: 7px;
-            text-indent: -1.7rem;
             line-height: 155%;
             margin-bottom: 0.9em;
+            padding-left: 7px;
+            text-indent: -1.7rem;
+        }
+
+        @media(max-width: 600px) {
+            padding-left: 0;
         }
 
         li::before {
             content: "⭐ ";
         }
+    }
+
+    @media(max-width: 1000px) {
+        margin-top: 2em;
+    }
+
+    @media(max-width: 600px) {
+        padding-top: 0.75em;
+        margin-top: 0;
+        margin-bottom: 3em;
     }
 }

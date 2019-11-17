@@ -60,47 +60,49 @@ const PageDetail = ({children, className, details, page}) => {
                                 <div className="PageDetail__item__title">
                                     Team Members
                                 </div>
-                                <div className="PageDetail__item__content">
-                                    <Link className="PageDetail__item__team__title"
-                                        to="https://wattenberger.com"
+                                <div className="PageDetail__item__list">
+                                    <div className="PageDetail__item__content">
+                                        <Link className="PageDetail__item__team__title"
+                                            to="https://wattenberger.com"
                                         >
-                                        Amelia Wattenberger
-                                    </Link>
-                                    <div className="PageDetail__item__team__role">
-                                        Project Lead, Sr Frontend Engineer,
-                                        Designer
+                                            Amelia Wattenberger
+                                        </Link>
+                                        <div className="PageDetail__item__team__role">
+                                            Project Lead, Sr Frontend Engineer,
+                                            Designer
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="PageDetail__item__content">
-                                    <div className="PageDetail__item__team__title">
-                                        Sal Gionfriddo
+                                    <div className="PageDetail__item__content">
+                                        <div className="PageDetail__item__team__title">
+                                            Sal Gionfriddo
+                                        </div>
+                                        <div className="PageDetail__item__team__role">
+                                            Frontend Lead
+                                        </div>
                                     </div>
-                                    <div className="PageDetail__item__team__role">
-                                        Frontend Lead
+                                    <div className="PageDetail__item__content">
+                                        <div className="PageDetail__item__team__title">
+                                            Conrad Lee
+                                        </div>
+                                        <div className="PageDetail__item__team__role">
+                                            Sr Machine Learning Engineer
+                                        </div>
                                     </div>
-                                </div>
-                                <div className="PageDetail__item__content">
-                                    <div className="PageDetail__item__team__title">
-                                        Conrad Lee
+                                    <div className="PageDetail__item__content">
+                                        <div className="PageDetail__item__team__title">
+                                            Matthew Carrigan
+                                        </div>
+                                        <div className="PageDetail__item__team__role">
+                                            Machine Learning Engineer
+                                        </div>
                                     </div>
-                                    <div className="PageDetail__item__team__role">
-                                        Sr Machine Learning Engineer
-                                    </div>
-                                </div>
-                                <div className="PageDetail__item__content">
-                                    <div className="PageDetail__item__team__title">
-                                        Matthew Carrigan
-                                    </div>
-                                    <div className="PageDetail__item__team__role">
-                                        Machine Learning Engineer
-                                    </div>
-                                </div>
-                                <div className="PageDetail__item__content">
-                                    <div className="PageDetail__item__team__title">
-                                        Mike Sukmanowsky
-                                    </div>
-                                    <div className="PageDetail__item__team__role">
-                                        Product Manager
+                                    <div className="PageDetail__item__content">
+                                        <div className="PageDetail__item__team__title">
+                                            Mike Sukmanowsky
+                                        </div>
+                                        <div className="PageDetail__item__team__role">
+                                            Product Manager
+                                        </div>
                                     </div>
                                 </div>
                             </div>

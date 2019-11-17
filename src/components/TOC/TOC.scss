@@ -12,21 +12,11 @@
         height: 0;
         position: sticky;
         top: 0em;
-        //background: white;
+
+        @media(max-width: 1000px) {
+            display: none;
+        }
     }
-
-    &__toggle {
-
-    }
-
-    // &__toc {
-    //     height: 60em;
-
-    //     max-height: 80vh;
-    //     overflow-y: scroll;
-    //     z-index: 1;
-    //     line-height: 2.2em;
-    // }
 
     &__title {
         margin: 0;
