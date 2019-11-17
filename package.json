@@ -96,6 +96,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
+    "noIndex": "npm run build && echo 'User-agent: *\nDisallow: /' > dist/robots.txt",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "repository": {
