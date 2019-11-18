@@ -68,7 +68,7 @@ const PageDetail = ({children, className, details, page}) => {
                                             Amelia Wattenberger
                                         </Link>
                                         <div className="PageDetail__item__team__role">
-                                            Project Lead, Sr Frontend Engineer,
+                                            Project Lead, Sr. Frontend Engineer,
                                             Designer
                                         </div>
                                     </div>
@@ -85,7 +85,7 @@ const PageDetail = ({children, className, details, page}) => {
                                             Conrad Lee
                                         </div>
                                         <div className="PageDetail__item__team__role">
-                                            Sr Machine Learning Engineer
+                                            Sr. Machine Learning Engineer
                                         </div>
                                     </div>
                                     <div className="PageDetail__item__content">

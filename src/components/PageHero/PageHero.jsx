@@ -17,10 +17,9 @@ const PageHero = ({children, className, page, image}) => {
     return (
         <>
             {page !== 'currents' ? (
-                <MaxWidth size="l" className={`PageHero__container PageHero__container--${page}`}>
+                <MaxWidth size="l" className="PageHero__container">
                     <Img fluid={image} />
                 </MaxWidth>
-
             ) : (
                 <div className= "PageHeroCurrents__container">
                     <MaxWidth size="l" className="PageHeroCurrents">
