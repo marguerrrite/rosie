@@ -9,7 +9,7 @@ const PageDetail = ({details, page}) => {
         <div
             className="PageDetail__container">
             <div className="PageDetail">
-                {page !== 'currents' ? (
+                {page !== '/currents' ? (
                     <>
                         <div className="PageDetail__item">
                             <div className="PageDetail__item__title">
@@ -113,7 +113,7 @@ const PageDetail = ({details, page}) => {
 };
 
 PageDetail.propTypes = {
-    details: PropTypes.array,
+    details: PropTypes.oneOfType(PropTypes.array, PropTypes.object),
     page: PropTypes.string,
 };
 

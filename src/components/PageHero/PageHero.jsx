@@ -16,7 +16,7 @@ const PageHero = ({children, className, page, image}) => {
             <p>
                 {page}
             </p>
-            {page === 'currents' ? (
+            {page === '/currents' ? (
                 <div className="PageHeroCurrents__container">
                     <MaxWidth size="l" className="PageHeroCurrents">
                         <div className="PageHeroCurrents__img__container">

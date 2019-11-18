@@ -17,7 +17,7 @@ export default ({ data, path }) => {
     let Work = data.mdx
     let featuredImgFluid = Work.frontmatter.featuredImage.childImageSharp.fluid
     let objectives = Work.frontmatter.objectives.childMdx
-    let page = path.substring(1);
+    //let page = path.substring(1);
 
     return (
         <>
@@ -33,14 +33,14 @@ export default ({ data, path }) => {
 
                     <PageHero
                         className="Work__hero__image"
-                        page={page}
+                        page={path}
                         image={featuredImgFluid}
                     />
 
                     <MaxWidth size="l" className="Work__content__container">
                         <div className="Work__content">
                             <PageDetail
-                                page={page}
+                                page={path}
                                 className="Work__content__detail"
                                 details={Work.frontmatter.details[0]} />
                             <div className="Word__content__body">
