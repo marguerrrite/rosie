@@ -16,10 +16,10 @@ const NotFoundPage = () => (
             <h1 className="NotFound__header">
                 Page not found
             </h1>
-            <Link to="/work"
+            <Link to="/#work"
                 className="NotFound__button"
                 isButton
-                buttonProps={{category: "secondary", size: "large"}}
+                buttonProps={{category: "primary", size: "l"}}
             >
                 Check out projects
             </Link>

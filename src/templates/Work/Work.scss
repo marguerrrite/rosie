@@ -63,6 +63,7 @@
     }
 
     p {
+        .Work__content__video__container,
         .gatsby-resp-image-wrapper {
             @media(min-width: 1600px) {
                 margin-left: -8em !important;
@@ -106,7 +107,8 @@
     }
 
     ul {
-        margin-top: 1em;
+        margin-top: 0.65em;
+        margin-bottom: 0.35em;
     }
 
     li {
@@ -118,7 +120,7 @@
         font: normal 16px/1.9em "Inter",
         Arial,
         sans-serif;
-        line-height: 175%;
+        line-height: 165%;
     }
 
     pre {
@@ -129,6 +131,16 @@
 
     img {
         box-shadow: $box-shadow__image--grey !important;
+
+        &[alt*="breakdown"],
+        &[alt*="listing"],
+        &[alt*="daily"],
+        &[alt*="map"],
+        &[alt*="devices"],
+        &[alt*="mockups"],
+        &[alt*="stats"] {
+            box-shadow: none !important;
+        }
     }
 
     &__hero {
@@ -235,13 +247,19 @@
             position: relative;
         }
 
+
         @media(max-width: 600px) {
             grid-gap: 2em;
         }
 
         @media(min-width: 601px) {
             h2 {
-                font-size: 1.55rem;
+                font-size: 1.55em;
+                font-size: 1.75em;
+            }
+
+            h3 {
+                //font-size: 1.3em;
             }
 
             h4 {
@@ -266,6 +284,11 @@
                 font-size: 0.8em;
                 color: $grey-700;
             }
+        }
+
+        video {
+            display: block;
+            width: 100%;
         }
     }
 }

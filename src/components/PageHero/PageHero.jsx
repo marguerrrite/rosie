@@ -36,7 +36,7 @@ const PageHero = ({children, className, page, image}) => {
                         <div className="PageHeroCurrents__video__container">
                             <video className="PageHeroCurrents__video"
                                 autoPlay loop muted playsInline
-                                poster={imgTimeline}
+
                             >
                                 <source src={videoCurrents} type="video/mp4" />
                             </video>
