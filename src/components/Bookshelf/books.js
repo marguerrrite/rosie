@@ -3,37 +3,6 @@ import React from "react";
 //Summaries and images from goodreads.com
 
 const books = [
-    // {
-    //     title: "If You Really Loved Me",
-    //     author: "Ann Rule",
-    //     finished: 2018,
-    //     inProgress: true,
-    //     "tags": [
-    //         "non-fiction",
-    //         "true crime",
-    //     ],
-    //     goodreadsUrl: "https://www.goodreads.com/book/show/118469.If_You_Really_Loved_Me",
-    //     coverImg: "https://images.gr-assets.com/books/1348985837l/118469.jpg",
-    //     summary: <div>
-    //         <p>
-    //             David Brown was the consummate entrepreneur: a computer wizard and millionaire
-    //             by age thirty-two. When his beautiful young wife was shot to death as she slept,
-    //             Brown's fourteen-year-old daughter, Cinnamon, confessed to killing her stepmother.
-    //             The California courts sentenced her harshly: twenty-four years to life. But in
-    //             the wake of Cinnamon's murder conviction, thanks in part to two determined lawmen,
-    //             the twisted private world of David Brown himself unfolded with astonishing clarity
-    //             — revealing a trail of perverse love, twisted secrets, and evil mind games.
-    //         </p>
-    //         <p>
-    //             A complex and often dangerous investigation suggested a horrifying scenario: Was
-    //             the seemingly bland David Brown really a stone-cold killer who convinced his
-    //             own daughter to prove her love by killing for him? A man who turned young women
-    //             into his own personal slaves, who collected nearly $1 million in insurance money,
-    //             and married his dead wife's teenage sister, David Brown was a sociopath who would
-    //             stop at nothing...a deadly charmer who almost got away with everything.
-    //         </p>
-    //     </div>
-    // },
     {
         title: "In Cold Blood",
         author: "Truman Capote",
@@ -53,6 +22,49 @@ const books = [
             </p>
             <p>
                 As Truman Capote reconstructs the murder and the investigation that led to the capture, trial, and execution of the killers, he generates both mesmerizing suspense and astonishing empathy. At the center of his study are the amoral young killers Perry Smith and Dick Hickcock, who, vividly drawn by Capote, are shown to be reprehensible yet entirely and frighteningly human. <i>In Cold Blood</i> is a seminal work of modern prose, a remarkable synthesis of journalistic skill and powerfully evocative narrative.
+            </p>
+        </div>
+    },
+    {
+        title: "Show Me the Numbers: Designing Tables and Graphs to Enlighten",
+        author: "Stephen Few",
+        finished: false,
+        inProgress: true,
+        "tags": [
+            "non-fiction",
+            "technology",
+        ],
+        genre: "technology",
+        isFiction: false,
+        goodreadsUrl: "https://www.goodreads.com/book/show/543936.Show_Me_the_Numbers?from_search=true&qid=oh4cRBMmJu&rank=1",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1328862683l/543936.jpg",
+        summary: <div>
+            <p>
+                Tables and graphs can more adequately communicate important business information when they reflect the good design practices discussed in this practical guide to effective table and graph design. Information is provided on the fundamental concepts of table and graph design, the numbers and knowledge most suitable for display in a graphic form, the best tabular means to communicate certain ideas, and the component-level aspects of design. Analysts, technicians, and managers will appreciate the solid theory behind this outline for ensuring that tables and graphs present quantitative business information in a truthful, attractive format that facilitates better decision making.
+            </p>
+        </div>
+    },
+    {
+        title: "Fullstack D3 and Data Visualization: Build beautiful data visualizations with D3",
+        author: "Amelia Wattenberger, Nate Murray (Editor)",
+        finished: true,
+        inProgress: false,
+        "tags": [
+            "non-fiction",
+            "technology",
+        ],
+        genre: "technology",
+        isFiction: false,
+        goodreadsUrl: "https://www.goodreads.com/book/show/48527276-fullstack-d3-and-data-visualization",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1571695804l/48527276.jpg",
+        summary: <div>
+            <p>
+                The Fullstack D3 book is the complete guide to D3. With dozens of code examples showing each step, you can gain new insights into your data by creating visualizations.            </p>
+            <p>
+                Learn how to quickly turn data into insights with D3.
+            </p>
+            <p>
+                We have the data. But it needs to be understood by humans. The best way to convert this data into an understandable format is to mold it into a data visualization.
             </p>
         </div>
     },

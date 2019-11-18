@@ -8,7 +8,7 @@
         align-items: flex-start;
         align-items: center;
         margin-top: 5em;
-        margin-bottom: 14em;
+        margin-bottom: 11em;
 
         &:last-of-type {
             margin-bottom: 0;
@@ -144,7 +144,24 @@
         margin-bottom: 0;
 
         &--hasBorder {
-            border: 16px solid $white;
+            border: 13px solid $white;
+        }
+
+        &--currents {
+            position: relative;
+            max-height: 430px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            background: linear-gradient(191.65deg, rgba(83, 147, 254, 0.48) 8.24%, #F7D9E6 92.93%);
+
+            video {
+                max-width: 80%;
+                width: 100%;
+                margin-top: 3vw;
+                border-radius: 3px;
+                transform: translateY(4px);
+            }
         }
 
         &__container {

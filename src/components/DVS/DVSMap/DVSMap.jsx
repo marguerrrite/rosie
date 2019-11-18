@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as d3 from 'd3';
 import { geoMercator, geoPath } from "d3-geo";
 import { feature } from "topojson-client";
 import _ from "lodash";
@@ -80,17 +79,6 @@ class DVSMap extends Component {
         } else {
             return "#9769F8";
         }
-    }
-
-    //tooltippies
-    onMouseEnter(member, index) {
-        // const xAccessor = d => d.longitude;
-        // const yAccessor = d => d.latitude;
-        const tooltip = d3.select("#tooltip");
-    }
-
-    onMouseLeave(datum, index) {
-        //this.props.unsetHoveredCircle(datum);
     }
 
     render() {

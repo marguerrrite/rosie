@@ -65,7 +65,7 @@ class BookRow extends Component {
                 <div className={classNames("BookRowSummary__container", { 'BookRowSummary__container--expanded': bookIsClicked })} onClick={this.openBook}>
                     <div className="BookRowSummary">
                         <img className="BookRowSummary__image"
-                            src={coverImg} alt={'"' + title + '"' + " book cover"} />
+                            src={coverImg} alt={`${title} book cover`} />
                         <div className="BookRowSummary__summary">
                             <div>
                                 {summary}

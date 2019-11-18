@@ -1,0 +1,87 @@
+//@import "../../styles/colors.scss";
+@import "./../../styles/lib";
+
+.PageHero {
+    &Currents {
+        background: linear-gradient(191.65deg, rgba(83, 147, 254, 0.48) 8.24%, #F7D9E6 92.93%);
+        overflow: hidden;
+        padding: 6em 2em 1.5em;
+        position: relative;
+
+        @media(max-width: 1100px) {
+            padding-top: 4em;
+            padding-bottom: 0;
+        }
+
+        @media(max-width: 600px) {
+            padding-top: 2em;
+        }
+
+        &__container {
+            @media(min-width: 600px) {
+                padding-left: 4em;
+                padding-right: 4em;
+            }
+        }
+
+        &__video {
+            max-width: 700px;
+            width: 100%;
+            box-shadow: 0 17px 56px rgba(0, 0, 0, 0.45);
+            border-radius: 4px;
+            display: block;
+            transform: translateY(7px);
+
+            @media(max-width: 900px) {
+                max-width: 600px;
+            }
+
+            &__container {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                background: transparent;
+
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                @media(max-width: 900px) {
+                    position: relative;
+                }
+            }
+        }
+
+        &__img {
+            width: 100%;
+            height: auto;
+            border-radius: 3px;
+
+            &__container {
+                display: grid;
+                grid-template-columns: 500px 1fr 270px;
+                align-items: center;
+                max-width: 1300px;
+                margin: 0 auto;
+                width: 100%;
+                padding-left: 3em;
+                padding-right: 3em;
+
+                @media(max-width: 1100px) {
+                    grid-template-columns: 2fr 0 1fr;
+                    padding: 0;
+                }
+
+                @media(max-width: 900px) {
+                    display: none;
+                }
+            }
+
+            &__right {
+                grid-column: 3;
+            }
+        }
+    }
+}

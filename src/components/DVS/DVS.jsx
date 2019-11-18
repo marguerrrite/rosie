@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import Link from "components/_ui/Link/Link";
 import classNames from 'classnames';
 import ReactGA from 'react-ga';
 import DvsIcon from 'components/_ui/DvsIcon/DvsIcon';
@@ -99,11 +99,11 @@ class DVSPage extends Component {
                             <div className="DVS__icon">
                                 <DvsIcon />
                             </div>
-                            {/* <Link to="/" onClick={this.props.showNavs} className="DVS__link">
+                            <Link to="/" className="DVS__link">
                                 <Label category="primary">
                                     ← Marguerite.io
                                 </Label>
-                            </Link> */}
+                            </Link>
                         </div>
 
                         <h1>

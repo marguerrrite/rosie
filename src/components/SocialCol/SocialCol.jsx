@@ -1,5 +1,4 @@
 import React from "react"
-import classNames from 'classnames'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faCodepen, faLinkedinIn, faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 import Link from "components/_ui/Link/Link"

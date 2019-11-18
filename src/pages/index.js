@@ -23,10 +23,12 @@ const Home = () => (
                     github={projects[key].github}
                     hasImageBorder={projects[key].hasImageBorder}
                     images={projects[key].img_src}
+                    imgType={projects[key].imgType}
                     inspiration={projects[key].inspiration}
                     projectType={projects[key].projectType}
                     tech={projects[key].tech}
                     title={projects[key].title}
+                    readMore={projects[key].readMore}
                     key={key}
                 />
             )}

@@ -1,0 +1,47 @@
+@import "./../../styles/lib";
+
+.Objectives {
+    background: $grey-200;
+    max-width: $post-max-width;
+    margin: 0 auto;
+    padding: 1.5em 1em 1em;
+    border-radius: 6px;
+    margin-top: 5rem;
+
+    h2 {
+        padding-top: 0.5rem !important;
+        //font-size: 1.625em !important;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+        padding-left: 20px;
+        margin: 0;
+
+        li {
+            line-height: 155%;
+            margin-bottom: 0.9em;
+            padding-left: 7px;
+            text-indent: -1.7rem;
+        }
+
+        @media(max-width: 600px) {
+            padding-left: 0;
+        }
+
+        li::before {
+            content: "⭐ ";
+        }
+    }
+
+    @media(max-width: 1000px) {
+        margin-top: 2em;
+    }
+
+    @media(max-width: 600px) {
+        padding-top: 0.75em;
+        margin-top: 0;
+        margin-bottom: 3em;
+    }
+}

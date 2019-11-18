@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
 
 const baseUrl = "https://twemoji.maxcdn.com/svg/"
 const emoji = {
