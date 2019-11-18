@@ -1,6 +1,26 @@
 import React from "react";
 
 const projects = {
+    currents: {
+        title: "Currents Dashboard",
+        projectType: "dashboard",
+        description: <div>
+            A look into the Current's Attention analytics dashboard built at Parse.ly.
+        </div>,
+        readMore: "./currents",
+        "tech": [
+            "react",
+            "redux",
+            "d3",
+            "mixpanel",
+            "figma"
+        ],
+        hasImageBorder: true,
+        imgType: "mp4",
+        "img_src": [
+            "project-currents-01"
+        ],
+    },
     prist: {
         title: "Prist | A Gatsby & Prismic Starter",
         projectType: "web",
@@ -46,6 +66,23 @@ const projects = {
         ],
         "img_src": [
             "project-dvs-01"
+        ],
+    },
+    retention: {
+        title: "Parse.ly Analytics Data Retention Upsells",
+        projectType: "web",
+        description: <div>
+            Working through adding more obvious data retention limit communication in the analytics dashboard and allowing users to upgrade.
+        </div>,
+        readMore: "/data-retention",
+        "tech": [
+            "angular",
+            "less",
+            "figma",
+        ],
+        hasImageBorder: true,
+        "img_src": [
+            "project-data-retention-01"
         ],
     },
     albondiga: {

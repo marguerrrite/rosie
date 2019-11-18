@@ -7,9 +7,10 @@ import Link from "components/_ui/Link/Link";
 import Label from "components/_ui/Label/Label";
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import videoCurrents from 'content/work/2019-11-25-currents/currents-info.mp4';
 import './Project.scss';
 
-const Project = ({ demo, description, github, hasImageBorder, images, inspiration, tech, title }) => {
+const Project = ({ demo, description, github, hasImageBorder, images, imgType, inspiration, readMore, tech, title }) => {
     return (
         <StaticQuery
             query={graphql`
@@ -48,6 +49,7 @@ const Project = ({ demo, description, github, hasImageBorder, images, inspiratio
                                     <Link
                                         to={demo}
                                         isButton
+                                        buttonProps={{ color: "white-blue-stroke" }}
                                     >
                                         Demo
                                 </Link>
@@ -56,6 +58,17 @@ const Project = ({ demo, description, github, hasImageBorder, images, inspiratio
                             <div>
                                 {description}
                             </div>
+
+                            {readMore && (
+                                <p>
+                                    <Link
+                                        to={readMore}
+                                        isButton
+                                    >
+                                        Read More
+                                </Link>
+                                </p>
+                            )}
 
                             {github && (
                                 <p>
@@ -80,21 +93,34 @@ const Project = ({ demo, description, github, hasImageBorder, images, inspiratio
                         </div>
                     </div>
                     <div className={classNames("Project__image__container", {
-                        'Project__image__container--has-link': demo
+                        'Project__image__container--has-link': demo || readMore
                     })}>
-
                         {images.map((image, i) => (
                             <Link
                                 key={i}
                                 className="Project__image__link"
-                                to={demo}
+                                to={demo || readMore}
                             >
-                                <img className={classNames("Project__image", {
-                                    "Project__image--hasBorder": hasImageBorder
-                                })}
-                                    src={require(`./images/${image}.png`)}
-                                    alt="Project"
-                                />
+                                {imgType !== 'mp4' ? (
+                                    <img className={classNames("Project__image", {
+                                        "Project__image--hasBorder": hasImageBorder
+                                    })}
+                                        src={require(`./images/${image}.png`)}
+                                        alt="Project"
+                                    />
+                                ) : (
+                                        <div className={classNames("Project__image Project__image--currents", {
+                                            "Project__image--hasBorder": hasImageBorder
+                                        })}>
+                                            <video
+                                                autoPlay loop muted playsInline
+                                                poster="./currents-info-map.png"
+                                            >
+                                                <source src={videoCurrents} type="video/mp4" />
+                                            </video>
+                                    </div>
+
+                                )}
                                 {demo && (
                                     <div className="Project__image__action">
                                         <Button
@@ -102,7 +128,17 @@ const Project = ({ demo, description, github, hasImageBorder, images, inspiratio
                                             category="secondary"
                                         >
                                             Go to demo
-                                    </Button>
+                                        </Button>
+                                    </div>
+                                )}
+                                {readMore && (
+                                    <div className="Project__image__action">
+                                        <Button
+                                            className="Project__image__button"
+                                            category="secondary"
+                                        >
+                                            Read More
+                                        </Button>
                                     </div>
                                 )}
                             </Link>
