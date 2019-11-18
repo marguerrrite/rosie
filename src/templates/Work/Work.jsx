@@ -20,8 +20,10 @@ export default ({ data, path }) => {
     let objectives = Work.frontmatter.objectives.childMdx
     //let page = path.substring(1);
 
-    const ogImagePath = Work.frontmatter.ogimage.childImageSharp.fixed.src
-    const twitterImagePath = Work.frontmatter.ogimage.childImageSharp.fixed.src
+    const ogImagePath = "https://marguerite.io" + Work.frontmatter.ogimage.childImageSharp.fixed.src
+    const twitterImagePath = "https://marguerite.io" + Work.frontmatter.ogimage.childImageSharp.fixed.src
+
+    console.log(ogImagePath)
 
     return (
         <>
