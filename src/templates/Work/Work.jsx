@@ -19,10 +19,14 @@ export default ({ data, path }) => {
     let featuredImgFluid = Work.frontmatter.featuredImage.childImageSharp.fluid
     let objectives = Work.frontmatter.objectives.childMdx
     //let page = path.substring(1);
-    console.log(slug)
+
     return (
         <>
-            <SEO title={`${Work.frontmatter.title}`}/>
+            <SEO
+                title={`${Work.frontmatter.title}`}
+                image={Work.frontmatter.ogimage}
+                twitterimage={Work.frontmatter.twitterimage}
+            />
             <Layout showSocialCol={false} className={classNames("Work", `Work--${Work.frontmatter.slug}`)}>
                 <div>
                     <Label className="Work__hero__label" category="primary">
@@ -87,6 +91,20 @@ export const query = graphql`
         objectives {
           childMdx {
             body
+          }
+        }
+        ogimage {
+         childImageSharp {
+           fixed {
+             src
+            }
+          }
+        }
+        twitterimage {
+         childImageSharp {
+           fixed {
+             src
+            }
           }
         }
       }

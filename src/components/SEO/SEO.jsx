@@ -26,6 +26,8 @@ function SEO({ description, lang, meta, title, image, twitterImage }) {
     const metaImage = image || site.siteMetadata.image;
     const metaTwitterImage = twitterImage || site.siteMetadata.twitterImage;
 
+    console.log(metaImage)
+
     return (
         <Helmet
             htmlAttributes={{
