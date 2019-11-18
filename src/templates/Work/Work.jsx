@@ -20,12 +20,15 @@ export default ({ data, path }) => {
     let objectives = Work.frontmatter.objectives.childMdx
     //let page = path.substring(1);
 
+    const ogImagePath = Work.frontmatter.ogimage && Work.frontmatter.ogimage.childImageSharp.fixed.src
+    const twitterImagePath = Work.frontmatter.ogimage && Work.frontmatter.ogimage.childImageSharp.fixed.src
+
     return (
         <>
             <SEO
                 title={`${Work.frontmatter.title}`}
-                image={Work.frontmatter.ogimage}
-                twitterimage={Work.frontmatter.twitterimage}
+                image={ogImagePath}
+                twitterImage={twitterImagePath}
             />
             <Layout showSocialCol={false} className={classNames("Work", `Work--${Work.frontmatter.slug}`)}>
                 <div>
