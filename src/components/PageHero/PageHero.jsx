@@ -16,30 +16,33 @@ import imgTimeline from 'content/work/2019-11-25-currents/currents-timeline.png'
 const PageHero = ({children, className, page, image}) => {
     return (
         <>
-
-            <div className= "PageHeroCurrents__container">
-                <MaxWidth size="l" className="PageHeroCurrents">
-                    <div className="PageHeroCurrents__img__container">
-                        <div className="PageHeroCurrents__img__left">
-                            <img className="PageHeroCurrents__img PageHeroCurrents__img--cats" src={imgRefCats} />
+            {page === 'currents' ? (
+                <div className="PageHeroCurrents__container">
+                    <MaxWidth size="l" className="PageHeroCurrents">
+                        <div className="PageHeroCurrents__img__container">
+                            <div className="PageHeroCurrents__img__left">
+                                <img className="PageHeroCurrents__img PageHeroCurrents__img--cats" src={imgRefCats} />
+                            </div>
+                            <div className="PageHeroCurrents__img__right">
+                                <img className="PageHeroCurrents__img PageHeroCurrents__img--story" src={imgStory} />
+                                <img className="PageHeroCurrents__img PageHeroCurrents__img--map" src={imgMap} />
+                            </div>
                         </div>
-                        <div className="PageHeroCurrents__img__right">
-                            <img className="PageHeroCurrents__img PageHeroCurrents__img--story" src={imgStory} />
-                            <img className="PageHeroCurrents__img PageHeroCurrents__img--map" src={imgMap} />
-                        </div>
-                    </div>
-                    <div className="PageHeroCurrents__video__container">
-                        <video className="PageHeroCurrents__video"
-                            autoPlay loop muted playsInline
+                        <div className="PageHeroCurrents__video__container">
+                            <video className="PageHeroCurrents__video"
+                                autoPlay loop muted playsInline
 
-                        >
-                            <source src={videoCurrents} type="video/mp4" />
-                        </video>
-                    </div>
+                            >
+                                <source src={videoCurrents} type="video/mp4" />
+                            </video>
+                        </div>
+                    </MaxWidth>
+                </div>
+            ) : (
+                <MaxWidth size="l" className="PageHero__container">
+                    <Img fluid={image} />
                 </MaxWidth>
-            </div>
-
-
+            )}
         </>
     );
 };
