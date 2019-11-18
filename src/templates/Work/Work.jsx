@@ -15,10 +15,11 @@ import './Work.scss'
 
 export default ({ data, path }) => {
     let Work = data.mdx
+    let slug = Work.frontmatter.slug
     let featuredImgFluid = Work.frontmatter.featuredImage.childImageSharp.fluid
     let objectives = Work.frontmatter.objectives.childMdx
     //let page = path.substring(1);
-
+    console.log(slug)
     return (
         <>
             <SEO title={`${Work.frontmatter.title}`}/>
@@ -33,14 +34,14 @@ export default ({ data, path }) => {
 
                     <PageHero
                         className="Work__hero__image"
-                        page={path}
+                        page={slug}
                         image={featuredImgFluid}
                     />
 
                     <MaxWidth size="l" className="Work__content__container">
                         <div className="Work__content">
                             <PageDetail
-                                page={path}
+                                page={slug}
                                 className="Work__content__detail"
                                 details={Work.frontmatter.details[0]} />
                             <div className="Word__content__body">

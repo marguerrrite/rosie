@@ -13,7 +13,7 @@ import imgTimeline from 'content/work/2019-11-25-currents/currents-timeline.png'
 const PageHero = ({className, page, image}) => {
     return (
         <>
-            {page === '/currents' ? (
+            {page === 'currents' ? (
                 <div className="PageHeroCurrents__container">
                     <MaxWidth size="l" className="PageHeroCurrents">
                         <div className="PageHeroCurrents__img__container">
