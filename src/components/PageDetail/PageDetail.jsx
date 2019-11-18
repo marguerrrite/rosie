@@ -1,12 +1,10 @@
-import React, { useState, useEffect } from "react"
-import classNames from 'classnames';
+import React from "react"
 import Link from "components/_ui/Link/Link";
 import PropTypes from 'prop-types';
 import './PageDetail.scss';
 
 
-const PageDetail = ({children, className, details, page}) => {
-
+const PageDetail = ({details, page}) => {
     return (
         <div
             className="PageDetail__container">
@@ -115,7 +113,8 @@ const PageDetail = ({children, className, details, page}) => {
 };
 
 PageDetail.propTypes = {
-
+    details: PropTypes.array,
+    page: PropTypes.string,
 };
 
 export default PageDetail;

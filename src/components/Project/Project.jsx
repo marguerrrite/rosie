@@ -64,6 +64,7 @@ const Project = ({ demo, description, github, hasImageBorder, images, imgType, i
                                     <Link
                                         to={readMore}
                                         isButton
+                                        buttonProps={{ size: "l" }}
                                     >
                                         Read More
                                 </Link>

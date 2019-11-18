@@ -121,7 +121,6 @@ class DVSMapContainer extends Component {
                             userCoords={this.props.coords}
                             setUserOffsets={this.setUserOffsets}
                             isLoaded={isLoaded}
-                            setLoading={this.setLoading}
                             showMap={showMap}
                             showData={showData}
                             showViz={showViz}

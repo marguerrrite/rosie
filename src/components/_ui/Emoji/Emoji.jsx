@@ -10,6 +10,7 @@ const Emoji = ({ name, className, ...props }) => {
 
     return (
         <img
+            alt={emojiUrl}
             className={[
                 "Emoji",
                 className

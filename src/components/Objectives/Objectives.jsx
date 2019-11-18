@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react"
+import React from "react"
 import PropTypes from 'prop-types';
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import './Objectives.scss';

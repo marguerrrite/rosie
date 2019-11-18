@@ -2,7 +2,6 @@ import { throttle } from 'lodash';
 import React, { useEffect, useRef, useState } from 'react';
 import { useEventListener, useOnClickOutside } from "hooks";
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import './TOC.scss';
 
 

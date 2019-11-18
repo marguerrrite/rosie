@@ -1,7 +1,4 @@
-import React, { useState, useEffect } from "react"
-import classNames from 'classnames';
-import Link from "components/_ui/Link/Link";
-import { StaticQuery, graphql } from "gatsby"
+import React from "react"
 import Img from "gatsby-image"
 import PropTypes from 'prop-types';
 import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
@@ -21,17 +18,17 @@ const PageHero = ({children, className, page, image}) => {
                     <MaxWidth size="l" className="PageHeroCurrents">
                         <div className="PageHeroCurrents__img__container">
                             <div className="PageHeroCurrents__img__left">
-                                <img className="PageHeroCurrents__img PageHeroCurrents__img--cats" src={imgRefCats} />
+                                <img alt="Referrer categories" className="PageHeroCurrents__img PageHeroCurrents__img--cats" src={imgRefCats} />
                             </div>
                             <div className="PageHeroCurrents__img__right">
-                                <img className="PageHeroCurrents__img PageHeroCurrents__img--story" src={imgStory} />
-                                <img className="PageHeroCurrents__img PageHeroCurrents__img--map" src={imgMap} />
+                                <img alt="Story sampling" className="PageHeroCurrents__img PageHeroCurrents__img--story" src={imgStory} />
+                                <img alt="Traffic map" className="PageHeroCurrents__img PageHeroCurrents__img--map" src={imgMap} />
                             </div>
                         </div>
                         <div className="PageHeroCurrents__video__container">
                             <video className="PageHeroCurrents__video"
                                 autoPlay loop muted playsInline
-
+                                poster={imgTimeline}
                             >
                                 <source src={videoCurrents} type="video/mp4" />
                             </video>
@@ -49,6 +46,7 @@ const PageHero = ({children, className, page, image}) => {
 
 PageHero.propTypes = {
     page: PropTypes.string,
+    image: PropTypes.object,
 };
 
 export default PageHero;

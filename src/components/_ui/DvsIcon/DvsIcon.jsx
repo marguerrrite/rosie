@@ -1,15 +1,9 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
-import PropTypes from 'prop-types';
 import icon from 'components/_ui/DvsIcon/dvs-icon.png';
 import './DvsIcon.scss';
 
 class DvsIcon extends Component {
-    static propTypes = {
-
-    };
-
-
     onMouseOver = () => {
         this.props.setCurrentPet(this.props.pet);
     }
@@ -19,7 +13,7 @@ class DvsIcon extends Component {
     }
 
     getClassName() {
-        const { size, spin, className } = this.props;
+        const { className } = this.props;
         return classNames(className,
             'DvsIcon__container'
         );

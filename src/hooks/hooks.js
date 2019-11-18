@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef } from "react";
 import globalThis from '@ungap/global-this';
 import "intersection-observer";
 
@@ -15,7 +15,7 @@ export const useIsInView = (margin = "0px") => {
                 // Update our state when observer callback fires
                 setIntersecting(entry.isIntersecting);
             },
-            { margin }
+            // { margin }
         );
         if (ref.current) observer.observe(ref.current);
         return () => {
