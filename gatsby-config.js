@@ -6,6 +6,7 @@ module.exports = {
         siteUrl: "https://www.marguerite.io",
         image: `https://www.marguerite.io/og-image.png`,
         twitterImage: `https://www.marguerite.io/twitter-image.png`,
+        keywords: `design, data, product, visualization, dashboard, analytics, currents, parse.ly, visual`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

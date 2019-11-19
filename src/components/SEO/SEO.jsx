@@ -15,18 +15,23 @@ function SEO({ description, lang, meta, title, image, twitterImage }) {
                         siteUrl
                         image
                         twitterImage
+                        keywords
                     }
                 }
             }
         `
     )
 
+
+
     const metaTitle = title || site.siteMetadata.title;
     const metaDescription = description || site.siteMetadata.description;
+    const metaKeywords = site.siteMetadata.keywords;
+
     const metaImage = image || site.siteMetadata.image;
     const metaTwitterImage = twitterImage || site.siteMetadata.twitterImage;
 
-    console.log(metaImage)
+    console.log(metaKeywords)
 
     return (
         <Helmet
@@ -95,6 +100,10 @@ function SEO({ description, lang, meta, title, image, twitterImage }) {
                 {
                     name: `twitter:description`,
                     content: metaDescription,
+                },
+                {
+                    name: `keywords`,
+                    content: metaKeywords,
                 },
             ].concat(meta)}
         />
