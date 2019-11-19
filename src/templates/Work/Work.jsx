@@ -13,17 +13,14 @@ import TOC from 'components/TOC/TOC'
 import SEO from "components/SEO/SEO"
 import './Work.scss'
 
-export default ({ data, path }) => {
+export default ({ data }) => {
     let Work = data.mdx
     let slug = Work.frontmatter.slug
     let featuredImgFluid = Work.frontmatter.featuredImage.childImageSharp.fluid
     let objectives = Work.frontmatter.objectives.childMdx
-    //let page = path.substring(1);
 
     const ogImagePath = "https://marguerite.io" + Work.frontmatter.ogimage.childImageSharp.fixed.src
     const twitterImagePath = "https://marguerite.io" + Work.frontmatter.ogimage.childImageSharp.fixed.src
-
-    console.log(ogImagePath)
 
     return (
         <>
