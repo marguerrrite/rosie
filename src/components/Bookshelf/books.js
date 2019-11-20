@@ -69,6 +69,28 @@ const books = [
         </div>
     },
     {
+        title: "The Art of Readable Code",
+        author: "Dustin Boswell, Trevor Foucher",
+        finished: true,
+        inProgress: false,
+        "tags": [
+            "non-fiction",
+            "technology",
+        ],
+        genre: "technology",
+        isFiction: false,
+        goodreadsUrl: "https://www.goodreads.com/book/show/8677004-the-art-of-readable-code",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1324147949l/8677004.jpg",
+        summary: <div>
+            <p>
+                As programmers, we’ve all seen source code that’s so ugly and buggy it makes our brain ache. Over the past five years, authors Dustin Boswell and Trevor Foucher have analyzed hundreds of examples of "bad code" (much of it their own) to determine why they’re bad and how they could be improved. Their conclusion? You need to write code that minimizes the time it would take someone else to understand it—even if that someone else is you.
+            </p>
+            <p>
+                This book focuses on basic principles and practical techniques you can apply every time you write code. Using easy-to-digest code examples from different languages, each chapter dives into a different aspect of coding, and demonstrates how you can make your code easy to understand.
+            </p>
+        </div>
+    },
+    {
         title: "1984",
         author: "George Orwell",
         finished: true,
