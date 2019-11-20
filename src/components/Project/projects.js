@@ -38,7 +38,8 @@ const projects = {
             "graphql",
             "cms",
             "react",
-            "figma"
+            "figma",
+            "netlify",
         ],
         hasImageBorder: true,
         "img_src": [
