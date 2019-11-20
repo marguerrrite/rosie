@@ -7,7 +7,7 @@ import books from "components/Bookshelf/books.js";
 
 class BookshelfContainer extends Component {
     state = {
-        booksToShow: 5,
+        booksToShow: 6,
         expanded: false,
         categories: {},
         genres: {},
