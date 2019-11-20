@@ -45,8 +45,8 @@ const books = [
         </div>
     },
     {
-        title: "Fullstack D3 and Data Visualization: Build beautiful data visualizations with D3",
-        author: "Amelia Wattenberger, Nate Murray (Editor)",
+        title: "Fullstack D3 and Data Visualization: Build Beautiful Data Visualizations with D3",
+        author: "🔥 Amelia Wattenberger, Nate Murray (Editor)",
         finished: true,
         inProgress: false,
         "tags": [
