@@ -1,0 +1,17 @@
+@import "./../styles/lib.scss";
+
+.Paradiddles {
+    display: grid;
+    grid-template-columns: 2fr 1.75fr;
+    align-items: center;
+    height: 100%;
+
+    &__layout {
+        min-height: 100%;
+        height: 100%;
+    }
+
+    &__content {
+
+    }
+}

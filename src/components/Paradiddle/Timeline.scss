@@ -1,0 +1,65 @@
+@import "./../../styles/lib";
+
+.Timeline {
+    height: 500px;
+    min-width: 500px;
+    width: calc(100% + 1em);
+    margin-bottom: 2em;
+    width: 100%;
+
+    svg text {
+        fill: #969696;
+    }
+
+
+    .y-axis-label {
+        font-size: 1em;
+        text-anchor: middle;
+        transform: rotate(-90deg);
+    }
+
+    .axis {
+        color: #E0E0E0;
+    }
+
+    .tick {
+        color: #E0E0E0;
+    }
+
+    .Line {
+        &--type {
+            &-line {
+                fill: none;
+                stroke-width: 1.5px;
+                stroke-linecap: round;
+            }
+        }
+
+        &--exercise {
+            &-0 { stroke: $paradiddle-green; }
+            &-1 { stroke: $paradiddle-purple; }
+            &-2 { stroke: $paradiddle-blue; }
+            &-3 { stroke: $paradiddle-orange; }
+        }
+    }
+
+    .Circle {
+        transition: all 0.15s ease-out;
+        pointer-events: none;
+        mix-blend-mode: multiply;
+
+        &--exercise {
+            &-0 { fill: $paradiddle-green; }
+            &-1 { fill: $paradiddle-purple; }
+            &-2 { fill: $paradiddle-blue; }
+            &-3 { fill: $paradiddle-orange; }
+        }
+    }
+
+    &__hover-line {
+        fill: rgba(#000000, 0.25);
+        transition: all 0.15s ease-out;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+}
