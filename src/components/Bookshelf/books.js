@@ -3,25 +3,93 @@ import React from "react";
 //Summaries and images from goodreads.com
 
 const books = [
+    // {
+    //     title: "In Cold Blood",
+    //     author: "Truman Capote",
+    //     finished: false,
+    //     inProgress: true,
+    //     "tags": [
+    //         "fiction",
+    //         "true crime",
+    //     ],
+    //     isFiction: false,
+    //     genre: "true crime",
+    //     goodreadsUrl: "https://www.goodreads.com/book/show/168642.In_Cold_Blood",
+    //     coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1424931136l/168642.jpg",
+    //     summary: <div>
+    //         <p>
+    //             On November 15, 1959, in the small town of Holcomb, Kansas, four members of the Clutter family were savagely murdered by blasts from a shotgun held a few inches from their faces. There was no apparent motive for the crime, and there were almost no clues.
+    //         </p>
+    //         <p>
+    //             As Truman Capote reconstructs the murder and the investigation that led to the capture, trial, and execution of the killers, he generates both mesmerizing suspense and astonishing empathy. At the center of his study are the amoral young killers Perry Smith and Dick Hickcock, who, vividly drawn by Capote, are shown to be reprehensible yet entirely and frighteningly human. <i>In Cold Blood</i> is a seminal work of modern prose, a remarkable synthesis of journalistic skill and powerfully evocative narrative.
+    //         </p>
+    //     </div>
+    // },
     {
-        title: "In Cold Blood",
-        author: "Truman Capote",
+        title: "Catch and Kill: Lies, Spies, and a Conspiracy to Protect Predators",
+        author: "Ronan Farrow",
         finished: false,
         inProgress: true,
         "tags": [
-            "fiction",
+            "non-fiction",
             "true crime",
         ],
-        isFiction: false,
         genre: "true crime",
-        goodreadsUrl: "https://www.goodreads.com/book/show/168642.In_Cold_Blood",
-        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1424931136l/168642.jpg",
+        audiobook: true,
+        isFiction: false,
+        goodreadsUrl: "https://www.goodreads.com/book/show/46650277-catch-and-kill",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1570798239l/46650277._SY475_.jpg",
         summary: <div>
             <p>
-                On November 15, 1959, in the small town of Holcomb, Kansas, four members of the Clutter family were savagely murdered by blasts from a shotgun held a few inches from their faces. There was no apparent motive for the crime, and there were almost no clues.
+                In a dramatic account of violence and espionage, Pulitzer Prize-winning investigative reporter Ronan Farrow exposes serial abusers and a cabal of powerful interests hellbent on covering up the truth, at any cost.
             </p>
             <p>
-                As Truman Capote reconstructs the murder and the investigation that led to the capture, trial, and execution of the killers, he generates both mesmerizing suspense and astonishing empathy. At the center of his study are the amoral young killers Perry Smith and Dick Hickcock, who, vividly drawn by Capote, are shown to be reprehensible yet entirely and frighteningly human. <i>In Cold Blood</i> is a seminal work of modern prose, a remarkable synthesis of journalistic skill and powerfully evocative narrative.
+                In 2017, a routine network television investigation led Ronan Farrow to a story only whispered about: one of Hollywood's most powerful producers was a predator, protected by fear, wealth, and a conspiracy of silence. As Farrow drew closer to the truth, shadowy operatives, from high-priced lawyers to elite war-hardened spies, mounted a secret campaign of intimidation, threatening his career, following his every move, and weaponizing an account of abuse in his own family.
+            </p>
+            <p>
+                All the while, Farrow and his producer faced a degree of resistance that could not be explained—until now. And a trail of clues revealed corruption and cover-ups from Hollywood, to Washington, and beyond.
+            </p>
+            <p>
+                This is the untold story of the exotic tactics of surveillance and intimidation deployed by wealthy and connected men to threaten journalists, evade accountability, and silence victims of abuse—and it's the story of the women who risked everything to expose the truth and spark a global movement.
+            </p>
+            <p>
+                Both a spy thriller and a meticulous work of investigative journalism, <i>Catch and Kill</i> breaks devastating new stories about the rampant abuse of power—and sheds far-reaching light on investigations that shook the culture.
+            </p>
+        </div>
+    },
+    {
+        title: "The Infographic History of the World",
+        author: "Valentina D'Efilippo, James Ball",
+        finished: false,
+        inProgress: true,
+        "tags": [
+            "non-fiction",
+            "history",
+        ],
+        genre: "history",
+        isFiction: false,
+        goodreadsUrl: "https://www.goodreads.com/book/show/18107896-the-infographic-history-of-the-world",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1419340351l/18107896.jpg",
+        summary: <div>
+            <p>
+                The History of the World, but not as you know it.
+            </p>
+            <p>
+                A new type of history is here – all 13.8 billion years of it, exploded into a visually jaw-dropping feast of facts, trends and timelines that tell you everything you’d ever want to know about the history of the world.
+            </p>
+            <p>
+                From the primordial soup to the technological revolution of the 21st century, interesting stuff has been going on; and ever since prehistoric man scratched the first tally markings into a damp cave wall, we’ve been counting and measuring it all.
+            </p>
+            <p>
+                Which historic warriors conquered the most territory, killed the most people, or had the largest empire?
+                When did everything evolve?
+                Which languages are related to which?
+                What’s been invented and when?
+                Where are we being born, and what are we dying of?
+                Which countries are eating all the food, causing all the pollution and taking all the drugs?
+            </p>
+            <p>
+                A story of civilisation and barbarism, of war and peace, this is history done in a new way – a beautifully designed collection of the most insightful and revealing trends that tell us what the human race has been up to, and where we’re heading.
             </p>
         </div>
     },
@@ -41,6 +109,31 @@ const books = [
         summary: <div>
             <p>
                 Tables and graphs can more adequately communicate important business information when they reflect the good design practices discussed in this practical guide to effective table and graph design. Information is provided on the fundamental concepts of table and graph design, the numbers and knowledge most suitable for display in a graphic form, the best tabular means to communicate certain ideas, and the component-level aspects of design. Analysts, technicians, and managers will appreciate the solid theory behind this outline for ensuring that tables and graphs present quantitative business information in a truthful, attractive format that facilitates better decision making.
+            </p>
+        </div>
+    },
+    {
+        title: "The Panama Papers: Breaking the Story of How the Rich and Powerful Hide Their Money",
+        author: "Frederik Obermaier, Bastian Obermayer",
+        finished: true,
+        audiobook: true,
+        inProgress: false,
+        "tags": [
+            "non-fiction",
+            "politics",
+        ],
+        genre: "politics",
+        isFiction: false,
+        goodreadsUrl: "https://www.goodreads.com/book/show/48673776-the-panama-papers",
+        coverImg: "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1572793196l/48673776._SY475_.jpg",
+        summary: <div>
+            <p>
+                From the winners of the 2017 Pulitzer Prize for Explanatory Reporting.</p>
+            <p>
+                11.5 million documents sent through encrypted channels. The secret records of 214,000 offshore companies. The largest data leak in history.
+            </p>
+            <p>
+                In early 2015, an anonymous whistle-blower led investigative journalists Bastian Obermayer and Frederik Obermaier into the shadow economy where the super-rich hide billions of dollars in complex financial networks. Thus began the ground-breaking investigation that saw an international team of 400 journalists work in secret for a year to uncover cases involving heads of state, politicians, businessmen, big banks, the mafia, diamond miners, art dealers and celebrities. A real-life thriller, <i>The Panama Papers</i> is the gripping account of how the story of the century was exposed to the world.
             </p>
         </div>
     },
