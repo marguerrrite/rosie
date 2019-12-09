@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Link from "components/_ui/Link/Link";
 import ReactGA from 'react-ga';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSpinner, faClipboardCheck } from '@fortawesome/free-solid-svg-icons'
+import { faSpinner, faClipboardCheck, faHeadphones } from '@fortawesome/free-solid-svg-icons'
 import classNames from 'classnames';
 import BookGenreTag from "./BookGenreTag";
 import './BookRow.scss';
@@ -40,7 +40,7 @@ class BookRow extends Component {
                                 {title}
                             </span>
                             {audiobook && (
-                                <i className="BookRow__icon BookRow__title__icon BookRow__icon--audiobook fas fa-headphones-alt"></i>
+                                <FontAwesomeIcon className="BookRow__icon BookRow__title__icon BookRow__icon--audiobook" icon={faHeadphones} />
                             )}
                         </div>
                         <div className="BookRow__author">

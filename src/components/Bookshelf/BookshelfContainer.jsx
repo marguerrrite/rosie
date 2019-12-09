@@ -7,7 +7,7 @@ import books from "components/Bookshelf/books.js";
 
 class BookshelfContainer extends Component {
     state = {
-        booksToShow: 6,
+        booksToShow: 7,
         expanded: false,
         categories: {},
         genres: {},
@@ -29,6 +29,10 @@ class BookshelfContainer extends Component {
             "#ff8075",
             "#ff6ea0",
             "#e070d3",
+            "#72DB83",
+            "#C27BE3",
+            "#4CADC6",
+            "#F3A569",
             "#9283ff",],
         bookListRows: true,
     }
@@ -41,10 +45,10 @@ class BookshelfContainer extends Component {
             action: 'Bookshelf | Toggled more/less books'
         });
 
-        this.state.booksToShow === 5 ? (
+        this.state.booksToShow === 7 ? (
             this.setState({ booksToShow: totalBooks, expanded: true })
         ) : (
-            this.setState({ booksToShow: 5, expanded: false })
+            this.setState({ booksToShow: 7, expanded: false })
         )
     };
 
