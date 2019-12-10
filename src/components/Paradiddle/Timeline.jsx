@@ -10,7 +10,7 @@ import './Timeline.scss'
 
 const formatDate = d3.timeFormat("%A")
 
-const Timeline = ({ data, xAccessor, yAccessor, label }) => {
+const Timeline = ({ data, xAccessor, yAccessor, label, className }) => {
     const [ref, dimensions] = useChartDimensions();
     const [isMouseMove, setIsMouseMove] = useState(false);
     const [currentHoveredData, setCurrentHoveredData] = useState();
@@ -72,7 +72,7 @@ const Timeline = ({ data, xAccessor, yAccessor, label }) => {
     }
 
     return (
-        <div className="Timeline" ref={ref}>
+        <div className={classNames("Timeline", className)} ref={ref}>
             {currentHoveredCircleCoords && (
                 <Tooltip
                     currentHoveredData={currentHoveredData}

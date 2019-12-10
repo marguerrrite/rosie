@@ -25,10 +25,6 @@ const variationD = ["r", "l", "r", "l", "l", "r", "l", "r"]
 const Paradiddles = () => {
     let data = [dataA, dataB, dataC, dataD]
     let variations = [variationA, variationB, variationC, variationD]
-    const [exerciseA, setExerciseA] = useState(variationA)
-    const [exerciseB, setExerciseB] = useState(variationB)
-    const [exerciseC, setExerciseC] = useState(variationC)
-    const [exerciseD, setExerciseD] = useState(variationD)
     const [selectedExercise, setSelectedExercise] = useState(null)
 
     function handleVariationChange(variation) {
@@ -51,6 +47,7 @@ const Paradiddles = () => {
                         xAccessor={dateAccessor}
                         yAccessor={bpmAccessor}
                         label="BPM"
+                        className="Paradiddles__timeline"
                     />
                     <div className="Paradiddles__content">
                         <h2>

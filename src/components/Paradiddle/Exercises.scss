@@ -1,7 +1,44 @@
 @import "./../../styles/lib";
 
 .Exercises {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
     &__staff {
         margin: 3em 0 1.5em;
+        grid-column: 2 / -1;
+    }
+
+    &__variation {
+        &s {
+            grid-column: 1 / -1;
+        }
+
+        display: grid;
+        grid-template-columns: 100px repeat(8, 1fr);
+        justify-items: center;
+        padding: 1em 0 1em 1.25rem;
+        margin-left: -1.25rem;
+        border: 1px solid transparent;
+        margin-bottom: 1em;
+        font-size: 0.85em;
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        &--isActive {
+            border: 1px solid red;
+        }
+
+        &__title {
+            justify-self: flex-start;
+            font-weight: 600;
+        }
+
+        &__step {
+            text-transform: uppercase;
+
+        }
     }
 }

@@ -6,10 +6,10 @@ import './Staff.scss'
 
 const Staff = ({ variations, selectedExercise }) => {
 
+    //let currentVariation = selectedExercise ? variations[selectedExercise - 1] : null
     let currentVariation = variations[selectedExercise - 1]
-    console.log(currentVariation)
 
-    let variationNote
+
     return (
         <div className="Staff__container">
             {variations[0].map((beats, i) => (
@@ -19,7 +19,7 @@ const Staff = ({ variations, selectedExercise }) => {
             ))}
 
             {variations[0].map((beats, i) => (
-                <StaffNoteCol key={i} variationNote={currentVariation[i]}/>
+                <StaffNoteCol key={i} variationNote={selectedExercise ? currentVariation[i] : ""}/>
             ))}
 
         </div>
@@ -33,30 +33,16 @@ Staff.propTypes = {
 export default Staff;
 
 
-
-
-const StaffHighHats = ({ variations }) => {
-    return (
-        <div className="Staff__highHats">
-            {variations[0].map((beats, i) => (
-                <div className="Staff__highHats__note" key={i}>
-                    {highHat}
-                </div>
-            ))}
-        </div>
-    )
-}
-
 const StaffNoteCol = ({ variationNote } ) => {
     return (
         <div className="Staff__noteCol">
             <div className={classNames("Staff__noteCol__note Staff__noteCol__note--snare", {
-                "Staff__noteCol__note--isActive" : variationNote == "l"
+                "Staff__noteCol__note--isActive" : variationNote === "l"
             })}>
                 {note}
             </div>
             <div className={classNames("Staff__noteCol__note Staff__noteCol__note--bass", {
-                "Staff__noteCol__note--isActive": variationNote == "r"
+                "Staff__noteCol__note--isActive": variationNote === "r"
             })}>
                 {note}
             </div>

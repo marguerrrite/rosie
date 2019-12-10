@@ -11,7 +11,13 @@
         height: 100%;
     }
 
-    &__content {
+    &__timeline {
+        padding-right: 3em;
+    }
 
+    &__content {
+        padding-left: 2em;
+        padding-right: 3em;
+        padding-bottom: 5em;
     }
 }

@@ -6,8 +6,9 @@ import './Exercises.scss'
 
 
 const Exercises = ({ variations, handleVariationChange, selectedExercise }) => {
+    console.log(selectedExercise)
     return (
-        <div>
+        <div className="Exercises">
             <div className="Exercises__staff" >
                 <Staff variations={variations} selectedExercise={selectedExercise}/>
             </div>
@@ -15,12 +16,23 @@ const Exercises = ({ variations, handleVariationChange, selectedExercise }) => {
             <div className="Exercises__variations">
                 {variations.map((variation, i) => (
                     <div className={classNames(`Exercises__variation Exercises__variation--${i+1}`, {
-                        "Exercsises__variation--isActive" : selectedExercise == (i+1)
+                        "Exercises__variation--isActive" : selectedExercise == i + 1
                     })}
                         key={i} onClick={() => handleVariationChange(i + 1)}>
-                        Variation {i+1}
+                        <div className="Exercises__variation__title">
+                            Variation {i + 1}
+                        </div>
+                        {variations[i].map((step, i) => (
+                            <span key={i} className="Exercises__variation__step">
+                                {step}
+                            </span>
+                        ))}
                     </div>
                 ))}
+            </div>
+
+            <div onClick={() => handleVariationChange("")}>
+                Clear
             </div>
         </div>
     );
