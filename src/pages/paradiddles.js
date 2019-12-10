@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import * as d3 from "d3"
 import Layout from 'components/Layout/Layout'
 import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
+import Exercises from 'components/Paradiddle/Exercises'
 import Timeline from 'components/Paradiddle/Timeline'
 import SEO from 'components/SEO/SEO'
 import "./paradiddles.scss"
@@ -15,9 +16,25 @@ const parseDate = d3.timeParse("%Y-%m-%d")
 const dateAccessor = d => parseDate(d.date)
 const bpmAccessor = d => d.bpm
 
+const variationA = ["r", "l", "r", "r", "l", "r", "l", "l"]
+const variationB = ["r", "l", "l", "r", "l", "r", "r", "l"]
+const variationC = ["r", "r", "l", "r", "l", "l", "r", "l"]
+const variationD = ["r", "l", "r", "l", "l", "r", "l", "r"]
+
 
 const Paradiddles = () => {
     let data = [dataA, dataB, dataC, dataD]
+    let variations = [variationA, variationB, variationC, variationD]
+    const [exerciseA, setExerciseA] = useState(variationA)
+    const [exerciseB, setExerciseB] = useState(variationB)
+    const [exerciseC, setExerciseC] = useState(variationC)
+    const [exerciseD, setExerciseD] = useState(variationD)
+    const [selectedExercise, setSelectedExercise] = useState(null)
+
+    function handleVariationChange(variation) {
+        setSelectedExercise(variation)
+        //console.log(variation)
+    }
 
     return (
         <>
@@ -42,6 +59,11 @@ const Paradiddles = () => {
                         <h3>
                             With quarter note high hat pulse
                         </h3>
+                        <Exercises
+                            handleVariationChange={handleVariationChange}
+                            variations={variations}
+                            selectedExercise={selectedExercise}
+                        />
                     </div>
                 </MaxWidth>
 
