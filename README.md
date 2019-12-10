@@ -1,4 +1,4 @@
-## 2019 Personal Site and Portfolio
+## Personal Site and Portfolio
 
 [marguerite.io](https://marguerite.io)
 
