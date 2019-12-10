@@ -1,3 +1,5 @@
+// Utils from Fullstack D3 and Data Visualization by Amelia Wattenberger | https://www.newline.co/fullstack-d3
+
 import PropTypes from 'prop-types'
 import { useEffect, useState, useRef } from "react"
 import ResizeObserver from "resize-observer-polyfill"

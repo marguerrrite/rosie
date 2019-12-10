@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from 'react'
 import * as d3 from "d3"
 import Layout from 'components/Layout/Layout'
 import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
@@ -14,6 +14,7 @@ import dataD from 'components/Paradiddle/paradiddleD.json'
 const parseDate = d3.timeParse("%Y-%m-%d")
 const dateAccessor = d => parseDate(d.date)
 const bpmAccessor = d => d.bpm
+
 
 const Paradiddles = () => {
     let data = [dataA, dataB, dataC, dataD]
@@ -40,7 +41,7 @@ const Paradiddles = () => {
                         </h2>
                         <h3>
                             With quarter note high hat pulse
-                    </h3>
+                        </h3>
                     </div>
                 </MaxWidth>
 
