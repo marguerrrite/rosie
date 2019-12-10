@@ -6,7 +6,8 @@ import './Exercises.scss'
 
 
 const Exercises = ({ variations, handleVariationChange, selectedExercise }) => {
-    console.log(selectedExercise)
+    let exercises = ["A", "B", "C", "D"]
+
     return (
         <div className="Exercises">
             <div className="Exercises__staff" >
@@ -20,7 +21,7 @@ const Exercises = ({ variations, handleVariationChange, selectedExercise }) => {
                     })}
                         key={i} onClick={() => handleVariationChange(i + 1)}>
                         <div className="Exercises__variation__title">
-                            Variation {i + 1}
+                            <span className="Exercises__variation__dot"></span> Variation {exercises[i]}
                         </div>
                         {variations[i].map((step, i) => (
                             <span key={i} className="Exercises__variation__step">

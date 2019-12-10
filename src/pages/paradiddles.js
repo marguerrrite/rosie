@@ -21,7 +21,6 @@ const variationB = ["r", "l", "l", "r", "l", "r", "r", "l"]
 const variationC = ["r", "r", "l", "r", "l", "l", "r", "l"]
 const variationD = ["r", "l", "r", "l", "l", "r", "l", "r"]
 
-
 const Paradiddles = () => {
     let data = [dataA, dataB, dataC, dataD]
     let variations = [variationA, variationB, variationC, variationD]
@@ -29,7 +28,6 @@ const Paradiddles = () => {
 
     function handleVariationChange(variation) {
         setSelectedExercise(variation)
-        //console.log(variation)
     }
 
     return (
