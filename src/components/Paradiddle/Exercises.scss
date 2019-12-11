@@ -2,7 +2,7 @@
 
 .Exercises {
     display: grid;
-    grid-template-columns: 100px 1fr;
+    grid-template-columns: 110px 1fr;
 
     &__staff {
         margin: 3em 0 1.5em;
@@ -41,7 +41,7 @@
         }
 
         display: grid;
-        grid-template-columns: 100px repeat(8, 1fr);
+        grid-template-columns: 110px repeat(8, 1fr);
         justify-items: center;
         padding: 1em 0 1em 1.25rem;
         margin-left: -1.25rem;
@@ -68,10 +68,22 @@
             text-transform: uppercase;
         }
 
+        &__dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 7px;
+            display: inline-block;
+            margin-right: 8px;
+        }
+
         &--1 {
             &.Exercises__variation--isActive {
                 border-color: $paradiddle-green;
                 background: rgba($paradiddle-green, 0.05);
+            }
+
+            .Exercises__variation__dot {
+                background: $paradiddle-green;
             }
         }
 
@@ -80,6 +92,10 @@
                 border-color: $paradiddle-purple;
                 background: rgba($paradiddle-purple, 0.05);
             }
+
+            .Exercises__variation__dot {
+                background: $paradiddle-purple;
+            }
         }
 
         &--3 {
@@ -87,12 +103,20 @@
                 border-color: $paradiddle-blue;
                 background: rgba($paradiddle-blue, 0.05);
             }
+
+            .Exercises__variation__dot {
+                background: $paradiddle-blue;
+            }
         }
 
         &--4 {
             &.Exercises__variation--isActive {
                 border-color: $paradiddle-orange;
                 background: rgba($paradiddle-orange, 0.05);
+            }
+
+            .Exercises__variation__dot {
+                background: $paradiddle-orange;
             }
         }
     }
