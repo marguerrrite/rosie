@@ -1,3 +1,5 @@
+// Button logic by Amelia Wattenberger | github.com/wattenberger | @wattenberger
+
 import React, { Component } from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';

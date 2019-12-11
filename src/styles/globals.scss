@@ -171,7 +171,8 @@ button {
 
 
 .Layout {
-    //height: 100%;
+    height: 100%;
+    // TO DO: Fix height because of footer etc.
     display: flex;
     flex-direction: column;
     //justify-content: space-between;

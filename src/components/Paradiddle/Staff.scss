@@ -1,0 +1,58 @@
+@import "./../../styles/lib";
+
+.Staff {
+    &__container {
+        width: 100%;
+        height: 63px;
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: 10px auto;
+        justify-items: center;
+        background-image: repeating-linear-gradient(to bottom,
+            transparent 0 10px,
+            $grey-300 10px 11px);
+    }
+
+    &__highHats {
+
+
+        &__note {
+            transform: translateY(-210%);
+
+            svg {
+                fill: black;
+            }
+
+            &:nth-of-type(even) {
+                svg {
+                    fill: transparent;
+                }
+            }
+        }
+    }
+
+    &__noteCol {
+        transform: translateY(-14%);
+
+        &__note {
+            svg {
+                fill: rgba(black, 0.15);
+            }
+
+            &--bass {
+                transform: translateY(-43%);
+            }
+
+            &--snare {
+
+            }
+
+            &--isActive {
+                svg {
+                    fill: black;
+                }
+            }
+        }
+    }
+}
