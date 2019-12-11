@@ -29,7 +29,7 @@ const Exercises = ({ variations, handleVariationChange, selectedExercise }) => {
                     })}
                         key={i} onClick={() => handleVariationChange(i + 1)}>
                         <div className="Exercises__variation__title">
-                            <span className="Exercises__variation__dot"></span> Variation {exercises[i]}
+                            <div className="Exercises__variation__dot"></div> Variation {exercises[i]}
                         </div>
                         {variations[i].map((step, i) => (
                             <span key={i} className="Exercises__variation__step">
