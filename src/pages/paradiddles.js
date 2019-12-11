@@ -46,14 +46,16 @@ const Paradiddles = () => {
                         yAccessor={bpmAccessor}
                         label="BPM"
                         className="Paradiddles__timeline"
+                        selectedExercise={selectedExercise}
                     />
+
                     <div className="Paradiddles__content">
-                        <h2>
+                        <h1>
                             Paradiddle Variations
-                        </h2>
-                        <h3>
+                        </h1>
+                        <div>
                             With quarter note high hat pulse
-                        </h3>
+                        </div>
                         <Exercises
                             handleVariationChange={handleVariationChange}
                             variations={variations}
@@ -61,7 +63,6 @@ const Paradiddles = () => {
                         />
                     </div>
                 </MaxWidth>
-
             </Layout>
         </>
     )

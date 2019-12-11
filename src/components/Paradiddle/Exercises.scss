@@ -9,6 +9,32 @@
         grid-column: 2 / -1;
     }
 
+    &__reset {
+        margin-left: -1.25rem;
+        font-size: 0.9em;
+        width: 70px;
+        border-color: transparent;
+        width: 100%;
+        text-align: left;
+        grid-column: 1 / -1;
+
+        &:hover {
+            box-shadow: none;
+        }
+    }
+
+    &__count {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        justify-items: center;
+        margin-top: 0.25em;
+
+        &__item {
+            font-size: 0.7em;
+            color: $grey-500;
+        }
+    }
+
     &__variation {
         &s {
             grid-column: 1 / -1;
@@ -22,13 +48,15 @@
         border: 1px solid transparent;
         margin-bottom: 1em;
         font-size: 0.85em;
+        border-radius: 6px;
 
         &:hover {
             cursor: pointer;
+            background: $grey-100;
         }
 
         &--isActive {
-            border: 1px solid red;
+            border: 1px solid;
         }
 
         &__title {
@@ -38,7 +66,34 @@
 
         &__step {
             text-transform: uppercase;
+        }
 
+        &--1 {
+            &.Exercises__variation--isActive {
+                border-color: $paradiddle-green;
+                background: rgba($paradiddle-green, 0.05);
+            }
+        }
+
+        &--2 {
+            &.Exercises__variation--isActive {
+                border-color: $paradiddle-purple;
+                background: rgba($paradiddle-purple, 0.05);
+            }
+        }
+
+        &--3 {
+            &.Exercises__variation--isActive {
+                border-color: $paradiddle-blue;
+                background: rgba($paradiddle-blue, 0.05);
+            }
+        }
+
+        &--4 {
+            &.Exercises__variation--isActive {
+                border-color: $paradiddle-orange;
+                background: rgba($paradiddle-orange, 0.05);
+            }
         }
     }
 }

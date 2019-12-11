@@ -1,7 +1,7 @@
 @import "./../../styles/lib";
 
 .Timeline {
-    height: 500px;
+    height: 520px;
     min-width: 500px;
     width: calc(100% + 1em);
     margin-bottom: 2em;
@@ -46,6 +46,10 @@
             &-2 { stroke: $paradiddle-blue; }
             &-3 { stroke: $paradiddle-orange; }
         }
+
+        &--isDimmed {
+            opacity: 0.1;
+        }
     }
 
     .Circle {
@@ -58,6 +62,10 @@
             &-1 { fill: $paradiddle-purple; }
             &-2 { fill: $paradiddle-blue; }
             &-3 { fill: $paradiddle-orange; }
+        }
+
+        &--isDimmed {
+            display: none;
         }
     }
 
@@ -138,6 +146,10 @@
                 .Tooltip__variation__bpm {
                     color: $paradiddle-orange;
                 }
+            }
+
+            &--isDimmed {
+                opacity: 0.2;
             }
 
             &__name {

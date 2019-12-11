@@ -10,11 +10,11 @@ import './Timeline.scss'
 
 const formatDate = d3.timeFormat("%A")
 
-const Timeline = ({ data, xAccessor, yAccessor, label, className }) => {
-    const [ref, dimensions] = useChartDimensions();
-    const [isMouseMove, setIsMouseMove] = useState(false);
-    const [currentHoveredData, setCurrentHoveredData] = useState();
-    const [currentHoveredCircleCoords, setCurrentHoveredCircleCoords] = useState();
+const Timeline = ({ data, xAccessor, yAccessor, label, className, selectedExercise }) => {
+    const [ref, dimensions] = useChartDimensions()
+    const [isMouseMove, setIsMouseMove] = useState(false)
+    const [currentHoveredData, setCurrentHoveredData] = useState()
+    const [currentHoveredCircleCoords, setCurrentHoveredCircleCoords] = useState()
 
     const xScale = d3.scaleTime()
         .domain(d3.extent(data[0], xAccessor))
@@ -65,7 +65,6 @@ const Timeline = ({ data, xAccessor, yAccessor, label, className }) => {
     }
 
     const onMouseLeave = e => {
-        //console.log("onMouseLeave")
         setIsMouseMove(false)
         setCurrentHoveredData()
         setCurrentHoveredCircleCoords()
@@ -78,6 +77,7 @@ const Timeline = ({ data, xAccessor, yAccessor, label, className }) => {
                     currentHoveredData={currentHoveredData}
                     currentHoveredCircleCoords={currentHoveredCircleCoords}
                     dimensions={dimensions}
+                    selectedExercise={selectedExercise}
                 />
             )}
 
@@ -113,7 +113,7 @@ const Timeline = ({ data, xAccessor, yAccessor, label, className }) => {
 
                 {data.map((line, i) => (
                     <Line
-                        className={`Line--exercise-${i}`}
+                        className={classNames(`Line--exercise-${i}`, { "Line--isDimmed": selectedExercise < 5 && selectedExercise > 0 && selectedExercise !== i + 1})}
                         key={i}
                         data={line}
                         xAccessor={xAccessorScaled}
@@ -125,7 +125,7 @@ const Timeline = ({ data, xAccessor, yAccessor, label, className }) => {
                     <>
                         {data.map((circle, i) => (
                             <Circle
-                                className={`Circle--exercise-${i}`}
+                                className={classNames(`Circle Circle--exercise-${i}`, { "Circle--isDimmed": selectedExercise < 5 && selectedExercise > 0 && selectedExercise !== i + 1 })}
                                 key={i}
                                 cx={currentHoveredCircleCoords[i][0]}
                                 cy={currentHoveredCircleCoords[i][1]}
@@ -144,7 +144,7 @@ Timeline.propTypes = {
     data: PropTypes.array,
     xAccessor: PropTypes.func,
     yAccessor: PropTypes.func,
-    label: PropTypes.string
+    label: PropTypes.string,
 };
 
 export default Timeline;
@@ -161,7 +161,7 @@ const Circle = ({ className, cx, cy, style }) => {
     )
 }
 
-const Tooltip = ({ currentHoveredCircleCoords, currentHoveredData, dimensions }) => {
+const Tooltip = ({ currentHoveredCircleCoords, currentHoveredData, dimensions, selectedExercise }) => {
     let exercises = ["A", "B", "C", "D"]
     let date = formatDate(currentHoveredData[0][0])
     let leftScrubCoord = currentHoveredCircleCoords[0][0] + dimensions.marginLeft
@@ -175,7 +175,7 @@ const Tooltip = ({ currentHoveredCircleCoords, currentHoveredData, dimensions })
                 </div>
                 <div className="Tooltip__variations">
                     {currentHoveredData.map((data, i) => (
-                        <div className={classNames("Tooltip__variation", `Tooltip__variation-${[i]}`)} key={i}>
+                        <div className={classNames("Tooltip__variation", `Tooltip__variation-${[i]}`, { "Tooltip__variation--isDimmed": selectedExercise < 5 && selectedExercise > 0 && selectedExercise !== i + 1 })} key={i}>
                             <span className="Tooltip__variation__dot"></span>
                             <div className="Tooltip__variation__name">
                                 Variation {exercises[i]}
