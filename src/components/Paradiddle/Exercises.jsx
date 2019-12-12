@@ -27,7 +27,7 @@ const Exercises = ({ variations, handleVariationChange, selectedExercise }) => {
                     <div className={classNames(`Exercises__variation Exercises__variation--${i+1}`, {
                         "Exercises__variation--isActive" : selectedExercise === i + 1
                     })}
-                        key={i} onClick={() => handleVariationChange(i + 1)}>
+                        key={i} onClick={() => handleVariationChange((selectedExercise === i + 1) ? "" : i + 1)}>
                         <div className="Exercises__variation__title">
                             <div className="Exercises__variation__dot"></div> Variation {exercises[i]}
                         </div>
@@ -40,12 +40,12 @@ const Exercises = ({ variations, handleVariationChange, selectedExercise }) => {
                 ))}
             </div>
 
-            <Button
+            {/* <Button
                 className="Exercises__reset"
                 onClick={() => handleVariationChange("")}
                 category="secondary">
                 Reset
-            </Button>
+            </Button> */}
         </div>
     );
 };

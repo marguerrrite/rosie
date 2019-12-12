@@ -3,11 +3,12 @@
 .Paradiddles {
     display: grid;
     grid-template-columns: 2fr 1.75fr;
-    align-items: center;
+    align-items: end;
     height: 100vh;
 
     @media(max-width: 1000px) {
         grid-template-columns: 1fr;
+        align-items: center;
     }
 
     h1 {
@@ -26,13 +27,31 @@
         margin-top: 7em;
     }
 
+    &__description {
+        color: $grey-700;
+        font-size: 0.8em;
+        padding-left: 5.5em;
+        padding-right: 2em;
+        margin-top: 2.5em;
+        align-self: baseline;
+
+        @media(max-width: 1000px) {
+            grid-row: 2;
+            grid-column: 1;
+            padding: 0;
+        }
+    }
+
     &__content {
         padding-left: 2em;
         padding-right: 3em;
         margin-top: 2.25em;
+        padding-bottom: 3em;
 
         @media(max-width: 1000px) {
             grid-row: -1;
+            grid-column: 1;
+            padding-bottom: 0;
         }
     }
 }
