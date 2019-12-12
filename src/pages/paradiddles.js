@@ -39,7 +39,7 @@ const Paradiddles = () => {
                 showSocialCol={false}
                 showNavigation={false}
                 showFooter={false}>
-                <SEO title="Paradiddles Data Visualization" />
+                <SEO title="Paradiddles Data Visualization" image="https://www.marguerite.io/og-image-paradiddles.png" twitterImage="https://www.marguerite.io/twitter-image-paradiddles.png"/>
 
                 <MaxWidth size="l" className="Paradiddles">
                     <Timeline
@@ -52,7 +52,7 @@ const Paradiddles = () => {
                     />
                     <div className="Paradiddles__content">
                         <h1>
-                            Paradiddle Variations
+                            7 Days of Paradiddle Variations 🥁
                         </h1>
                         <div>
                             With quarter note high hat pulse
