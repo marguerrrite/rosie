@@ -66,6 +66,10 @@
 
         &__step {
             text-transform: uppercase;
+
+            &::selection {
+                background: transparent;
+            }
         }
 
         &__dot {
