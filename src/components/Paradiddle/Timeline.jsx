@@ -180,7 +180,13 @@ const Tooltip = ({ currentHoveredCircleCoords, currentHoveredData, dimensions, s
                             <div className="Tooltip__variation__name">
                                 Variation {exercises[i]}
                             </div>
-                            <span className="Tooltip__variation__change"></span>
+                            <span className="Tooltip__variation__change">
+                                {/* {currentHoveredData[i - 1] && (
+                                    <>
+                                        {currentHoveredData[i - 1][1] - currentHoveredData[i][1]}
+                                    </>
+                                )} */}
+                            </span>
                             <span className="Tooltip__variation__bpm">
                                 {data[1]} bpm
                             </span>
