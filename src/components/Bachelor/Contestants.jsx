@@ -15,8 +15,8 @@ let contestantNames = _.map(contestantsDataB, _.property('name'));
 const Contestants = () => {
     return (
         <div className="Contestants__grid">
-            {contestantNames.map((name, i) => (
-                <ContestantPreview name={name} key={i}/>
+            {contestantsDataA.map((info, i) => (
+                <ContestantPreview info={info} key={i} name={contestantNames[i]}/>
             ))}
         </div>
     )

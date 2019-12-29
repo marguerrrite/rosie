@@ -41,7 +41,7 @@ const Bachelor = () => {
                         </span>
                     </div>
                 </MaxWidth>
-                <MaxWidth>
+                <MaxWidth className="Bachelor__contestants">
                     <Contestants/>
                 </MaxWidth>
             </Layout>
