@@ -1,0 +1,10 @@
+@import "../../styles/lib.scss";
+
+.Contestants {
+    &__grid {
+        margin-top: 2em;
+        display: grid;
+        grid-row-gap: 2em;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}

@@ -1,0 +1,44 @@
+@import "../../styles/lib.scss";
+
+.Bachelor {
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        font-family: "Inter", sans-serif;
+    }
+
+    &__header {
+        background: $pink-100;
+        padding-top: 4em;
+        padding-bottom: 1.5em;
+        position: relative;
+
+        &__title {
+            font-family: 'Tropline';
+            line-height: 1;
+            margin: 0;
+        }
+
+        &__peter {
+            max-width: 122px;
+            width: 100%;
+            margin: 0 !important;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        &__name {
+            margin-bottom: 0.125em;
+            margin-top: 0.5em;
+        }
+
+        &__description {
+            font-size: 0.8em;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
