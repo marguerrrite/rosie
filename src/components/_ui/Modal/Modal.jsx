@@ -23,7 +23,7 @@ export function ModalProvider({ children }) {
             <Context.Provider value={context}>
                 {children}
             </Context.Provider>
-            <div className="ModalContext" ref={modalRef} />
+            <div ref={modalRef} />
         </div>
     );
 }
@@ -36,8 +36,8 @@ export function Modal({ className, onClose, children, ...props }) {
         ? ReactDOM.createPortal(
            <>
                 <div className="Modal__overlay" onClick={onClose}></div>
-                <div className="Modal__content">
-                    <div className={classNames(className, "Modal__dialog")} {...props}>
+                <div className={classNames(className, "Modal__content")}>
+                    <div className="Modal__dialog" {...props}>
                         {children}
                         <Button
                             className="Modal__button Modal__button--close"

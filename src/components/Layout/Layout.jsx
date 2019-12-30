@@ -15,7 +15,6 @@ if (typeof window !== "undefined") {
 }
 
 const Layout = ({ className, children, showNavigation, showSocialCol, showFooter }) => {
-    const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
         <StaticQuery

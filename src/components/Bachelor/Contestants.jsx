@@ -1,9 +1,8 @@
 import React, { useState } from 'react'
-import { Modal } from "components/_ui/Modal/Modal"
-
 import * as d3 from "d3"
 import _ from "lodash"
 import ContestantPreview from "components/Bachelor/ContestantPreview"
+import ContestantModal from "components/Bachelor/ContestantModal"
 import './Contestants.scss'
 
 import contestantsDataA from 'components/Bachelor/data/bachelor-cosmo.csv'
@@ -16,23 +15,36 @@ let contestantNames = _.map(contestantsDataB, _.property('name'));
 
 const Contestants = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [selectedContestant, setSelectedContestant] = useState(null)
+    const [selectedContestantIndex, setSelectedContestantIndex] = useState(null)
 
+    function handleContestantSelection(contestant, i) {
+        setSelectedContestant(contestant)
+        setSelectedContestantIndex(i)
+        setIsModalOpen(true)
+    }
+
+    function clearContestantSelection() {
+        setSelectedContestant(null)
+        setSelectedContestantIndex(null)
+        setIsModalOpen(false)
+    }
 
     return (
         <div className="Contestants__grid">
             {isModalOpen && (
-                <Modal onClose={() => setIsModalOpen(false)}>
-                    <p>
-                        woo!
-                    </p>
-                </Modal>
+                <ContestantModal
+                    onClose={clearContestantSelection}
+                    contestant={selectedContestant}
+                    name={contestantNames[selectedContestantIndex]}
+                />
             )}
             {contestantsDataA.map((info, i) => (
                 <ContestantPreview
                     info={info}
                     key={i}
                     name={contestantNames[i]}
-                    onClick={() => setIsModalOpen(true)}
+                    onClick={() => handleContestantSelection(info, i)}
                 />
             ))}
         </div>

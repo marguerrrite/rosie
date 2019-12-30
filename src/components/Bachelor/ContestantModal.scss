@@ -1,0 +1,28 @@
+@import "../../styles/lib.scss";
+
+.ContestantModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+
+    .Modal__dialog {
+        background: transparent;
+        height: 95vh;
+        width: 95vw;
+    }
+
+    &__name {
+        font-family: 'Tropline';
+        line-height: 1;
+        margin: 0;
+        font-size: 2.5em;
+    }
+
+    &__occupation {
+        font-weight: 600;
+        color: white;
+    }
+}

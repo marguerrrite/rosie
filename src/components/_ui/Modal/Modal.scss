@@ -40,9 +40,13 @@
         transform: translate(-50%, -50%);
         z-index: 20;
         //pointer-events: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
     &__button {
         cursor: pointer;
+        width: 100%;
     }
 }
