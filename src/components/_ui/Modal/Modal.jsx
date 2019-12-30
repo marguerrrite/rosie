@@ -1,4 +1,6 @@
 import React, { useRef, useContext, useState, useEffect } from "react"
+import Button from "components/_ui/Button/Button"
+import classNames from 'classnames'
 import ReactDOM from "react-dom"
 import "./Modal.scss"
 
@@ -26,7 +28,7 @@ export function ModalProvider({ children }) {
     );
 }
 
-export function Modal({ onClose, children, ...props }) {
+export function Modal({ className, onClose, children, ...props }) {
     const modalNode = useContext(Context);
 
 
@@ -35,11 +37,17 @@ export function Modal({ onClose, children, ...props }) {
            <>
                 <div className="Modal__overlay" onClick={onClose}></div>
                 <div className="Modal__content">
-                    <div className="Modal__dialog" {...props}>
+                    <div className={classNames(className, "Modal__dialog")} {...props}>
                         {children}
-                        <button onClick={onClose}>
+                        <Button
+                            className="Modal__button Modal__button--close"
+                            onClick={onClose}
+                        >
                             Close
-                        </button>
+                        </Button>
+                        {/* <button onClick={onClose}>
+                            Close
+                        </button> */}
                     </div>
                 </div>
            </>,
