@@ -4,10 +4,24 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-radius: 20px;
 
-    &:hover {
-        background: $grey-100;
-        cursor: pointer;
+    @media(max-width: 600px) {
+        padding: 0;
+    }
+
+    &__head {
+        transition: 100ms transform ease-in-out;
+    }
+
+    &__metas {
+        margin-top: -1em;
+
+        @media(max-width: 600px) {
+            margin: 0;
+        }
     }
 
     &__name {
@@ -15,6 +29,7 @@
         font-size: 15px;
         line-height: 18px;
         margin-bottom: 0.25em;
+        text-align: center;
     }
 
     &__occupation {
@@ -36,6 +51,32 @@
 
         .fa-map-marker-alt {
             color: #E1E1E1;
+        }
+    }
+
+    &:hover {
+        background: $pink-100;
+        cursor: pointer;
+
+        .ContestantPreview__head {
+            transform: translateY(-0.35em);
+            transition: 100ms transform ease-in-out;
+
+            @media(max-width: 600px) {
+                transform: none;
+            }
+        }
+
+        .ContestantPreview__occupation {
+            color: $grey-800;
+        }
+
+        .ContestantPreview__location {
+            color: $grey-800;
+        }
+
+        .fa-map-marker-alt {
+            color: $pink-500;
         }
     }
 }

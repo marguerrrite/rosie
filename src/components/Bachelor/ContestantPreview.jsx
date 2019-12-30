@@ -8,15 +8,17 @@ const ContestantPreview = ({ info, name, onClick }) => {
 
     return (
         <div className="ContestantPreview" onClick={onClick}>
-            <ContestantHead name={name} />
-            <div className="ContestantPreview__name">
-                {name}, {info.age}
-            </div>
-            <div className="ContestantPreview__occupation">
-                {info.occupation}
-            </div>
-            <div className="ContestantPreview__location">
-                <FontAwesomeIcon className="" icon={faMapMarkerAlt} /> {info.location}
+            <ContestantHead name={name} className="ContestantPreview__head" />
+            <div className="ContestantPreview__metas">
+                <div className="ContestantPreview__name">
+                    {name}, {info.age}
+                </div>
+                <div className="ContestantPreview__occupation">
+                    {info.occupation}
+                </div>
+                <div className="ContestantPreview__location">
+                    <FontAwesomeIcon className="" icon={faMapMarkerAlt} /> {info.location}
+                </div>
             </div>
         </div>
     )

@@ -37,12 +37,25 @@
 
         &__description {
             font-size: 0.8em;
-            display: flex;
-            justify-content: space-between;
+
+            span {
+                margin-right: 2em;
+            }
+
+            @media(max-width: 600px) {
+                display: flex;
+                justify-content: space-between;
+
+                span {
+                    margin-right: 0em;
+                }
+            }
         }
     }
 
     &__contestants {
-        padding: 0;
+        @media(max-width: 600px) {
+            padding: 0;
+        }
     }
 }
