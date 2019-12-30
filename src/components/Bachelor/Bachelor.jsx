@@ -14,37 +14,29 @@ const Bachelor = () => {
 
     return (
         <>
-            <Layout
-                className="Bachelor__layout Bachelor"
-                showSocialCol={false}
-                showNavigation={false}
-                showFooter={false}>
-                <SEO title="Bachelor Contestants 2020" />
-
-                <MaxWidth size="l" className="Bachelor__header">
-                    <h1 className="Bachelor__header__title">
-                        The Bachelor
-                    </h1>
-                    <img className="Bachelor__header__peter" src={peterCrownImg} />
-                    <h4 className="Bachelor__header__name">
-                        Peter Weber, 28
-                    </h4>
-                    <div className="Bachelor__header__description">
-                        <span>
-                            <FontAwesomeIcon className="" icon={faMapMarkerAlt} /> Westlake Village, CA
-                        </span>
-                        <span>
-                            ✈️ Airline Pilot
-                        </span>
-                        <span>
-                            🌹Hannah’s Season
-                        </span>
-                    </div>
-                </MaxWidth>
-                <MaxWidth className="Bachelor__contestants">
-                    <Contestants/>
-                </MaxWidth>
-            </Layout>
+            <MaxWidth size="l" className="Bachelor__header">
+                <h1 className="Bachelor__header__title">
+                    The Bachelor
+                </h1>
+                <img className="Bachelor__header__peter" src={peterCrownImg} />
+                <h4 className="Bachelor__header__name">
+                    Peter Weber, 28
+                </h4>
+                <div className="Bachelor__header__description">
+                    <span>
+                        <FontAwesomeIcon className="" icon={faMapMarkerAlt} /> Westlake Village, CA
+                    </span>
+                    <span>
+                        ✈️ Airline Pilot
+                    </span>
+                    <span>
+                        🌹Hannah’s Season
+                    </span>
+                </div>
+            </MaxWidth>
+            <MaxWidth className="Bachelor__contestants">
+                <Contestants/>
+            </MaxWidth>
         </>
     )
 }

@@ -1,0 +1,45 @@
+@import "./../../../styles/lib";
+
+.Modal {
+    &Context {
+        position: absolute;
+        z-index: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+
+    &__overlay {
+        animation: 200ms ease-out;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        cursor: pointer;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.9);
+    }
+
+    &__content {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100vh;
+    }
+
+    &__dialog {
+        background: white;
+        border-radius: 5px;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+        //pointer-events: none;
+    }
+}

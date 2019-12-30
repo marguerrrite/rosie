@@ -8,7 +8,7 @@ const Bachelor2020 = () => {
     return (
         <>
             <Layout
-                className="Paradiddles__layout"
+                className="Bachelor__layout"
                 showSocialCol={false}
                 showNavigation={false}
                 showFooter={false}>
