@@ -1,17 +1,19 @@
 @import "../../styles/lib.scss";
 
-.Chart {
-    overflow: visible;
+.CrochetChart {
+    &.Chart {
+        overflow: visible;
 
-    &__container {
-        position: relative;
-    }
+        &__container {
+            position: relative;
+        }
 
-    circle {
-        opacity: 0.75;
+        circle {
+            opacity: 0.75;
 
-        &:hover {
-            opacity: 1;
+            &:hover {
+                opacity: 1;
+            }
         }
     }
 }

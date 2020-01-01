@@ -4,7 +4,7 @@
     display: grid;
     grid-template-columns: 2fr 1.75fr;
     align-items: end;
-    height: 100vh;
+    //height: 100vh;
 
     @media(max-width: 1000px) {
         grid-template-columns: 1fr;

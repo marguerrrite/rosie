@@ -101,7 +101,7 @@ class Chart extends Component {
         return (
             <div className="Chart__container">
                 <svg
-                    className="Chart"
+                    className="CrochetChart Chart"
                     width={svgDimensions.width}
                     height={svgDimensions.height}>
                     <Axes

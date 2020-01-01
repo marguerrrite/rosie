@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
-import * as d3 from "d3"
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Contestants from 'components/Bachelor/Contestants'
-import Layout from 'components/Layout/Layout'
-import Link from 'components/_ui/Link/Link'
+import ContestantHistogram from 'components/Bachelor/ContestantHistogram'
 import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
-import SEO from 'components/SEO/SEO'
 import peterCrownImg from './images/head-peter-crown.png'
-import './Bachelor.scss';
+import './Bachelor.scss'
+
+import contestantsDataA from 'components/Bachelor/data/bachelor-cosmo.csv'
+import contestantsDataB from 'components/Bachelor/data/bachelor-usmag.csv'
+
+import contestantsDataAges from 'components/Bachelor/data/bachelor-cosmo-ages.csv'
+const ageAccessor = d => d.age
 
 const Bachelor = () => {
 
@@ -34,6 +37,11 @@ const Bachelor = () => {
                     </span>
                 </div>
             </MaxWidth>
+            {/* <ContestantHistogram
+                data={contestantsDataAges}
+                xAccessor={ageAccessor}
+                label="Age"
+            /> */}
             <MaxWidth className="Bachelor__contestants">
                 <Contestants/>
             </MaxWidth>

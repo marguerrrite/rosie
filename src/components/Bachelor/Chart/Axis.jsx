@@ -2,12 +2,13 @@ import React from "react"
 import PropTypes from "prop-types"
 import * as d3 from 'd3'
 import { dimensionsPropsType } from "components/utils";
-import { useChartDimensions } from "./Chart";
+import { useChartDimensions } from "components/Bachelor/Chart/Chart";
 
 const axisComponentsByDimension = {
     x: AxisHorizontal,
     y: AxisVertical,
 }
+
 const Axis = ({ dimension, ...props }) => {
     const dimensions = useChartDimensions()
     const Component = axisComponentsByDimension[dimension]
@@ -39,17 +40,14 @@ export default Axis
 
 
 function AxisHorizontal({ dimensions, label, formatTick, scale, ...props }) {
-    // const numberOfTicks = dimensions.boundedWidth < 600
-    //     ? dimensions.boundedWidth / 100
-    //     : dimensions.boundedWidth / 250
+    const numberOfTicks = dimensions.boundedWidth < 600
+        ? dimensions.boundedWidth / 100
+        : dimensions.boundedWidth / 250
 
-    const numberOfTicks = 7
-    const ticks = scale.ticks(numberOfTicks)
+    const ticks = scale.ticks(8)
 
     return (
-        <g
-            className="Axis AxisHorizontal"
-            transform={`translate(0, ${dimensions.boundedHeight})`} {...props}>
+        <g className="Axis AxisHorizontal" transform={`translate(0, ${dimensions.boundedHeight})`} {...props}>
             <line
                 className="Axis__line"
                 x2={dimensions.boundedWidth}
@@ -58,8 +56,8 @@ function AxisHorizontal({ dimensions, label, formatTick, scale, ...props }) {
             {ticks.map((tick, i) => (
                 <text
                     key={tick}
-                    className="Axis__tick"
-                    transform={`translate(${scale(tick)}, 25)`}
+                    className="Axis__tick Axis__tick--horizontal"
+                    transform={`translate(${scale(tick) + 16}, 15)`}
                 >
                     {formatTick(tick)}
                 </text>
@@ -68,7 +66,7 @@ function AxisHorizontal({ dimensions, label, formatTick, scale, ...props }) {
             {label && (
                 <text
                     className="Axis__label"
-                    transform={`translate(${dimensions.boundedWidth / 2}, 60)`}
+                    transform={`translate(${dimensions.boundedWidth / 1.85}, 36)`}
                 >
                     {label}
                 </text>
@@ -80,7 +78,7 @@ function AxisHorizontal({ dimensions, label, formatTick, scale, ...props }) {
 function AxisVertical({ dimensions, label, formatTick, scale, ...props }) {
     const numberOfTicks = dimensions.boundedHeight / 70
 
-    const ticks = scale.ticks(numberOfTicks)
+    const ticks = scale.ticks(4)
 
     return (
         <g className="Axis AxisVertical" {...props}>
@@ -93,13 +91,12 @@ function AxisVertical({ dimensions, label, formatTick, scale, ...props }) {
                 <text
                     key={tick}
                     className="Axis__tick"
-                    transform={`translate(-26, ${scale(tick)})`}
+                    transform={`translate(-16, ${scale(tick)})`}
                 >
                     {formatTick(tick)}
                 </text>
             ))}
-
-            {label && (
+            {/* {label && (
                 <text
                     className="Axis__label"
                     style={{
@@ -108,7 +105,7 @@ function AxisVertical({ dimensions, label, formatTick, scale, ...props }) {
                 >
                     {label}
                 </text>
-            )}
+            )} */}
         </g>
     )
 }

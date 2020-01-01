@@ -14,15 +14,37 @@
         width: 95vw;
     }
 
+    &__head {
+        max-width: 260px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
     &__name {
         font-family: 'Tropline';
         line-height: 1;
         margin: 0;
         font-size: 2.5em;
+        margin-bottom: 0.25rem;
     }
 
     &__occupation {
         font-weight: 600;
+        margin-bottom: 0.5em;
         color: white;
+    }
+
+    &__location {
+        font-weight: 600;
+        color: white;
+    }
+
+    &__content {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__histogram {
+        flex: 1;
     }
 }
