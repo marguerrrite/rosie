@@ -5,11 +5,8 @@
     justify-content: center;
 
     &__container {
-        margin-top: 10em;
-
-        @media(max-width: 500px) {
-            margin-top: 5em;
-        }
+        display: flex;
+        align-items: center;
     }
 
     &__pet {
@@ -18,7 +15,7 @@
         transition: 150ms ease-out all;
 
         &:hover {
-            transform: translateY(-8px) scale(2);
+            transform: scale(1.5);
             transition: 150ms ease-out all;
             z-index: 1;
         }
@@ -28,7 +25,6 @@
         width: 160px;
         margin: 0 auto;
         text-align: left;
-        margin-top: 1em;
         transform: translateX(17px);
     }
 }

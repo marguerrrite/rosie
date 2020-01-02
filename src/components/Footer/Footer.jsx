@@ -13,12 +13,12 @@ const Footer = () => {
             </div>
             <div className="Footer__copyright__container">
                 <span className="Footer__copyright">
-                    &copy; 2019 — </span>
+                    &copy; 2020 Marguerite Roth — </span>
                 <Link
                     className="Footer__copyright__link"
                     href="https://github.com/margueriteroth"
                 >
-                    Designed and developed by Marguerite Roth
+                    Designed and developed by me.
                 </Link>
             </div>
         </MaxWidth>
