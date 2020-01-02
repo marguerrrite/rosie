@@ -94,7 +94,7 @@ const ContestantHistogram = ({ className, data, xAccessor, label, contestantAge,
                 <image
                     className="ContestantHistogram__peter-head"
                     x={(xScale(28)) - 3}
-                    y={dimensions.boundedHeight + 25}
+                    y={dimensions.boundedHeight + 23}
                     width="40"
                     height="40"
                     href={peterCrownImg}
