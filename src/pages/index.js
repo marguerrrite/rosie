@@ -11,7 +11,7 @@ import projects from "components/Project/projects.js";
 import SEO from "components/SEO/SEO"
 
 const Home = () => (
-    <Layout>
+    <Layout showNavigation showSocialCol showFooter>
         <SEO />
         <Intro />
         <MaxWidth className="Home__recent">

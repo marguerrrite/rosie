@@ -6,7 +6,7 @@ import Spinner from "components/_ui/Spinner/Spinner";
 import "./404.scss";
 
 const NotFoundPage = () => (
-    <Layout>
+    <Layout showNavigation showSocialCol showFooter>
         <MaxWidth className="NotFound">
             <Spinner
                 className="NotFound__spinner__container"

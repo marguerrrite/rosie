@@ -18,7 +18,13 @@ const Header = () => (
                         className="Header__link"
                         to={'/#work'}
                     >
-                    Work
+                        Work
+                    </Link>
+                    <Link
+                        className="Header__link"
+                        to={'/writing'}
+                    >
+                        Writing
                     </Link>
                     <Link
                         doOpenInNewTab

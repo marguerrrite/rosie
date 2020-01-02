@@ -5,10 +5,7 @@ import SEO from "components/SEO/SEO";
 
 const DVS = () => (
     <Layout
-        className="DVS__layout"
-        showSocialCol={false}
-        showNavigation={false}
-        showFooter={false}>
+        className="DVS__layout">
         <SEO title="Data Visualization Society: Challenge #1" />
         <DVSPage/>
     </Layout>

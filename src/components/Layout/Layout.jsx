@@ -14,11 +14,9 @@ if (typeof window !== "undefined") {
     require("smooth-scroll")('a[href*="#"]')
 }
 
-const Layout = ({ className, children, showNavigation, showSocialCol, showFooter }) => {
-
-    return (
-        <StaticQuery
-            query={graphql`
+const Layout = ({ className, children, showNavigation, showSocialCol, showFooter }) => (
+    <StaticQuery
+        query={graphql`
             query SITE_TITLE_QUERY {
                 site {
                     siteMetadata {
@@ -60,9 +58,9 @@ Layout.propTypes = {
 }
 
 Layout.defaultProps = {
-    showNavigation: true,
-    showFooter: true,
-    showSocialCol: true,
+    showNavigation: false,
+    showFooter: false,
+    showSocialCol: false,
 }
 
 export default Layout;

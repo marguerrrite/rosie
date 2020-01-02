@@ -35,14 +35,8 @@ const Paradiddles = () => {
     return (
         <>
             <Layout
-                className="Paradiddles__layout"
-                showSocialCol={false}
-                showNavigation={false}
-                showFooter={false}>
-                <SEO title="Paradiddles Data Visualization"
-                    image="https://www.marguerite.io/og-image-paradiddles.png"
-                    twitterImage="https://www.marguerite.io/twitter-image-paradiddles.png"
-                />
+                className="Paradiddles__layout" showFooter>
+                <SEO title="Paradiddles Data Visualization" image="https://www.marguerite.io/og-image-paradiddles.png" twitterImage="https://www.marguerite.io/twitter-image-paradiddles.png"/>
 
                 <MaxWidth size="l" className="Paradiddles">
                     <Timeline
