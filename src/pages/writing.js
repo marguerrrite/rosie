@@ -4,7 +4,7 @@ import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
 import SEO from "components/SEO/SEO"
 
 const Writing = () => (
-    <Layout className="Layout__writing" showSocialCol={false}>
+    <Layout className="Layout__writing" showNavigation showSocialCol showFooter>
         <SEO title="Writing" />
         <MaxWidth>
             <h1>
