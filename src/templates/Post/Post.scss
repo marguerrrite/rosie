@@ -1,6 +1,6 @@
 @import "./../../styles/lib";
 
-.Writing {
+.Post {
     // max-width: 655px;
     // margin: 0 auto;
     margin-bottom: 2em;
@@ -63,7 +63,7 @@
     }
 
     p {
-        .Writing__content__video__container,
+        .Post__content__video__container,
         .gatsby-resp-image-wrapper {
             @media(min-width: 1600px) {
                 margin-left: -8em !important;

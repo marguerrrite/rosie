@@ -83,7 +83,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
 
-    const writingPost = path.resolve(`src/templates/Writing/Writing.jsx`);
+    const writingPost = path.resolve(`src/templates/Post/Post.jsx`);
     const writingPages = await graphql(`
         query {
             allMdx(filter: {frontmatter: {type: {ne: "internal"}}, fileAbsolutePath: {regex: "/writing/"}}, sort: { fields: [frontmatter___date], order: DESC }) {

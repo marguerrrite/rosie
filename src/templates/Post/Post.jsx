@@ -10,51 +10,51 @@ import PageHero from 'components/PageHero/PageHero'
 import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
 import TOC from 'components/TOC/TOC'
 import SEO from "components/SEO/SEO"
-import './Writing.scss'
+import './Post.scss'
 
 export default ({ data }) => {
-    let Writing = data.mdx
-    let slug = Writing.frontmatter.slug
-    let featuredImgFluid = Writing.frontmatter.featuredImage.childImageSharp.fluid
+    let Post = data.mdx
+    let slug = Post.frontmatter.slug
+    let featuredImgFluid = Post.frontmatter.featuredImage.childImageSharp.fluid
 
     return (
         <>
             <SEO
-                title={`${Writing.frontmatter.title}`}
+                title={`${Post.frontmatter.title}`}
             />
-            <Layout showNavigation showFooter className={classNames("Writing", `Writing--${Writing.frontmatter.slug}`)}>
+            <Layout showNavigation showFooter className={classNames("Post", `Post--${Post.frontmatter.slug}`)}>
                 <div>
-                    <Label className="Writing__hero__label" category="primary">
-                        <Link className="Writing__hero__label__link" to={'/writing'}>
+                    <Label className="Post__hero__label" category="primary">
+                        <Link className="Post__hero__label__link" to={'/writing'}>
                             Writing
                         </Link>
                     </Label>
-                    <h1 className="Writing__hero__title">
-                        {Writing.frontmatter.title}
+                    <h1 className="Post__hero__title">
+                        {Post.frontmatter.title}
                     </h1>
 
-                    {/* {Writing.frontmatter.description && (
-                        <h2 className="Writing__hero__description">
-                            {Writing.frontmatter.description}
+                    {/* {Post.frontmatter.description && (
+                        <h2 className="Post__hero__description">
+                            {Post.frontmatter.description}
                         </h2>
                     )} */}
 
                     <PageHero
-                        className="Writing__hero__image"
+                        className="Post__hero__image"
                         page={slug}
                         image={featuredImgFluid}
                     />
 
-                    <MaxWidth size="l" className="Writing__content__container">
-                        <div className="Writing__content">
+                    <MaxWidth size="l" className="Post__content__container">
+                        <div className="Post__content">
                             <div></div>
                             <div className="Word__content__body">
                                 <MDXRenderer>
-                                    {Writing.body}
+                                    {Post.body}
                                 </MDXRenderer>
                             </div>
                             <TOC
-                                className="Writing__content__TOC"
+                                className="Post__content__TOC"
                             />
                         </div>
                     </MaxWidth>
