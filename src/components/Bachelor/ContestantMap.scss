@@ -1,0 +1,23 @@
+@import "../../styles/lib.scss";
+
+.ContestantMap {
+    height: 200px; //otherwise will increase height continuously
+
+
+    img {
+        margin: 0 !important;
+    }
+
+    .ContestantBars__rect {
+        fill: $pink-500;
+
+        &--isHighlighted {
+            fill: $pink-100;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        transform: translateY(20px);
+    }
+}

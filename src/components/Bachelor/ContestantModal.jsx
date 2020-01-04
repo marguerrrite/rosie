@@ -10,7 +10,6 @@ import contestantsDataAges from 'components/Bachelor/data/bachelor-cosmo-ages.cs
 const ageAccessor = d => d.age
 
 const ContestantModal = ({ contestant, name, onClose }) => {
-    console.log(contestant)
 
     return (
         <Modal onClose={() => onClose()} className="ContestantModal">

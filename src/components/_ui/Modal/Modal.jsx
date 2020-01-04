@@ -34,7 +34,7 @@ export function Modal({ className, onClose, children, ...props }) {
 
     return modalNode
         ? ReactDOM.createPortal(
-           <>
+            <div className="Modal__container">
                 <div className="Modal__overlay" onClick={onClose}></div>
                 <div className={classNames(className, "Modal__content")}>
                     <div className="Modal__dialog" {...props}>
@@ -50,7 +50,7 @@ export function Modal({ className, onClose, children, ...props }) {
                         </button> */}
                     </div>
                 </div>
-           </>,
+           </div>,
             modalNode
         )
         : null;

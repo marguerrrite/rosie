@@ -9,6 +9,14 @@
         right: 0;
     }
 
+    &__container {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+
     &__overlay {
         animation: 200ms ease-out;
         position: fixed;
