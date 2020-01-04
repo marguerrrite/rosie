@@ -7,21 +7,23 @@ import './Footer.scss';
 
 const Footer = () => {
     return (
-        <MaxWidth size="l" className="Footer__container">
-            <div className="Footer__pets">
-                <SpinningPets />
-            </div>
-            <div className="Footer__copyright__container">
-                <span className="Footer__copyright">
-                    &copy; 2020 Marguerite Roth — </span>
-                <Link
-                    className="Footer__copyright__link"
-                    href="https://github.com/margueriteroth"
-                >
-                    Designed and developed by me.
+        <div className="Footer__container">
+            <MaxWidth size="l" className="Footer">
+                <div className="Footer__pets">
+                    <SpinningPets />
+                </div>
+                <div className="Footer__copyright__container">
+                    <span className="Footer__copyright">
+                        &copy; 2020 Marguerite Roth — </span>
+                    <Link
+                        className="Footer__copyright__link"
+                        href="https://github.com/margueriteroth"
+                    >
+                        Designed and developed by me.
                 </Link>
-            </div>
-        </MaxWidth>
+                </div>
+            </MaxWidth>
+        </div>
     );
 };
 

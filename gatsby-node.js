@@ -84,7 +84,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
 
     const writingPost = path.resolve(`src/templates/Post/Post.jsx`);
-    const writingPages = await graphql(`
+    const writingPosts = await graphql(`
         query {
             allMdx(filter: {frontmatter: {type: {ne: "internal"}}, fileAbsolutePath: {regex: "/writing/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
                 edges {
@@ -98,16 +98,16 @@ exports.createPages = async ({ graphql, actions }) => {
         }
   `)
 
-    if (writingPages.errors) {
-        throw writingPages.errors
+    if (writingPosts.errors) {
+        throw writingPosts.errors
     }
 
     // Create work post pages.
-    const writings = writingPages.data.allMdx.edges
+    const posts = writingPosts.data.allMdx.edges
 
-    writings.forEach((post, index) => {
-        const previous = index === writings.length - 1 ? null : writings[index + 1].node
-        const next = index === 0 ? null : writings[index - 1].node
+    posts.forEach((post, index) => {
+        const previous = index === posts.length - 1 ? null : posts[index + 1].node
+        const next = index === 0 ? null : posts[index - 1].node
 
         createPage({
             path: `/writing${post.node.fields.slug}`,

@@ -1,57 +1,57 @@
 @import "./../styles/lib.scss";
 
 .Writing {
-    display: grid;
-    grid-template-columns: 2fr 1.75fr;
-    align-items: end;
-    height: 100vh;
 
-    @media(max-width: 1000px) {
-        grid-template-columns: 1fr;
-        align-items: center;
-    }
+    &Post {
+        margin-bottom: 4em;
+        display: block;
+        text-decoration: none;
 
-    h1 {
-        font-weight: 700;
-        font-size: 2.2em;
-        margin-bottom: 0.5em;
-    }
+        &__title {
+            line-height: 1.2;
+            font-size: 1.2em;
+            margin-bottom: 0.1em;
+            transition: all 100ms ease-out;
+        }
 
-    &__layout {
-        min-height: 100%;
-        height: 100%;
-    }
+        &__categories {
+            font-size: 0.8em;
+            color: $grey-600;
+            font-weight: 600;
+            margin-top: 0.25em;
+            margin-bottom: 0.25em;
+        }
 
-    &__timeline {
-        padding-right: 3em;
-        margin-top: 7em;
-    }
+        &__description {
+            margin-top: 1em;
+            font-size: 0.9em;
+            line-height: 165%;
+        }
 
-    &__description {
-        color: $grey-700;
-        font-size: 0.8em;
-        padding-left: 5.5em;
-        padding-right: 2em;
-        margin-top: 2.5em;
-        align-self: baseline;
-
-        @media(max-width: 1000px) {
-            grid-row: 2;
-            grid-column: 1;
-            padding: 0;
+        &:hover {
+            .WritingPost__title {
+                color: $blue-600;
+                transition: all 100ms ease-out;
+            }
         }
     }
 
     &__content {
-        padding-left: 2em;
-        padding-right: 3em;
-        margin-top: 2.25em;
-        padding-bottom: 3em;
+        display: grid;
+        grid-template-columns: 3fr 4fr;
+        grid-gap: 2.25em;
 
-        @media(max-width: 1000px) {
-            grid-row: -1;
-            grid-column: 1;
-            padding-bottom: 0;
+        @media(max-width: 767px) {
+            grid-template-columns: 1fr;
         }
+    }
+
+    &__title {
+        grid-column: 1 / -1;
+        margin-bottom: 2rem;
+    }
+
+    &__posts {
+        grid-column: 1 / 2;
     }
 }

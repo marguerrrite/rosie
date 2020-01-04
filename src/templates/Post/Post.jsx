@@ -5,7 +5,6 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import Label from 'components/_ui/Label/Label'
 import Layout from "components/Layout/Layout"
 import Link from 'components/_ui/Link/Link'
-import PageDetail from 'components/PageDetail/PageDetail'
 import PageHero from 'components/PageHero/PageHero'
 import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
 import TOC from 'components/TOC/TOC'
