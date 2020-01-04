@@ -88,13 +88,17 @@ const ContestantHistogram = ({ className, data, xAccessor, label, contestantAge,
                         y={dimensions.boundedHeight + 20}
                     />
                 )}
-                <svg x={(xScale(28)) + 11} y={dimensions.boundedHeight + 20} >
-                    <path d="M4.5 0L9 4H0L4.5 0Z" fill="#5892f2" />
-                </svg>
+                {contestantAge != 28 && (
+                    <svg
+                        x={(xScale(28)) + 11}
+                        y={dimensions.boundedHeight + 20} >
+                        <path d="M4.5 0L9 4H0L4.5 0Z" fill="#5892f2" />
+                    </svg>
+                )}
                 <image
                     className="ContestantHistogram__peter-head"
                     x={(xScale(28)) - 3}
-                    y={dimensions.boundedHeight + 23}
+                    y={contestantAge != 28 ? dimensions.boundedHeight + 23 : dimensions.boundedHeight + 64}
                     width="40"
                     height="40"
                     href={peterCrownImg}
