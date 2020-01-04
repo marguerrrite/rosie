@@ -112,6 +112,13 @@ module.exports = {
         name: `work`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/writing`,
+        name: `writing`,
+      },
+    },
     // {
     //   resolve: `gatsby-source-filesystem`,
     //   options: {
