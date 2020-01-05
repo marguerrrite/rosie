@@ -13,10 +13,10 @@ import "./ContestantMap.scss"
 
 const ContestantMap = ({ className, data, contestantAge, contestantName, contestantCoordinates }) => {
     const [ref, dimensions] = useChartDimensions({
-        marginBottom: 30,
-        marginRight: 24,
+        marginBottom: 0,
+        marginRight: 0,
         marginLeft: 0,
-        marginTop: 30
+        marginTop: 14
     })
 
     const sphere = ({ type: "Sphere" })
@@ -27,11 +27,16 @@ const ContestantMap = ({ className, data, contestantAge, contestantName, contest
 
     let coordinatesLosAngeles = [-118.248405, 33.973951]
 
+    // function linkArc(d) {
+    //     var dx = d.target.x - d.source.x,
+    //         dy = d.target.y - d.source.y,
+    //         dr = Math.sqrt(dx * dx + dy * dy);
+    //     return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
+    // }
+
+
     return (
         <div className={classNames(className, "ContestantMap")} ref={ref}>
-            <h6 className="ContestantMap__title">
-                Map
-            </h6>
             <Chart dimensions={dimensions}>
                 <g className="ContestantMap__states">
                     {statesJson.features.map((d, i) => (
@@ -46,8 +51,8 @@ const ContestantMap = ({ className, data, contestantAge, contestantName, contest
                     className="ContestantMap__head ContestantMap__head--peter"
                     x={projection(coordinatesLosAngeles)[0]}
                     y={projection(coordinatesLosAngeles)[1]}
-                    width="40"
-                    height="40"
+                    width="18"
+                    height="18"
                     href={peterCrownImg}
                 />
                 <ContestantHead
@@ -57,6 +62,7 @@ const ContestantMap = ({ className, data, contestantAge, contestantName, contest
                     x={projection(contestantCoordinates)[0]}
                     y={projection(contestantCoordinates)[1]}
                 />
+                <path className="ContestantMap__arc"/>
             </Chart>
         </div>
     )

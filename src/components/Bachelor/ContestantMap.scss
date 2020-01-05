@@ -1,8 +1,8 @@
 @import "../../styles/lib.scss";
 
 .ContestantMap {
-    height: 300px; //otherwise will increase height continuously
-    max-width: 500px;
+    height: 100px; //otherwise will increase height continuously
+    width: 160px;
 
     img {
         margin: 0 !important;
@@ -19,6 +19,10 @@
     }
 
     &__head {
-        transform: translate(-20px, -20px);
+        transform: translate(-18px, -18px);
+
+        &--peter {
+            transform: translate(-9px, -9px);
+        }
     }
 }
