@@ -14,7 +14,6 @@ export function ModalProvider({ children }) {
     // render so that modalRef exists
     useEffect(() => {
         setContext(modalRef.current);
-
     }, []);
 
 
