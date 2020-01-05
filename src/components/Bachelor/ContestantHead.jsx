@@ -23,6 +23,7 @@ const ContestantHead = ({ name, className, isSvg, x, y, showNotch }) => {
                         </svg>
                     )}
                         <image
+                            className={classNames(className, "ContestantHead")}
                             x={x}
                             y={y + 5}
                             width="40"

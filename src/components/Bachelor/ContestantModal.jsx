@@ -3,13 +3,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import ContestantHead from "components/Bachelor/ContestantHead"
 import ContestantHistogram from 'components/Bachelor/ContestantHistogram'
+import ContestantMap from 'components/Bachelor/ContestantMap'
 import { Modal } from "components/_ui/Modal/Modal"
 import './ContestantModal.scss'
 
 import contestantsDataAges from 'components/Bachelor/data/bachelor-cosmo-ages.csv'
 const ageAccessor = d => d.age
 
-const ContestantModal = ({ contestant, name, onClose }) => {
+const ContestantModal = ({ contestant, name, onClose, contestantCoordinates }) => {
 
     return (
         <Modal onClose={() => onClose()} className="ContestantModal">
@@ -25,7 +26,7 @@ const ContestantModal = ({ contestant, name, onClose }) => {
                     <FontAwesomeIcon className="" icon={faMapMarkerAlt} /> {contestant.location}
                 </div>
             </div>
-            <div className="ContestantModal__content">
+            {/* <div className="ContestantModal__content">
                 <ContestantHistogram
                     className="ContestantModal__histogram"
                     data={contestantsDataAges}
@@ -34,7 +35,16 @@ const ContestantModal = ({ contestant, name, onClose }) => {
                     contestantAge={contestant.age}
                     contestantName={name}
                 />
+            </div> */}
+            <div className="ContestantModal__content">
+                <ContestantMap
+                    className="ContestantModal__map"
+                    data={contestantsDataAges}
+                    contestantName={name}
+                    contestantCoordinates={contestantCoordinates}
+                />
             </div>
+
         </Modal>
     )
 }

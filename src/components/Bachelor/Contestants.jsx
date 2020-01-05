@@ -13,7 +13,7 @@ import contestantsDataB from 'components/Bachelor/data/bachelor-usmag.csv'
 
 let contestantNames = _.map(contestantsDataB, _.property('name'));
 
-const Contestants = () => {
+const Contestants = ({ parsedContestants }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedContestant, setSelectedContestant] = useState(null)
     const [selectedContestantIndex, setSelectedContestantIndex] = useState(null)
@@ -32,21 +32,30 @@ const Contestants = () => {
 
     return (
         <div className="Contestants__grid">
-            {isModalOpen && (
-                <ContestantModal
-                    onClose={clearContestantSelection}
-                    contestant={selectedContestant}
-                    name={contestantNames[selectedContestantIndex]}
-                />
+            {parsedContestants ? (
+                <>
+                    {isModalOpen && (
+                        <ContestantModal
+                            onClose={clearContestantSelection}
+                            contestant={selectedContestant}
+                            name={contestantNames[selectedContestantIndex]}
+                            contestantCoordinates={[parsedContestants[selectedContestantIndex].lng, parsedContestants[selectedContestantIndex].lat]}
+                        />
+                    )}
+                    {contestantsDataA.map((info, i) => (
+                        <ContestantPreview
+                            info={info}
+                            key={i}
+                            name={contestantNames[i]}
+                            onClick={() => handleContestantSelection(info, i)}
+                        />
+                    ))}
+                </>
+            ) : (
+                <p>
+                    loading
+                </p>
             )}
-            {contestantsDataA.map((info, i) => (
-                <ContestantPreview
-                    info={info}
-                    key={i}
-                    name={contestantNames[i]}
-                    onClick={() => handleContestantSelection(info, i)}
-                />
-            ))}
         </div>
     )
 }
