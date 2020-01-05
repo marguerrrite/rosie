@@ -83,6 +83,9 @@ const Bachelor = () => {
                 label="Age"
             /> */}
             <MaxWidth className="Bachelor__contestants">
+                <h2>
+                    The Cast
+                </h2>
                 <Contestants parsedContestants={parsedContestants}/>
             </MaxWidth>
         </>
