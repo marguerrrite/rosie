@@ -17,10 +17,10 @@ const gradientColors = ["#9980FA", "rgb(226, 222, 243)"]
 const ContestantHistogram = ({ className, data, xAccessor, label, contestantAge, contestantName }) => {
     const gradientId = useUniqueId("ContestantHistogram-gradient")
     const [ref, dimensions] = useChartDimensions({
-        marginBottom: 30,
+        marginBottom: 60,
         marginRight: 24,
         marginLeft: 0,
-        marginTop: 30
+        marginTop: 50
     })
 
     const numberOfThresholds = 9
@@ -51,11 +51,14 @@ const ContestantHistogram = ({ className, data, xAccessor, label, contestantAge,
     const heightAccessorScaled = d => dimensions.boundedHeight - yScale(yAccessor(d))
     const keyAccessor = (d, i) => i
 
+    const ageAccessor = d => d.age
+    const mean = d3.mean(data.filter(d => d.occupation), ageAccessor)
+
     return (
         <div className={classNames(className, "ContestantHistogram")} ref={ref}>
-            <h6 className="ContestantHistogram__title">
-                Age Distribution
-            </h6>
+            {/* <h6 className="ContestantHistogram__title">
+                Contestant Age Distribution
+            </h6> */}
             <Chart dimensions={dimensions}>
                 <Axis
                     dimensions={dimensions}
@@ -99,10 +102,31 @@ const ContestantHistogram = ({ className, data, xAccessor, label, contestantAge,
                     className="ContestantHistogram__peter-head"
                     x={(xScale(28)) - 3}
                     y={contestantAge != 28 ? dimensions.boundedHeight + 23 : dimensions.boundedHeight + 64}
-                    width="40"
-                    height="40"
+                    width="36"
+                    height="36"
                     href={peterCrownImg}
                 />
+                <line
+                    className="ContestantHistogram__mean"
+                    x1={xScale(mean)}
+                    x2={xScale(mean)}
+                    y1={-16}
+                    y2={dimensions.boundedHeight}
+                />
+                <text
+                    className="ContestantHistogram__mean__label"
+                    x={xScale(mean)}
+                    y={-37}
+                >
+                    Average age:
+                </text>
+                <text
+                    className="ContestantHistogram__mean__age"
+                    x={xScale(mean)}
+                    y={-22}
+                >
+                    {mean}
+                </text>
             </Chart>
         </div>
     )

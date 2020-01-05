@@ -12,9 +12,6 @@ import './Bachelor.scss'
 import contestantsDataA from 'components/Bachelor/data/bachelor-cosmo.csv'
 import contestantsDataB from 'components/Bachelor/data/bachelor-usmag.csv'
 
-import contestantsDataAges from 'components/Bachelor/data/bachelor-cosmo-ages.csv'
-const ageAccessor = d => d.age
-
 const Bachelor = () => {
     const [parsedContestants, setParsedContestants] = useState('');
 

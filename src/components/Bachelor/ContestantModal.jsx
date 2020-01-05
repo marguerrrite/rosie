@@ -11,7 +11,6 @@ import contestantsDataAges from 'components/Bachelor/data/bachelor-cosmo-ages.cs
 const ageAccessor = d => d.age
 
 const ContestantModal = ({ contestant, name, onClose, contestantCoordinates }) => {
-
     return (
         <Modal onClose={() => onClose()} className="ContestantModal">
             <div className="ContestantModal__header">
@@ -22,11 +21,17 @@ const ContestantModal = ({ contestant, name, onClose, contestantCoordinates }) =
                 <div className="ContestantModal__occupation">
                     {contestant.occupation}
                 </div>
+                <ContestantMap
+                    className="ContestantModal__map"
+                    data={contestantsDataAges}
+                    contestantName={name}
+                    contestantCoordinates={contestantCoordinates}
+                />
                 <div className="ContestantModal__location">
-                    <FontAwesomeIcon className="" icon={faMapMarkerAlt} /> {contestant.location}
+                    <FontAwesomeIcon className="ContestantModal__location__icon" icon={faMapMarkerAlt} /> {contestant.location}
                 </div>
             </div>
-            {/* <div className="ContestantModal__content">
+            <div className="ContestantModal__content">
                 <ContestantHistogram
                     className="ContestantModal__histogram"
                     data={contestantsDataAges}
@@ -34,14 +39,6 @@ const ContestantModal = ({ contestant, name, onClose, contestantCoordinates }) =
                     label="Age"
                     contestantAge={contestant.age}
                     contestantName={name}
-                />
-            </div> */}
-            <div className="ContestantModal__content">
-                <ContestantMap
-                    className="ContestantModal__map"
-                    data={contestantsDataAges}
-                    contestantName={name}
-                    contestantCoordinates={contestantCoordinates}
                 />
             </div>
 

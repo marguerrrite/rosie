@@ -1,8 +1,12 @@
 @import "../../styles/lib.scss";
 
 .ContestantHistogram {
-    height: 200px; //otherwise will increase height continuously
+    height: 220px; //otherwise will increase height continuously
 
+    @media(min-width: 501px) {
+        height: 160px;
+        max-width: 340px;
+    }
 
     img {
         margin: 0 !important;
@@ -19,5 +23,38 @@
     &__title {
         margin: 0;
         transform: translateY(20px);
+    }
+
+    &__head {
+        width: 36px;
+        height: 36px;
+
+        &--peter {
+            // width: 36px;
+            // height: 36px;
+        }
+    }
+
+    &__mean {
+        stroke: $pink-200;
+        stroke-dasharray: 2px 3px;
+
+        &__label {
+            font-size: 0.6em;
+            text-anchor: middle;
+            fill: $pink-300;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.055em;
+            opacity: 0.6;
+        }
+
+        &__age {
+            font-size: 0.8em;
+            text-anchor: middle;
+            fill: $pink-300;
+            opacity: 0.85;
+            font-weight: 600;
+        }
     }
 }

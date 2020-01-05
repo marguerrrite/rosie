@@ -25,9 +25,9 @@ const ContestantHead = ({ name, className, isSvg, x, y, showNotch }) => {
                         <image
                             className={classNames(className, "ContestantHead")}
                             x={x}
-                            y={y + 5}
-                            width="40"
-                            height="40"
+                            y={y + 3}
+                            width="36"
+                            height="36"
                             href={img_src}>
                         </image>
                 </>
