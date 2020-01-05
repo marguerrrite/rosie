@@ -3,11 +3,8 @@ import { useChartDimensions, accessorPropsType, useUniqueId } from "components/u
 import PropTypes from "prop-types"
 import classNames from 'classnames'
 import * as d3 from "d3"
-import { geoMercator, geoPath } from "d3-geo";
 import _ from "lodash"
-
 import Chart from "components/Bachelor/Chart/Chart"
-
 import ContestantHead from "components/Bachelor/ContestantHead"
 import peterCrownImg from './images/head-peter-crown.png'
 import statesJson from './gz_2010_us_040_00_500k_simple.json'
@@ -28,6 +25,7 @@ const ContestantMap = ({ className, data, contestantAge, contestantName, contest
 
     const pathGenerator = d3.geoPath(projection)
 
+    let coordinatesLosAngeles = [-118.248405, 33.973951]
 
     return (
         <div className={classNames(className, "ContestantMap")} ref={ref}>
@@ -44,6 +42,14 @@ const ContestantMap = ({ className, data, contestantAge, contestantName, contest
                         />
                     ))}
                 </g>
+                <image
+                    className="ContestantMap__head ContestantMap__head--peter"
+                    x={projection(coordinatesLosAngeles)[0]}
+                    y={projection(coordinatesLosAngeles)[1]}
+                    width="40"
+                    height="40"
+                    href={peterCrownImg}
+                />
                 <ContestantHead
                     isSvg
                     className="ContestantMap__head"
