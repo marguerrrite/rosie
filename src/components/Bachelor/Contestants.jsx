@@ -8,6 +8,8 @@ import './Contestants.scss'
 import contestantsDataA from 'components/Bachelor/data/bachelor-cosmo.csv'
 import contestantsDataB from 'components/Bachelor/data/bachelor-usmag.csv'
 
+import peterCrownImg from './images/head-peter-crown.png'
+
 // const ageAccessor = d => d.age
 // const yAccessor = d => d.length
 
@@ -31,9 +33,9 @@ const Contestants = ({ parsedContestants }) => {
     }
 
     return (
-        <div className="Contestants__grid">
+        <div className="Contestants">
             {parsedContestants ? (
-                <>
+                <div className="Contestants__grid">
                     {isModalOpen && (
                         <ContestantModal
                             onClose={clearContestantSelection}
@@ -50,11 +52,11 @@ const Contestants = ({ parsedContestants }) => {
                             onClick={() => handleContestantSelection(info, i)}
                         />
                     ))}
-                </>
+                </div>
             ) : (
-                <p>
-                    loading
-                </p>
+                <div className="Contestants__loader__container">
+                    <img src={peterCrownImg} className="Contestants__loader" />
+                </div>
             )}
         </div>
     )

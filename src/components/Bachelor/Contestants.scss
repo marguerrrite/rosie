@@ -25,4 +25,23 @@
             grid-template-columns: 1fr 1fr 1fr;
         }
     }
+
+    &__loader {
+        max-width: 80px;
+        animation: spinPeter 25s linear infinite;
+
+        &__container {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        @keyframes spinPeter {
+            to {
+                transform: rotate(6080deg);
+            }
+        }
+    }
 }
