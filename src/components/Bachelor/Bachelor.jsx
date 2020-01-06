@@ -38,11 +38,17 @@ const Bachelor = () => {
                 const res = await fetch(url)
                 const json = await res.json()
 
+                let name = contestantsDataB[i].name
+
+                //Canada!
+                let lat = name !== "Mykenna" ? json.results[0].location.lat : -122.672326
+                let lng = name !== "Mykenna" ? json.results[0].location.lng : 48.993867
+
                 return {
                     ...d,
-                    lat: json.results[0].location.lat,
-                    lng: json.results[0].location.lng,
-                    name: contestantsDataB[i].name,
+                    lat,
+                    lng,
+                    name,
                     image: contestantsDataB[i]["image-src"]
                 }
             })
@@ -50,6 +56,8 @@ const Bachelor = () => {
 
         setParsedContestants(contestantsData);
     };
+
+    console.log(parsedContestants)
 
     return (
         <>

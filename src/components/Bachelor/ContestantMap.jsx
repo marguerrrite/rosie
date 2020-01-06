@@ -34,7 +34,6 @@ const ContestantMap = ({ className, data, contestantAge, contestantName, contest
     //     return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
     // }
 
-
     return (
         <div className={classNames(className, "ContestantMap")} ref={ref}>
             <Chart dimensions={dimensions}>
@@ -60,7 +59,7 @@ const ContestantMap = ({ className, data, contestantAge, contestantName, contest
                     className="ContestantMap__head"
                     name={contestantName}
                     x={projection(contestantCoordinates)[0]}
-                    y={projection(contestantCoordinates)[1]}
+                    y={contestantName != "Mykenna" ? projection(contestantCoordinates)[1] : projection(contestantCoordinates)[1] - 4}
                 />
                 <path className="ContestantMap__arc"/>
             </Chart>
