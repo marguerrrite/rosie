@@ -1,8 +1,14 @@
 @import "../../styles/lib.scss";
 
 .ContestantMap {
-    height: 100px; //otherwise will increase height continuously
-    width: 160px;
+    height: 70px;
+    width: 130px;
+    margin-top: 0.5em;
+
+    @media(min-width: 501px) {
+        height: 90px;
+        width: 140px;
+    }
 
     img {
         margin: 0 !important;

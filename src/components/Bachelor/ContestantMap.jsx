@@ -16,7 +16,7 @@ const ContestantMap = ({ className, data, contestantAge, contestantName, contest
         marginBottom: 0,
         marginRight: 0,
         marginLeft: 0,
-        marginTop: 14
+        marginTop: 0
     })
 
     const sphere = ({ type: "Sphere" })
