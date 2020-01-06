@@ -12,7 +12,11 @@ const Bachelor2020 = () => {
                 showSocialCol={false}
                 showNavigation={false}
                 showFooter={false}>
-                <SEO title="Bachelor Contestants 2020" />
+                <SEO
+                    title="Bachelor Contestants 2020"
+                    image="https://www.marguerite.io/og-image-bachelor2020.png"
+                    twitterImage="https://www.marguerite.io/twitter-image-bachelor2020.png"
+                />
 
                 <Bachelor />
             </Layout>

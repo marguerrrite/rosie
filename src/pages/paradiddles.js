@@ -39,7 +39,10 @@ const Paradiddles = () => {
                 showSocialCol={false}
                 showNavigation={false}
                 showFooter={false}>
-                <SEO title="Paradiddles Data Visualization" image="https://www.marguerite.io/og-image-paradiddles.png" twitterImage="https://www.marguerite.io/twitter-image-paradiddles.png"/>
+                <SEO title="Paradiddles Data Visualization"
+                    image="https://www.marguerite.io/og-image-paradiddles.png"
+                    twitterImage="https://www.marguerite.io/twitter-image-paradiddles.png"
+                />
 
                 <MaxWidth size="l" className="Paradiddles">
                     <Timeline
