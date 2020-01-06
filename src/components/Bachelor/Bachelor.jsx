@@ -83,6 +83,13 @@ const Bachelor = () => {
             <MaxWidth size="l" className="Bachelor__contestants">
                 <Contestants parsedContestants={parsedContestants} />
             </MaxWidth>
+            <MaxWidth size="l" className="Bachelor__">
+                <h6>
+                    <Link doOpenInNewTab to="https://robhasawebsite.com/shows/reality-tv-rhapups/bachelor-bachelorette-paradise/bachelor-2/">
+                        Inspired by the Bachelor RHAP UP podcast 🌹
+                    </Link>
+                </h6>
+            </MaxWidth>
             <MaxWidth size="l" className="Bachelor__attributions">
                 <h5 className="Bachelor__attributions__title">
                     Contestant image, name, age, occupation, and location information from:
