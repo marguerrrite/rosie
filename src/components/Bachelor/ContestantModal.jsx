@@ -13,35 +13,36 @@ const ageAccessor = d => d.age
 const ContestantModal = ({ contestant, name, onClose, contestantCoordinates }) => {
     return (
         <Modal onClose={() => onClose()} className="ContestantModal">
-            <div className="ContestantModal__header">
-                <ContestantHead className="ContestantModal__head" name={name} />
-                <div className="ContestantModal__name">
-                    {name}, {contestant.age}
+            <div>
+                <div className="ContestantModal__header">
+                    <ContestantHead className="ContestantModal__head" name={name} />
+                    <div className="ContestantModal__name">
+                        {name}, {contestant.age}
+                    </div>
+                    <div className="ContestantModal__occupation">
+                        {contestant.occupation}
+                    </div>
+                    <ContestantMap
+                        className="ContestantModal__map"
+                        data={contestantsDataAges}
+                        contestantName={name}
+                        contestantCoordinates={contestantCoordinates}
+                    />
+                    <div className="ContestantModal__location">
+                        <FontAwesomeIcon className="ContestantModal__location__icon" icon={faMapMarkerAlt} /> {contestant.location}
+                    </div>
                 </div>
-                <div className="ContestantModal__occupation">
-                    {contestant.occupation}
-                </div>
-                <ContestantMap
-                    className="ContestantModal__map"
-                    data={contestantsDataAges}
-                    contestantName={name}
-                    contestantCoordinates={contestantCoordinates}
-                />
-                <div className="ContestantModal__location">
-                    <FontAwesomeIcon className="ContestantModal__location__icon" icon={faMapMarkerAlt} /> {contestant.location}
+                <div className="ContestantModal__content">
+                    <ContestantHistogram
+                        className="ContestantModal__histogram"
+                        data={contestantsDataAges}
+                        xAccessor={ageAccessor}
+                        label="Age"
+                        contestantAge={contestant.age}
+                        contestantName={name}
+                    />
                 </div>
             </div>
-            <div className="ContestantModal__content">
-                <ContestantHistogram
-                    className="ContestantModal__histogram"
-                    data={contestantsDataAges}
-                    xAccessor={ageAccessor}
-                    label="Age"
-                    contestantAge={contestant.age}
-                    contestantName={name}
-                />
-            </div>
-
         </Modal>
     )
 }

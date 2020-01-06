@@ -24,8 +24,8 @@
 
     .Modal__button {
         background: rgba($pink-300, 0.2);
-        padding-top: 1em;
-        padding-bottom: 1em;
+        //padding-top: 1em;
+        //padding-bottom: 1em;
         color: rgba(white, 0.5);
         transition: all 100ms ease-out;
 
@@ -38,7 +38,7 @@
 
     &__head {
         max-width: 260px;
-        max-width: 230px;
+        max-width: 180px;
         width: 100%;
         margin: 0 auto;
     }
@@ -52,7 +52,7 @@
         color: $pink-100;
 
         @media(max-width: 500px) {
-            font-size: 2.5em;
+            font-size: 2.25em;
         }
     }
 
@@ -60,7 +60,7 @@
         font-weight: 600;
         margin-bottom: 0.5em;
         color: $pink-200;
-        font-size: 1.25em;
+        font-size: 1em;
         text-transform: capitalize;
     }
 
@@ -85,6 +85,7 @@
     &__content {
         display: flex;
         justify-content: center;
+        margin-top: 2em;
 
         // display: grid;
         // grid-template-columns: 1fr 1fr;

@@ -15,10 +15,10 @@ const gradientColors = ["#9980FA", "rgb(226, 222, 243)"]
 
 const ContestantHistogram = ({ className, data, xAccessor, contestantAge, contestantName }) => {
     const [ref, dimensions] = useChartDimensions({
-        marginBottom: 60,
+        marginBottom: 90,
         marginRight: 24,
         marginLeft: 0,
-        marginTop: 66
+        marginTop: 45
     })
 
     const numberOfThresholds = 9
