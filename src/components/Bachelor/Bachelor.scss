@@ -9,48 +9,77 @@
         font-family: "Inter", sans-serif;
     }
 
+    background: $mauve-200;
+    padding-bottom: 4em;
+
+
     &__header {
-        background: $pink-100;
-        padding-top: 4em;
-        padding-bottom: 1.5em;
-        position: relative;
+        padding-top: 8em;
+        //padding-bottom: 2em;
+
+        @media(max-width: 600px) {
+            padding-top: 4em;
+        }
 
         &__title {
             font-family: 'Tropline';
             line-height: 1;
             margin: 0;
-        }
 
-        &__peter {
-            max-width: 122px;
-            width: 100%;
-            margin: 0 !important;
-            position: absolute;
-            top: 0;
-            right: 0;
-        }
-
-        &__name {
-            margin-bottom: 0.125em;
-            margin-top: 0.5em;
+            @media(min-width: 501px) {
+                font-size: 7.5em;
+                max-width: 750px;
+            }
         }
 
         &__description {
-            font-size: 0.8em;
-
-            span {
-                margin-right: 2em;
-            }
 
             @media(max-width: 600px) {
-                display: flex;
-                justify-content: space-between;
-
-                span {
-                    margin-right: 0em;
-                }
+                font-size: 0.9em;
+                font-weight: 600;
             }
         }
+
+        // padding-top: 4em;
+        // padding-bottom: 1.5em;
+        // position: relative;
+
+        // &__title {
+        //     font-family: 'Tropline';
+        //     line-height: 1;
+        //     margin: 0;
+        // }
+
+        // &__peter {
+        //     max-width: 122px;
+        //     width: 100%;
+        //     margin: 0 !important;
+        //     position: absolute;
+        //     top: 0;
+        //     right: 0;
+        // }
+
+        // &__name {
+        //     margin-bottom: 0.125em;
+        //     margin-top: 0.5em;
+        // }
+
+        // &__description {
+        //     font-size: 0.8em;
+
+        //     span {
+        //         margin-right: 2em;
+        //     }
+
+        //     @media(max-width: 600px) {
+        //         display: flex;
+        //         justify-content: space-between;
+
+        //         span {
+        //             margin-right: 0em;
+        //         }
+        //     }
+        // }
     }
 
     &__contestants {
@@ -69,6 +98,28 @@
                 padding-left: 1.25rem;
                 padding-right: 1.25rem;
             }
+        }
+    }
+
+    &__attributions {
+        background: rgba(#F8EAEA, 0.5);
+        padding: 2em;
+        color: #A97676;
+        font-size: 0.8em;
+        max-width: 960px;
+
+        &__title {
+            margin-top: 0;
+            margin-bottom: 0.5em;
+            line-height: 1.5;
+            font-weight: 600;
+        }
+
+        p {
+            margin: 0.5em 0;
+            word-break: break-all;
+            white-space: pre-wrap;
+            font-size: 0.9em;
         }
     }
 }

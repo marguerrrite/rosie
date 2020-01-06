@@ -2,9 +2,7 @@ import React, { useState, useEffect } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Contestants from 'components/Bachelor/Contestants'
-import ContestantHistogram from 'components/Bachelor/ContestantHistogram'
-import ContestantMap from 'components/Bachelor/ContestantMap'
-
+import Link from "components/_ui/Link/Link"
 import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
 import peterCrownImg from './images/head-peter-crown.png'
 import './Bachelor.scss'
@@ -41,8 +39,8 @@ const Bachelor = () => {
                 let name = contestantsDataB[i].name
 
                 //Canada!
-                let lat = name !== "Mykenna" ? json.results[0].location.lat : -122.672326
-                let lng = name !== "Mykenna" ? json.results[0].location.lng : 48.993867
+                let lat = name !== "Mykenna" ? json.results[0].location.lat : 48.993867
+                let lng = name !== "Mykenna" ? json.results[0].location.lng : -122.672326
 
                 return {
                     ...d,
@@ -60,12 +58,15 @@ const Bachelor = () => {
     console.log(parsedContestants)
 
     return (
-        <>
+        <MaxWidth size="l" className="Bachelor">
             <MaxWidth size="l" className="Bachelor__header">
                 <h1 className="Bachelor__header__title">
-                    The Bachelor
+                    Bachelor Contestants
                 </h1>
-                <img className="Bachelor__header__peter" src={peterCrownImg} />
+                <h3 className="Bachelor__header__description">
+                    Following along with the new contestants is hard. This guide is here to help! 🌹
+                </h3>
+                {/* <img className="Bachelor__header__peter" src={peterCrownImg} />
                 <h4 className="Bachelor__header__name">
                     Peter Weber, 28
                 </h4>
@@ -79,7 +80,7 @@ const Bachelor = () => {
                     <span>
                         🌹Hannah’s Season
                     </span>
-                </div>
+                </div> */}
             </MaxWidth>
             {/* <ContestantMap
                 data={contestantsDataAges}
@@ -90,13 +91,30 @@ const Bachelor = () => {
                 xAccessor={ageAccessor}
                 label="Age"
             /> */}
-            <MaxWidth className="Bachelor__contestants">
-                <h2>
-                    The Cast
-                </h2>
-                <Contestants parsedContestants={parsedContestants}/>
+            <MaxWidth size="l" className="Bachelor__contestants">
+                <Contestants parsedContestants={parsedContestants} />
             </MaxWidth>
-        </>
+            <MaxWidth size="l" className="Bachelor__attributions">
+                <h5 className="Bachelor__attributions__title">
+                    Contestant image, name, age, occupation, and location information from:
+                </h5>
+                <p>
+                    Us Magazine: <Link to="https://www.usmagazine.com/entertainment/pictures/the-bachelor-season-24-cast-meet-peter-webers-contestants">
+                        https://www.usmagazine.com/entertainment/pictures/the-bachelor-season-24-cast-meet-peter-webers-contestants
+                    </Link>
+                </p>
+                <p>
+                    Cosmopolitan: <Link to="https://www.cosmopolitan.com/entertainment/tv/g29087999/peter-weber-bachelor-contestants-season-24-2020/">
+                        https://www.cosmopolitan.com/entertainment/tv/g29087999/peter-weber-bachelor-contestants-season-24-2020/
+                    </Link>
+                </p>
+                <p>
+                    ABC: <Link to="https://abc.com/shows/the-bachelor">
+                        https://abc.com/shows/the-bachelor
+                    </Link>
+                </p>
+            </MaxWidth>
+        </MaxWidth>
     )
 }
 
