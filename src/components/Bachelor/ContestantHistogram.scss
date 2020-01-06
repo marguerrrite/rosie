@@ -1,7 +1,7 @@
 @import "../../styles/lib.scss";
 
 .ContestantHistogram {
-    height: 220px; //otherwise will increase height continuously
+    height: 170px; //otherwise will increase height continuously
 
     @media(min-width: 501px) {
         height: 160px;
@@ -23,6 +23,12 @@
     &__title {
         margin: 0;
         transform: translateY(20px);
+        font-family: 'Inter', sans-serif;
+        font-size: 1em;
+        color: $pink-200;
+        margin: 0;
+        font-weight: 600;
+        //text-align: left;
     }
 
     &__head {
@@ -32,6 +38,15 @@
         &--peter {
             // width: 36px;
             // height: 36px;
+        }
+    }
+
+    &__age {
+        &__label {
+            fill: $pink-300;
+            font-size: 0.75em;
+            font-weight: 600;
+            text-anchor: middle;
         }
     }
 
@@ -56,5 +71,18 @@
             opacity: 0.85;
             font-weight: 600;
         }
+
+        @media(max-width: 500px) {
+            &__label {
+                font-size: 0.5em;
+                letter-spacing: 0.055em;
+            }
+
+            &__age {
+                font-size: 0.7em;
+            }
+        }
+
+
     }
 }

@@ -33,7 +33,7 @@
     }
 
     .AxisHorizontal .Axis__tick {
-        text-anchor: middle;
+        //text-anchor: middle;
     }
 
     .AxisVertical .Axis__tick {
@@ -69,5 +69,13 @@
         &--horizontal {
             //fill: red;
         }
+    }
+
+    .AxisHorizontal {
+        // .Axis__tick {
+        //     &:nth-of-type(11) {
+        //         display: none;
+        //     }
+        // }
     }
 }
