@@ -1,0 +1,92 @@
+@import "../../styles/lib.scss";
+
+.ContestantPreview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    border-radius: 20px;
+
+    @media(max-width: 600px) {
+        padding: 0;
+        padding-bottom: 0.25em;
+        padding-top: 0.25em;
+    }
+
+    &__head {
+        transition: 100ms transform ease-in-out;
+    }
+
+    &__metas {
+        margin-top: -1em;
+
+        @media(max-width: 600px) {
+            margin: 0;
+        }
+    }
+
+    &__name {
+        font-weight: bold;
+        font-size: 1em;
+        line-height: 18px;
+        margin-bottom: 0.25em;
+        text-align: center;
+        margin-top: 0.75em;
+
+        @media(max-width: 600px) {
+            margin-top: 0em;
+        }
+    }
+
+    &__occupation {
+        font-weight: normal;
+        font-size: 0.8em;
+        line-height: 1.2em;
+        text-align: center;
+        opacity: 0.5;
+        padding-left: 4px;
+        padding-right: 4px;
+        margin-top: 0.5em;
+        margin-bottom: 0.25em;
+        font-weight: 600;
+    }
+
+    &__location {
+        font-weight: normal;
+        font-size: 0.7em;
+        line-height: 1.5em;
+        text-align: center;
+        opacity: 0.5;
+
+        .fa-map-marker-alt {
+            color: $pink-500;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: $pink-200;
+
+        transform: translateY(-0.35em);
+        transition: 100ms transform ease-in-out;
+
+        @media(max-width: 600px) {
+            transform: none;
+            border-radius: 6px;
+        }
+
+        .ContestantPreview__occupation {
+            opacity: 1;
+        }
+
+        .ContestantPreview__location {
+            opacity: 1;
+        }
+
+        .fa-map-marker-alt {
+            color: $pink-500;
+            opacity: 1;
+        }
+    }
+}

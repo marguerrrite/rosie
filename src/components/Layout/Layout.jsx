@@ -1,10 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
-import classNames from 'classnames';
-import { StaticQuery, graphql } from "gatsby";
-import Footer from "components/Footer/Footer";
-import SocialCol from "components/SocialCol/SocialCol";
-import Header from "components/Header/Header";
+import React, { useState } from "react"
+import ReactDOM from "react-dom"
+import PropTypes from "prop-types"
+import classNames from 'classnames'
+import { StaticQuery, graphql } from "gatsby"
+import Footer from "components/Footer/Footer"
+import SocialCol from "components/SocialCol/SocialCol"
+import Header from "components/Header/Header"
+import { ModalProvider, Modal } from "components/_ui/Modal/Modal"
 import 'styles/globals.scss';
 
 if (typeof window !== "undefined") {
@@ -12,9 +14,11 @@ if (typeof window !== "undefined") {
     require("smooth-scroll")('a[href*="#"]')
 }
 
-const Layout = ({ className, children, showNavigation, showSocialCol, showFooter }) => (
-    <StaticQuery
-        query={graphql`
+const Layout = ({ className, children, showNavigation, showSocialCol, showFooter }) => {
+
+    return (
+        <StaticQuery
+            query={graphql`
             query SITE_TITLE_QUERY {
                 site {
                     siteMetadata {
@@ -23,26 +27,30 @@ const Layout = ({ className, children, showNavigation, showSocialCol, showFooter
                 }
             }
         `}
-        render={data => (
-            <div className="div">
-                <div className="Layout">
-                    {showNavigation && (
-                        <Header />
-                    )}
-                    {showSocialCol && (
-                        <SocialCol />
-                    )}
-                    <main className={classNames("Layout__content", className)}>
-                        {children}
-                    </main>
-                    {showFooter && (
-                        <Footer />
-                    )}
-                </div>
-            </div>
-        )}
-    />
-)
+            render={data => (
+                <ModalProvider>
+                    <div className="div">
+                        <div className="Layout">
+                            {showNavigation && (
+                                <Header />
+                            )}
+                            {showSocialCol && (
+                                <SocialCol />
+                            )}
+                            <main className={classNames("Layout__content", className)}>
+                                {children}
+                            </main>
+                            {showFooter && (
+                                <Footer />
+                            )}
+                        </div>
+                    </div>
+                </ModalProvider>
+            )}
+        />
+
+    )
+}
 
 Layout.propTypes = {
     children: PropTypes.node.isRequired,

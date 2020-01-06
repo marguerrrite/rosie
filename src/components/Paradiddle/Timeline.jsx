@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import classNames from "classnames"
 import PropTypes from 'prop-types'
 import * as d3 from "d3"
-import { useChartDimensions } from "./utils"
+import { useChartDimensions } from "components/utils"
 import Axis from "components/Paradiddle/Axis"
 import Chart from 'components/Paradiddle/Chart'
 import Line from "components/Paradiddle/Line"

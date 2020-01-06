@@ -1,0 +1,88 @@
+@import "../../styles/lib.scss";
+
+.ContestantHistogram {
+    height: 160px; //otherwise will increase height continuously
+
+    @media(min-width: 501px) {
+        height: 160px;
+        max-width: 340px;
+    }
+
+    img {
+        margin: 0 !important;
+    }
+
+    .ContestantBars__rect {
+        fill: $pink-500;
+
+        &--isHighlighted {
+            fill: $pink-100;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        transform: translateY(0px);
+        font-family: 'Inter', sans-serif;
+        font-size: 1em;
+        color: $pink-200;
+        margin: 0;
+        font-weight: 600;
+        //text-align: left;
+    }
+
+    &__head {
+        width: 36px;
+        height: 36px;
+
+        &--peter {
+            // width: 36px;
+            // height: 36px;
+        }
+    }
+
+    &__age {
+        &__label {
+            fill: $pink-300;
+            font-size: 0.75em;
+            font-weight: 600;
+            text-anchor: middle;
+        }
+    }
+
+    &__mean {
+        stroke: $pink-200;
+        stroke-dasharray: 2px 3px;
+
+        &__label {
+            font-size: 0.6em;
+            text-anchor: middle;
+            fill: $pink-300;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.055em;
+            opacity: 0.6;
+        }
+
+        &__age {
+            font-size: 0.8em;
+            text-anchor: middle;
+            fill: $pink-300;
+            opacity: 0.85;
+            font-weight: 600;
+        }
+
+        @media(max-width: 500px) {
+            &__label {
+                font-size: 0.5em;
+                letter-spacing: 0.055em;
+            }
+
+            &__age {
+                font-size: 0.7em;
+            }
+        }
+
+
+    }
+}

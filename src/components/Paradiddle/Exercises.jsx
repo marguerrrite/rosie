@@ -1,6 +1,5 @@
 import React from 'react'
 import classNames from "classnames"
-import Button from "components/_ui/Button/Button"
 import PropTypes from 'prop-types'
 import Staff from 'components/Paradiddle/Staff'
 import './Exercises.scss'
