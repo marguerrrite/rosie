@@ -56,6 +56,7 @@ const Contestants = ({ parsedContestants }) => {
             ) : (
                 <div className="Contestants__loader__container">
                     <img src={peterCrownImg} className="Contestants__loader" />
+                    Loading Contestants
                 </div>
             )}
         </div>

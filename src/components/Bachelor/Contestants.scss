@@ -29,11 +29,18 @@
     &__loader {
         max-width: 80px;
         animation: spinPeter 25s linear infinite;
+        margin: 0 !important;
 
         &__container {
             width: 100%;
             display: flex;
             justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 6em;
+            margin-bottom: 10em;
+            color: rgba(0, 0, 0, 0.3);
+            font-size: 0.85em;
         }
 
 
