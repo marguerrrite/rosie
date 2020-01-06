@@ -54,8 +54,6 @@ const ContestantHistogram = ({ className, data, xAccessor, contestantAge, contes
 
     let ageDifference = 28 - contestantAge
 
-    console.log(ageDifference)
-
     return (
         <div className={classNames(className, "ContestantHistogram")} ref={ref}>
             <h5 className="ContestantHistogram__title">

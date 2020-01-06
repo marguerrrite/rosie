@@ -10,6 +10,8 @@
 
     @media(max-width: 600px) {
         padding: 0;
+        padding-bottom: 0.25em;
+        padding-top: 0.25em;
     }
 
     &__head {
@@ -33,7 +35,7 @@
         margin-top: 0.75em;
 
         @media(max-width: 600px) {
-            margin-top: 0.2em;
+            margin-top: 0em;
         }
     }
 

@@ -55,8 +55,6 @@ const Bachelor = () => {
         setParsedContestants(contestantsData);
     };
 
-    console.log(parsedContestants)
-
     return (
         <MaxWidth size="l" className="Bachelor">
             <MaxWidth size="l" className="Bachelor__header">
@@ -82,15 +80,6 @@ const Bachelor = () => {
                     </span>
                 </div> */}
             </MaxWidth>
-            {/* <ContestantMap
-                data={contestantsDataAges}
-            /> */}
-
-            {/* <ContestantHistogram
-                data={contestantsDataAges}
-                xAccessor={ageAccessor}
-                label="Age"
-            /> */}
             <MaxWidth size="l" className="Bachelor__contestants">
                 <Contestants parsedContestants={parsedContestants} />
             </MaxWidth>
