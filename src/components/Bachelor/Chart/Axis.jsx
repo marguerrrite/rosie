@@ -57,7 +57,7 @@ function AxisHorizontal({ dimensions, label, formatTick, scale, ...props }) {
                 <text
                     key={tick}
                     className="Axis__tick Axis__tick--horizontal"
-                    transform={`translate(${scale(tick) + 16}, 15)`}
+                    transform={`translate(${scale(tick)}, 15)`}
                 >
                     {formatTick(tick)}
                 </text>

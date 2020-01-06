@@ -31,13 +31,14 @@
 
         &:hover,
         &:focus {
-            background: rgba($pink-300, 0.225);
+            background: rgba($pink-300, 0.25);
             transition: all 100ms ease-out;
         }
     }
 
     &__head {
         max-width: 260px;
+        max-width: 230px;
         width: 100%;
         margin: 0 auto;
     }
@@ -46,15 +47,21 @@
         font-family: 'Tropline';
         line-height: 1;
         margin: 0;
-        font-size: 2.5em;
+        font-size: 2.35em;
         margin-bottom: 0.25rem;
         color: $pink-100;
+
+        @media(max-width: 500px) {
+            font-size: 2.5em;
+        }
     }
 
     &__occupation {
         font-weight: 600;
         margin-bottom: 0.5em;
         color: $pink-200;
+        font-size: 1.25em;
+        text-transform: capitalize;
     }
 
     &__location {
