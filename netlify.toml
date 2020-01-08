@@ -3,3 +3,11 @@
 
 [context.branch-deploy]
   command = "npm run noIndex"
+
+[[redirects]]
+  from = "/bachelor"
+  to = "/2020-bachelor"
+
+[[redirects]]
+  from = "/2020"
+  to = "/2020-bachelor"
