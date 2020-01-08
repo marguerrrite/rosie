@@ -14,7 +14,7 @@ import contestantsDataB from 'components/Bachelor/data/bachelor-usmag.csv'
 const Bachelor = () => {
     const [parsedContestants, setParsedContestants] = useState('');
 
-    const geoapikey = '4b0753ae63c03000c5e40404e4abce5040ae5be'
+    const geoapikey = 'b0e855789851bb855be0e5e8b160eb58816e556'
     const api_url = 'https://api.geocod.io/v1.4/geocode'
 
     useEffect(() => {
