@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+//import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+//import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import Contestants from 'components/Bachelor/Contestants'
 import Link from "components/_ui/Link/Link"
 import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
-import peterCrownImg from './images/head-peter-crown.png'
+import Label from "components/_ui/Label/Label";
+//import peterCrownImg from './images/head-peter-crown.png'
 import './Bachelor.scss'
 
 import contestantsDataA from 'components/Bachelor/data/bachelor-cosmo.csv'
@@ -83,14 +84,19 @@ const Bachelor = () => {
             <MaxWidth size="l" className="Bachelor__contestants">
                 <Contestants parsedContestants={parsedContestants} />
             </MaxWidth>
-            <MaxWidth size="l" className="Bachelor__">
+            <MaxWidth size="l" className="Bachelor__inspo">
                 <h6>
                     <Link doOpenInNewTab to="https://robhasawebsite.com/shows/reality-tv-rhapups/bachelor-bachelorette-paradise/bachelor-2/">
                         Inspired by the Bachelor RHAP UP podcast 🌹
                     </Link>
                 </h6>
             </MaxWidth>
-            <MaxWidth size="l" className="Bachelor__attributions">
+            <MaxWidth size="xl" className="Bachelor__back-button__container">
+                <Link to="/" isButton className="Bachelor__back-button">
+                    ← Back to Marguerite.io
+                </Link>
+            </MaxWidth>
+            <MaxWidth size="xl" className="Bachelor__attributions">
                 <h5 className="Bachelor__attributions__title">
                     Contestant image, name, age, occupation, and location information from:
                 </h5>

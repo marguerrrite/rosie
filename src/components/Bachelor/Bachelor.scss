@@ -106,7 +106,7 @@
         padding: 2em;
         color: #A97676;
         font-size: 0.8em;
-        max-width: 960px;
+        //max-width: 960px;
         margin-top: 4rem;
 
         &__title {
@@ -121,6 +121,14 @@
             word-break: break-all;
             white-space: pre-wrap;
             font-size: 0.9em;
+        }
+    }
+
+    &__back-button {
+        &__container {
+            margin: 0 auto;
+            margin-top: 2em;
+            text-align: center;
         }
     }
 }
