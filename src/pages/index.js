@@ -14,7 +14,7 @@ const Home = () => (
         <Intro />
         <MaxWidth id="work" className="Home__projects">
             <h1>
-                Work
+                Selected Work
             </h1>
             {Object.keys(projects).map((key) =>
                 <Project
