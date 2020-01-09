@@ -1,31 +1,31 @@
-name,location,age,occupation
-Alayah B.,"San Antonio, TX",24,Miss Texas 2019
-Alexa C.,"Chicago, IL",27,Esthetician
-Avonlea E.,"Fort Worth, TX",27,Cattle rancher and model
-Courtney P.,"Venice, FL",26,Cosmetologist
-Deandra K.,"Plano, TX",23,Home Care Coordinator
-Eunice C.,"Chicago, IL",23,Flight attendant
-Hannah Ann S.,"Knoxville, TN",23,Model
-Jade M.,"Mesa, AZ",26,Flight attendant
-Jasmine N.,"Houston, TX",25,Client relations manager
-Jenna S.,"New Lenox, IL",22,Nursing student
-Katrina B.,"Chicago, IL",28,Professional sports dancer
-Kelley F.,"Chicago, IL",27,Attorney
-Kelsey W.,"Des Moines, IA",28,Professional clothier
-Kiarra N.,"Kennesaw, GA",23,Nanny
-Kylie R.,"Los Angeles, CA",26,Entertainment sales associate
-Lauren J.,"Los Angeles, CA",26,Marketing executive
-Lexi B.,"New York, NY",26,Marketing coordinator
-Madison P.,"Birmingham, AL",23,Foster parent recruiter
-Maurissa G.,"Atlanta, GA",23,Patient care coordinator
-Megan H.,"Daly City, CA",26,Flight attendant
-Mykenna D.,"Langely, BC, Canada",22,Fashion blogger
-Natasha P.,"New York, NY",31,Event planner
-Payton M.,"Wellesley, MA",23,Business development representative
-Sarah C.,"Knoxville, TN",24,Medical radiographer
-Savannah M.,"Houston, TX",27,Realtor
-Shiann L.,"Las Vegas, NV",27,Administrative assistant
-Sydney H.,"Birmingham, AL",24,Retail marketing manager
-Tammy L.,"Syracuse, NY",24,House flipper
-Victoria F.,"Virginia Beach, VA",25,Medical sales representative
-Victoria P.,"Alexandria, LA",27,Nurse
+name,location,age,occupation,lat,lng
+Alayah.,"San Antonio, TX",24,Miss Texas 2019,29.468413,-98.528889
+Alexa ,"Chicago, IL",27,Esthetician,41.88531,-87.62213
+Avonlea,"Fort Worth, TX",27,Cattle rancher and model,32.771419,-97.291484
+Courtney,"Venice, FL",26,Cosmetologist,27.167521,-82.380967
+Deandra,"Plano, TX",23,Home Care Coordinator,33.056756,-96.730831
+Eunice,"Chicago, IL",23,Flight attendant,41.88531,-87.62213
+Hannah Ann,"Knoxville, TN",23,Model,36.032334,-83.884804
+Jade,"Mesa, AZ",26,Flight attendant,33.440695,-111.856967
+Jasmine,"Houston, TX",25,Client relations manager,29.813142,-95.309789
+Jenna,"New Lenox, IL",22,Nursing student,41.510802,-87.961808
+Katrina,"Chicago, IL",28,Professional sports dancer,41.88531,-87.62213
+Kelley,"Chicago, IL",27,Attorney,41.88531,-87.62213
+Kelsey,"Des Moines, IA",28,Professional clothier,41.672687,-93.572173
+Kiarra,"Kennesaw, GA",23,Nanny,34.03384,-84.597433
+Kylie,"Los Angeles, CA",26,Entertainment sales associate,33.973951,-118.248405
+Lauren,"Los Angeles, CA",26,Marketing executive,33.973951,-118.248405
+Lexi,"New York, NY",26,Marketing coordinator,40.68863,-74.018244
+Madison,"Birmingham, AL",23,Foster parent recruiter,33.456412,-86.801904
+Maurissa,"Atlanta, GA",23,Patient care coordinator,33.844371,-84.47405
+Megan,"Daly City, CA",26,Flight attendant,37.687509,-122.438783
+Mykenna,"Langely, BC, Canada",22,Fashion blogger,48.993867,-122.672326
+Natasha,"New York, NY",31,Event planner,40.68863,-74.018244
+Payton,"Wellesley, MA",23,Business development representative,42.300596,-71.27875
+Sarah,"Knoxville, TN",24,Medical radiographer,36.032334,-83.884804
+Savannah,"Houston, TX",27,Realtor,29.813142,-95.309789
+Shiann,"Las Vegas, NV",27,Administrative assistant,36.17372,-115.10647
+Sydney,"Birmingham, AL",24,Retail marketing manager,33.456412,-86.801904
+Tammy,"Syracuse, NY",24,House flipper,43.02143,-76.197701
+Victoria F.,"Virginia Beach, VA",25,Medical sales representative,36.844004,-76.12036
+Victoria P.,"Alexandria, LA",27,Nurse,31.274156,-92.467107

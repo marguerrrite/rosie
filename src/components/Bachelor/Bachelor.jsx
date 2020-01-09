@@ -25,33 +25,53 @@ const Bachelor = () => {
         }
     }, []);
 
-    const getParsedContestants = async () => {
-        const contestantsData = await Promise.all(
-            contestantsDataA.map(async (d, i) => {
-                let location = d.location
-                let url = api_url
-                    + '?'
-                    + 'api_key=' + geoapikey
-                    + '&q=' + encodeURIComponent(location)
 
-                const res = await fetch(url)
-                const json = await res.json()
+    // const getParsedContestants = async () => {
+    //     const contestantsData = await Promise.all(
+    //         contestantsDataA.map(async (d, i) => {
+    //             let location = d.location
+    //             let url = api_url
+    //                 + '?'
+    //                 + 'api_key=' + geoapikey
+    //                 + '&q=' + encodeURIComponent(location)
 
-                let name = contestantsDataB[i].name
+    //             const res = await fetch(url)
+    //             const json = await res.json()
 
-                //Canada!
-                let lat = name !== "Mykenna" ? json.results[0].location.lat : 48.993867
-                let lng = name !== "Mykenna" ? json.results[0].location.lng : -122.672326
+    //             let name = contestantsDataB[i].name
 
-                return {
-                    ...d,
-                    lat,
-                    lng,
-                    name,
-                    image: contestantsDataB[i]["image-src"]
-                }
-            })
-        )
+    //             //Canada!
+    //             let lat = name !== "Mykenna" ? json.results[0].location.lat : 48.993867
+    //             let lng = name !== "Mykenna" ? json.results[0].location.lng : -122.672326
+
+    //             return {
+    //                 ...d,
+    //                 lat,
+    //                 lng,
+    //                 name,
+    //                 image: contestantsDataB[i]["image-src"]
+    //             }
+    //         })
+    //     )
+
+    //     setParsedContestants(contestantsData);
+    // };
+
+    const getParsedContestants = () => {
+        const contestantsData = contestantsDataA.map((d, i) => {
+            let name = contestantsDataB[i].name
+            let image = contestantsDataB[i]["image-src"]
+            let lat = d.lat
+            let lng = d.lng
+
+            return {
+                ...d,
+                lat,
+                lng,
+                name,
+                image
+            }
+        })
 
         setParsedContestants(contestantsData);
     };
