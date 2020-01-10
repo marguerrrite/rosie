@@ -14,9 +14,6 @@ import contestantsDataB from 'components/Bachelor/data/bachelor-usmag.csv'
 const Bachelor = () => {
     const [parsedContestants, setParsedContestants] = useState('');
 
-    const geoapikey = 'b0e855789851bb855be0e5e8b160eb58816e556'
-    const api_url = 'https://api.geocod.io/v1.4/geocode'
-
     useEffect(() => {
         // You need to restrict it at some point
         // This is just dummy code and should be replaced by actual
@@ -24,7 +21,6 @@ const Bachelor = () => {
             getParsedContestants();
         }
     }, []);
-
 
     // const getParsedContestants = async () => {
     //     const contestantsData = await Promise.all(
