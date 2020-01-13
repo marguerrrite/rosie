@@ -10,10 +10,14 @@ import Button from "components/_ui/Button/Button"
 import { Modal } from "components/_ui/Modal/Modal"
 import './ContestantModal.scss'
 
+import contestantWeeklies from 'components/Bachelor/data/bachelor-weeklies.csv'
+
 import contestantsDataAges from 'components/Bachelor/data/bachelor-cosmo-ages.csv'
 const ageAccessor = d => d.age
 
-const ContestantModal = ({ contestant, name, onClose, contestantCoordinates }) => {
+
+
+const ContestantModal = ({ contestant, name, onClose, contestantCoordinates, contestantIndex }) => {
     const [openBio, setOpenBio] = useState("bio");
 
     const onToggleBio = () => {
@@ -36,7 +40,9 @@ const ContestantModal = ({ contestant, name, onClose, contestantCoordinates }) =
         contestant.week10rose,
     ]
 
-    console.log(weeklyRoseStatus)
+    let contestantWeekly = contestantWeeklies[contestantIndex]
+
+    let weeklyHighlight = contestantWeeklies[contestantIndex].week1highlight
 
     return (
         <Modal onClose={() => onClose()} className="ContestantModal">
@@ -81,6 +87,12 @@ const ContestantModal = ({ contestant, name, onClose, contestantCoordinates }) =
                         {contestant.bio}
                     </div>
                 </div>
+            </div>
+
+            <div className="ContestantHighlight__container">
+                {weeklyHighlight && (
+                    <ContestantHighlight highlight={weeklyHighlight} />
+                )}
             </div>
 
             <div className="ContestantStatus__container">
@@ -149,6 +161,25 @@ const ContestantStatus = ({ status }) => {
                     </div>
                 </div>
             ))}
+        </div>
+    )
+}
+
+const ContestantHighlight = ({ highlight }) => {
+    let highlights = highlight.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
+    let roseHighlight = highlights[0].includes("rose")
+    console.log(roseHighlight)
+    return (
+        <div className="ContestantHighlight">
+            <h5 className="ContestantModal__section-title ContestantHighlight__title">
+                <span>{roseHighlight ? "🌹" : "💅"}</span> Week 1 Highlight
+            </h5>
+            <div className="ContestantHighlight__primary">
+                {highlights[0]}
+            </div>
+            <div className="ContestantHighlight__secondary">
+                {highlights[1]}
+            </div>
         </div>
     )
 }

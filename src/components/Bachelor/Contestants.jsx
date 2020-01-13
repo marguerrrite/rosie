@@ -43,6 +43,7 @@ const Contestants = ({ parsedContestants }) => {
                             onClose={clearContestantSelection}
                             contestant={selectedContestant}
                             name={contestantNames[selectedContestantIndex]}
+                            contestantIndex={selectedContestantIndex}
                             contestantCoordinates={[parsedContestants[selectedContestantIndex].lng, parsedContestants[selectedContestantIndex].lat]}
                         />
                     )}

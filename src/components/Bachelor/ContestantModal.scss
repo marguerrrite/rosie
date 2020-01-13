@@ -11,14 +11,14 @@
         height: 760px;
         padding: 2em 3em 2em;
         box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.58);
-        max-width: 990px;
+        max-width: 1030px;
         width: 100%;
 
         display: grid;
         grid-template-columns: 1.1fr 1fr;
         grid-template-rows: 150px 100px 2fr 2fr;
         grid-row-gap: 1.5em;
-        grid-column-gap: 2em;
+        grid-column-gap: 4em;
 
         @media(max-width: 600px) {
             height: 680px;
@@ -65,7 +65,7 @@
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        grid-column: 1 / -1;
+        grid-column: 1 / 2;
         margin-left: -2em;
 
         &__content {
@@ -112,9 +112,43 @@
         }
     }
 
+    .ContestantHighlight {
+        &__container {
+            background: rgba($pink-300, 0.1);
+            grid-column: 2 / -1;
+            grid-row: 1 / 2;
+            border-radius: 5px;
+            padding: 1em;
+            height: fit-content;
+            align-self: center;
+            justify-self: end;
+        }
+
+        &__title {
+            margin-bottom: 0.5em;
+        }
+
+        &__primary {
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-bottom: 0.35em;
+            line-height: 1.35;
+        }
+
+        &__secondary {
+            font-size: 0.8em;
+            opacity: 0.7;
+            line-height: 1.35;
+        }
+    }
+
     .ContestantStatus {
         display: flex;
         justify-content: space-between;
+
+        &__container {
+            grid-row: 2 / 3;
+        }
 
         &__week {
             text-align: center;
