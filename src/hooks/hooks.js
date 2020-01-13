@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react";
+import { getUrlArgs } from "components/utils"
 import globalThis from '@ungap/global-this';
 import "intersection-observer";
 
@@ -63,4 +64,10 @@ export const useOnClickOutside = (ref, handler, events) => {
         !ref.current.contains(event.target) &&
         handler(event)
     useEventListener(events, detectClickOutside)
+}
+
+// from https://wattenberger.com/
+export const useUrlParams = () => {
+    const params = getUrlArgs()
+    return params
 }

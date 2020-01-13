@@ -10,6 +10,7 @@ import './Bachelor.scss'
 
 import contestantsDataA from 'components/Bachelor/data/bachelor-cosmo.csv'
 import contestantsDataB from 'components/Bachelor/data/bachelor-usmag.csv'
+import contestantsDataC from 'components/Bachelor/data/bachelor-abc.csv'
 
 const Bachelor = () => {
     const [parsedContestants, setParsedContestants] = useState('');
@@ -59,13 +60,17 @@ const Bachelor = () => {
             let image = contestantsDataB[i]["image-src"]
             let lat = d.lat
             let lng = d.lng
+            let bio = contestantsDataC[i].bio
+            let notes = contestantsDataC[i].notes
 
             return {
                 ...d,
                 lat,
                 lng,
                 name,
-                image
+                image,
+                bio,
+                notes
             }
         })
 

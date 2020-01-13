@@ -1,4 +1,5 @@
 // Utils from Fullstack D3 and Data Visualization by Amelia Wattenberger | https://www.newline.co/fullstack-d3
+// from https://wattenberger.com/
 
 import PropTypes from 'prop-types'
 import { useEffect, useState, useRef } from "react"
@@ -81,4 +82,18 @@ let lastId = 0
 export const useUniqueId = (prefix = "") => {
     lastId++
     return [prefix, lastId].join("-")
+}
+
+const windowGlobal = typeof window !== 'undefined' && window
+
+export const getUrlArgs = () => {
+    if (!windowGlobal) return {}
+
+    const parts = windowGlobal.location.search.slice(1).split("&").filter(d => d)
+    let params = {}
+    parts.forEach(part => {
+        const [key, value] = part.split("=")
+        params[key] = value
+    })
+    return params;
 }
