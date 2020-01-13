@@ -10,9 +10,10 @@ import './Bachelor.scss'
 
 import contestantsDataA from 'components/Bachelor/data/bachelor-cosmo.csv'
 import contestantsDataB from 'components/Bachelor/data/bachelor-usmag.csv'
+import contestantsDataC from 'components/Bachelor/data/bachelor-abc.csv'
 
 const Bachelor = () => {
-    const [parsedContestants, setParsedContestants] = useState('');
+    const [parsedContestants, setParsedContestants] = useState('')
 
     useEffect(() => {
         // You need to restrict it at some point
@@ -59,13 +60,17 @@ const Bachelor = () => {
             let image = contestantsDataB[i]["image-src"]
             let lat = d.lat
             let lng = d.lng
+            let bio = contestantsDataC[i].bio
+            let notes = contestantsDataC[i].notes
 
             return {
                 ...d,
                 lat,
                 lng,
                 name,
-                image
+                image,
+                bio,
+                notes
             }
         })
 
@@ -76,10 +81,10 @@ const Bachelor = () => {
         <MaxWidth size="l" className="Bachelor">
             <MaxWidth size="l" className="Bachelor__header">
                 <h1 className="Bachelor__header__title">
-                    Bachelor Contestants
+                    The Bachelor
                 </h1>
                 <h3 className="Bachelor__header__description">
-                    Following along with the new contestants is hard. This guide is here to help! 🌹
+                    Welcome Bachelor Nation. Following along with the new contestants is hard—this guide is here to help! 🌹
                 </h3>
                 {/* <img className="Bachelor__header__peter" src={peterCrownImg} />
                 <h4 className="Bachelor__header__name">
@@ -110,6 +115,11 @@ const Bachelor = () => {
             <MaxWidth size="xl" className="Bachelor__back-button__container">
                 <Link to="/" isButton className="Bachelor__back-button">
                     ← Back to Marguerite.io
+                </Link>
+            </MaxWidth>
+            <MaxWidth size="xl" className="Bachelor__inspo">
+                <Link doOpenInNewTab to="https://github.com/margueriteroth/rosie/tree/master/src/components/Bachelor" className="Bachelor__code">
+                    Bachelor code
                 </Link>
             </MaxWidth>
             <MaxWidth size="xl" className="Bachelor__attributions">

@@ -16,12 +16,13 @@ import peterCrownImg from './images/head-peter-crown.png'
 let contestantNames = _.map(contestantsDataB, _.property('name'));
 
 const Contestants = ({ parsedContestants }) => {
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedContestant, setSelectedContestant] = useState(null)
     const [selectedContestantIndex, setSelectedContestantIndex] = useState(null)
 
     function handleContestantSelection(contestant, i) {
-        setSelectedContestant(contestant)
+        setSelectedContestant(parsedContestants[i])
         setSelectedContestantIndex(i)
         setIsModalOpen(true)
     }
@@ -32,6 +33,7 @@ const Contestants = ({ parsedContestants }) => {
         setIsModalOpen(false)
     }
 
+
     return (
         <div className="Contestants">
             {parsedContestants ? (
@@ -41,6 +43,7 @@ const Contestants = ({ parsedContestants }) => {
                             onClose={clearContestantSelection}
                             contestant={selectedContestant}
                             name={contestantNames[selectedContestantIndex]}
+                            contestantIndex={selectedContestantIndex}
                             contestantCoordinates={[parsedContestants[selectedContestantIndex].lng, parsedContestants[selectedContestantIndex].lat]}
                         />
                     )}

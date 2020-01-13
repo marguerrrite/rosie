@@ -113,7 +113,7 @@ const PageDetail = ({details, page}) => {
 };
 
 PageDetail.propTypes = {
-    details: PropTypes.oneOfType(PropTypes.array, PropTypes.object),
+    details: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
     page: PropTypes.string,
 };
 

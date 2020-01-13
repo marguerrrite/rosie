@@ -56,9 +56,6 @@ const ContestantHistogram = ({ className, data, xAccessor, contestantAge, contes
 
     return (
         <div className={classNames(className, "ContestantHistogram")} ref={ref}>
-            <h5 className="ContestantHistogram__title">
-                Contestant Age Distribution
-            </h5>
             <Chart dimensions={dimensions}>
                 <Axis
                     dimensions={dimensions}

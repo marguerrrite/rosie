@@ -190,6 +190,37 @@ button {
 }
 
 .Home {
+    &__recent {
+        padding-top: 10vh;
+        padding-bottom: 8em;
+        &__project {
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            padding-right: 1.5em;
+            border-radius: 8px;
+
+            &:hover {
+                background: $pink-300;
+            }
+        }
+
+        h3 {
+            margin-bottom: 0em;
+        }
+
+        p {
+            margin-top: 0.5em;
+        }
+
+        .ContestantHead {
+            width: 100px;
+            height: 100px;
+        }
+    }
+
+
     &__projects {
         margin-top: 0vh;
         padding-top: 10vh;

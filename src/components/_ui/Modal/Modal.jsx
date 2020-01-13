@@ -1,4 +1,6 @@
 import React, { useRef, useContext, useState, useEffect } from "react"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimes } from '@fortawesome/free-solid-svg-icons'
 import Button from "components/_ui/Button/Button"
 import classNames from 'classnames'
 import ReactDOM from "react-dom"
@@ -27,7 +29,7 @@ export function ModalProvider({ children }) {
     );
 }
 
-export function Modal({ className, onClose, children, ...props }) {
+export function Modal({ className, onClose, children, useCloseButton, ...props }) {
     const modalNode = useContext(Context);
 
 
@@ -38,12 +40,26 @@ export function Modal({ className, onClose, children, ...props }) {
                 <div className={classNames(className, "Modal__content")}>
                     <div className="Modal__dialog" {...props}>
                         {children}
-                        <Button
-                            className="Modal__button Modal__button--close"
-                            onClick={onClose}
-                        >
-                            Close
-                        </Button>
+                        {useCloseButton ? (
+                            <Button
+                                className="Modal__button Modal__button--close"
+                                onClick={onClose}
+                            >
+                                Close
+                            </Button>
+                        ) : (
+                            <>
+                                <div className="Modal__close" onClick={onClose}>
+                                    <FontAwesomeIcon className="Modal__close__icon" icon={faTimes} />
+                                </div>
+                                <Button
+                                    className="Modal__button Modal__button--mobile-only Modal__button--close"
+                                    onClick={onClose}
+                                >
+                                    Close
+                                </Button>
+                            </>
+                        )}
                         {/* <button onClick={onClose}>
                             Close
                         </button> */}
