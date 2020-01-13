@@ -57,5 +57,35 @@
     &__button {
         cursor: pointer;
         width: 100%;
+
+        &--mobile-only {
+            display: none;
+
+            @media(max-width: 600px) {
+                display: block;
+            }
+        }
+    }
+
+    &__close {
+        position: absolute;
+        top: 0em;
+        right: 0em;
+        width: 4em;
+        height: 4em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0.5;
+
+        &:hover {
+            cursor: pointer;
+            color: $pink-400;
+            opacity: 1;
+        }
+
+        @media(max-width: 600px) {
+            display: none;
+        }
     }
 }
