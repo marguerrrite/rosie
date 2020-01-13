@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import _ from "lodash"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
 import ContestantHead from "components/Bachelor/ContestantHead"
@@ -42,26 +43,29 @@ const ContestantModal = ({ contestant, name, onClose, contestantCoordinates }) =
             >
                 Toggle
             </Button> */}
-            <div className="ContestantModal__bio">
-                <h5>
-                    Notes
-                </h5>
-                <div className="ContestantModal__bio__notes">
-                    <ul>
-                        {contestantNotes.map((note, i) => (
-                            <li key={i}>
-                                {note}
-                            </li>
-                        ))}
-                    </ul>
-                </div>
-                <h5>
-                    Full bio
-                </h5>
-                <div className="ContestantModal__bio__full">
-                    {contestant.bio}
+            <div className="ContestantModal__bio__container">
+                <div className="ContestantModal__bio">
+                    <h5>
+                        Notes
+                    </h5>
+                    <div className="ContestantModal__bio__notes">
+                        <ul>
+                            {contestantNotes.map((note, i) => (
+                                <li key={i}>
+                                    {note}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <h5>
+                        Full bio
+                    </h5>
+                    <div className="ContestantModal__bio__full">
+                        {contestant.bio}
+                    </div>
                 </div>
             </div>
+
 
             <div className="ContestantModal__map__container">
                 <h5>
