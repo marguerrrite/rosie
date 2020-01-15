@@ -86,6 +86,16 @@ const Bachelor = () => {
                 <h3 className="Bachelor__header__description">
                     Welcome Bachelor Nation. Following along with the new contestants is hard—this guide is here to help! 🌹
                 </h3>
+
+                <div className="Bachelor__header__message">
+                    <h4>
+                        Check back next week for improvements!
+                    </h4>
+                    <p>
+                        I'm currently working on a episode table with easy-to-digest eliminations, improved episode highlights, and better mobile support! Thanks for stopping by and happy watching <span className="emoji" role="img" aria-label="Emoji smile">😊</span>
+                    </p>
+                </div>
+
                 {/* <img className="Bachelor__header__peter" src={peterCrownImg} />
                 <h4 className="Bachelor__header__name">
                     Peter Weber, 28
