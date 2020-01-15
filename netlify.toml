@@ -11,7 +11,15 @@
 [[redirects]]
   from = "/2020"
   to = "/2020-bachelor"
-  
+
 [[redirects]]
   from = "/2020/bachelor"
+  to = "/2020-bachelor"
+
+[[redirects]]
+  from = "/2020bachelor"
+  to = "/2020-bachelor"
+
+[[redirects]]
+  from = "/202-bachelor"
   to = "/2020-bachelor"

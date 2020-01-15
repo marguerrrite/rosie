@@ -42,7 +42,9 @@ const ContestantModal = ({ contestant, name, onClose, contestantCoordinates, con
 
     let contestantWeekly = contestantWeeklies[contestantIndex]
 
-    let weeklyHighlight = contestantWeeklies[contestantIndex].week1highlight
+    let weeklyHighlight = contestantWeeklies[contestantIndex].week2highlight
+
+    console.log(weeklyHighlight)
 
     return (
         <Modal onClose={() => onClose()} className="ContestantModal">
@@ -172,13 +174,13 @@ const ContestantHighlight = ({ highlight }) => {
     return (
         <div className="ContestantHighlight">
             <h5 className="ContestantModal__section-title ContestantHighlight__title">
-                <span>{roseHighlight ? "🌹" : "💅"}</span> Week 1 Highlight
+                <span>{roseHighlight ? "🌹" : "💅"}</span> Week 2 Highlight
             </h5>
             <div className="ContestantHighlight__primary">
                 {highlights[0]}
             </div>
             <div className="ContestantHighlight__secondary">
-                {highlights[1]}
+                {highlights[1]} {highlights[2]} {highlights[3]}
             </div>
         </div>
     )

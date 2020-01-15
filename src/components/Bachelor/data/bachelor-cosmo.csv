@@ -1,31 +1,31 @@
 name,location,age,occupation,lat,lng,week1rose,week2rose,week3rose,week4rose,week5rose,week6rose,week7rose,week8rose,week9rose,week10rose
-Alayah.,"San Antonio, TX",24,Miss Texas 2019,29.468413,-98.528889,true
-Alexa ,"Chicago, IL",27,Esthetician,41.88531,-87.62213,true
+Alayah.,"San Antonio, TX",24,Miss Texas 2019,29.468413,-98.528889,true,true
+Alexa ,"Chicago, IL",27,Esthetician,41.88531,-87.62213,true,true
 Avonlea,"Fort Worth, TX",27,Cattle rancher and model,32.771419,-97.291484,false
-Courtney,"Venice, FL",26,Cosmetologist,27.167521,-82.380967,true
-Deandra,"Plano, TX",23,Home Care Coordinator,33.056756,-96.730831,true
+Courtney,"Venice, FL",26,Cosmetologist,27.167521,-82.380967,true,false
+Deandra,"Plano, TX",23,Home Care Coordinator,33.056756,-96.730831,true,true
 Eunice,"Chicago, IL",23,Flight attendant,41.88531,-87.62213,false
-Hannah Ann,"Knoxville, TN",23,Model,36.032334,-83.884804,true
+Hannah Ann,"Knoxville, TN",23,Model,36.032334,-83.884804,true,true
 Jade,"Mesa, AZ",26,Flight attendant,33.440695,-111.856967,false
-Jasmine,"Houston, TX",25,Client relations manager,29.813142,-95.309789,true
+Jasmine,"Houston, TX",25,Client relations manager,29.813142,-95.309789,true,true
 Jenna,"New Lenox, IL",22,Nursing student,41.510802,-87.961808,false
 Katrina,"Chicago, IL",28,Professional sports dancer,41.88531,-87.62213,false
-Kelley,"Chicago, IL",27,Attorney,41.88531,-87.62213,true
-Kelsey,"Des Moines, IA",28,Professional clothier,41.672687,-93.572173,true
-Kiarra,"Kennesaw, GA",23,Nanny,34.03384,-84.597433,true
+Kelley,"Chicago, IL",27,Attorney,41.88531,-87.62213,true,true
+Kelsey,"Des Moines, IA",28,Professional clothier,41.672687,-93.572173,true,true
+Kiarra,"Kennesaw, GA",23,Nanny,34.03384,-84.597433,true,true
 Kylie,"Los Angeles, CA",26,Entertainment sales associate,33.973951,-118.248405,false
-Lauren,"Los Angeles, CA",26,Marketing executive,33.973951,-118.248405,true
-Lexi,"New York, NY",26,Marketing coordinator,40.68863,-74.018244,true
-Madison,"Birmingham, AL",23,Foster parent recruiter,33.456412,-86.801904,true
+Lauren,"Los Angeles, CA",26,Marketing executive,33.973951,-118.248405,true,false
+Lexi,"New York, NY",26,Marketing coordinator,40.68863,-74.018244,true,true
+Madison,"Birmingham, AL",23,Foster parent recruiter,33.456412,-86.801904,true,true
 Maurissa,"Atlanta, GA",23,Patient care coordinator,33.844371,-84.47405,false
 Megan,"Daly City, CA",26,Flight attendant,37.687509,-122.438783,false
-Mykenna,"Langely, BC, Canada",22,Fashion blogger,48.993867,-122.672326,true
-Natasha,"New York, NY",31,Event planner,40.68863,-74.018244,true
-Payton,"Wellesley, MA",23,Business development representative,42.300596,-71.27875,true
-Sarah,"Knoxville, TN",24,Medical radiographer,36.032334,-83.884804,true
-Savannah,"Houston, TX",27,Realtor,29.813142,-95.309789,true
-Shiann,"Las Vegas, NV",27,Administrative assistant,36.17372,-115.10647,true
-Sydney,"Birmingham, AL",24,Retail marketing manager,33.456412,-86.801904,true
-Tammy,"Syracuse, NY",24,House flipper,43.02143,-76.197701,true
-Victoria F.,"Virginia Beach, VA",25,Medical sales representative,36.844004,-76.12036,true
-Victoria P.,"Alexandria, LA",27,Nurse,31.274156,-92.467107,true
+Mykenna,"Langely, BC, Canada",22,Fashion blogger,48.993867,-122.672326,true,true
+Natasha,"New York, NY",31,Event planner,40.68863,-74.018244,true,true
+Payton,"Wellesley, MA",23,Business development representative,42.300596,-71.27875,true,false
+Sarah,"Knoxville, TN",24,Medical radiographer,36.032334,-83.884804,true,true
+Savannah,"Houston, TX",27,Realtor,29.813142,-95.309789,true,true
+Shiann,"Las Vegas, NV",27,Administrative assistant,36.17372,-115.10647,true,true
+Sydney,"Birmingham, AL",24,Retail marketing manager,33.456412,-86.801904,true,true
+Tammy,"Syracuse, NY",24,House flipper,43.02143,-76.197701,true,true
+Victoria F.,"Virginia Beach, VA",25,Medical sales representative,36.844004,-76.12036,true,true
+Victoria P.,"Alexandria, LA",27,Nurse,31.274156,-92.467107,true,true
