@@ -92,7 +92,7 @@ const Bachelor = () => {
                         Check back next week for improvements!
                     </h4>
                     <p>
-                        I'm currently working on a episode table with easy-to-digest eliminations, improved episode highlights, and better mobile support! Thanks for stopping by and happy watching <span className="emoji" role="img" aria-label="Emoji smile">😊</span>
+                        I'm currently working on an episode table with easy-to-digest eliminations, improved episode highlights, and better mobile support! Thanks for stopping by and happy watching <span className="emoji" role="img" aria-label="Emoji smile">😊</span>
                     </p>
                 </div>
 
