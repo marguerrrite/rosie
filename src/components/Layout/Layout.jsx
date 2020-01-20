@@ -48,7 +48,7 @@ const Layout = ({ className, children, showNavigation, showSocialCol, showFooter
         />
 
     )
-}
+
 
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
