@@ -1,0 +1,28 @@
+@import "../../styles/lib.scss";
+
+.ContestantTable {
+    $tablegrid-desktop: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+    &__header {
+        display: grid;
+        grid-template-columns: $tablegrid-desktop;
+        margin-bottom: 1em;
+        padding: 0.5em 0;
+
+        &__item {
+            font-size: 0.75em;
+            letter-spacing: 0.055em;
+            text-transform: uppercase;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+
+    &Row {
+        display: grid;
+        grid-template-columns: $tablegrid-desktop;
+    }
+}
