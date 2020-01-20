@@ -24,8 +24,8 @@ export default ({ data }) => {
             <Layout showNavigation showFooter className={classNames("Post", `Post--${Post.frontmatter.slug}`)}>
                 <div>
                     <Label className="Post__hero__label" category="primary">
-                        <Link className="Post__hero__label__link" to={'/writing'}>
-                            Writing
+                        <Link className="Post__hero__label__link" to={'/blog'}>
+                            Blog
                         </Link>
                     </Label>
                     <h1 className="Post__hero__title">

@@ -22,9 +22,9 @@ const Header = () => (
                     </Link>
                     <Link
                         className="Header__link"
-                        to={'/writing'}
+                        to={'/blog'}
                     >
-                        Writing
+                        Blog
                     </Link>
                     <Link
                         doOpenInNewTab

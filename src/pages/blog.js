@@ -4,21 +4,21 @@ import Link from "components/_ui/Link/Link"
 import Layout from "components/Layout/Layout"
 import MaxWidth from "components/_ui/MaxWidth/MaxWidth";
 import SEO from "components/SEO/SEO"
-import "./writing.scss"
+import "./blog.scss"
 
-const Writing = ({ data }) => {
+const Blog = ({ data }) => {
     const posts = data.allMdx.edges
 
     return (
-        <Layout className="Layout__writing Writing" showNavigation showFooter>
-            <SEO title="Writing" />
-            <MaxWidth className="Writing__content">
-                <h1 className="Writing__title">
-                    Writing
+        <Layout className="Layout__blog Writing" showNavigation showFooter>
+            <SEO title="Blog" />
+            <MaxWidth className="Blog__content">
+                <h1 className="Blog__title">
+                    Blog
                 </h1>
-                <div className="Writing__posts">
+                <div className="Blog__posts">
                     {posts.map((post, i) => (
-                        <WritingPost post={post} key={i} />
+                        <BlogPost post={post} key={i} />
                     ))}
                 </div>
             </MaxWidth>
@@ -26,22 +26,22 @@ const Writing = ({ data }) => {
     )
 };
 
-export default Writing;
+export default Blog;
 
 
-const WritingPost = ({ post }) => {
+const BlogPost = ({ post }) => {
 
     let frontmatter = post.node.frontmatter
 
     return (
-        <Link to={`writing${post.node.fields.slug}`} className="WritingPost">
-            <h3 className="WritingPost__title">
+        <Link to={`blog${post.node.fields.slug}`} className="BlogPost">
+            <h3 className="BlogPost__title">
                 {frontmatter.title}
             </h3>
-            <div className="WritingPost__categories">
+            <div className="BlogPost__categories">
                 Data Viz, Project
             </div>
-            <div className="WritingPost__description">
+            <div className="BlogPost__description">
                 {frontmatter.description}
             </div>
         </Link>
@@ -49,11 +49,11 @@ const WritingPost = ({ post }) => {
 };
 
 
-export const WRITING_QUERY = graphql`
+export const BLOGPOST_QUERY = graphql`
     query {
         allMdx(filter: {
             frontmatter: {type: {ne: "internal"}},
-            fileAbsolutePath: {regex: "/writing/"}},
+            fileAbsolutePath: {regex: "/blog/"}},
             sort: { fields: [frontmatter___date],
             order: DESC })
         {
