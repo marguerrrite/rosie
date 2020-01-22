@@ -65,11 +65,7 @@ export const BLOGPOST_QUERY = graphql`
                     frontmatter {
                         title
                         isFeatured
-                        description
                         date(formatString: "MMMM D, YYYY")
-                        categories {
-                            category
-                        }
                     }
                 }
             }
