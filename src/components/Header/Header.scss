@@ -5,6 +5,30 @@
     &__headroom {
         z-index: 300;
 
+        .headroom:not(.headroom--scrolled) {
+            .Header__container--knockoutColors {
+                .Header__logo {
+                    .Logo {
+                        background: white;
+
+                        &__type {
+                            color: $blue-600;
+                        }
+                    }
+                }
+
+                .Header__link {
+                    color: white;
+
+                    &:hover {
+                        opacity: 0.75;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+
         .headroom--scrolled {
             background: white;
             box-shadow: 0 4px 20px 0 rgba(#000000, 0.1);
@@ -27,28 +51,6 @@
     &__container {
         padding-top: 1.5em;
         padding-bottom: 1.5em;
-
-
-        &--knockoutColors {
-            .Header__logo {
-                .Logo {
-                    background: white;
-
-                    &__type {
-                        color: $blue-600;
-                    }
-                }
-            }
-
-            .Header__link {
-                color: white;
-
-                &:hover {
-                    opacity: 0.75;
-                    color: white;
-                }
-            }
-        }
     }
 
     &__content {
