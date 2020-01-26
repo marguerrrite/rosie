@@ -2,6 +2,7 @@
 
 .Post {
     $post-font-desktop: normal 18px/1.95em "Inter", Arial,sans-serif;
+    $post-font-mobile: normal 16px/1.95em "Inter", Arial,sans-serif;
 
     // max-width: 655px;
     // margin: 0 auto;
@@ -21,6 +22,10 @@
         margin: 0 auto;
         margin-bottom: 0em;
         margin-top: 5em;
+
+        .PageAuthor__info__title {
+            padding: 0;
+        }
     }
 
     &__hero {
@@ -110,22 +115,17 @@
         padding: 2em;
     }
 
-    ul {
-        margin-top: 0.65em;
-        margin-bottom: 0.35em;
-    }
-
-    li {
-        margin: 0 auto 1em;
-        padding-right: 20px;
-        //padding-left: 1.2em;
-        font: $post-font-desktop;
-        line-height: 165%;
+    .gatsby-highlight {
+        margin-top: -1.5em;
     }
 
     pre {
         //background: rgba(0, 0, 0, .05);
         padding: 20px;
+        white-space: pre-wrap;
+    }
+
+    code {
         white-space: pre-wrap;
     }
 
@@ -245,16 +245,33 @@
             padding-right: 20px;
 
             @media(max-width: 600px) {
-                padding-left: 0;
-                padding-right: 0;
+                padding: 14px 10px;
             }
         }
 
         ul {
             padding-left: 20px;
+            margin-top: 0.65em;
+            margin-bottom: 0.35em;
 
             @media(min-width: 601px) {
-                padding-left: 40px;
+                padding-left: 60px;
+            }
+        }
+
+        li {
+            margin: 0 auto 1em;
+            padding-right: 20px;
+            //padding-left: 1.2em;
+            font: $post-font-desktop;
+            line-height: 165%;
+        }
+
+        &__button-row {
+            text-align: center;
+
+            .Button {
+                margin: 0 0.5em;
             }
         }
 
@@ -278,16 +295,29 @@
 
         @media(max-width: 600px) {
             grid-gap: 2em;
+
+            p,
+            li {
+                font: $post-font-mobile;
+            }
+
+            code {
+                font-size: 14px;
+            }
+
+            .gatsby-highlight {
+                margin-top: -1.75em;
+            }
         }
 
         @media(min-width: 601px) {
             h2 {
-                font-size: 1.55em;
-                font-size: 1.75em;
+                font-size: 1.5em;
+                font-size: 1.85em;
             }
 
             h3 {
-                //font-size: 1.3em;
+                font-size: 1.6em;
             }
 
             h4 {

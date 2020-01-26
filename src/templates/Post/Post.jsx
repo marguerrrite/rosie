@@ -6,7 +6,7 @@ import Label from 'components/_ui/Label/Label'
 import Layout from "components/Layout/Layout"
 import Link from 'components/_ui/Link/Link'
 import PageAuthor from 'components/PageAuthor/PageAuthor'
-import PageHero from 'components/PageHero/PageHero'
+import PostDetail from "components/PostDetail/PostDetail"
 import Objectives from 'components/Objectives/Objectives'
 import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
 import TOC from 'components/TOC/TOC'
@@ -16,9 +16,11 @@ import './Post.scss'
 export default ({ data }) => {
     let Post = data.mdx
     let slug = Post.frontmatter.slug
-    let featuredImgFluid = Post.frontmatter.featuredImage.childImageSharp.fluid
-
+    //let featuredImgFluid = Post.frontmatter.featuredImage.childImageSharp.fluid
     let goals = Post.frontmatter.goals.childMdx
+    let demoUrl = Post.frontmatter.demoUrl
+    let projectRepo = Post.frontmatter.projectRepo
+    let date = Post.frontmatter.date
 
     return (
         <>
@@ -54,18 +56,24 @@ export default ({ data }) => {
 
                     <MaxWidth size="l" className="Post__content__container">
                         <div className="Post__content">
-                            <div></div>
+                            <PostDetail
+                                className="Post__content__detail"
+                                projectRepo={projectRepo}
+                                demoUrl={demoUrl}
+                                date={date}
+                            />
                             <div className="Post__content__body">
                                 <Objectives objectives={goals.body} />
                                 <MDXRenderer>
                                     {Post.body}
                                 </MDXRenderer>
+                                <PageAuthor className="Post__author" />
                             </div>
                             <TOC
                                 className="Post__content__TOC"
                             />
                         </div>
-                        <PageAuthor className="Post__author"/>
+
                     </MaxWidth>
                 </div>
             </Layout>
@@ -87,6 +95,8 @@ export const query = graphql`
         title
         intro
         section
+        demoUrl
+        projectRepo
         goals {
           childMdx {
             body
