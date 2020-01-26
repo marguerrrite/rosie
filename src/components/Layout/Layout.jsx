@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import ReactDOM from "react-dom"
 import PropTypes from "prop-types"
 import classNames from 'classnames'
 import { StaticQuery, graphql } from "gatsby"
@@ -14,7 +13,7 @@ if (typeof window !== "undefined") {
     require("smooth-scroll")('a[href*="#"]')
 }
 
-const Layout = ({ className, children, showNavigation, showSocialCol, showFooter }) => (
+const Layout = ({ className, children, showNavigation, showSocialCol, showFooter, knockoutHeader }) => (
     <StaticQuery
         query={graphql`
             query SITE_TITLE_QUERY {
@@ -30,7 +29,7 @@ const Layout = ({ className, children, showNavigation, showSocialCol, showFooter
                     <div className="div">
                         <div className="Layout">
                             {showNavigation && (
-                                <Header />
+                                <Header knockoutHeader/>
                             )}
                             {showSocialCol && (
                                 <SocialCol />
