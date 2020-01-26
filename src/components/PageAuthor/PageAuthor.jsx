@@ -3,7 +3,7 @@ import classNames from "classnames"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faGithub, faCodepen, faLinkedinIn, faInstagram, faTwitter, faDribbble } from '@fortawesome/free-brands-svg-icons'
+import { faGithub, faTwitter, faDribbble } from '@fortawesome/free-brands-svg-icons'
 import Link from "components/_ui/Link/Link"
 import "./PageAuthor.scss";
 
@@ -59,6 +59,12 @@ const PageAuthor = ({ postLocation, className }) => {
                                 <FontAwesomeIcon
                                     icon={faTwitter}
                                 />
+                            </Link>
+                            <Link
+                                className="PageAuthor__info__link"
+                                doOpenInNewTab
+                                to="mailto:hello@marguerite.io">
+                                Email
                             </Link>
                         </div>
                     </div>
