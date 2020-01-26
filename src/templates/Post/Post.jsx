@@ -25,7 +25,7 @@ export default ({ data }) => {
             <SEO
                 title={`${Post.frontmatter.title}`}
             />
-            <Layout showNavigation showFooter className={classNames("Post", `Post--${Post.frontmatter.slug}`)}>
+            <Layout knockoutHeader showNavigation showFooter className={classNames("Post", `Post--${Post.frontmatter.slug}`)}>
                 <div>
                     <MaxWidth className="Post__hero" size="xl">
                         <div className="Post__hero__content">
