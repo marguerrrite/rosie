@@ -4,54 +4,26 @@ title: "Setting up a local dev environment and running a website"
 date: 2019-10-01
 section: "tutorial"
 isFeatured: false
-intro: "Setting up a local web development environment allows you to play with new tools, languages, and any kind of project you're working on without having to deploy publicly."
-featuredImage: ./part1-hero.png
+intro: "Learn how to run a local web development environment. This will allow you to play with new tools, languages, or any kind of web project you want to work on."
 goals: "./objectives.mdx"
+demoUrl: "https://margueriteroth.github.io/our-project-starter/"
+projectRepo: "https://github.com/margueriteroth/our-project-starter"
 
 ---
 
 import PostNote from 'components/PostNote/PostNote'
+import Link from 'components/_ui/Link/Link'
 
 <!--
 import PostLinks from 'components/Post/PostLinks'
 import PostTOC from 'components/Post/PostTOC'
 import Emoji from 'components/_ui/Emoji/Emoji'
-import Link from 'components/_ui/Link/Link' -->
-
-<!--
-<PostTOC>
-    <div className="PostTOC__item">
-        Goals
-    </div>
-    <div className="PostTOC__item">
-        Who this is for
-    </div>
-    <div className="PostTOC__item">
-        Setting up tools and files
-    </div>
-    <div className="PostTOC__item">
-        Walking through HTML, CSS, and JS files
-    </div>
-    <div className="PostTOC__item">
-        Running our local environment
-    </div>
-    <div className="PostTOC__item">
-        Editing the files
-    </div>
-    <div className="PostTOC__item">
-        Now what?
-    </div>
-</PostTOC>
-
-<PostLinks
-    demo="https://sample.marguerite.io/"
-    repo="https://github.com/margueriteroth/our-new-project"
-/>
-
-
-In Part 1 of this tutorial, we will collect and utilize the basic tools you'll need to spin up and edit a website. By the end, you will have a local environment set up and the space needed to start working on a website, data visualization, or any other kind of web-based project. 👏
+-->
 
 <br/>
+<br/>
+
+In Part 1 of this tutorial, we will collect and utilize the basic tools you'll need to spin up and edit a website. By the end, you will have a local environment set up and the space needed to start working on a website, data visualization, or any other kind of web-based project. 👏
 
 #### You might be a:
 - Designer
@@ -66,17 +38,17 @@ In Part 1 of this tutorial, we will collect and utilize the basic tools you'll n
 - **Part 2**: Committing our work to Github
 - **Part 3**: Deploying to a public url with Netlify -->
 
-## We got this
+<br/>
+<br/>
 
-In Part 1 of this tutorial, we will collect and utilize the basic tools you'll need to spin up and edit a website. By the end, you will have a local environment set up and the space needed to start working on a site, data visualization, or any other kind of web-based project. 👏
-
-#### You might be a:
-- Designer
-- Data Scientist
-- Web Developer
-- Person at any skill level looking to create a website (Welcome! 🎉)
+What you'll have running by the end of this post:
 
 <br/>
+
+![Demo project](./demo-starter-files.png)
+
+<br/>
+
 
 Note: We will be tackling a pure HTML, CSS, and vanilla JavaScript project - not any frontend frameworks like [React](https://reactjs.org/), [Vue](https://vuejs.org/), or [Angular](https://angular.io/). We'll save those for a rainy day.
 
@@ -228,7 +200,6 @@ npm install -g live-server
     <Link
         className="PostNote__link"
         to="https://superuser.com/questions/185441/what-does-the-sudo-command-do"
-        doOpenInNewTab
     >
         Read more about <i>sudo</i> here
     </Link>
@@ -260,7 +231,7 @@ I switched to using VSCode last year and like the large the large extension libr
 
 To install VSCode, head to (code.visualstudio.com)[https://code.visualstudio.com], download, and follow the installation instructions. 
 
-Other editors:
+#### Other editors:
 - Sublime text
 - Atom
 
@@ -339,8 +310,7 @@ The default page for sites is `index.html`. HTML stands for Hypertext Markup Lan
     </p>
     <Link
         className="PostNote__link"
-        to="https://developer.mozilla.org/en-US/docs/Web/HTML"
-        doOpenInNewTab>
+        to="https://developer.mozilla.org/en-US/docs/Web/HTML">
         From the MDN web docs
     </Link>
 </PostNote>
@@ -398,9 +368,7 @@ A browser tab should automatically open at http://127.0.0.1:8080/.
 
 ![Terminal screenshot: starting live-server](./terminal-live-server.png)
 
-![Sample project homepage!](./project-homepage.png)
-
-<br/>
+![Sample project homepage!](./project-home.png)
 
 _Weet woo!_
 
@@ -409,7 +377,7 @@ _Weet woo!_
 <br/>
 <br/>
 
-## Editing the files
+## Editing the project
 
 Start VSCode and open the `our-new-project` folder. Your terminal is already running the `live-server` from this same folder location.
 
@@ -431,8 +399,6 @@ In `index.html` we have a basic html structure with our content inside of the `<
 
 <br/>
 
-![SIMON BOGGS!](./simon-boggs.gif)
-
 
 . . . . . . . . . . .
 
@@ -441,27 +407,33 @@ In `index.html` we have a basic html structure with our content inside of the `<
 <br/>
 <br/>
 
-## Next steps
 
 The world is our oyster. Continue editing the project files!
 
 
-## Additional sample projects
+## Additional starters
 
 ### D3.js
 
-D3.js is a powerful library full of visualization tools, but where to start?
+D3.js is a powerful JavaScript library used to produce dynamic, interactive data visualizations on the web.
 
-[Sample project using D3.js]()
+#### D3.js starter:
+![D3.js starter](./demo-starter-d3.png)
 
-D3.js has a steep learning curve, but thankfully there are some amazing resources out there.
+<p className="Post__content__button-row">
+    <Link doOpenInNewTab isButton to="https://margueriteroth.github.io/our-project-starter-d3/">
+        D3 Starter Demo
+    </Link>
+    <Link doOpenInNewTab isButton buttonProps={{category: "secondary"}} to="https://github.com/margueriteroth/our-project-starter-d3">
+        Download from Github
+    </Link>
+</p>
 
-#### D3.js resources
-- [Fullstack D3 book by Amelia Wattenberger]()
-- [Scott Murray Book])() (this book uses an older version of d3, but the foundations covered are still helpful)
-- [d3 page by Amelia]()
-- [Blockus or whatever he calls it]()
-- [Observable? so weird to use]()
+#### Awesome D3.js resources:
+- [Fullstack D3](https://www.newline.co/fullstack-d3) book by Amelia Wattenberger
+- [How to Learn D3.js](https://wattenberger.com/blog/d3) article by Amelia Wattenberger
+- [D3 Block](https://bl.ocks.org/) examples, originally created by Mike Bostock
+- [Interactive Data Visualization for the Web](https://alignedleft.com/work/d3-book-2e) book by Scott Murray
 
 
 <br/>
@@ -469,28 +441,36 @@ D3.js has a steep learning curve, but thankfully there are some amazing resource
 
 ### CSS Frameworks
 
-Maybe you want to use a CSS framework. CSS frameworks are collection of stylesheets that contain preset styles. For example, instead of styling a button with its hover and active states for every project, you can utilize a CSS framework to quickly style your buttons with one class name declaration.
+CSS frameworks provide a basic structure for designing consistent responsive layouts, elements, and functionality for the web. A main benefit is  they provide a complete toolkit at the onset of a project and you don't have to write custom styles if you don't want to.
 
-[Sample project using Bootstrap]()
+[Chris Coyier has a great article](https://css-tricks.com/what-are-the-benefits-of-using-a-css-framework/) about the pros and cons to using a CSS framework.
 
-Common CSS Frameworks:
-- [Bootstrap]()
-- [Tailwind]()
-- [Foundation]()
+#### [Twitter Bootstrap](https://getbootstrap.com/) starter:
+
+![Bootstrap starter](./demo-starter-bootstrap.png)
+
+<p className="Post__content__button-row">
+    <Link doOpenInNewTab isButton to="https://margueriteroth.github.io/our-project-starter-bootstrap/">
+        Bootstrap Starter Demo
+    </Link>
+    <Link doOpenInNewTab isButton buttonProps={{category: "secondary"}} to="https://github.com/margueriteroth/our-project-starter-bootstrap">
+        Download from Github
+    </Link>
+</p>
+
+#### Twitter Bootstrap resources:
+- [Bootstrap official documentation](https://getbootstrap.com/)
+- [Bootstrap grid system](https://getbootstrap.com/docs/4.0/layout/grid/)
+- [Twitter Bootstrap](https://getbootstrap.com/docs/4.0/layout/grid/) video Crash Course by Traversy Media
+- [r/bootstrap](https://www.reddit.com/r/bootstrap/) subreddit
+
+#### Other common frameworks:
+- [Tailwind](https://tailwindcss.com/)
+- [Foundation](https://foundation.zurb.com/)
 
 
 <br/>
+<br/>
+<br/>
 
-
-## Resources
-
-- CSS:
-- [CSS Tricks]()
-- [Post by Amerlia]()
-- [MDN]()
-
-- HTML:
-    - [MDN]()
-
-
-Please reach out if you have any questions!
+That's it! Let me know how it goes and don't hesitate to reach out if you have any questions.
