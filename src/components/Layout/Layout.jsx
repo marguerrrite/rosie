@@ -29,7 +29,7 @@ const Layout = ({ className, children, showNavigation, showSocialCol, showFooter
                     <div className="div">
                         <div className="Layout">
                             {showNavigation && (
-                                <Header knockoutHeader/>
+                                <Header knockoutHeader={knockoutHeader} />
                             )}
                             {showSocialCol && (
                                 <SocialCol />
