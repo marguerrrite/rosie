@@ -12,14 +12,16 @@ const Blog = ({ data }) => {
     return (
         <Layout className="Layout__blog Writing" showNavigation showFooter>
             <SEO title="Blog" />
-            <MaxWidth className="Blog__content">
-                <h1 className="Blog__title">
-                    Blog
-                </h1>
-                <div className="Blog__posts">
-                    {posts.map((post, i) => (
-                        <BlogPost post={post} key={i} />
-                    ))}
+            <MaxWidth className="Blog__content__container">
+                <div className="Blog__content">
+                    <h1 className="Blog__title">
+                        Blog
+                    </h1>
+                    <div className="Blog__posts">
+                        {posts.map((post, i) => (
+                            <BlogPost post={post} key={i} />
+                        ))}
+                    </div>
                 </div>
             </MaxWidth>
         </Layout>
@@ -39,7 +41,7 @@ const BlogPost = ({ post }) => {
                 {frontmatter.title}
             </h3>
             <div className="BlogPost__categories">
-                Data Viz, Project
+                Web Development, Tutorial
             </div>
             <div className="BlogPost__description">
                 {frontmatter.description}

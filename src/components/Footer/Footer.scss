@@ -4,8 +4,9 @@
     margin-top: 5em;
     padding-left: $padding-horizontal;
     padding-right: $padding-horizontal;
-    padding-top: 1.75em;
-    padding-bottom: 1.75em;
+    // padding-top: 1.75em;
+    // padding-bottom: 1.75em;
+    height: $footer-height-desktop;
     transition: all 150ms linear;
     transition: all 150ms linear;
     background: $blue-500;
@@ -99,7 +100,8 @@
     @media(max-width: 700px) {
         display: flex;
         flex-direction: column;
-        height: auto;
+        height: $footer-height-mobile;
+        padding: 1em 0;
 
         &__container {
             padding-top: 2em;

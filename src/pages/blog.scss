@@ -44,6 +44,14 @@
         @media(max-width: 767px) {
             grid-template-columns: 1fr;
         }
+
+        &__container {
+            height: calc(100vh - 4.8em - #{$footer-height-desktop} - #{$navigation-height});
+
+            @media(max-width: 700px) {
+                height: calc(100vh - 8em - #{$footer-height-mobile} - #{$navigation-height--mobile});
+            }
+        }
     }
 
     &__title {
