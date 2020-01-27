@@ -22,11 +22,17 @@ export default ({ data }) => {
     let projectRepo = Post.frontmatter.projectRepo
     let date = Post.frontmatter.date
 
+    const ogImagePath = "https://marguerite.io" + Post.frontmatter.ogimage.childImageSharp.fixed.src
+    const twitterImagePath = "https://marguerite.io" + Post.frontmatter.ogimage.childImageSharp.fixed.src
+
+
     return (
         <>
             <SEO
                 title={`${Post.frontmatter.title}`}
                 description={`${Post.frontmatter.intro}`}
+                image={ogImagePath}
+                twitterImage={twitterImagePath}
             />
             <Layout knockoutHeader showNavigation showFooter className={classNames("Post", `Post--${Post.frontmatter.slug}`)}>
                 <div>
@@ -108,6 +114,20 @@ export const query = graphql`
           childImageSharp {
             fluid(maxWidth: 2500) {
               ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        ogimage {
+         childImageSharp {
+           fixed {
+             src
+            }
+          }
+        }
+        twitterimage {
+         childImageSharp {
+           fixed {
+             src
             }
           }
         }
