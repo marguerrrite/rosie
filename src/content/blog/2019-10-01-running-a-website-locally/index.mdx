@@ -23,25 +23,17 @@ import Emoji from 'components/_ui/Emoji/Emoji'
 <br/>
 <br/>
 
-In Part 1 of this tutorial, we will collect and utilize the basic tools you'll need to spin up and edit a website. By the end, you will have a local environment set up and the space needed to start working on a website, data visualization, or any other kind of web-based project. 👏
+In Part 1 of this tutorial, we will collect and utilize the basic tools needed to spin up and edit a website. By the end, you will have a local environment set up and the workspace needed to start noodling on a website, data visualization, or any other kind of web-based project. 👏
 
 #### You might be a:
 - Designer
 - Data Scientist
 - Web Developer
-- Interested person at any skill level looking to create a website (Welcome! 🎉)
+- Interested person at any skill level looking to create a website
 
-<br/>
+Welcome! 🎉
 
-<!-- This tutorial is broken down into three parts:
-- **Part 1**: Setting up our environment and running a project locally in our browser (You are here! 🏁)
-- **Part 2**: Committing our work to Github
-- **Part 3**: Deploying to a public url with Netlify -->
-
-<br/>
-<br/>
-
-What you'll have running by the end of this post:
+#### What you'll have running by the end of this post:
 
 <br/>
 
@@ -50,7 +42,7 @@ What you'll have running by the end of this post:
 <br/>
 
 
-Note: We will be tackling a pure HTML, CSS, and vanilla JavaScript project - not any frontend frameworks like [React](https://reactjs.org/), [Vue](https://vuejs.org/), or [Angular](https://angular.io/). We'll save those for a rainy day.
+Note: We will be tackling a pure HTML, CSS, and vanilla JavaScript project—not any frontend frameworks like [React](https://reactjs.org/), [Vue](https://vuejs.org/), or [Angular](https://angular.io/). We'll save those for a rainy day.
 
 Let's go! 🚀
 
@@ -58,15 +50,15 @@ Let's go! 🚀
 
 ## Collecting tools and files
 
-- the terminal
+- Terminal
 - Node and npm
-- Server: Live server
-- Text editor: Visual Studio Code
-- Sample project: HTML, CSS, and JavaScript files (a demo site I put together for you)
+- Live server
+- Visual Studio Code
+- Sample project I put together for you
 
 <br/>
 
-Don't worry if you've never used any of these tools—I'll walk you through obtaining each.
+Don't worry if you've never used any of these tools before—I'll walk you through obtaining each one.
 
 <br/>
 
@@ -96,17 +88,15 @@ cd ..
 
 ### The terminal
 
-If you've never used your terminal before, don't worry. We'll go over what the terminal is and commands needed for this tutorial.
-
-Using your machine's terminal might look like the most daunting program to learn, but it isn't! With a few basic commands, we'll use it to move through directories (folders), create files, and run taks like starting a server.
+Using your machine's terminal might look like the most daunting step to tackle, but it isn't! With a few basic commands we will use it get a project up and running in no time.
 
 ![Terminal screenshot](./terminal.jpeg)
 
 In a nutshell, the terminal (also known as the **command line**) is a way to interact with your computer. It is used to send commands to the computer like moving through files and folders, installing and running programs, creating and deleting documents, or anything else you do within your operating system. The command line used to be the _only_ way to interact with your computer—think back to MS-DOS!
 
-Even though command line GUIs (graphical user interfaces aka programs) exist, terminals are still commonly used in development. I find that I can do tasks more quickly within the terminal interface, whether that is navigating to a project and starting a server, using git, or run multiple environments at once. Since writing commands is like using a language, it gives me the freedom to express what exactly I'm trying to do.
+Even though command line GUIs (graphical user interfaces aka programs) exist, terminals are still commonly used in development. I find that I can do tasks more quickly within the interface, whether that be navigating to a project and starting a server, using git, or running multiple environments at once. Since writing commands is like using a language, it gives me the freedom to express exactly I'm trying to do.
 
-And it all comes with time. When I first began my journey into web development, I only knew 1-2 commands and fudged my way through the rest by making tons of mistakes and googling everything.
+And it all comes with time. When I first began my journey into web development I only knew 1-2 commands and fudged my way through the rest. It is normal to make mistakes and google everything. Everyone does it.
 
 <br/>
 
@@ -118,7 +108,7 @@ And it all comes with time. When I first began my journey into web development, 
 
 **Windows**: Start -> All Programs -> Accessories -> Command Prompt
 
-The images in this article show a MacOS environment and the iTerm terminal.
+The images in this article show a MacOS environment and the iTerm terminal. The standard terminal that comes with your computer is fine to use.
 
 <br/>
 
@@ -144,9 +134,17 @@ cd [folder-name]
 
 <br/>
 
-**change directory** (Moves your terminal _up_ one level)
+**change directory** (Moves your terminal _up_ one level out of a folder)
 ```
 cd ..
+```
+<br/>
+
+<br/>
+
+**list files** (Lists all files in the current directory)
+```
+ls
 ```
 
 <br/>
@@ -160,9 +158,7 @@ cd ..
 
 <br/>
 
-[Node](https://nodejs.org/en/) is a run-time environment for JavaScript. I.E. it helps you execute JavaScript code. No worries if you have no JavaScript experience!
-
-You may already have Node installed. To check, open up your terminal, paste this command, and hit enter.
+[Node](https://nodejs.org/en/) is a run-time environment for JavaScript. I.E. it helps execute JavaScript code. You may already have Node installed. To check, open up your terminal, paste this command, and hit enter.
 
 ```
 node -v
@@ -179,9 +175,9 @@ If Node is not installed, the terminal will say that Node is not found. Head to 
 <br/>
 <br/>
 
-### Server: Live Server
+### Live Server
 
-Live Server is an application that runs on your computer with the use of server software and it allows you to run your project's JavaScript code. Essentially, this mimics a server that your website will be deployed on once it's out on the internet.
+Live Server is an application that runs on your computer with the use of server software and runs JavaScript code. Essentially, this mimics a production server for a website.
 
 [Live Server](https://www.npmjs.com/package/live-server) is a wonderful and free development server that comes with a hot reload capability (automatically refreshing your browser anytime a saved change is detected).
 
@@ -195,7 +191,7 @@ npm install -g live-server
 
 <PostNote>
     <p className="PostNote__content">
-        If you are seeing permission errors, you may need to add <code>sudo</code> to the beginning of this command to grant admin access. <code>sudo</code> gives you super-user permission to modify your computer. This is common issue for those using macOS.
+        If you are seeing permission errors, you may need to add <code>sudo</code> to the beginning of this command to grant admin access. <code>sudo</code> gives you super-user permission to modify your computer. This is common issue for those using MacOS.
     </p>
     <Link
         className="PostNote__link"
@@ -208,7 +204,7 @@ npm install -g live-server
 <br/>
 <br/>
 
-_If_ you need to add `sudo`:
+_If_ you need to add `sudo`, the command will look like this:
 ```
 sudo npm install -g live-server
 ```
@@ -225,29 +221,27 @@ _You may already have a text editor you prefer to use. Skip this section if you 
 
 A text editor is a program that allows you to write and edit all the code for your project in a range of programming languages.
 
-The text editor in this tutorial's screenshots is Visual Studio code.
+The text editor used in this tutorial's screenshots is [Visual Studio Code](https://code.visualstudio.com). I switched to VSCode because I like the large the large extension library and themes it provides.
 
-I switched to using VSCode last year and like the large the large extension library and themes. (Regarding themes: I prefer light text editor themes as toggling between a light browser and dark editor causes eye strain for me. I am currently using the GitHub Plus theme, seen in the screenshots in this tutorial).
+To install VSCode, head to [code.visualstudio.com](https://code.visualstudio.com), download, and follow the installation instructions. 
 
-To install VSCode, head to (code.visualstudio.com)[https://code.visualstudio.com], download, and follow the installation instructions. 
-
-#### Other editors:
-- Sublime text
-- Atom
+#### Other text editors:
+- [Sublime text](https://www.sublimetext.com/)
+- [Atom](https://atom.io/)
 
 
 <br/>
 <br/>
 
-### Project and file organization
+### Folder organization
 
-If this is your first dev project, I recommend keeping all project folders (future repos) organized in the same location. My repos are organized in a folder named _repos_ located in my User root folder.
+If this is your first dev project, I recommend keeping all project folders organized in the same location. My project repos are organized in a folder called _repos_ located in my User root folder.
 
 ![Finder organization](./finder-files.png)
 
 <br/>
 
-When you open a new terminal window, it will default your User root folder (for me that is margueriteroth). By having my repos folder here, I can easily navigate my terminal to the repos  folder and a project. I suggest keeping your projects in a similar spot. 
+A new terminal window will usually default your User root folder (for me that is "margueriteroth"). Having my _repos_ folder here lets me quickly point my terminal to that folder and to project. I suggest keeping your projects in a similar spot. 
 
 To create a new folder in your User root (your name) via the command line, open your terminal and make a repos folder:
 
@@ -264,28 +258,26 @@ cd repos
 ```
 
 <br/>
+<br/>
 
-And copy (clone) the sample project:
+### Clone the sample project
+
+Once inside your _repos_ folder, copy (clone) the sample project:
 
 ```
-git clone git@github.com:margueriteroth/our-new-project.git
+git clone git@github.com:margueriteroth/our-project-starter.git
 ```
 
 <br/>
-<br/>
 
-![Terminal screenshot: git clone](./terminal-git-clone.png)
-
-<br/>
-
-_If you don't want to use the terminal for this, create a `repos` folder the way you normally create new folders and directly download and unzip the project files: https://github.com/margueriteroth/our-new-project/archive/master.zip._
+_If you don't want to use the terminal for this, create a `repos` folder the way you normally create new folders and directly download and unzip the project files: https://github.com/margueriteroth/our-project-starter/archive/master.zip._
 
 <br/>
 
-After downloading, the sample project will appear in your `repos` folder. Point your terminal into this new project folder:
+Once cloned, the sample project will appear in your `repos` folder. Point your terminal into this new project folder:
 
 ```
-cd our-new-project
+cd our-project-starter
 ```
 <br/>
 
@@ -301,7 +293,7 @@ Here you will find our three project files: `index.html`, `styles.css`, and `scr
 
 ### index.html
 
-The default page for sites is `index.html`. HTML stands for Hypertext Markup Language. A markup language is a set of instructions on how to create a document, like a webpage for your browser. Markdown is another type of markup language.
+The homepage page for a website is `index.html`. HTML stands for Hypertext Markup Language. A markup language is a set of instructions on how to create a document, like a webpage for your browser. Markdown is another type of markup language.
 
 
 <PostNote isBlue>
@@ -316,23 +308,20 @@ The default page for sites is `index.html`. HTML stands for Hypertext Markup Lan
 </PostNote>
 
 
-
-
-
 ### styles.css
 
 CSS stands for Cascading Style Sheets and it is a styling language used to style the HTML elements (ie. element size, color, placement, font, etc.). Within a CSS file, you target DOM elements using ids, classes, tags, and style using CSS syntax. 
 
-You may have seen CSS preprocessor files around: .less, .sass, and .scss, and a few others. Preprocessors are CSS-like language that compiles into CSS for use by a browser. They allow us to write CSS with less repetition and added functionally like mixins and color functions. 
+You may have seen CSS preprocessor files around: .less, .sass, and .scss, and a few others. Preprocessors are CSS-like languages that compile into CSS to be used by a browser. They allow developers to write CSS with less repetition and added functionally like mixins and color functions. 
 
-To keep things simple, we are sticking with regular CSS for this tutorial.
+To keep things simple, we are sticking with vanilla CSS for this tutorial.
 
 <br/>
 <br/>
 
 ### scripts.js
 
-This is where our JavaScript lives. JavaScript is a client side scripting language used by your browser - it makes our static page intelligent (not to be confused with the Java programming language). With JavaScript, you can do things like complex interactions, calculations, and more. 
+This is where our JavaScript lives. JavaScript is a client side scripting language used by your browser—it makes our static page intelligent (not to be confused with the Java programming language). With JavaScript, you can create complex interactions, calculations, and more. 
 
 [JQuery](https://jquery.com/), [Moment.js](https://momentjs.com/), and [D3.js](https://d3js.org/) are examples of common JavaScript libraries.
 
@@ -342,17 +331,17 @@ This is where our JavaScript lives. JavaScript is a client side scripting langua
 
 ## Running the sample project
 
-Okay, the good part. Now that we have installed all our tools and downloaded the sample project, it is time to fire this baby up. 
+Okay, the good part. Now that we have installed all the tools and downloaded the sample project, it is time to fire this baby up. 
 
-Open your terminal and navigate from your User root folder to the project files folder.
+Make sure the terminal is pointed to the project directory. If not, navigate to it:
 
 ```
-cd our-new-project
+cd our-project-starter
 ```
 
 <br/>
 
-For the server to run our project, the server command needs to run while in the project folder, which we just navigated to in the step above. This is where our html, css, and js files live. Otherwise, the server won't know which files to serve.
+For the server to run our project, the server command needs to run while while in the project folder, which we just navigated to in the previous step. Otherwise, it will try and run something else.
 
 Start the server 🔥
 
@@ -379,7 +368,7 @@ _Weet woo!_
 
 ## Editing the project
 
-Start VSCode and open the `our-new-project` folder. Your terminal is already running the `live-server` from this same folder location.
+Start VSCode and open the `our-project-starter` folder. Your terminal is already running the `live-server` from this same folder location.
 
 <br/>
 
@@ -398,17 +387,11 @@ In `index.html` we have a basic html structure with our content inside of the `<
 ![Updated homepage](./project-hot-reloaded.png)
 
 <br/>
-
-
-. . . . . . . . . . .
-
-
-<br/>
 <br/>
 <br/>
 
 
-The world is our oyster. Continue editing the project files!
+Boom! The world is our oyster. Continue editing the project files.
 
 
 ## Additional starters
@@ -437,7 +420,8 @@ D3.js is a powerful JavaScript library used to produce dynamic, interactive data
 
 
 <br/>
-
+<br/>
+<br/>
 
 ### CSS Frameworks
 
