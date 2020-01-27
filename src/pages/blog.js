@@ -18,9 +18,14 @@ const Blog = ({ data }) => {
                         Blog
                     </h1>
                     <div className="Blog__posts">
-                        {posts.map((post, i) => (
-                            <BlogPost post={post} key={i} />
-                        ))}
+                        <>
+                            {posts.map((post, i) => (
+                                <BlogPost post={post} key={i} />
+                            ))}
+                        </>
+                        <div className="Blog__tbd">
+                            🤺 Working on more! 🤺
+                        </div>
                     </div>
                 </div>
             </MaxWidth>
