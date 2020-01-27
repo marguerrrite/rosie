@@ -51,9 +51,9 @@ class SpinningPets extends Component {
                         />
                     )}
                 </div>
-                <Label className="SpinningPets__message">
+                <span className="SpinningPets__message">
                     powered by {currentPet ? <span className="SpinningPets__name">{currentPet}</span> : "pets"}
-                </Label>
+                </span>
             </div>
         );
     }

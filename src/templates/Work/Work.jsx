@@ -29,7 +29,7 @@ export default ({ data }) => {
                 image={ogImagePath}
                 twitterImage={twitterImagePath}
             />
-            <Layout showSocialCol={false} className={classNames("Work", `Work--${Work.frontmatter.slug}`)}>
+            <Layout showNavigation showFooter className={classNames("Work", `Work--${Work.frontmatter.slug}`)}>
                 <div>
                     <Label className="Work__hero__label" category="primary">
                         <Link className="Work__hero__label__link" to={'/#work'}>Work</Link> | {Work.frontmatter.section}

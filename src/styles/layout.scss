@@ -12,6 +12,9 @@ $border-radius--900: 30px;
 $padding-horizontal: 60px;
 $padding-horizontal--mobile: 16px;
 
+$footer-height-desktop: 80px;
+$footer-height-mobile: 120px;
+
 $navigation-height: 78px;
 $navigation-height--mobile: 56px;
 
@@ -22,7 +25,7 @@ $max-width__navigation: 910px;
 $max-width__navigation: $max-width__content;
 $max-width__navigation--l: $max-width__content--l;
 
-$post-max-width: 680px;
+$post-max-width: 800px;
 
 
 // Media query widths

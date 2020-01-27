@@ -5,6 +5,30 @@
     &__headroom {
         z-index: 300;
 
+        .headroom:not(.headroom--scrolled) {
+            .Header__container--knockoutColors {
+                .Header__logo {
+                    .Logo {
+                        background: white;
+
+                        &__type {
+                            color: $blue-600;
+                        }
+                    }
+                }
+
+                .Header__link {
+                    color: white;
+
+                    &:hover {
+                        opacity: 0.75;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+
         .headroom--scrolled {
             background: white;
             box-shadow: 0 4px 20px 0 rgba(#000000, 0.1);
@@ -27,7 +51,6 @@
     &__container {
         padding-top: 1.5em;
         padding-bottom: 1.5em;
-        //margin-bottom: 10em;
     }
 
     &__content {
@@ -47,7 +70,7 @@
     &__link {
         &s {
             display: grid;
-            grid-template-columns: repeat(2, auto);
+            grid-template-columns: repeat(3, auto);
             grid-gap: 7em;
             grid-gap: 4em;
             justify-content: flex-end;

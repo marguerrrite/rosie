@@ -45,14 +45,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
     const workPost = path.resolve(`src/templates/Work/Work.jsx`);
-
-    const result = await graphql(`
+    const workPages = await graphql(`
         query {
-            allMdx(
-                filter: {frontmatter: {type: {ne: "internal"}}}
-                sort: { fields: [frontmatter___date], order: DESC }
-                    limit: 1000
-                ){
+            allMdx(filter: {frontmatter: {type: {ne: "internal"}}, fileAbsolutePath: {regex: "/work/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
                 edges {
                     node {
                         fields {
@@ -64,12 +59,12 @@ exports.createPages = async ({ graphql, actions }) => {
         }
   `)
 
-    if (result.errors) {
-        throw result.errors
+    if (workPages.errors) {
+        throw workPages.errors
     }
 
     // Create work post pages.
-    const works = result.data.allMdx.edges
+    const works = workPages.data.allMdx.edges
 
     works.forEach((post, index) => {
         const previous = index === works.length - 1 ? null : works[index + 1].node
@@ -85,7 +80,47 @@ exports.createPages = async ({ graphql, actions }) => {
             },
         })
     })
+
+
+
+    const blogPost = path.resolve(`src/templates/Post/Post.jsx`);
+    const blogPosts = await graphql(`
+        query {
+            allMdx(filter: {frontmatter: {type: {ne: "internal"}}, fileAbsolutePath: {regex: "/blog/"}}, sort: { fields: [frontmatter___date], order: DESC }) {
+                edges {
+                    node {
+                        fields {
+                            slug
+                        }
+                    }
+                }
+            }
+        }
+  `)
+
+    if (blogPosts.errors) {
+        throw blogPosts.errors
+    }
+
+    // Create work post pages.
+    const posts = blogPosts.data.allMdx.edges
+
+    posts.forEach((post, index) => {
+        const previous = index === posts.length - 1 ? null : posts[index + 1].node
+        const next = index === 0 ? null : posts[index - 1].node
+
+        createPage({
+            path: `/blog${post.node.fields.slug}`,
+            component: blogPost,
+            context: {
+                slug: post.node.fields.slug,
+                previous,
+                next,
+            },
+        })
+    })
 }
+
 
 exports.onCreateWebpackConfig = ({
     stage,

@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import ReactDOM from "react-dom"
 import PropTypes from "prop-types"
 import classNames from 'classnames'
 import { StaticQuery, graphql } from "gatsby"
@@ -14,11 +13,9 @@ if (typeof window !== "undefined") {
     require("smooth-scroll")('a[href*="#"]')
 }
 
-const Layout = ({ className, children, showNavigation, showSocialCol, showFooter }) => {
-
-    return (
-        <StaticQuery
-            query={graphql`
+const Layout = ({ className, children, showNavigation, showSocialCol, showFooter, knockoutHeader }) => (
+    <StaticQuery
+        query={graphql`
             query SITE_TITLE_QUERY {
                 site {
                     siteMetadata {
@@ -32,7 +29,7 @@ const Layout = ({ className, children, showNavigation, showSocialCol, showFooter
                     <div className="div">
                         <div className="Layout">
                             {showNavigation && (
-                                <Header />
+                                <Header knockoutHeader={knockoutHeader} />
                             )}
                             {showSocialCol && (
                                 <SocialCol />
@@ -50,7 +47,7 @@ const Layout = ({ className, children, showNavigation, showSocialCol, showFooter
         />
 
     )
-}
+
 
 Layout.propTypes = {
     children: PropTypes.node.isRequired,
@@ -60,9 +57,9 @@ Layout.propTypes = {
 }
 
 Layout.defaultProps = {
-    showNavigation: true,
-    showFooter: true,
-    showSocialCol: true,
+    showNavigation: false,
+    showFooter: false,
+    showSocialCol: false,
 }
 
 export default Layout;

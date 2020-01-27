@@ -11,25 +11,45 @@ import projects from "components/Project/projects.js";
 import SEO from "components/SEO/SEO"
 
 const Home = () => (
-    <Layout>
+    <Layout showNavigation showSocialCol showFooter>
         <SEO />
         <Intro />
         <MaxWidth className="Home__recent">
-            <h1>
-                Recent Project
-            </h1>
-            <Link to="/2020-bachelor" className="Home__recent__project">
-                <ContestantHead name="Deandra" />
-                <div>
-                    <h3>
-                        Bachelor 2020 Contestant Guide
-                    </h3>
-                    <p>
-                        Updating weekly with episode information and improved components.
-                    </p>
-                </div>
+            <div>
+                <h2>
+                    Recent Project
+                </h2>
+                <Link to="/2020-bachelor" className="Home__recent__item Home__recent__item--project">
+                    <ContestantHead name="Deandra" />
+                    <div>
+                        <h3>
+                            Bachelor 2020 Contestant Guide
+                        </h3>
+                        <p>
+                            Updating weekly with episode information and improved components.
+                        </p>
+                    </div>
 
-            </Link>
+                </Link>
+            </div>
+            <div>
+                <h2>
+                    Recent Post
+                </h2>
+                <Link to="/blog/setting-up-a-local-dev-environment-and-running-a-website/"
+                    className="Home__recent__item Home__recent__item--post">
+                    <div>
+                        <h3>
+                            Set up a local dev environment and run a website
+                        </h3>
+                        <p>
+                            Collect and utilize the tools needed to spin up and edit a website on your computer.
+                            Basic HTML/CSS/JS, D3.js, and Twitter Bootstrap starters provided.
+                        </p>
+                    </div>
+
+                </Link>
+            </div>
         </MaxWidth>
         <MaxWidth id="work" className="Home__projects">
             <h1>

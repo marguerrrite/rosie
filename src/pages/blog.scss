@@ -1,0 +1,70 @@
+@import "./../styles/lib.scss";
+
+.Blog {
+
+    &Post {
+        margin-bottom: 4em;
+        display: block;
+        text-decoration: none;
+
+        &__title {
+            line-height: 1.2;
+            font-size: 1.2em;
+            margin-bottom: 0.1em;
+            transition: all 100ms ease-out;
+        }
+
+        &__categories {
+            font-size: 0.8em;
+            color: $grey-600;
+            font-weight: 600;
+            margin-top: 0.25em;
+            margin-bottom: 0.25em;
+        }
+
+        &__description {
+            margin-top: 1em;
+            font-size: 0.9em;
+            line-height: 165%;
+        }
+
+        &:hover {
+            .WritingPost__title {
+                color: $blue-600;
+                transition: all 100ms ease-out;
+            }
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-template-columns: 3fr 4fr;
+        grid-gap: 2.25em;
+
+        @media(max-width: 767px) {
+            grid-template-columns: 1fr;
+        }
+
+        &__container {
+            height: calc(100vh - 4.8em - #{$footer-height-desktop} - #{$navigation-height});
+
+            @media(max-width: 700px) {
+                height: calc(100vh - 8em - #{$footer-height-mobile} - #{$navigation-height--mobile});
+            }
+        }
+    }
+
+    &__title {
+        grid-column: 1 / -1;
+        margin-bottom: 2rem;
+    }
+
+    &__posts {
+        grid-column: 1 / 2;
+    }
+
+    &__tbd {
+        font-size: 0.9em;
+        font-style: italic;
+    }
+}

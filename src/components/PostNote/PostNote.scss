@@ -1,0 +1,67 @@
+@import "../../styles/lib.scss";
+
+.PostNote {
+    border-top: 4px solid rgba(salmon, 0.5);
+    max-width: calc(#{$post-max-width} - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(salmon, 0.1);
+    padding: 1.5em 1.5em 1.5em;
+    margin-top: 2em;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+
+    code {
+        background: rgba(salmon, 0.25);
+    }
+
+    &__content {
+        padding: 0 !important;
+        margin-bottom: 1.5em !important;
+        font-size: 0.9rem !important;
+        line-height: 1.75 !important;
+    }
+
+    &__link {
+        color: salmon;
+        text-align: right;
+        display: block;
+        font-weight: 600;
+        font-size: 0.825em;
+
+        &:after {
+            background: none;
+        }
+
+        &:visited,
+        &:hover {
+            color: darken(salmon, 5%);
+        }
+    }
+
+    &--isBlue {
+        background: $blue-100;
+        border-top-color: $blue-300;
+
+        code {
+            background: rgba($blue-300, 0.5);
+        }
+
+        .PostNote__link {
+            color: $blue-600;
+            text-align: right;
+            display: block;
+            font-weight: 600;
+            font-size: 0.825em;
+
+            &:after {
+                background: none;
+            }
+
+            &:visited,
+            &:hover {
+                color: $blue-600;
+            }
+        }
+    }
+}

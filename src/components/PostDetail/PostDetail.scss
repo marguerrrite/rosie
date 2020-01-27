@@ -1,0 +1,111 @@
+//@import "../../styles/colors.scss";
+@import "./../../styles/lib";
+
+.PostDetail {
+    justify-self: end;
+    text-align: left;
+    padding-top: 4.75rem;
+    margin-top: 1.25em;
+
+    &__container {
+        width: 100%;
+        margin: 0 auto;
+        max-width: $post-max-width;
+        height: 0;
+        position: sticky;
+        top: 0em;
+
+        @media(max-width: 1000px) {
+            display: none;
+        }
+    }
+
+    &__item {
+        margin-bottom: 4em;
+
+        &__title {
+            padding: 0 0px;
+            margin-top: 0;
+            font-size: 1.1em;
+            font-family: "Circular", sans-serif;
+            letter-spacing: -0.005em;
+            font-weight: 700;
+        }
+
+        &__content {
+            padding: 0 0px;
+            margin-top: 1em;
+            margin-bottom: 2em;
+        }
+
+        &__button {
+            display: block;
+            margin-bottom: 1em;
+        }
+
+        &__ga-link {
+            font-size: 0.9em;
+
+            &__icon {
+                margin-right: 0.35em;
+            }
+        }
+
+        &__date {
+            font-size: 0.85em;
+            opacity: 0.5;
+        }
+    }
+
+    @media(max-width: 1000px) {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        &__container {
+            height: auto;
+        }
+
+        &__item {
+            &__content {
+                margin-bottom: 0;
+            }
+
+            &__list {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                grid-column-gap: 2em;
+            }
+        }
+    }
+
+    @media(max-width: 700px) {
+        padding-top: 2em;
+
+        &__item {
+            margin-bottom: 0;
+
+            &__title {
+                font-size: 1em;
+            }
+
+            &__list {
+                margin-top: 1em;
+                grid-template-columns: 1fr 1fr;
+                grid-column-gap: 2em;
+            }
+        }
+    }
+
+    @media(max-width: 600px) {
+        &__item {
+            margin-right: 1em;
+
+            &__content {
+                margin-top: 0em;
+                margin-bottom: 2em;
+                font-size: 0.9em;
+            }
+        }
+    }
+}
