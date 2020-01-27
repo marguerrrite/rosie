@@ -40,7 +40,7 @@ const Contestants = ({ parsedContestants }) => {
         ]
     }
 
-    let weeklyHighlight = null;
+    let weeklyHighlight = false;
     if (selectedContestant) {
         weeklyHighlight = [
             _.find(parsedContestants, ['name', selectedContestant.name]).week3highlight
