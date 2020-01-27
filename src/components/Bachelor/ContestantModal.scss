@@ -45,8 +45,11 @@
         margin: 0;
         font-weight: 600;
         margin-bottom: 1.5em;
-        display: flex;
-        justify-content: space-between;
+
+        &--bio {
+            display: flex;
+            justify-content: space-between;
+        }
 
         &__note {
             font-size: 0.75rem;

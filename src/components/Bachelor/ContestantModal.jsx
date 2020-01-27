@@ -53,7 +53,7 @@ const ContestantModal = ({ weeklyHighlight, weeklyRoseStatus, contestant, name, 
 
             <div className="ContestantModal__bio__container">
                 <div className="ContestantModal__bio">
-                    <h5 className="ContestantModal__section-title">
+                    <h5 className="ContestantModal__section-title ContestantModal__section-title--bio">
                         Notes
                         <span className="ContestantModal__section-title__note">
                             From <Link doOpenInNewTab to={abcUrl}>abc.com</Link>
