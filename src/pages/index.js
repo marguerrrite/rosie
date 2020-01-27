@@ -36,7 +36,7 @@ const Home = () => (
                 <h2>
                     Recent Post
                 </h2>
-                <Link to="/blog/set-up-a-local-dev-environment-and-run-a-website/"
+                <Link to="/blog/set-up-local-website"
                     className="Home__recent__item Home__recent__item--post">
                     <div>
                         <h3>
