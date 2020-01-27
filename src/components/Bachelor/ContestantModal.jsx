@@ -7,6 +7,7 @@ import ContestantHead from "components/Bachelor/ContestantHead"
 import ContestantHistogram from 'components/Bachelor/ContestantHistogram'
 import ContestantMap from 'components/Bachelor/ContestantMap'
 import Button from "components/_ui/Button/Button"
+import Link from "components/_ui/Link/Link"
 import { Modal } from "components/_ui/Modal/Modal"
 import './ContestantModal.scss'
 
@@ -24,6 +25,9 @@ const ContestantModal = ({ weeklyHighlight, weeklyRoseStatus, contestant, name, 
 
     let contestantNotes = contestant.notes.split("- ")
     contestantNotes.shift()
+
+    let urlName = name.toLowerCase().replace(".", '').replace(" ", '-')
+    let abcUrl = "https://abc.com/shows/the-bachelor/cast/season-24-" + urlName + "-2020"
 
     return (
         <Modal onClose={() => onClose()} className="ContestantModal">
@@ -51,6 +55,9 @@ const ContestantModal = ({ weeklyHighlight, weeklyRoseStatus, contestant, name, 
                 <div className="ContestantModal__bio">
                     <h5 className="ContestantModal__section-title">
                         Notes
+                        <span className="ContestantModal__section-title__note">
+                            From <Link doOpenInNewTab to={abcUrl}>abc.com</Link>
+                        </span>
                     </h5>
                     <div className="ContestantModal__bio__notes">
                         <ul>
@@ -71,7 +78,7 @@ const ContestantModal = ({ weeklyHighlight, weeklyRoseStatus, contestant, name, 
             </div>
 
             <div className="ContestantHighlight__container">
-                {weeklyHighlight && (
+                {(weeklyHighlight[0] !== null) && (
                     <ContestantHighlight highlight={weeklyHighlight} />
                 )}
             </div>
