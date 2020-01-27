@@ -12,6 +12,8 @@ import contestantsDataA from 'components/Bachelor/data/bachelor-cosmo.csv'
 import contestantsDataB from 'components/Bachelor/data/bachelor-usmag.csv'
 import contestantsDataC from 'components/Bachelor/data/bachelor-abc.csv'
 
+import contestants from 'components/Bachelor/data/parsedContestants.csv'
+
 const Bachelor = () => {
     const [parsedContestants, setParsedContestants] = useState('')
 
@@ -19,63 +21,10 @@ const Bachelor = () => {
         // You need to restrict it at some point
         // This is just dummy code and should be replaced by actual
         if (!parsedContestants) {
-            getParsedContestants();
+            setParsedContestants(contestants);
         }
     }, []);
 
-    // const getParsedContestants = async () => {
-    //     const contestantsData = await Promise.all(
-    //         contestantsDataA.map(async (d, i) => {
-    //             let location = d.location
-    //             let url = api_url
-    //                 + '?'
-    //                 + 'api_key=' + geoapikey
-    //                 + '&q=' + encodeURIComponent(location)
-
-    //             const res = await fetch(url)
-    //             const json = await res.json()
-
-    //             let name = contestantsDataB[i].name
-
-    //             //Canada!
-    //             let lat = name !== "Mykenna" ? json.results[0].location.lat : 48.993867
-    //             let lng = name !== "Mykenna" ? json.results[0].location.lng : -122.672326
-
-    //             return {
-    //                 ...d,
-    //                 lat,
-    //                 lng,
-    //                 name,
-    //                 image: contestantsDataB[i]["image-src"]
-    //             }
-    //         })
-    //     )
-
-    //     setParsedContestants(contestantsData);
-    // };
-
-    const getParsedContestants = () => {
-        const contestantsData = contestantsDataA.map((d, i) => {
-            let name = contestantsDataB[i].name
-            let image = contestantsDataB[i]["image-src"]
-            let lat = d.lat
-            let lng = d.lng
-            let bio = contestantsDataC[i].bio
-            let notes = contestantsDataC[i].notes
-
-            return {
-                ...d,
-                lat,
-                lng,
-                name,
-                image,
-                bio,
-                notes
-            }
-        })
-
-        setParsedContestants(contestantsData);
-    };
 
     return (
         <MaxWidth size="l" className="Bachelor">
@@ -89,10 +38,12 @@ const Bachelor = () => {
 
                 <div className="Bachelor__header__message">
                     <h4>
-                        Check back next week for improvements!
+                        Week 3 updated!
                     </h4>
                     <p>
-                        I'm currently working on an episode table with easy-to-digest eliminations, improved episode highlights, and better mobile support! Thanks for stopping by and happy watching <span className="emoji" role="img" aria-label="Emoji smile">😊</span>
+                        Future improvements include an episode table with
+                        easy-to-digest eliminations and better mobile support! Thanks
+                        for stopping by and happy watching <span className="emoji" role="img" aria-label="Emoji smile">😊</span>
                     </p>
                 </div>
 
@@ -158,3 +109,33 @@ const Bachelor = () => {
 
 export default Bachelor;
 
+// const getParsedContestants = async () => {
+    //     const contestantsData = await Promise.all(
+    //         contestantsDataA.map(async (d, i) => {
+    //             let location = d.location
+    //             let url = api_url
+    //                 + '?'
+    //                 + 'api_key=' + geoapikey
+    //                 + '&q=' + encodeURIComponent(location)
+
+    //             const res = await fetch(url)
+    //             const json = await res.json()
+
+    //             let name = contestantsDataB[i].name
+
+    //             //Canada!
+    //             let lat = name !== "Mykenna" ? json.results[0].location.lat : 48.993867
+    //             let lng = name !== "Mykenna" ? json.results[0].location.lng : -122.672326
+
+    //             return {
+    //                 ...d,
+    //                 lat,
+    //                 lng,
+    //                 name,
+    //                 image: contestantsDataB[i]["image-src"]
+    //             }
+    //         })
+    //     )
+
+    //     setParsedContestants(contestantsData);
+    // };

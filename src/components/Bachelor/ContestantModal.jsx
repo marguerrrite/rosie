@@ -15,9 +15,7 @@ import contestantWeeklies from 'components/Bachelor/data/bachelor-weeklies.csv'
 import contestantsDataAges from 'components/Bachelor/data/bachelor-cosmo-ages.csv'
 const ageAccessor = d => d.age
 
-
-
-const ContestantModal = ({ contestant, name, onClose, contestantCoordinates, contestantIndex }) => {
+const ContestantModal = ({ weeklyHighlight, weeklyRoseStatus, contestant, name, onClose, contestantCoordinates, contestantIndex }) => {
     const [openBio, setOpenBio] = useState("bio");
 
     const onToggleBio = () => {
@@ -26,25 +24,6 @@ const ContestantModal = ({ contestant, name, onClose, contestantCoordinates, con
 
     let contestantNotes = contestant.notes.split("- ")
     contestantNotes.shift()
-
-    let weeklyRoseStatus = [
-        contestant.week1rose,
-        contestant.week2rose,
-        contestant.week3rose,
-        contestant.week4rose,
-        contestant.week5rose,
-        contestant.week6rose,
-        contestant.week7rose,
-        contestant.week8rose,
-        contestant.week9rose,
-        contestant.week10rose,
-    ]
-
-    let contestantWeekly = contestantWeeklies[contestantIndex]
-
-    let weeklyHighlight = contestantWeeklies[contestantIndex].week2highlight
-
-    console.log(weeklyHighlight)
 
     return (
         <Modal onClose={() => onClose()} className="ContestantModal">
@@ -168,13 +147,12 @@ const ContestantStatus = ({ status }) => {
 }
 
 const ContestantHighlight = ({ highlight }) => {
-    let highlights = highlight.match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
+    let highlights = highlight[0].match(/\(?[^\.\?\!]+[\.!\?]\)?/g);
     let roseHighlight = highlights[0].includes("rose")
-    console.log(roseHighlight)
     return (
         <div className="ContestantHighlight">
             <h5 className="ContestantModal__section-title ContestantHighlight__title">
-                <span>{roseHighlight ? "🌹" : "💅"}</span> Week 2 Highlight
+                <span>{roseHighlight ? "🌹" : "💅"}</span> Week 3 Highlight
             </h5>
             <div className="ContestantHighlight__primary">
                 {highlights[0]}

@@ -16,10 +16,36 @@ import peterCrownImg from './images/head-peter-crown.png'
 let contestantNames = _.map(contestantsDataB, _.property('name'));
 
 const Contestants = ({ parsedContestants }) => {
-
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedContestant, setSelectedContestant] = useState(null)
     const [selectedContestantIndex, setSelectedContestantIndex] = useState(null)
+
+    let contestantName = selectedContestant && selectedContestant.name
+    let contestantLat = selectedContestant && _.find(parsedContestants, ['name', selectedContestant.name]).lat
+    let contestantLng = selectedContestant && _.find(parsedContestants, ['name', selectedContestant.name]).lng
+
+    let weeklyRoseStatus = null;
+    if (selectedContestant) {
+        weeklyRoseStatus = [
+            _.find(parsedContestants, ['name', selectedContestant.name]).week1rose,
+            _.find(parsedContestants, ['name', selectedContestant.name]).week2rose,
+            _.find(parsedContestants, ['name', selectedContestant.name]).week3rose,
+            _.find(parsedContestants, ['name', selectedContestant.name]).week4rose,
+            _.find(parsedContestants, ['name', selectedContestant.name]).week5rose,
+            _.find(parsedContestants, ['name', selectedContestant.name]).week6rose,
+            _.find(parsedContestants, ['name', selectedContestant.name]).week7rose,
+            _.find(parsedContestants, ['name', selectedContestant.name]).week8rose,
+            _.find(parsedContestants, ['name', selectedContestant.name]).week9rose,
+            _.find(parsedContestants, ['name', selectedContestant.name]).week10rose,
+        ]
+    }
+
+    let weeklyHighlight = null;
+    if (selectedContestant) {
+        weeklyHighlight = [
+            _.find(parsedContestants, ['name', selectedContestant.name]).week3highlight
+        ]
+    }
 
     function handleContestantSelection(contestant, i) {
         setSelectedContestant(parsedContestants[i])
@@ -33,7 +59,6 @@ const Contestants = ({ parsedContestants }) => {
         setIsModalOpen(false)
     }
 
-
     return (
         <div className="Contestants">
             {parsedContestants ? (
@@ -42,9 +67,11 @@ const Contestants = ({ parsedContestants }) => {
                         <ContestantModal
                             onClose={clearContestantSelection}
                             contestant={selectedContestant}
-                            name={contestantNames[selectedContestantIndex]}
+                            name={contestantName}
                             contestantIndex={selectedContestantIndex}
-                            contestantCoordinates={[parsedContestants[selectedContestantIndex].lng, parsedContestants[selectedContestantIndex].lat]}
+                            contestantCoordinates={[contestantLng, contestantLat]}
+                            weeklyRoseStatus={weeklyRoseStatus}
+                            weeklyHighlight={weeklyHighlight}
                         />
                     )}
                     {contestantsDataA.map((info, i) => (
