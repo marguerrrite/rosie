@@ -26,6 +26,7 @@ export default ({ data }) => {
         <>
             <SEO
                 title={`${Post.frontmatter.title}`}
+                description={`${Post.frontmatter.intro}`}
             />
             <Layout knockoutHeader showNavigation showFooter className={classNames("Post", `Post--${Post.frontmatter.slug}`)}>
                 <div>
