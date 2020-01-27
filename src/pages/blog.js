@@ -24,7 +24,7 @@ const Blog = ({ data }) => {
                             ))}
                         </>
                         <div className="Blog__tbd">
-                            🤺 Working on more! 🤺
+                            🤺 More in the works! 🤺
                         </div>
                     </div>
                 </div>
