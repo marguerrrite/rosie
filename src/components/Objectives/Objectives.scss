@@ -41,7 +41,13 @@
 
     @media(max-width: 600px) {
         padding-top: 0.75em;
-        margin-top: 0;
-        margin-bottom: 3em;
+        margin-top: 3em;
+        margin-bottom: 0em;
+
+        ul {
+            li {
+                text-indent: -1.8rem;
+            }
+        }
     }
 }
