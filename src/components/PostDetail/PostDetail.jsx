@@ -33,7 +33,7 @@ const PostDetail = ({date, demoUrl, projectRepo, className}) => {
                 </div>
                 <div className="PostDetail__item">
                     <div className="PostDetail__item__date">
-                        Upadted {date}
+                        Updated {date}
                     </div>
                 </div>
             </div>
