@@ -20,7 +20,7 @@ export default ({ data }) => {
     let objectives = Work.frontmatter.objectives.childMdx
 
     const ogImagePath = "https://marguerite.io" + Work.frontmatter.ogimage.childImageSharp.fixed.src
-    const twitterImagePath = "https://marguerite.io" + Work.frontmatter.ogimage.childImageSharp.fixed.src
+    const twitterImagePath = "https://marguerite.io" + Work.frontmatter.twitterimage.childImageSharp.fixed.src
 
     return (
         <>

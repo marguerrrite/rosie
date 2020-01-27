@@ -23,7 +23,7 @@ export default ({ data }) => {
     let date = Post.frontmatter.date
 
     const ogImagePath = "https://marguerite.io" + Post.frontmatter.ogimage.childImageSharp.fixed.src
-    const twitterImagePath = "https://marguerite.io" + Post.frontmatter.ogimage.childImageSharp.fixed.src
+    const twitterImagePath = "https://marguerite.io" + Post.frontmatter.twitterimage.childImageSharp.fixed.src
 
 
     return (
