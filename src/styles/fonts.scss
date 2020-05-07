@@ -103,18 +103,18 @@ html {
 
 @font-face {
 	font-family: "TiemposHeadline";
-	src: url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold.eot");
-	src: url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold.eot?#iefix") format("embedded-opentype"),
-	url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold.woff") format("woff");
+	src: url("../assets/TiemposHeadline-Bold.eot");
+	src: url("../assets/TiemposHeadline-Bold.eot?#iefix") format("embedded-opentype"),
+	url("../assets/TiemposHeadline-Bold.woff") format("woff");
 	font-style: normal;
 	font-weight: 700;
 }
 
 @font-face {
 	font-family: "TiemposHeadline";
-	src: url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold-Italic.eot");
-	src: url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold-Italic.eot?#iefix") format("embedded-opentype"),
-	url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold-Italic.woff") format("woff");
+	src: url("../assets/TiemposHeadline-Bold-Italic.eot");
+	src: url("../assets/TiemposHeadline-Bold-Italic.eot?#iefix") format("embedded-opentype"),
+	url("../assets/TiemposHeadline-Bold-Italic.woff") format("woff");
 	font-style: italic;
 	font-weight: 700;
 }
