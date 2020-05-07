@@ -13,6 +13,10 @@
     background: $blue-100;
     border-radius: 5px;
 
+    @media(max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
+
     &__image {
         width: 100%;
 
@@ -24,6 +28,10 @@
 
             img {
                 margin: 0 !important;
+            }
+
+            @media(max-width: 600px) {
+                grid-row: 2;
             }
         }
     }

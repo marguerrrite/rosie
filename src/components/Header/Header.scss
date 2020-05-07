@@ -77,6 +77,10 @@
             grid-gap: 4em;
             justify-content: flex-end;
             width: 100%;
+
+            @media(max-width: 600px) {
+                grid-gap: 2em;
+            }
         }
 
         color: currentColor;
