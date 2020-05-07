@@ -2,6 +2,7 @@
 
 .Header {
     //Shrink height for react-headroom scrub peep
+
     &__headroom {
         z-index: 300;
 
@@ -19,6 +20,7 @@
 
                 .Header__link {
                     color: white;
+                    font-family: 'Space Mono', monospace;
 
                     &:hover {
                         opacity: 0.75;
@@ -80,7 +82,7 @@
         color: currentColor;
         text-decoration: none;
         border-bottom: 3px solid transparent;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 0.95em;
         //height: 100%;
         //padding-bottom: 1.25em;

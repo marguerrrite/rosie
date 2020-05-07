@@ -28,6 +28,9 @@
         opacity: 0;
         animation: fadeUpMedium 1000ms ease-in-out;
         animation-fill-mode: forwards;
+        font-family: 'Space Mono', monospace;
+        font-weight: 500;
+        font-size: 1.4em;
     }
 
     &__header {
@@ -39,15 +42,15 @@
         animation: fadeUpSmall 800ms ease-in-out;
         animation-fill-mode: forwards;
         animation-delay: 100ms;
+        font-size: 5.35em;
     }
 
     &__subheader {
         font-weight: 400;
-        font-family: "Inter", sans-serif;
         margin: 0;
         margin-bottom: 2em;
         animation: fade--up 1s ease-out;
-        max-width: 810px;
+        max-width: 880px;
         line-height: 1.8;
         opacity: 0;
         animation: fadeUpSmall 800ms ease-in-out;

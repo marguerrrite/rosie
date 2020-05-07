@@ -31,16 +31,27 @@
     &__hero {
         background-color: $blue-600;
         color: white;
-        height: 80vh;
-        max-height: 900px;
         transform: translateY(-120px);
         margin-bottom: -100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
 
+        &--height{
+            &-small {
+                height: 45vh;
+                min-height: 350px;
+                padding-top: 4em;
+            }
+
+            &-large {
+                height: 80vh;
+                max-height: 900px;
+            }
+        }
+
         &__content {
-            max-width: 800px;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
@@ -56,9 +67,10 @@
 
         &__title {
             text-align: center;
+            margin-bottom: 0;
 
             @media(min-width: 1100px) {
-                font-size: 3.25em;
+                font-size: 4.25em;
             }
         }
 
@@ -190,7 +202,12 @@
         grid-template-columns: 11em 1fr 11em;
         grid-gap: 4em;
 
+        &__body {
+            padding-top: 4.75rem;
+        }
+
         h2 {
+            font-family: 'Space Mono', monospace;
             @media(min-width: 601px) {
                 padding-top: 4.75rem;
                 padding-top: 4rem;
@@ -201,6 +218,7 @@
         h3,
         h5,
         h6 {
+            font-family: 'Space Mono', monospace;
             @media(min-width: 601px) {
                 padding-top: 4.75rem;
                 padding-top: 2rem;

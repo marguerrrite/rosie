@@ -7,7 +7,7 @@ import "./Intro.scss";
 const Intro = () => {
     return (
         <MaxWidth
-            size="s"
+            size="m"
             className="Intro"
         >
             <h2 className="Intro__greeting">

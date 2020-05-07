@@ -1,10 +1,11 @@
 @import "../../../styles/lib.scss";
 
 .Button {
-    font-weight: 600;
+    font-weight: 500;
     border: 1px solid transparent;
     transition: all 150ms ease-out;
     font-family: "Circular", sans-serif;
+    font-family: 'Space Mono', monospace;
 
     &:hover {
         cursor: pointer;

@@ -1,4 +1,5 @@
 @import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
     font-family: 'Inter', sans-serif;
@@ -98,4 +99,22 @@ html {
     font-family: 'Tropline';
     src: url('../assets/Tropiline-Black.woff') format('woff');
     font-weight: 800;
+}
+
+@font-face {
+	font-family: "TiemposHeadline";
+	src: url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold.eot");
+	src: url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold.eot?#iefix") format("embedded-opentype"),
+	url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold.woff") format("woff");
+	font-style: normal;
+	font-weight: 700;
+}
+
+@font-face {
+	font-family: "TiemposHeadline";
+	src: url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold-Italic.eot");
+	src: url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold-Italic.eot?#iefix") format("embedded-opentype"),
+	url("https://www.bu.edu/cdn/fonts/TiemposHeadline/TiemposHeadline-Bold-Italic.woff") format("woff");
+	font-style: italic;
+	font-weight: 700;
 }
