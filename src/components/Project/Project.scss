@@ -101,6 +101,10 @@
         font-family: 'Space Mono', monospace;
     }
 
+    &__about {
+        font-size: 0.9em;
+    }
+
     &__link {
         &__icon {
             margin-right: 0.4em;
@@ -118,7 +122,7 @@
 
         &__link {
             display: inline-block;
-            text-decoration: none;
+            //text-decoration: none;
             font-weight: 500;
             margin-top: 1em;
         }

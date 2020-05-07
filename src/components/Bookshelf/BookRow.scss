@@ -252,6 +252,10 @@ $row-transition: 100ms ease-in-out all;
             }
         }
 
+        p {
+            font-family: 'Inter', sans-serif;
+        }
+
         &__image {
             height: 200px;
             border: 8px solid white;
