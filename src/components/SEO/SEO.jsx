@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { Helmet } from "react-helmet";
 import { useStaticQuery, graphql } from "gatsby";
 
-function SEO({ description, lang, meta, title, image, twitterImage }) {
+function SEO({ description, lang, meta, title, image, twitterImage, canonical, pathname }) {
     const { site } = useStaticQuery(
         graphql`
             query {
@@ -22,11 +22,14 @@ function SEO({ description, lang, meta, title, image, twitterImage }) {
         `
     )
 
-
+    const url = `${site.siteMetadata.siteUrl}${
+        grabWindowPathname()
+    }`;
 
     const metaTitle = title || site.siteMetadata.title;
     const metaDescription = description || site.siteMetadata.description;
     const metaKeywords = site.siteMetadata.keywords;
+    const metaUrl = canonical || url;
 
     const metaImage = image || site.siteMetadata.image;
     const metaTwitterImage = twitterImage || site.siteMetadata.twitterImage;
@@ -41,7 +44,7 @@ function SEO({ description, lang, meta, title, image, twitterImage }) {
             meta={[
                 {
                     property: `og:url`,
-                    content: site.siteMetadata.siteUrl,
+                    content: metaUrl,
                 },
                 {
                     property: `og:type`,
@@ -124,3 +127,9 @@ SEO.propTypes = {
 }
 
 export default SEO;
+
+const grabWindowPathname = () => {
+    const windowGlobal = typeof window !== 'undefined' && window;
+    if (!windowGlobal) return null;
+    return windowGlobal.location.pathname;
+};
