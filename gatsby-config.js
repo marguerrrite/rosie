@@ -3,9 +3,9 @@ module.exports = {
         title: `Marguerite Roth | Product Designer & Developer`,
         description: `Personal site for Marguerite Roth`,
         author: `Marguerite Roth | marguerite.io | @marrrguerite`,
-        siteUrl: "https://www.marguerite.io",
-        image: `https://www.marguerite.io/og-image.png`,
-        twitterImage: `https://www.marguerite.io/twitter-image.png`,
+        siteUrl: "https://marguerite.io",
+        image: `https://marguerite.io/og-image.png`,
+        twitterImage: `https://marguerite.io/twitter-image.png`,
         keywords: `web development, design, data, product, visualization, dashboard, analytics, currents, parse.ly, visual`,
   },
   plugins: [
