@@ -40,6 +40,7 @@ function SEO({ description, lang, meta, title, image, twitterImage, canonical, p
                 lang,
             }}
             title={metaTitle}
+            link={[{ rel: 'canonical', key: metaUrl, href: metaUrl }]}
             titleTemplate={title ? `%s | ${site.siteMetadata.title}`: null}
             meta={[
                 {
