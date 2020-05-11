@@ -13,7 +13,7 @@ const Paradiddles = () => {
         <>
             <Layout
                 className="Paradiddles__layout" showFooter>
-                <SEO title="Paradiddles Data Visualization" image="https://www.marguerite.io/og-image-paradiddles.png" twitterImage="https://www.marguerite.io/twitter-image-paradiddles.png"/>
+                <SEO title="Paradiddles Data Visualization" image="https://marguerite.io/og-image-paradiddles.png" twitterImage="https://marguerite.io/twitter-image-paradiddles.png"/>
 
                 <MaxWidth size="l" className="Paradiddles">
                     <ParadiddleContainer/>
