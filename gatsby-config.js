@@ -18,6 +18,12 @@ module.exports = {
     `gatsby-plugin-remove-trailing-slashes`,
     `gatsby-plugin-emotion`,
     `gatsby-remark-autolink-headers`,
+    {
+        resolve: `gatsby-plugin-canonical-urls`,
+        options: {
+        siteUrl: `https://marguerite.io`,
+    },
+      },
     // {
     //     resolve: `gatsby-plugin-layout`,
     //     options: {
