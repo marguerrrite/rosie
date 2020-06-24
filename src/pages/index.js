@@ -26,10 +26,9 @@ const Home = () => (
                             Bachelor 2020 Contestant Guide
                         </h3>
                         <p>
-                            Updating weekly with episode information and improved components.
+                            Hannah Ann, Madison, Kelley, oh my!
                         </p>
                     </div>
-
                 </Link>
             </div>
             <div>

@@ -5,16 +5,31 @@
     h3,
     h4,
     h5,
-    h6 {
+    h6,
+    p {
         font-family: "Inter", sans-serif;
     }
-
+    font-family: "Inter", sans-serif;
     background: $mauve-200;
     padding-bottom: 4em;
     height: 100%;
 
+    &__home__link {
+        .Label {
+            opacity: 0.25;
+            margin-bottom: 3em;
+            display: inline-block;
+            transition: 100ms linear opacity;
+
+            &:hover {
+                opacity: 1;
+                transition: 100ms linear opacity;
+            }
+        }
+    }
+
     &__header {
-        padding-top: 8em;
+        padding-top: 5em;
         //padding-bottom: 2em;
         position: relative;
 
@@ -50,6 +65,14 @@
             max-width: 470px;
             padding: 0em 1.5em 0;
             border-radius: 4px;
+
+            p {
+                text-decoration: line-through;
+
+                &:last-of-type {
+                    text-decoration: none;
+                }
+            }
 
             @media(max-width: 940px) {
                 position: relative;

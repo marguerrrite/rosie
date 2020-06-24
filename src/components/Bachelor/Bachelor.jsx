@@ -29,21 +29,29 @@ const Bachelor = () => {
     return (
         <MaxWidth size="l" className="Bachelor">
             <MaxWidth size="l" className="Bachelor__header">
+                <Link to="/" className="Bachelor__home__link">
+                    <Label category="primary">
+                        ← Marguerite.io
+                    </Label>
+                </Link>
                 <h1 className="Bachelor__header__title">
                     The Bachelor
                 </h1>
                 <h3 className="Bachelor__header__description">
                     Welcome Bachelor Nation. Following along with the new contestants is hard—this guide is here to help! 🌹
                 </h3>
-
                 <div className="Bachelor__header__message">
-                    <h4>
-                        Week 3 updated!
-                    </h4>
+                    <h3>
+                        And we have a winner...
+                    </h3>
                     <p>
-                        Future improvements include an episode table with
-                        easy-to-digest eliminations and better mobile support! Thanks
-                        for stopping by and happy watching <span className="emoji" role="img" aria-label="Emoji smile">😊</span>
+                        Hanna Ann... wins?
+                    </p>
+                    <p>
+                        Peter is Arie. Madison wins.
+                    </p>
+                    <p>
+                        Peter quarantines with Kelley. ¯\_(ツ)_/¯
                     </p>
                 </div>
 
