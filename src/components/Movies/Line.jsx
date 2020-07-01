@@ -15,8 +15,6 @@ const Line = ({ className, type, data, xAccessor, yAccessor, y0Accessor, interpo
             .y1(yAccessor)
     }
 
-    console.log(data)
-
     return (
         <path {...props}
             className={classNames(`Line Line--type-${type}`, className)}

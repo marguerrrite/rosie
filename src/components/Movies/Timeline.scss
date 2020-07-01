@@ -1,0 +1,194 @@
+@import "./../../styles/lib";
+
+.Timeline {
+    height: 500px;
+    min-width: 500px;
+    width: calc(100% + 1em);
+    //margin-bottom: 2em;
+    width: 100%;
+    position: relative;
+
+    &Context {
+        height: 100px;
+    }
+
+    svg text {
+        fill: #969696;
+    }
+
+    .y-axis-label {
+        font-size: 0.8em;
+        text-anchor: middle;
+        transform: rotate(-90deg);
+    }
+
+    .axis {
+        color: #E0E0E0;
+    }
+
+    .tick {
+        color: #E0E0E0;
+    }
+
+    .Axis__tick {
+        text-anchor: middle;
+    }
+
+    .AxisHorizontal,
+    .AxisVertical {
+        font-size: 0.8em;
+
+        .Axis__line {
+            stroke: #E0E0E0;
+        }
+    }
+
+    .Line {
+        &--type {
+            &-line {
+                fill: none;
+                stroke-width: 1.5px;
+                stroke-linecap: round;
+            }
+        }
+
+        &--exercise {
+            &-0 { stroke: $paradiddle-green; }
+            &-1 { stroke: $paradiddle-purple; }
+            &-2 { stroke: $paradiddle-blue; }
+            &-3 { stroke: $paradiddle-orange; }
+        }
+
+        &--isDimmed {
+            opacity: 0.175;
+        }
+    }
+
+    .Circle {
+        transition: all 0.15s ease-out;
+        pointer-events: none;
+        mix-blend-mode: multiply;
+
+        &--exercise {
+            &-0 { fill: $paradiddle-green; }
+            &-1 { fill: $paradiddle-purple; }
+            &-2 { fill: $paradiddle-blue; }
+            &-3 { fill: $paradiddle-orange; }
+        }
+
+        &--isDimmed {
+            display: none;
+        }
+    }
+
+    &__hover-line {
+        fill: rgba(#000000, 0.25);
+        transition: all 0.15s ease-out;
+        opacity: 0.5;
+        pointer-events: none;
+    }
+
+    .Tooltip {
+        &__container {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -100%);
+            padding: 1em 1.75em;
+            background: #fff;
+            line-height: 1.4em;
+            z-index: 10;
+            transition: all 0.15s ease-out;
+            pointer-events: none;
+            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+        }
+
+        &__date {
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            text-align: center;
+            color: #969696;
+            margin-bottom: 1em;
+        }
+
+        &__variation {
+            display: grid;
+            grid-template-columns: 1em 100px 50px 65px;
+            margin: 0.5em 0;
+            font-size: 0.9em;
+
+            &-0 {
+                .Tooltip__variation__dot {
+                    background: $paradiddle-green;
+                }
+
+                .Tooltip__variation__bpm {
+                    color: $paradiddle-green;
+                }
+            }
+
+            &-1 {
+                .Tooltip__variation__dot {
+                    background: $paradiddle-purple;
+                }
+
+                .Tooltip__variation__bpm {
+                    color: $paradiddle-purple;
+                }
+            }
+
+            &-2 {
+                .Tooltip__variation__dot {
+                    background: $paradiddle-blue;
+                }
+
+                .Tooltip__variation__bpm {
+                    color: $paradiddle-blue;
+                }
+            }
+
+            &-3 {
+                .Tooltip__variation__dot {
+                    background: $paradiddle-orange;
+                }
+
+                .Tooltip__variation__bpm {
+                    color: $paradiddle-orange;
+                }
+            }
+
+            &--isDimmed {
+                opacity: 0.35;
+            }
+
+            &__name {
+                font-weight: 600;
+            }
+
+            &__dot {
+                width: 8px;
+                height: 8px;
+                border-radius: 8px;
+                background: red;
+                transform: translateY(100%);
+            }
+
+            &__change {
+                text-align: right;
+                font-feature-settings: 'tnum'1;
+                font-size: 13px;
+                text-align: right;
+                color: #B9B9B9;
+            }
+
+            &__bpm {
+                font-weight: 700;
+                text-align: right;
+                font-feature-settings: 'tnum'1;
+            }
+        }
+    }
+}
