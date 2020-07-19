@@ -55,7 +55,7 @@
     "gatsby-transformer-sharp": "^2.1.21",
     "humanize-duration": "^3.20.1",
     "intersection-observer": "^0.7.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "moment": "2.24.0",
     "node-sass": "^4.12.0",
     "prismic-reactjs": "^0.3.2",
