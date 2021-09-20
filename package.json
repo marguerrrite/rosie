@@ -59,7 +59,7 @@
     "moment": "2.24.0",
     "node-sass": "^4.12.0",
     "prismic-reactjs": "^0.3.2",
-    "prismjs": "^1.17.1",
+    "prismjs": "^1.25.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-anchor-link-smooth-scroll": "^1.0.12",
