@@ -56,7 +56,7 @@
     "humanize-duration": "^3.20.1",
     "intersection-observer": "^0.7.0",
     "lodash": "^4.17.15",
-    "moment": "2.24.0",
+    "moment": "2.29.2",
     "node-sass": "^4.12.0",
     "prismic-reactjs": "^0.3.2",
     "prismjs": "^1.17.1",
