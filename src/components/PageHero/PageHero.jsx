@@ -1,5 +1,5 @@
 import React from "react"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import PropTypes from 'prop-types';
 import MaxWidth from 'components/_ui/MaxWidth/MaxWidth'
 import './PageHero.scss';
@@ -37,7 +37,7 @@ const PageHero = ({className, page, image}) => {
                 </div>
             ) : (
                 <MaxWidth size="l" className="PageHero__container">
-                    <Img fluid={image} />
+                    {/* <Img fluid={image} /> */}
                 </MaxWidth>
             )}
         </>

@@ -1,7 +1,7 @@
 import React from "react"
 import classNames from "classnames"
 import { StaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faTwitter, faDribbble } from '@fortawesome/free-brands-svg-icons'
 import Link from "components/_ui/Link/Link"
@@ -24,7 +24,7 @@ const PageAuthor = ({ postLocation, className }) => {
             render={data => (
                 <div className={classNames("PageAuthor", `PageAuthor--${postLocation}`, className)}>
                     <div className="PageAuthor__image__container">
-                        <Img fluid={data.headshot.childImageSharp.fluid} className="PageAuthor__image"/>
+                        {/* <Img fluid={data.headshot.childImageSharp.fluid} className="PageAuthor__image"/> */}
                     </div>
                     <div className="PageAuthor__info">
                         <h4 className="PageAuthor__info__title">
