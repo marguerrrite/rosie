@@ -5,7 +5,8 @@
   "version": "0.1.0",
   "author": "Marguerite Roth | marguerite.io | @marrrguerite",
   "dependencies": {
-    "@emotion/core": "^10.0.10",
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.9.0",
     "@emotion/styled": "^10.0.12",
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
@@ -61,7 +62,6 @@
     "joi": "^17.6.0",
     "lodash": "^4.17.15",
     "moment": "2.24.0",
-    "node-sass": "^4.14.1",
     "prismic-reactjs": "^0.3.2",
     "prismjs": "^1.17.1",
     "prop-types": "^15.7.2",
@@ -81,6 +81,8 @@
     "react-router-hash-link": "^1.2.1",
     "react-share": "^3.0.1",
     "resize-observer-polyfill": "^1.5.1",
+    "sass": "^1.52.1",
+    "sass-loader": "^13.0.0",
     "smooth-scroll": "^16.0.3",
     "tinycolor2": "^1.4.1",
     "topojson-client": "^3.0.0"
