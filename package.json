@@ -54,7 +54,7 @@
     "gatsby-remark-prismjs": "^3.3.14",
     "gatsby-remark-vscode": "^1.2.1",
     "gatsby-source-filesystem": "^2.0.38",
-    "gatsby-transformer-remark": "^2.6.24",
+    "gatsby-transformer-remark": "^5.25.1",
     "gatsby-transformer-sharp": "^2.1.21",
     "humanize-duration": "^3.20.1",
     "intersection-observer": "^0.7.0",
